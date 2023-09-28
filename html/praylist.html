@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/header_footer.css">
     <link rel="stylesheet" href="../assets/css/common.css">
     <title>遊!一覧ページ</title>
 </head>
@@ -11,17 +12,48 @@
     <!-- header開始 -->
     <header>
         <div class="wrapper container">
-            <div class="header__logo">
+            <div class="header_logo">
                 <h1 class="js-title_logo">
                     <a href=""><img src="" alt="AwAワンNaviわんこと一緒徳島の自然の中でのびのびたのしもう"></a>
                 </h1>
             </div>
-
+            <!-- headerナビゲーション -->
+            <btn class="hamburger-menu-btn"><span></span></btn>
+            <nav class="hamburger-menu-content">
+                <div class="hamburger-menu-content-inner">
+                    <!-- 検索フォーム -->
+                    <div class="form-box">
+                        <form action="https://awacamp.site/" method="get" class="header_search form-box">
+                            <!-- name="s"サーチのs 決まっている文字 -->
+                            <input class="form-input" type="text" name="s" value="" maxlength="20" placeholder="キーワードを入力">
+                            <button class="form-button" value=""><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="gnav-wrap">
+                        <p class="gnav">
+                        <span></span>
+                        <span></span>
+                    </p>
+                        <ul class="menu-item-wrap">
+                            <li class="menu-item"><a href="">検索</a></li>
+                            <span></span>
+                            <span></span>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gnav-wrap">
+                    <p class="gnav">遊ぶ</p>
+                    <ul class="menu-item-wrap">
+                        <li class="menu-item"><a href="">公園</a></li>
+                    </ul>
+            </nav>
         </div>
     </header>
     <!-- header修了 -->
     <main></main>
     <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../assets/js/commn.js"></script>
 
 </body>
 </html>
