@@ -89,7 +89,7 @@ header {
     height: 100%;
     position: fixed;
     top: 0;
-    /* left: 100%; */
+    left: 100%;
     background-color: #f3e06e;
     /*leftの値を変更してメニューを画面外へ*/
     z-index: 80;
