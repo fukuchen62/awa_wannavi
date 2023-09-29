@@ -2,11 +2,11 @@
 
 $(function () {
     // ボタンがクリックされたら発動
-    $(".hamburger-menu-btn").on("click", function () {
+    $(".hamburger__menu__btn").on("click", function () {
         // ドロワーメニュー部分のアニメーション
-        $(".hamburger-menu-content").toggleClass("is-active");
+        $(".hamburger__menu__content").toggleClass("is-active");
         // ボタン部分のアニメーション
-        $(".hamburger-menu-btn").toggleClass("is-active");
+        $(".hamburger__menu__btn").toggleClass("is-active");
     });
 });
 
@@ -15,12 +15,12 @@ $(function () {
     $(".globalnavi a").click(function () {
         if (
             // もし.menu-btnと.menuの要素が.is-activeを持っていたら
-            $(".hamburger-menu-btn").hasClass("is-active") &&
-            $(".hamburger-menu-content").hasClass("is-active")
+            $(".hamburger__menu__btn").hasClass("is-active") &&
+            $(".hamburger__menu__content").hasClass("is-active")
         ) {
             // .menu-btnと.menuの要素から.is-activeを外す
-            $(".hamburger-menu-btn").removeClass("is-active");
-            $(".hamburger-menu-content").removeClass("is-active");
+            $(".hamburger__menu__btn").removeClass("is-active");
+            $(".hamburger__menu__content").removeClass("is-active");
         }
     });
 });
