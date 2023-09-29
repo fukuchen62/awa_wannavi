@@ -1,0 +1,403 @@
+@charset "utf-8";
+
+/***********************/
+/* 阿波キャンのCSS参考 */
+/***********************/
+
+html {
+    /* 一部のモバイル端末で使われる、テキストの自動拡大アルゴリズムを制御 */
+    /* 不必要ならnoneを記載、必要ならこの文を削除 */
+    -webkit-text-size-adjust: 100%;
+
+    /* remの計算を分かり易く設定、デフォルト値は1rem=16px */
+    /* example:16 x 0.625=10px つまり、10px=1remとする記載 */
+
+    font-size: 62.5%;
+}
+
+body {
+    /* googlefontでbodyのフォントをmaru gothicに統一 */
+    /* googlefontから直接引用している   */
+    font-family: 'Cherry Bomb One', cursive;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    background-color: #f5f4ef;
+    margin-top: 100px;
+}
+
+a {
+    /* リンクのアンダーバーを消す記載 */
+    text-decoration: none;
+    color: black;
+}
+
+/* aをホバーした時の色変化 */
+a:hover {
+    color: red;
+}
+
+p {
+    font-family: 'Cherry Bomb One', cursive;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+li {
+    font-size: 1.4rem;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    /* 画像の下に隙間が空かないように設定 */
+    vertical-align: top;
+}
+
+a img:hover {
+    /* imgをホバーしたら画像を薄くする */
+    opacity: 0.6;
+}
+
+
+.container {
+    /* コンテナーはmaxwidthとして定義した1200pxを超えなくする */
+    width: 100%;
+    max-width: 1200px;
+    min-width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/******************/
+/* パンくずリスト */
+/******************/
+
+.Breadcrumb {
+    padding-left: 20px;
+    font-size: 1.4rem;
+}
+
+/************************************************************/
+/* 遊ぶ食べる泊まるなどの一覧ページにあるページの切り替えタブ */
+/************************************************************/
+
+/* タブの親要素です */
+.tab__wrapper {
+    /* 横並びにしてやる */
+    display: flex;
+    /* コンテンツは改行させるのでwrap(逆はnowrap:改行なし) */
+    flex-wrap: wrap;
+    /* 各タブのスペースは均等に */
+    justify-content: space-between;
+    width: 100%;
+    /* flexタブの横幅 */
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    /* タブを並べる横幅の調整 */
+    padding: 0 20px;
+}
+
+/* タブの子要素です */
+.tab__block {
+    /* SP想定で2つ並ぶようにします */
+    width: 40%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #8CCBE7;
+    border-radius: 8px;
+    /* ホバーした時の色変化を制御します */
+    transition: ease;
+    /* 傍線に変形します */
+    border: 4px dashed #333;
+    margin: 10px auto;
+}
+
+/* タブをホバーした時はタブの色を変更します */
+.tab__block:hover {
+    background-color: #5a749a;
+    border: 4px dashed #333;
+}
+
+.tab__title {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #333;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: ease;
+}
+
+/* タブタイトルを変更したときは文字を白くします */
+/* なんかボタンと文字の間で変な挙動をするので、js対応したいです */
+.tab__title:hover {
+    color: #fff;
+}
+
+
+/****************************************/
+/* エリアを区切るボーダー帯型のタイトル */
+/* 各エリアによってbgcを変更していく */
+/****************************************/
+
+.h2__title {
+    /* コンテナの横幅いっぱい */
+    width: 100%;
+    /* 無いとタイトルのバランスが微妙、下にしずむ */
+    /* padding-bottom: 10px; */
+    /* 上下の邪魔しない為のmargin */
+    margin: 0px auto;
+    /* h2のままだと小さすぎるのでサイズを調整 */
+    font-size: 2.4rem;
+    /* h2の文字をセンターよせにする */
+    text-align: center;
+    /* バックのカラーを確認 */
+    background-color: #8CCBE7;
+    /* ボーダーの大きさと囲いの調整 */
+    border-top: 5px dashed #333;
+    border-bottom: 5px dashed #333;
+    font-weight: bold;
+}
+
+
+/**************/
+/* 一覧を見る */
+/**************/
+
+.next__info {
+    padding-right: 20px;
+    font-size: 1.4rem;
+}
+
+/**************************************************/
+/* 一覧ページのコンテンツ内にあるサブタイトルのcss */
+/**************************************************/
+
+.sub__title {
+    width: 80%;
+    margin: 0 auto;
+    /* 無いとタイトルのバランスが微妙、下にしずむ */
+    /* padding-bottom: 10px; */
+    /* 上下の邪魔しない為のmargin */
+    /* h2のままだと小さすぎるのでサイズを調整 */
+    font-size: 2rem;
+    /* h2の文字をセンターよせにする */
+    text-align: center;
+    /* バックのカラーを確認 */
+    background-color: #8CCBE7;
+    /* ボーダーの大きさと囲いの調整 */
+    border: 3px dashed #333;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+/******************/
+/* 記事は○○件です */
+/******************/
+
+.article__number {
+    padding-left: 20px;
+    font-size: 1.4rem;
+}
+
+/*****************************/
+/* カード型記事のテンプレート */
+/*****************************/
+
+/* 全体のレイアウトの枠 */
+.card__wrapper {
+    margin: 1rem auto;
+    width: 100%;
+}
+
+.card__wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 34px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+    transition: all .5s;
+}
+
+.card__block {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+.card__img {
+    border-radius: 5px 5px 0 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.card__content {
+    padding: 8px 20px 20px;
+}
+
+.card__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border-bottom: 2px dashed #333;
+}
+
+.card__title {
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card__category {
+    font-size: 0.8rem;
+    color: red;
+    border: solid 1px red;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+
+.card__text {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 0.2em;
+}
+
+.card__link {
+    text-align: center;
+    border-top: 1px solid #eee;
+    padding: 20px;
+}
+
+.card__link a {
+    text-decoration: none;
+    color: #4f96f6;
+    margin: 0 10px;
+    font-size: 1.6rem;
+}
+
+.card__link a:hover {
+    color: #6bb6ff;
+}
+
+
+
+/*****************************************/
+/* marginのpx幅テンプレート等 */
+/* これをつけて最後に見た目の調整を行う */
+/* メディアクエリの時は注意 */
+/* 基本的にはコンテンツの中で完結してやる */
+/*****************************************/
+
+/***********************/
+/* margin-bottom */
+/* 外枠の下方向にマージンを取る */
+/***********************/
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.mb60 {
+    margin-bottom: 60px;
+}
+
+.mb80 {
+    margin-bottom: 80px;
+}
+
+.mb120 {
+    margin-bottom: 120px;
+}
+
+/***********************/
+/* margin-top */
+/* 外枠の上方向にマージンを取る */
+/***********************/
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt60 {
+    margin-top: 60px;
+}
+
+/***********************/
+/* これはpadding */
+/* 内枠全体にパディングをとる */
+/***********************/
+
+.pd10 {
+    padding: 10px;
+}
+
+.pd20 {
+    padding: 20px;
+}
+
+.pd40 {
+    padding: 40px;
+}
+
+/***********************/
+/* padding-left */
+/* 内枠左側にパディングをとる */
+/***********************/
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.pl40 {
+    padding-left: 40px;
+}
+
+/***********************/
+/* padding-bottom */
+/* 内側下側にパディングを取る */
+/***********************/
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+/*************************************/
+/* text-align */
+/* テキストをどちらに寄せるのかを設定 */
+/*************************************/
+
+.tl {
+    text-align: left;
+}
+
+.tr {
+    text-align: right;
+}
+
+.tc {
+    text-align: center;
+}
+
+/************************************/
+/* display-flex */
+/* フレックスボックスをつけてあげる */
+/************************************/
+
+.flex {
+    display: flex;
+}
