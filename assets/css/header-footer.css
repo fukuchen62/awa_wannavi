@@ -10,12 +10,12 @@ header {
     z-index: 10;
 }
 
-.header_logo {
+.header__logo {
     max-width: 200px;
     height: auto;
 }
 
-.js__title_logo {
+.js__title__logo {
     font-size: 100%;
 }
 
@@ -105,7 +105,7 @@ header {
     /*アニメーション設定*/
 }
 
-.hamburger__menu__content.is__active {
+.hamburger__menu__content.is-active {
     left: 0;
     overflow: scroll;
     /*メニューを画面内へ*/
