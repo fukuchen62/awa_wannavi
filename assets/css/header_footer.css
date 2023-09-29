@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "utf__8";
 /* ヘッダー */
 header {
     position: fixed;
@@ -12,16 +12,16 @@ header {
     max-width: 200px;
     height: auto;
 }
-.js-title_logo {
+.js__title_logo {
     font-size: 100%;
 }
 /* ハンバーガーメニュー */
 
 /* ハンバーガーメニュー3本線 */
 
-.hamburger-menu-btn span,
-.hamburger-menu-btn span:before,
-.hamburger-menu-btn span:after {
+.hamburger__menu__btn span,
+.hamburger__menu__btn span:before,
+.hamburger__menu__btn span:after {
     content: "";
     display: block;
     height: 3px;
@@ -32,35 +32,35 @@ header {
     transition: all 0.5;
 }
 
-.hamburger-menu-btn span:before {
+.hamburger__menu__btn span:before {
     bottom: 8px;
 }
 
-.hamburger-menu-btn span:after {
+.hamburger__menu__btn span:after {
     top: 8px;
 }
 
-.hamburger-menu-btn.is-active span {
+.hamburger__menu__btn.is__active span {
     background-color: rgba(255, 255, 255, 0);
     /*メニューオープン時は真ん中の線を透明にする*/
 }
 
-.hamburger-menu-btn.is-active span::before {
+.hamburger__menu__btn.is__active span::before {
     bottom: 0;
     transform: rotate(45deg);
 }
 
-.hamburger-menu-btn.is-active span::after {
+.hamburger__menu__btn.is__active span::after {
     top: 0;
     transform: rotate(-45deg);
 }
 
-#hamburger-menu-btn-check {
+#hamburger__menu__btn__check {
     display: none;
 }
 
   /* ハンバーガーメニューボタン */
-    .hamburger-menu-btn {
+    .hamburger__menu__btn {
     display: flex;
     position: absolute;
     top: 20px;
@@ -72,19 +72,19 @@ header {
     z-index: 100;
 }
 /* ハンバーガーメニュー中身 */
-.form-input {
+.form__input {
     font-size: 1rem;
     padding: 8px 5px;
     height: 100%;
     border: 1px solid #4f4f4f;
     background-color: #fff;
 }
-.form-button {
+.form__button {
     border: none;
     position: absolute;
 }
 
-.hamburger-menu-content {
+.hamburger__menu__content {
     padding: 20px 20px;
     width: 100%;
     height: 100%;
@@ -98,7 +98,7 @@ header {
     transition: all 0.5s;
     /*アニメーション設定*/
 }
-.hamburger-menu-content.is-active{
+.hamburger__menu__content.is__active{
     left: 0;
     overflow: scroll;
     /*メニューを画面内へ*/
@@ -107,15 +107,15 @@ header {
 .navDrawr {
     display: none;
 }
-.gnav-wrap {
+.gnav__wrap {
     display: flex;
 }
 /* ワード検索の虫眼鏡アイコン */
-.fa-search{
+.fa__search{
     position: relative;
     left: 0;
 }
-.fa-search span:nth-child(1) {
+.fa__search span:nth-child(1) {
     position:absolute;
     border: 4px solid #d9d9d9;
     border-radius: 12px;
@@ -125,7 +125,7 @@ header {
     left: -44px;
 
 }
-.fa-search span:nth-child(2){
+.fa__search span:nth-child(2){
     position: absolute;
     border: solid 2px #d9d9d9;
     background-color: #d9d9d9;
@@ -139,7 +139,7 @@ header {
 }
 
 /* 虫眼鏡のgavi */
-.gnav-search {
+.gnav__search {
     display: flex;
     padding: 10px;
     margin: 10px  0 10px 20px;
@@ -150,7 +150,7 @@ header {
     background-color: #4f4f4f;
 }
 
-.gnav-search span:nth-child(1) {
+.gnav__search span:nth-child(1) {
     display: block;
     position: absolute;
     border: 4px solid #d9d9d9;
@@ -159,7 +159,7 @@ header {
     width: 25px;
     height: 25px;
 }
-.gnav-search span:nth-child(2){
+.gnav__search span:nth-child(2){
     display: block;
     position: relative;
     border: solid 2px #d9d9d9;
@@ -173,7 +173,7 @@ header {
     transform: rotate(45deg);
 }
 
-.menu-item-search-wrap{
+.menu__item__search__wrap{
     background-color: #fff;
     border-radius: 5px;
     max-width: 220px;
@@ -181,23 +181,23 @@ header {
     height: 60px;
     margin: 10px 0 10px 0;
 }
-.menu-item-search {
-    text-decoration: none;
+.menu__item__search {
+    text-align: none;
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 15px;
 }
-.menu-item-search li{
+.menu__item__search li{
     list-style: none;
     position: relative;
     color: #fe9800;
-    text-decoration: none;
+    text-align: none;
     border-radius: 10px;
     padding: 2px;
 }
-.menu-item-search span,
-.menu-item-search span::before {
+.menu__item__search span,
+.menu__item__search span::before {
     content: "";
     display: block;
     position: relative;
@@ -207,12 +207,12 @@ header {
     width: 15px;
     bottom: 35px;
 }
-.menu-item-search span{
+.menu__item__search span{
 transform: rotate(45deg);
 top: 10px;
 left: 50px;
 }
-.menu-item-search span::before {
+.menu__item__search span::before {
 top: 7px;
 left: 7px;
 transform: rotate(90deg);
@@ -233,7 +233,7 @@ transform: rotate(90deg);
     background-color: #4f4f4f;
     padding: 10px;
 }
-.menu-item-wrap{
+.menu__item__wrap{
     display: flex;
     flex-wrap: wrap;
     background-color: #fff;
@@ -243,18 +243,18 @@ transform: rotate(90deg);
     height: auto;
     margin: 10px 0 10px 0;
 }
-.menu-item {
+.menu__item {
     margin: 5px;
     text-decoration: none;
     list-style: none;
     text-align: center;
     font-size: 1rem;
 }
-.menu-item a {
+.menu__item a {
     color: #000;
     border: #000 solid 1px;
     border-radius: 20px;
-    text-decoration: none;
+    text-align: none;
     margin: 2px;
     padding: 5px;
 
