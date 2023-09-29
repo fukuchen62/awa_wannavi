@@ -12,7 +12,7 @@ header {
 
 .header__logo img{
     position: absolute;
-    top: 25px;
+    top: 5px;
     left: 20px;
     max-width: 50px;
     height: auto;
@@ -99,7 +99,7 @@ header {
     height: 100%;
     position: fixed;
     top: 0;
-    left: 100%;
+    /* left: 100%; */
     background-color: #f3e06e;
     /*leftの値を変更してメニューを画面外へ*/
     z-index: 80;
@@ -117,8 +117,11 @@ header {
 .navDrawr {
     display: none;
 }
-
-.gnav__wrap {
+.gnav{
+    margin: 10px auto;
+    border-bottom: 3px dashed #000;
+}
+.menu__wrap {
     display: flex;
 }
 
@@ -239,21 +242,20 @@ header {
 }
 
 /* 通常gnav */
-.gnav {
+.gnav__icon {
     color: #d9d9d9;
     text-align: center;
     /* 文字を真ん中に */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin: 10px 0 10px 20px;
     max-width: 60px;
     height: auto;
     width: 100%;
     border-radius: 5px;
-    background-color: #4f4f4f;
     padding: 10px;
+    background-color: #4f4f4f;
 }
 
 .menu__item__wrap {
