@@ -5,16 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <title>サンプルサイト</title> -->
-    <!-- <title><?php bloginfo("name"); ?></title> -->
-
-    <!-- <link href="<?php echo get_template_directory_uri(); ?>/assets/css/styles.min.css" rel="stylesheet"> -->
-
-    <!-- <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"> -->
-    <!-- jQueryはwordPress（wp_enqueue_script('jquery')）で読み込む -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
-    <!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js"></script> -->
-
     <?php
     // wp_head()を呼び出す
     wp_head();
@@ -40,21 +30,16 @@
             <?php get_search_form(); ?>
         </div>
 
-
-
         <div class="header_links">
-
             <!-- 自身のマークアップを活用する -->
             <nav class="gnav">
                 <ul class="">
-                    <li><a href="<?php echo home_url(); ?>">HOME</a></li>
-                    <li><a href="<?php echo home_url('/about/'); ?>">わたしたちについて</a></li>
-                    <li><a href="<?php echo home_url('/access/'); ?>">アクセス</a></li>
-                    <li><a href="<?php echo home_url('/category/news/'); ?>">最新情報</a></li>
-                    <li><a href="<?php echo home_url('/menu/'); ?>">メニュー一覧</a></li>
-                    <li><a href="<?php echo home_url('/contact/'); ?>">お問い合わせ</a></li>
-                    <li><a href="<?php echo home_url('/special/'); ?>">三周年記念セール</a></li>
-
+                    <li><a href="<?php echo home_url('/enjoy/'); ?>">遊ぶ</a></li>
+                    <li><a href="<?php echo home_url('/stay/'); ?>">泊まる</a></li>
+                    <li><a href="<?php echo home_url('/eat/'); ?>">食べる</a></li>
+                    <li><a href="<?php echo home_url('/course/'); ?>">モデルコース</a></li>
+                    <li><a href="<?php echo home_url('/special/'); ?>">特集記事</a></li>
+                    <li><a href="<?php echo home_url('/search/'); ?>">検索</a></li>
                 </ul>
             </nav>
 
@@ -68,11 +53,6 @@
                 wp_nav_menu($args);
                 ?>
             </nav> -->
-
-            <ul class="header_sns">
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            </ul>
         </div>
 
         <svg class="header_menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
