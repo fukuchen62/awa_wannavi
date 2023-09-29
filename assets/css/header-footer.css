@@ -1,0 +1,261 @@
+@charset "utf-8";
+/* ヘッダー */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #f3e06e;
+    z-index: 10;
+}
+.header__logo {
+    max-width: 200px;
+    height: auto;
+}
+.js__title__logo {
+    font-size: 100%;
+}
+/* ハンバーガーメニュー */
+
+/* ハンバーガーメニュー3本線 */
+
+.hamburger__menu__btn span,
+.hamburger__menu__btn span:before,
+.hamburger__menu__btn span:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #000;
+    position: absolute;
+    transition: all 0.5;
+}
+
+.hamburger__menu__btn span:before {
+    bottom: 8px;
+}
+
+.hamburger__menu__btn span:after {
+    top: 8px;
+}
+
+.hamburger__menu__btn.is-active span {
+    background-color: rgba(255, 255, 255, 0);
+    /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+.hamburger__menu__btn.is-active span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.hamburger__menu__btn.is-active span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#hamburger__menu__btn__check {
+    display: none;
+}
+
+  /* ハンバーガーメニューボタン */
+    .hamburger__menu__btn {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+/* ハンバーガーメニュー中身 */
+.form__input {
+    font-size: 1rem;
+    padding: 8px 5px;
+    height: 100%;
+    border: 1px solid #4f4f4f;
+    background-color: #fff;
+}
+.form__button {
+    border: none;
+    position: absolute;
+}
+
+.hamburger__menu__content {
+    padding: 20px 20px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    background-color: #f3e06e;
+    /*leftの値を変更してメニューを画面外へ*/
+    z-index: 80;
+
+    transition: all 0.5s;
+    /*アニメーション設定*/
+}
+.hamburger__menu__content.is-active{
+    left: 0;
+    overflow: scroll;
+    /*メニューを画面内へ*/
+}
+
+.navDrawr {
+    display: none;
+}
+.gnav__wrap {
+    display: flex;
+}
+/* ワード検索の虫眼鏡アイコン */
+.fa__search{
+    position: relative;
+    left: 0;
+}
+.fa__search span:nth-child(1) {
+    position:absolute;
+    border: 4px solid #d9d9d9;
+    border-radius: 12px;
+    width: 25px;
+    height: 25px;
+    top: -23px;
+    left: -44px;
+
+}
+.fa__search span:nth-child(2){
+    position: absolute;
+    border: solid 2px #d9d9d9;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    max-width: 20px;
+    width: 100%;
+    height: 20px;
+    transform: rotate(-45deg);
+    top:-7px;
+    left: -20px;
+}
+
+/* 虫眼鏡のgavi */
+.gnav__search {
+    display: flex;
+    padding: 10px;
+    margin: 10px  0 10px 20px;
+    max-width: 60px;
+    height: 60px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #4f4f4f;
+}
+
+.gnav__search span:nth-child(1) {
+    display: block;
+    position: absolute;
+    border: 4px solid #d9d9d9;
+    border-radius: 12px;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+}
+.gnav__search span:nth-child(2){
+    display: block;
+    position: relative;
+    border: solid 2px #d9d9d9;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    max-width: 20px;
+    width: 100%;
+    height: 3px;
+    top: 24px;
+    left: 16px;
+    transform: rotate(45deg);
+}
+
+.menu__item__search__wrap{
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 220px;
+    width: 100%;
+    height: 60px;
+    margin: 10px 0 10px 0;
+}
+.menu__item__search {
+    text-align: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+.menu__item__search li{
+    list-style: none;
+    position: relative;
+    color: #fe9800;
+    text-align: none;
+    border-radius: 10px;
+    padding: 2px;
+}
+.menu__item__search span,
+.menu__item__search span::before {
+    content: "";
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    background-color: #fe9800;
+    height: 1px;
+    width: 15px;
+    bottom: 35px;
+}
+.menu__item__search span{
+transform: rotate(45deg);
+top: 10px;
+left: 50px;
+}
+.menu__item__search span::before {
+top: 7px;
+left: 7px;
+transform: rotate(90deg);
+}
+/* 通常gnav */
+.gnav {
+    color: #d9d9d9;
+    text-align: center;
+    /* 文字を真ん中に */  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px  0 10px 20px;
+    max-width: 60px;
+    height: auto;
+    width: 100%;;
+    border-radius: 5px;
+    background-color: #4f4f4f;
+    padding: 10px;
+}
+.menu__item__wrap{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 10px 0 10px 0;
+}
+.menu__item {
+    margin: 5px;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    font-size: 1rem;
+}
+.menu__item a {
+    color: #000;
+    border: #000 solid 1px;
+    border-radius: 20px;
+    text-align: none;
+    margin: 2px;
+    padding: 5px;
+
+}
