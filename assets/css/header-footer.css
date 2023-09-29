@@ -1,4 +1,4 @@
-@charset "utf__8";
+@charset "utf-8";
 
 /* ヘッダー */
 header {
@@ -44,17 +44,17 @@ header {
     top: 8px;
 }
 
-.hamburger__menu__btn.is__active span {
+.hamburger__menu__btn.is-active span {
     background-color: rgba(255, 255, 255, 0);
     /*メニューオープン時は真ん中の線を透明にする*/
 }
 
-.hamburger__menu__btn.is__active span::before {
+.hamburger__menu__btn.is-active span::before {
     bottom: 0;
     transform: rotate(45deg);
 }
 
-.hamburger__menu__btn.is__active span::after {
+.hamburger__menu__btn.is-active span::after {
     top: 0;
     transform: rotate(-45deg);
 }
