@@ -21,6 +21,7 @@ body {
     font-family: 'Cherry Bomb One', cursive;
     font-family: 'Zen Maru Gothic', sans-serif;
     background-color: #f5f4ef;
+    /* ヘッダー分上に余白を取る */
     margin-top: 100px;
 }
 
@@ -68,6 +69,24 @@ a img:hover {
     margin: 0 auto;
     background-color: #fff;
 }
+
+/*****************************************/
+/* ヘッダーの下に入ってくるバナー体の広告 */
+/*****************************************/
+
+.banner__head {
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url("../img/dog-banner.jpg");
+    color: black;
+    -webkit-text-stroke: 2px #fff;
+    /* ベンダープレフィックス */
+    text-stroke: 1px #fff;
+    font-size: 10rem;
+}
+
 
 /******************/
 /* パンくずリスト */
@@ -213,36 +232,44 @@ a img:hover {
     width: 100%;
 }
 
-
+/* ホバーした時Y軸方向に下がり、ボタンが動くように見える */
 .card__wrapper:hover {
-    transform: translateY(-5px);
+    transform: translateY(+5px);
     box-shadow: 0 7px 34px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
     transition: all .5s;
 }
 
+/* これが一番初めに影に見えている部分 */
 .card__block {
     background: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px #ccc;
 }
 
+/* カードの画像は丸さをつける */
 .card__img {
     border-radius: 5px 5px 0 0;
     max-width: 100%;
     height: auto;
 }
 
+/* テキスト部を覆う箱 */
 .card__content {
     padding: 8px 20px 20px;
 }
 
+/* テキスト上段のテキストなど、フレックスでタグごと並べている */
 .card__flex {
     display: flex;
+    /* 均等に分ける */
     justify-content: space-between;
+    /* フレックスボックスの並べ方を上から始める */
     align-items: start;
+    /* 下の傍線 */
     border-bottom: 2px dashed #333;
 }
 
+/* カード型の一番大きなタイトルネーム */
 .card__title {
     font-size: 1.6rem;
     color: #333;
@@ -250,6 +277,7 @@ a img:hover {
     margin-bottom: 5px;
 }
 
+/* カテゴリーのタグ */
 .card__category {
     font-size: 0.8rem;
     color: red;
@@ -258,7 +286,7 @@ a img:hover {
     padding: 3px;
 }
 
-
+/* カードの薄くなった文字 */
 .card__text {
     color: #777;
     font-size: 14px;
@@ -266,12 +294,14 @@ a img:hover {
     margin-bottom: 0.2em;
 }
 
+/* もっと見るなどページ遷移の誘導 */
 .card__link {
     text-align: center;
     border-top: 1px solid #eee;
     padding: 20px;
 }
 
+/* linkの色付け */
 .card__link a {
     text-decoration: none;
     color: #4f96f6;
@@ -279,6 +309,7 @@ a img:hover {
     font-size: 1.6rem;
 }
 
+/* リンクのAをホバーした時の色 */
 .card__link a:hover {
     color: #6bb6ff;
 }
