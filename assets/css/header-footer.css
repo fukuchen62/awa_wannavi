@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 /* ヘッダー */
 header {
     position: fixed;
@@ -8,13 +9,16 @@ header {
     background-color: #f3e06e;
     z-index: 10;
 }
-.header__logo {
+
+.header_logo {
     max-width: 200px;
     height: auto;
 }
-.js__title__logo {
+
+.js__title_logo {
     font-size: 100%;
 }
+
 /* ハンバーガーメニュー */
 
 /* ハンバーガーメニュー3本線 */
@@ -59,8 +63,8 @@ header {
     display: none;
 }
 
-  /* ハンバーガーメニューボタン */
-    .hamburger__menu__btn {
+/* ハンバーガーメニューボタン */
+.hamburger__menu__btn {
     display: flex;
     position: absolute;
     top: 20px;
@@ -71,6 +75,7 @@ header {
     align-items: center;
     z-index: 100;
 }
+
 /* ハンバーガーメニュー中身 */
 .form__input {
     font-size: 1rem;
@@ -79,6 +84,7 @@ header {
     border: 1px solid #4f4f4f;
     background-color: #fff;
 }
+
 .form__button {
     border: none;
     position: absolute;
@@ -98,7 +104,8 @@ header {
     transition: all 0.5s;
     /*アニメーション設定*/
 }
-.hamburger__menu__content.is-active{
+
+.hamburger__menu__content.is__active {
     left: 0;
     overflow: scroll;
     /*メニューを画面内へ*/
@@ -107,16 +114,19 @@ header {
 .navDrawr {
     display: none;
 }
+
 .gnav__wrap {
     display: flex;
 }
+
 /* ワード検索の虫眼鏡アイコン */
-.fa__search{
+.fa__search {
     position: relative;
     left: 0;
 }
+
 .fa__search span:nth-child(1) {
-    position:absolute;
+    position: absolute;
     border: 4px solid #d9d9d9;
     border-radius: 12px;
     width: 25px;
@@ -125,7 +135,8 @@ header {
     left: -44px;
 
 }
-.fa__search span:nth-child(2){
+
+.fa__search span:nth-child(2) {
     position: absolute;
     border: solid 2px #d9d9d9;
     background-color: #d9d9d9;
@@ -134,7 +145,7 @@ header {
     width: 100%;
     height: 20px;
     transform: rotate(-45deg);
-    top:-7px;
+    top: -7px;
     left: -20px;
 }
 
@@ -142,7 +153,7 @@ header {
 .gnav__search {
     display: flex;
     padding: 10px;
-    margin: 10px  0 10px 20px;
+    margin: 10px 0 10px 20px;
     max-width: 60px;
     height: 60px;
     width: 100%;
@@ -159,7 +170,8 @@ header {
     width: 25px;
     height: 25px;
 }
-.gnav__search span:nth-child(2){
+
+.gnav__search span:nth-child(2) {
     display: block;
     position: relative;
     border: solid 2px #d9d9d9;
@@ -173,7 +185,7 @@ header {
     transform: rotate(45deg);
 }
 
-.menu__item__search__wrap{
+.menu__item__search__wrap {
     background-color: #fff;
     border-radius: 5px;
     max-width: 220px;
@@ -181,6 +193,7 @@ header {
     height: 60px;
     margin: 10px 0 10px 0;
 }
+
 .menu__item__search {
     text-align: none;
     display: flex;
@@ -188,7 +201,8 @@ header {
     text-align: center;
     padding: 15px;
 }
-.menu__item__search li{
+
+.menu__item__search li {
     list-style: none;
     position: relative;
     color: #fe9800;
@@ -196,6 +210,7 @@ header {
     border-radius: 10px;
     padding: 2px;
 }
+
 .menu__item__search span,
 .menu__item__search span::before {
     content: "";
@@ -207,33 +222,39 @@ header {
     width: 15px;
     bottom: 35px;
 }
-.menu__item__search span{
-transform: rotate(45deg);
-top: 10px;
-left: 50px;
+
+.menu__item__search span {
+    transform: rotate(45deg);
+    top: 10px;
+    left: 50px;
 }
+
 .menu__item__search span::before {
-top: 7px;
-left: 7px;
-transform: rotate(90deg);
+    top: 7px;
+    left: 7px;
+    transform: rotate(90deg);
 }
+
 /* 通常gnav */
 .gnav {
     color: #d9d9d9;
     text-align: center;
-    /* 文字を真ん中に */  display: flex;
+    /* 文字を真ん中に */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px  0 10px 20px;
+    margin: 10px 0 10px 20px;
     max-width: 60px;
     height: auto;
-    width: 100%;;
+    width: 100%;
+    ;
     border-radius: 5px;
     background-color: #4f4f4f;
     padding: 10px;
 }
-.menu__item__wrap{
+
+.menu__item__wrap {
     display: flex;
     flex-wrap: wrap;
     background-color: #fff;
@@ -243,6 +264,7 @@ transform: rotate(90deg);
     height: auto;
     margin: 10px 0 10px 0;
 }
+
 .menu__item {
     margin: 5px;
     text-decoration: none;
@@ -250,6 +272,7 @@ transform: rotate(90deg);
     text-align: center;
     font-size: 1rem;
 }
+
 .menu__item a {
     color: #000;
     border: #000 solid 1px;
