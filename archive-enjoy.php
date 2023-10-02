@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<h2 class="pageTitle">メニュー<span>MENU</span></h2>
+<h2 class="pageTitle">遊ぶ</h2>
 
 <?php get_template_part('template-parts/breadcrumb'); ?>
 

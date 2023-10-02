@@ -35,8 +35,8 @@
             <nav class="gnav">
                 <ul class="">
                     <li><a href="<?php echo home_url('/enjoy/'); ?>">遊ぶ</a></li>
-                    <li><a href="<?php echo home_url('/stay/hotel/'); ?>">泊まる</a></li>
-                    <li><a href="<?php echo home_url('/eat/cafe/'); ?>">食べる</a></li>
+                    <li><a href="<?php echo home_url('/stay/'); ?>">泊まる</a></li>
+                    <li><a href="<?php echo home_url('/eat/'); ?>">食べる</a></li>
                     <li><a href="<?php echo home_url('/course/'); ?>">モデルコース</a></li>
                     <li><a href="<?php echo home_url('/special/'); ?>">特集記事</a></li>
                     <li><a href="<?php echo home_url('/search/'); ?>">検索</a></li>
