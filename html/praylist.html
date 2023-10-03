@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link rel="stylesheet" href="../assets/css/header-footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>遊!一覧ページ</title>
 </head>
 <body>
@@ -22,12 +26,13 @@
                 <div class="hamburger__menu__content__inner">
                     <!-- 検索フォーム -->
                     <div class="form__box">
-                        <form action="" method="get" class="header__search form__box">
+                        <form action="" method="get" class="header__search">
                             <!---- name="s"サーチのs 決まっている文字 -->
-                            <input class="form__input" type="text" name="s" value="" maxlength="20" placeholder="キーワードを入力">
+                            <input class="form__input" type="text" name="s" value="" maxlength="20" placeholder="Search">
                             <button class="form__button fa__search" value="">
-                                <span></span>
-                                <span></span>
+                                <!-- <span></span>
+                                <span></span> -->
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </form>
                     </div>
@@ -42,60 +47,88 @@
                                 <li>検索</li>
                                 <span></span>
                             </a>
-
                         </ul>
                     </div>
                 </div>
                 <p class="gnav">遊ぶ</p>
                 <div class="menu__wrap">
                     <div class="gnav__icon"><img src="../assets/img/cat.jpg" alt=""></div>
-                    <ul class="menu__item__wrap">
-                        <li class="menu__item"><a href="">公園</a></li>
-                        <li class="menu__item"><a href="">ドッグラン</a></li>
-                        <li class="menu__item"><a href="">自然</a></li>
-                        <li class="menu__item"><a href="">商業施設</a></li>
-                        <li class="menu__item"><a href="">観光スポット</a></li>
+                    <ul class="menu__item__wrap play__wrap">
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>公園</div>
+                            </a></li>
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>ドッグラン</div>
+                            </a></li>
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>自然・観光</div>
+                            </a></li>
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>屋内施設</div>
+                            </a></li>
                     </ul>
                 </div>
                 <p class="gnav">泊まる</p>
                 <div class="menu__wrap">
                     <div class="gnav__icon"><img src="../assets/img/cat.jpg" alt=""></div>
-                    <ul class="menu__item__wrap">
-                        <li class="menu__item"><a href="">ペットホテル</a></li>
-                        <li class="menu__item"><a href="">ペット同伴</a></li>
+                    <ul class="menu__item__wrap stay__wrap">
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>ペットホテル</div>
+                            </a></li>
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>ペットと宿泊</div>
+                            </a></li>
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>キャンプ</div>
+                            </a></li>
                     </ul>
                 </div>
                 <p class="gnav">食べる</p>
                 <div class="menu__wrap">
                     <div class="gnav__icon"><img src="../assets/img/cat.jpg" alt=""></div>
-                    <ul class="menu__item__wrap">
-                        <li class="menu__item"><a href="">ドッグカフェ</a></li>
-                        <li class="menu__item"><a href="">キャンプ</a></li>
-                        <li class="menu__item"><a href="">ペット同伴</a></li>
+                    <ul class="menu__item__wrap eat__wrap">
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>ドッグカフェ</div>
+                            </a></li>
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>ペットとお食事</div>
+                            </a></li>
                     </ul>
                 </div>
                 <p class="gnav">モデルコース</p>
                 <div class="menu__wrap">
                     <div class="gnav__icon"><img src="../assets/img/cat.jpg" alt=""></div>
-                    <ul class="menu__item__wrap">
-                        <li class="menu__item"><a href="">川コース</a></li>
-                        <li class="menu__item"><a href="">海コース</a></li>
-                        <li class="menu__item"><a href="">山コース</a></li>
+                    <ul class="menu__item__wrap model__course__wrap">
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>川コース</div>
+                            </a></li>
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>海コース</div>
+                            </a></li>
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>山コース</div>
+                            </a></li>
                     </ul>
                 </div>
-                <p class="gnav">特集記事</p>
+                <p class="gnav">おすすめ情報</p>
                 <div class="menu__wrap">
                     <div class="gnav__icon"><img src="../assets/img/cat.jpg" alt=""></div>
-                    <ul class="menu__item__wrap">
-                        <li class="menu__item"><a href="">動物病院</a></li>
-                        <li class="menu__item"><a href="">マナー</a></li>
-                        <li class="menu__item"><a href="">レンタカー(犬OK)</a></li>
-                        <li class="menu__item"><a href="">お出かけ情報</a></li>
-                        <li class="menu__item"><a href="">徳島の豆知識</a></li>
-                        <li class="menu__item"><a href="">犬の豆知識</a></li>
-                        <li class="menu__item"><a href="">特集</a></li>
-                        <li class="menu__item"><a href="">イベント</a></li>
+                    <ul class="menu__item__wrap special__wrap">
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>マナー</div>
+                            </a></li>
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>犬の豆知識</div>
+                            </a></li>
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>お出かけ情報</div>
+                            </a></li>
+                        <li class="menu__item"><a href=""><img src="../assets/img/cat.jpg" alt="">
+                                <div>特集</div>
+                            </a></li>
                     </ul>
+                </div>
+                <p class="gnav">検索</p>
             </nav>
         </div>
     </header>
