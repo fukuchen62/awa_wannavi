@@ -190,6 +190,7 @@ header {
 }
 .menu__wrap {
     display: flex;
+    justify-content: center;
 }
 
 /* ワード検索の虫眼鏡アイコン */
@@ -387,15 +388,20 @@ header {
         top: 100px;
         /* justify-content: space-between; */
         left: 0px;
+        position: absolute;
+        visibility: hidden;
 
     }
+    /* メニューを隠す */
     .hamburger__menu__content ul:nth-of-type(1){
         position: absolute;
+        visibility: hidden;
     }
 
     .menu__wrap {
     display: flex;
     height: auto;
+    position: absolute;
     }
     .menu__wrap li {
         list-style: none;
@@ -415,7 +421,6 @@ header {
         text-align: center;
         line-height: 50px;
         height: auto;
-        visibility: visible;
         opacity: 1;
         border: #000 solid 1px;
         width: 100%;
@@ -496,4 +501,28 @@ header {
         background-color: #f3e06e;
         border:1px solid #000;
     }
+}
+/* ホバーアクション */
+.pray__hover:hover {
+    opacity: 0;
+}
+.pray__hover:hover {
+    opacity: 0.7;
+}
+
+.stay__hover:hover{
+    opacity: 0.7;
+}
+.eat__hover:hover {
+    opacity: 0.7;
+}
+.model__course__hover:hover {
+    opacity: 0.7;
+}
+.special__hover:hover {
+    opacity: 0.7;
+}
+
+.search__hover:hover {
+    opacity: 0.7;
 }
