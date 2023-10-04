@@ -17,7 +17,7 @@
     }
 }
 
-.facility-name {
+.facility__name {
     border-radius: 35px;
     border: 5px solid #000;
     background: #8CCBE7;
@@ -27,16 +27,16 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: 900;
 }
 
 @media (min-width:768px) {
-    .facility-name {
+    .facility__name {
         display: flex;
         width: 500px;
         height: 86px;
-        font-size: 2.4rem;
+        font-size: 35px;
     }
 }
 
@@ -46,26 +46,21 @@
     align-items: center;
 }
 
-.flex-sb {
+.flex__sb {
     display: flex;
     justify-content: space-between;
 }
 
-.flex-sa {
-    display: flex;
-    justify-content: space-around;
-}
-
-.top-photo {
+.top__photo {
     padding: 0 10px;
 }
 
-.photo-container {
+.photo__container {
     padding: 10px 10px;
     /* 両サイドにスペース */
 }
 
-.s-img {
+.s__img {
     width: 23%;
 }
 
@@ -73,7 +68,7 @@
     margin: 10px 0;
 }
 
-.border-box {
+.border__box {
     border-radius: 8px;
     border: 1px solid #000;
     background: #FFF;
@@ -112,7 +107,7 @@
     flex-wrap: wrap;
 }
 
-.column-flex-left {
+.column__flex__left {
     display: flex;
     flex-wrap: wrap;
 }
@@ -131,43 +126,11 @@
 
 
 /*********************/
-/* murakami.css部分 */
+/* shinyama.css部分 */
 /*********************/
 
 .display {
     display: flex;
-}
-
-
-/* 大見出し */
-.headline {
-    margin: 0 auto;
-    width: 200px;
-    height: 60px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    border: 3px dashed #000;
-    background: #8CCBE7;
-    font-size: 16px;
-}
-
-@media screen and (min-width:769px) {
-
-    /* 大見出し（メディアクエリ） */
-    .headline {
-        width: 330px;
-        height: 90px;
-        margin-bottom: 80px;
-        font-size: 24px;
-    }
-
-    /* 仕切りライン（メディアクエリ） */
-    .line {
-        display: block;
-        width: 100%;
-        border: 1px solid #000;
-    }
 }
 
 .h2__title {
@@ -206,7 +169,7 @@
     border-radius: 20px;
     border: 5px solid #000;
     background: #8CCBE7;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: bold;
     color: #000;
     font-family: Zen Maru Gothic;
@@ -215,7 +178,13 @@
     line-height: normal;
 }
 
-.info-wrap {
+@media screen and (min-width:769px) {
+    .info {
+        font-size: 26px;
+    }
+}
+
+.info__wrap {
     margin: 0 10px;
 }
 
@@ -279,18 +248,18 @@
 }
 
 @media (min-width:768px) {
-    .info-wrap {
+    .info__wrap {
         width: 80%;
         /* display: flex; */
         margin: 0 auto;
         /* justify-content: center; */
     }
 
-    .info-wrap li {
+    .info__wrap li {
         display: flex;
     }
 
-    .info-wrap li div {
+    .info__wrap li div {
         margin-left: 30%;
     }
 }
@@ -498,7 +467,7 @@
     border-radius: 20px;
     border: 3px dashed #000;
     background: #8CCBE7;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 /* 仕切りライン */
@@ -513,7 +482,7 @@
         width: 330px;
         height: 90px;
         margin-bottom: 80px;
-        font-size: 24px;
+        font-size: 30px;
     }
 
     /* 仕切りライン（メディアクエリ） */
@@ -557,6 +526,9 @@
 /******************/
 /* フォントサイズ */
 /******************/
+.fs35 {
+    font-size: 35px;
+}
 
 .fs24 {
     font-size: 24px;
