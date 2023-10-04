@@ -22,7 +22,7 @@
 
     }
 
-    .column-flex {
+    .column__flex {
         display: flex;
         justify-content: center;
     }
