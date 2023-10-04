@@ -1,7 +1,7 @@
 <!-- header.phpを読み込む -->
 <?php get_header(); ?>
 
-<h2 class="pageTitle">遊ぶ<span>enjoy</span></h2>
+<h2 class="pageTitle"><?php the_field("enjoy_type"); ?></h2>
 
 <!-- パンくずリスト出力 -->
 <?php get_template_part("template-parts/breadcrumb"); ?>
@@ -17,7 +17,7 @@
                     <table>
                         <tr>
                             <th>施設名</th>
-                            <td><?php the_field("facility"); ?></td>
+                            <td><?php the_title(); ?></td>
                         </tr>
                         <tr>
                             <th>住所</th>
@@ -117,7 +117,11 @@
                         </tr>
                         <tr>
                             <th>芝生エリア</th>
-                            <td><?php the_field("grass"); ?></td>
+                            <td><?php if (get_field("grass")) {
+                                    echo "有";
+                                } else {
+                                    echo "無";
+                                } ?></td>
                         </tr>
                         <tr>
                             <th>自動販売機</th>
@@ -125,7 +129,11 @@
                         </tr>
                         <tr>
                             <th>屋根付き休憩室</th>
-                            <td><?php the_field("roof"); ?></td>
+                            <td><?php if (get_field("roof")) {
+                                    echo "有";
+                                } else {
+                                    echo "無";
+                                } ?></td>
                         </tr>
                         <tr>
                             <th>禁止事項</th>
@@ -137,7 +145,11 @@
                         </tr>
                         <tr>
                             <th>フィールド</th>
-                            <td><?php the_field("field"); ?></td>
+                            <td><?php if (get_field("field")) {
+                                    echo "芝";
+                                } else {
+                                    echo "砂";
+                                }; ?></td>
                         </tr>
                         <tr>
                             <th>フェンスの高さ</th>
@@ -173,7 +185,10 @@
                         </tr>
 
                     </table>
+                    <?php the_field("iframe"); ?>
                 </div>
+
+
             </section>
         </main>
 

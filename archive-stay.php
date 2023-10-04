@@ -5,7 +5,7 @@
 <?php get_template_part('template-parts/breadcrumb'); ?>
 
 <?php
-$kinds = get_terms(array('taxonomy' => 'kind'));
+$kinds = get_terms(array('taxonomy' => 'stay_type'));
 if (!empty($kinds)) :
 ?>
     <div class="pageNav">
@@ -19,7 +19,7 @@ if (!empty($kinds)) :
 
 <main class="main">
     <?php
-    $kinds = get_terms(array('taxonomy' => 'kind'));
+    $kinds = get_terms(array('taxonomy' => 'stay_type'));
     if (!empty($kinds)) :
     ?>
         <?php foreach ($kinds as $kind) : ?>
@@ -34,13 +34,13 @@ if (!empty($kinds)) :
                         <?php
                         // メニューの投稿タイプ
                         $args = array(
-                            'post_type' => 'menu',
+                            'post_type' => 'stay',
                             'posts_per_page' => -1,
                         );
                         // 料理の種類で絞り込む
                         $taxquerysp = array('relation' => 'AND');
                         $taxquerysp[] = array(
-                            'taxonomy' => 'kind',
+                            'taxonomy' => 'stay_type',
                             'terms' => $kind->slug,
                             'field' => 'slug',
                         );
