@@ -1,18 +1,17 @@
 <!-- header.phpを読み込む -->
 <?php get_header(); ?>
 
-<h2 class="pageTitle">メニュー<span>MENU</span></h2>
+<?php
+$kind_slug = get_query_var("stay_type");
+$kind = get_term_by("slug", $kind_slug, "stay_type");
+?>
+
+<h2 class="pageTitle"><?php echo $kind->name; ?></h2>
 
 <!-- パンくずリスト出力 -->
 <?php get_template_part("template-parts/breadcrumb"); ?>
 
 <main class="main">
-
-	<?php
-	$kind_slug = get_query_var("kind");
-	$kind = get_term_by("slug", $kind_slug, "kind");
-	print_r($kind);
-	?>
 
 	<section class="sec">
 		<div class="container">
