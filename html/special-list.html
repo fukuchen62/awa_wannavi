@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSSの読み込み -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/header-footer.css">
+    <link rel="stylesheet" href="../assets/css/special-list.css">
+
+    <!-- 肉球アイコンなどのfontawesome読み込み用 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <!-- googlefontの読み込みと適用 -->
+    <!-- zen maru gothicを利用 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;900&display=swap" rel="stylesheet">
+
+
+
+    <title>特集記事＠阿波わんNavi</title>
+</head>
+<body class="body__wrapper">
+    <!-- header開始 -->
+    <header>
+        <div class="wrapper">
+            <div class="header__logo">
+                <h1 class="js__title__logo">
+                            <a href=""><img src="../assets/img/cat.jpg" alt="AwAワンNaviわんこと一緒徳島の自然の中でのびのびたのしもう"></a>
+                        </h1>
+            </div>
+            <!-- headerナビゲーション -->
+            <btn class="hamburger__menu__btn"><span></span></btn>
+            <nav class="hamburger__menu__content">
+                <div class="hamburger__menu__content__inner">
+                    <!-- 検索フォーム -->
+                    <div class="form__box">
+                        <form action="" method="get" class="header__search form__box">
+                            <!---- name="s"サーチのs 決まっている文字 -->
+                            <input class="form__input" type="text" name="s" value="" maxlength="20" placeholder="キーワードを入力">
+                            <button class="form__button fa__search" value="">
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </form>
+                    </div>
+                    <p class="gnav">条件検索</p>
+                    <div class="menu__wrap">
+                        <div class="gnav__search">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <ul class="menu__item__search__wrap">
+                            <a class="menu__item__search" href="">
+                                <li>検索</li>
+                                <span></span>
+                            </a>
+
+                        </ul>
+                    </div>
+                </div>
+                <p class="gnav">遊ぶ</p>
+                <div class="menu__wrap">
+                    <div class="gnav__icon"><img src="../assets/img/cat.jpg" alt=""></div>
+                    <ul class="menu__item__wrap">
+                        <li class="menu__item"><a href="">公園</a></li>
+                        <li class="menu__item"><a href="">ドッグラン</a></li>
+                        <li class="menu__item"><a href="">自然</a></li>
+                        <li class="menu__item"><a href="">商業施設</a></li>
+                        <li class="menu__item"><a href="">観光スポット</a></li>
+                    </ul>
+                </div>
+                <p class="gnav">泊まる</p>
+                <div class="menu__wrap">
+                    <div class="gnav__icon"><img src="../assets/img/cat.jpg" alt=""></div>
+                    <ul class="menu__item__wrap">
+                        <li class="menu__item"><a href="">ペットホテル</a></li>
+                        <li class="menu__item"><a href="">ペット同伴</a></li>
+                    </ul>
+                </div>
+                <p class="gnav">食べる</p>
+                <div class="menu__wrap">
+                    <div class="gnav__icon"><img src="../assets/img/cat.jpg" alt=""></div>
+                    <ul class="menu__item__wrap">
+                        <li class="menu__item"><a href="">ドッグカフェ</a></li>
+                        <li class="menu__item"><a href="">キャンプ</a></li>
+                        <li class="menu__item"><a href="">ペット同伴</a></li>
+                    </ul>
+                </div>
+                <p class="gnav">モデルコース</p>
+                <div class="menu__wrap">
+                    <div class="gnav__icon"><img src="../assets/img/cat.jpg" alt=""></div>
+                    <ul class="menu__item__wrap">
+                        <li class="menu__item"><a href="">川コース</a></li>
+                        <li class="menu__item"><a href="">海コース</a></li>
+                        <li class="menu__item"><a href="">山コース</a></li>
+                    </ul>
+                </div>
+                <p class="gnav">特集記事</p>
+                <div class="menu__wrap">
+                    <div class="gnav__icon"><img src="../assets/img/cat.jpg" alt=""></div>
+                    <ul class="menu__item__wrap">
+                        <li class="menu__item"><a href="">動物病院</a></li>
+                        <li class="menu__item"><a href="">マナー</a></li>
+                        <li class="menu__item"><a href="">レンタカー(犬OK)</a></li>
+                        <li class="menu__item"><a href="">お出かけ情報</a></li>
+                        <li class="menu__item"><a href="">徳島の豆知識</a></li>
+                        <li class="menu__item"><a href="">犬の豆知識</a></li>
+                        <li class="menu__item"><a href="">特集</a></li>
+                        <li class="menu__item"><a href="">イベント</a></li>
+                    </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- header修了 -->
+    <main class="container">
+
+        <!-- h2帯タイトル -->
+        <div class="container">
+
+            <div class="banner__head">
+                <h2 class="page__title">おすすめ情報</h2>
+            </div>
+
+        </div>
+
+        <!-- パンくずリスト -->
+        <div class="Breadcrumb">
+            <a href="#">トップ > おすすめ情報一覧</a>
+        </div>
+
+
+
+
+
+        <!-- 2col全体を格納するコンテナー -->
+        <div class="container__col">
+
+            <!-- メインコラムコンテナー -->
+            <div class="main__col">
+                <!-- 帯になるコンテナーのタイトル -->
+                <div class="container">
+
+                    <!-- コンテンツのサブタイトル -->
+
+                    <!-- common.cssのsub__titleを利用しているが、タブの装飾と配色の変更の為、それぞれに名前を指定した-->
+                    <h3 class="sub__title manner yellow"> マナー</h3>
+                </div>
+
+
+                <!-- カード型コンテンツのテンプレート -->
+                <!-- デザインはカンプどおりに作成するとして、機能などは逐一考える -->
+
+
+                <div class="container card__2col pd10 mb40">
+
+
+                    <div class="card__wrapper mb40">
+                        <div class="card__block">
+                            <img class="card__img" src="../assets/img/cat.jpg" alt="">
+                            <div class="card__content">
+                                <div class="card__flex">
+                                    <div class="card__title">徳島●●●公園</div>
+                                    <div class="card__category">遊ぶ</div>
+                                </div>
+
+                                <div class="card__text">
+                                    <div class="card__address">●住所：徳島県徳島市鮎喰町２丁目５６－１１</div>
+                                    <div class="card__number">●お問い合わせ：０８０－６３７９－７４３７</div>
+                                    <div class="card__url"></div>
+                                </div>
+                            </div>
+                            <div class="card__link">
+                                <a href="#">もっと見る</a>
+                                <!-- <a href="#">FAQ</a>
+                                    <a href="#">PRIVACY</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card__wrapper mb40">
+                        <div class="card__block">
+                            <img class="card__img" src="../assets/img/cat.jpg" alt="">
+                            <div class="card__content">
+                                <div class="card__flex">
+                                    <div class="card__title">徳島●●●公園</div>
+                                    <div class="card__category">遊ぶ</div>
+                                </div>
+
+                                <div class="card__text">
+                                    <div class="card__address">●住所：徳島県徳島市鮎喰町２丁目５６－１１</div>
+                                    <div class="card__number">●お問い合わせ：０８０－６３７９－７４３７</div>
+                                    <div class="card__url"></div>
+                                </div>
+                            </div>
+                            <div class="card__link">
+                                <a href="#">もっと見る</a>
+                                <!-- <a href="#">FAQ</a>
+                                                    <a href="#">PRIVACY</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card__wrapper mb40">
+                        <div class="card__block">
+                            <img class="card__img" src="../assets/img/cat.jpg" alt="">
+                            <div class="card__content">
+                                <div class="card__flex">
+                                    <div class="card__title">徳島●●●公園</div>
+                                    <div class="card__category">遊ぶ</div>
+                                </div>
+
+                                <div class="card__text">
+                                    <div class="card__address">●住所：徳島県徳島市鮎喰町２丁目５６－１１</div>
+                                    <div class="card__number">●お問い合わせ：０８０－６３７９－７４３７</div>
+                                    <div class="card__url"></div>
+                                </div>
+                            </div>
+                            <div class="card__link">
+                                <a href="#">もっと見る</a>
+                                <!-- <a href="#">FAQ</a>
+                                    <a href="#">PRIVACY</a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 雲moreボタン -->
+                <div class="more__btn mb60">
+                    <img src="../assets/img/more-btn.png" alt="more"></img>
+                </div>
+            </div>
+
+            <!-- aside カテゴリー一覧 -->
+            <!-- <div class="container"> -->
+
+            <div class="aside__col">
+                <div class="sub__title yellow">カテゴリー一覧</div>
+
+                <div class="category__innner">
+                    <ul>
+                        <li class="category__list"><a href="#">マナー</a></li>
+                        <li class="category__list"><a href="#">犬の豆知識</a></li>
+                        <li class="category__list"><a href="#">お出かけ情報</a></li>
+                        <li class="category__list"><a href="#">特集</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- </div> -->
+        </div>
+    </main>
+
+    <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="../assets/js/commn.js"></script>
+
+</body>
+</html>
