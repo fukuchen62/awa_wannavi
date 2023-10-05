@@ -179,13 +179,11 @@ header {
 
 /* ワード検索の虫眼鏡アイコン */
 
-.fa-solid {
+.lupe {
     color: #fff;
     background-color: #000;
-    width: 20px;
-    height: 20px;
+    width: 23px;
     border-radius: 50%;
-    padding: 2px;
 
 }
 
@@ -194,7 +192,7 @@ header {
     left: 0;
 }
 /* 輪っか部分 */
-.fa__search__sp span:nth-child(1) {
+.lupe__sp span:nth-child(1) {
     position: absolute;
     border: 4px solid #d9d9d9;
     border-radius: 12px;
@@ -205,7 +203,7 @@ header {
 
 }
 /* 柄部分 */
-.fa__search__sp span:nth-child(2) {
+.lupe__sp span:nth-child(2) {
     position: absolute;
     border: solid 2px #d9d9d9;
     background-color: #d9d9d9;
@@ -390,7 +388,6 @@ header {
         text-align: centers;
         flex-wrap: nowrap;
         max-width: initial;
-        max-width: 2560px;
         width: 100%;
         background-color: #f3e06e;
         padding: 20px;
@@ -399,7 +396,7 @@ header {
         top: 100px;
         /* justify-content: space-between; */
         left: 0px;
-        position: absolute;
+        position: fixed;
         visibility: hidden;
     }
 }
