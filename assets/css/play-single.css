@@ -8,6 +8,18 @@
     background-color: #C6DF74;
 }
 
+@media (min-width:768px) {
+    .h2__title {
+        display: flex;
+        height: 140px;
+        padding: 48px 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+}
+
 .top__photo {
     padding: 0 10px;
 }
@@ -41,17 +53,6 @@
     border: 1px solid black;
 }
 
-@media (min-width:768px) {
-    .h2__title {
-        display: flex;
-        height: 140px;
-        padding: 48px 0px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex-shrink: 0;
-    }
-}
 
 .facility__name {
     border-radius: 35px;
@@ -142,60 +143,6 @@
     display: flex;
 }
 
-
-/* 大見出し */
-.headline {
-    margin: 0 auto;
-    width: 200px;
-    height: 60px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    border: 3px dashed #000;
-    background: #C6DF74;
-    font-size: 24px;
-}
-
-@media screen and (min-width:769px) {
-
-    /* 大見出し（メディアクエリ） */
-    .headline {
-        width: 330px;
-        height: 90px;
-        margin-bottom: 80px;
-        font-size: 30px;
-    }
-
-    /* 仕切りライン（メディアクエリ） */
-    .line {
-        display: block;
-        width: 100%;
-        border: 1px solid #000;
-    }
-}
-
-.h2__title {
-    /* 立幅60px */
-    height: 60px;
-    /* 行の真ん中 */
-    line-height: 50px;
-    /* コンテナの横幅いっぱい */
-    width: 100%;
-    /* 無いとタイトルのバランスが微妙、下にしずむ */
-    /* padding-bottom: 10px; */
-    /* 上下の邪魔しない為のmargin */
-    margin: 0px auto;
-    /* h2のままだと小さすぎるのでサイズを調整 */
-    font-size: 2.4rem;
-    /* h2の文字をセンターよせにする */
-    text-align: center;
-    /* バックのカラーを確認 */
-    background-color: #C6DF74;
-    /* ボーダーの大きさと囲いの調整 */
-    border-top: 5px dashed #333;
-    border-bottom: 5px dashed #333;
-    font-weight: bold;
-}
 
 /**************************************************/
 /* 一覧ページのコンテンツ内にあるサブタイトルのcss */
@@ -341,6 +288,7 @@
     }
 }
 
+
 /*****************************/
 /* カード型記事のテンプレート */
 /*****************************/
@@ -352,122 +300,6 @@
     margin: 0 1rem;
 }
 
-/* 全体のレイアウトの枠 */
-.card__wrapper {
-    margin: 1rem auto;
-    width: 100%;
-}
-
-/* ホバーした時Y軸方向に下がり、ボタンが動くように見える */
-.card__wrapper:hover {
-    transform: translateY(+5px);
-    box-shadow: 0 7px 34px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
-    transition: all .5s;
-}
-
-/* これが一番初めに影に見えている部分 */
-.card__block {
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px #ccc;
-}
-
-/* カードの画像は丸さをつける */
-.card__img {
-    border-radius: 5px 5px 0 0;
-    max-width: 100%;
-    height: auto;
-}
-
-/* テキスト部を覆う箱 */
-.card__content {
-    padding: 8px 20px 20px;
-}
-
-/* テキスト上段のテキストなど、フレックスでタグごと並べている */
-.card__flex {
-    display: flex;
-    /* 均等に分ける */
-    justify-content: space-between;
-    /* フレックスボックスの並べ方を上から始める */
-    align-items: start;
-    /* 下の傍線 */
-    border-bottom: 2px dashed #333;
-}
-
-/* カード型の一番大きなタイトルネーム */
-.card__title {
-    font-size: 1.6rem;
-    color: #333;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-/* カテゴリーのタグ */
-.card__category {
-    font-size: 0.8rem;
-    color: red;
-    border: solid 1px red;
-    border-radius: 5px;
-    padding: 3px;
-}
-
-/* カードの薄くなった文字 */
-.card__text {
-    color: #777;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 0.2em;
-}
-
-/* もっと見るなどページ遷移の誘導 */
-.card__link {
-    text-align: center;
-    border-top: 1px solid #eee;
-    padding: 20px;
-}
-
-/* linkの色付け */
-.card__link a {
-    text-decoration: none;
-    color: #4f96f6;
-    margin: 0 10px;
-    font-size: 1.6rem;
-}
-
-/* リンクのAをホバーした時の色 */
-.card__link a:hover {
-    color: #6bb6ff;
-}
-
-@media screen and (min-width:768px) {
-
-    .card__box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    /* 全体のレイアウトの枠 */
-    .card__wrapper {
-        width: 30%;
-    }
-
-}
-
-@media screen and (min-width:1023px) {
-    .card__box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    /* 全体のレイアウトの枠 */
-    .card__wrapper {
-        width: 30%;
-    }
-
-}
 
 /*****************************/
 /* もっとみるmoreボタンの設計 */
@@ -644,6 +476,10 @@
 /* フォントサイズ */
 /******************/
 
+.fs35 {
+    font-size: 35px;
+}
+
 .fs24 {
     font-size: 24px;
 }
@@ -652,6 +488,9 @@
     font-size: 20px;
 }
 
+.fs16 {
+    font-size: 16px;
+}
 
 /******************/
 /* フォントの太さ */
@@ -679,19 +518,6 @@
 /*************************/
 /* フォントサイズ強制指定 */
 /*************************/
-.fs16 {
-    font-size: 16px;
-}
-
-.fs20to35 {
-    font-size: 20px;
-}
-
-@media screen and (min-width: 769px) {
-    .fs20to35 {
-        font-size: 35px;
-    }
-}
 
 .fs24to30 {
     font-size: 24px;
@@ -701,8 +527,4 @@
     .fs24to30 {
         font-size: 30px;
     }
-}
-
-.fs35 {
-    font-size: 35px;
 }

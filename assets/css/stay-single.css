@@ -4,6 +4,10 @@
 /* murakami.css部分 */
 /*********************/
 
+.h2__title {
+    /* バックのカラーを確認 */
+    background-color: #8CCBE7;
+}
 
 @media (min-width:768px) {
     .h2__title {
@@ -128,10 +132,6 @@
 /*********************/
 /* shinyama.css部分 */
 /*********************/
-
-.display {
-    display: flex;
-}
 
 /**************************************************/
 /* 一覧ページのコンテンツ内にあるサブタイトルのcss */
@@ -286,40 +286,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 1rem;
-}
-
-/* リンクのAをホバーした時の色 */
-.card__link a:hover {
-    color: #8CCBE7;
-}
-
-@media screen and (min-width:768px) {
-
-    .card__box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    /* 全体のレイアウトの枠 */
-    .card__wrapper {
-        width: 30%;
-    }
-
-}
-
-@media screen and (min-width:1023px) {
-    .card__box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    /* 全体のレイアウトの枠 */
-    .card__wrapper {
-        width: 30%;
-    }
-
 }
 
 /********************/
