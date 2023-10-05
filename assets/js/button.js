@@ -43,7 +43,7 @@ $(document).ready(function () {
             // 全部表示済の場合は、状態を切り替える
             if (show_tokushima >= num_tokushima) {
                 // ボタン名はもっと見るから閉じるに変更
-                jQuery('#btn__tokushima').text('とじる').addClass('close');
+                jQuery('#btn__tokushima').text('CLOSE');
 
                 // 表示フラグを切り替える
                 flag_show_tokushima = false;
@@ -54,7 +54,7 @@ $(document).ready(function () {
             jQuery(tokushima__contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
 
             // ボタン名はもっと見るから閉じるに変更
-            jQuery('#btn__tokushima').text('もっと見る').removeClass('close');
+            jQuery('#btn__tokushima').text('MORE').removeClass('close');
             // 表示フラグを切り替える
             flag_show_tokushima = true;
             // 表示数リセット
@@ -78,7 +78,7 @@ $(document).ready(function () {
             // 全部表示済の場合は、状態を切り替える
             if (show_east >= num_east) {
                 // ボタン名はもっと見るから閉じるに変更
-                jQuery('#btn__east').text('とじる').addClass('close');
+                jQuery('#btn__east').text('CLOSE').addClass('close');
 
                 // 表示フラグを切り替える
                 flag_show_east = false;
@@ -88,7 +88,7 @@ $(document).ready(function () {
             //４件目からを隠せる処理
             jQuery(east__contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
             // ボタン名はもっと見るから閉じるに変更
-            jQuery('#btn__east').text('もっと見る').removeClass('close');
+            jQuery('#btn__east').text('MORE').removeClass('close');
             // 表示フラグを切り替える
             flag_show_east = true;
             // 表示数リセット
@@ -111,7 +111,7 @@ $(document).ready(function () {
             show_west += num;
             if (show_west >= num_west) {
                 // ボタン名はもっと見るから閉じるに変更
-                jQuery('#btn__west').text('とじる').addClass('close');
+                jQuery('#btn__west').text('CLOSE').addClass('close');
                 // 表示フラグを切り替える
                 flag_show_west = false;
             }
@@ -120,7 +120,7 @@ $(document).ready(function () {
             //４件目からを隠せる処理
             jQuery(west__contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
             // ボタン名はもっと見るから閉じるに変更
-            jQuery('#btn__west').text('もっと見る').removeClass('close');
+            jQuery('#btn__west').text('MORE').removeClass('close');
             // 表示フラグを切り替える
             flag_show_west = true;
             show_west = 3;
@@ -142,7 +142,7 @@ $(document).ready(function () {
             show_south += num;
             if (show_south >= num_south) {
                 // ボタン名はopenからcloseに変更
-                jQuery('#btn__south').text('とじる').addClass('close');
+                jQuery('#btn__south').text('CLOSE').addClass('close');
                 // 表示フラグを切り替える
                 flag_show_south = false;
             }
@@ -151,7 +151,7 @@ $(document).ready(function () {
             //４件目からを隠せる処理
             jQuery(south__contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
             // ボタン名はもっと見るから閉じるに変更
-            jQuery('#btn__south').text('もっと見る').removeClass('close');
+            jQuery('#btn__south').text('MORE').removeClass('close');
             // 表示フラグを切り替える
             flag_show_south = true;
             show_south = 3;
