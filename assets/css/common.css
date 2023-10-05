@@ -81,6 +81,10 @@ a img:hover {
     background-color: #C6DF74;
 }
 
+.mw12 {
+    max-width: 1200px;
+}
+
 /*****************************************/
 /* ヘッダーの下に入ってくるバナー体の広告 */
 /*****************************************/
@@ -274,7 +278,7 @@ a img:hover {
 .sub__title {
     /* 形を整える為にflex */
     display: flex;
-    width: 200px;
+    width: 300px;
     height: 60px;
     margin: 0 auto;
     justify-content: center;
@@ -433,6 +437,115 @@ a img:hover {
 
 }
 
+
+/**********************/
+/* カード型レイアウト */
+/*********************/
+
+/* カードサイズ（スマホ） */
+.card {
+    position: relative;
+    width: 100%;
+    margin: 60px 0;
+}
+
+/* カード前面の影 */
+.card__front {
+    position: relative;
+    width: 96%;
+    padding: 20px 15px;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+}
+
+/* 画像比率固定 */
+.card img {
+    width: 100%;
+    aspect-ratio: 27 / 23;
+}
+
+/* タグ（遊ぶ、泊まる、食べる） */
+.card__tag {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    margin-top: 18px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background: #8CCBE7;
+}
+
+/* 施設名 */
+.card__outline {
+    padding: 18px 0;
+    border-bottom: 3px dashed #000;
+    font-size: 20px;
+}
+
+/* 詳細情報欄 */
+.card__textarea {
+    margin-top: 18px;
+    font-size: 16px;
+}
+
+/* urlはPC画面のみ表示 */
+.card__url {
+    display: none;
+}
+
+/* カード背面の影 */
+.card__back {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    width: 97%;
+    height: 100%;
+    border-right: 8px solid #000;
+    border-bottom: 8px solid #000;
+}
+
+@media screen and (min-width: 769px) {
+
+    /* カードサイズ（PC）+ カーソル判定 */
+    .card {
+        width: 30%;
+        margin: 60px 2.3% 0 1%;
+        cursor: pointer;
+    }
+
+    /* カードホバーアニメーション（下に下がって半透明化） */
+    .card:hover {
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+
+    .card:hover a {
+        color: #000;
+        opacity: 0.7;
+    }
+
+    /* カード背面の位置指定 */
+    .card__back {
+        right: -3px;
+    }
+
+    /* 詳細情報欄のレイアウト変更（横並び） */
+    .card__textarea dd {
+        display: inline-block;
+    }
+
+    .card__url {
+        display: inline-block;
+    }
+
+    /* カードの横並び試験用 */
+    .card__contents {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
 /*****************************/
 /* もっとみるmoreボタンの設計 */
 /*****************************/
@@ -459,25 +572,6 @@ a img:hover {
     }
 }
 
-/* カテゴリごとにmoreボタンを出すかどうか判定を行う為のcss  */
-.c-more1,
-.c-more2,
-.c-more3 {
-    overflow: hidden;
-    transition: all 0.4s ease 0s;
-}
-
-/* jqueryでhiddenのクラスを外して隠れている記事を出してあげる */
-/* .c-more1.is-hidden,
-.c-more2.is-hidden,
-.c-more3.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    margin: 0 10px;
-    padding: 0;
-} */
-
 .is-hidden {
     display: none;
 }
@@ -485,6 +579,52 @@ a img:hover {
 /* 記事(navi1)が四件以上あればhideをつけるこれはjquery */
 .hide {
     display: none;
+}
+
+
+/**************/
+/* MOREボタン */
+/**************/
+.more-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    outline: 3px solid rgb(255, 255, 255);
+    outline-offset: -8px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    outline: 3px solid rgb(255, 255, 255);
+    outline-offset: -8px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+
+/* ホバーアニメーション */
+.more-button:hover {
+    opacity: 0.7;
 }
 
 /*****************************************/
