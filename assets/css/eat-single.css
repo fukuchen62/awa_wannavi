@@ -4,6 +4,10 @@
 /* murakami.css部分 */
 /*********************/
 
+.h2__title {
+    /* バックのカラーを確認 */
+    background-color: #E5A799;
+}
 
 @media (min-width:768px) {
     .h2__title {
@@ -17,7 +21,7 @@
     }
 }
 
-.facility-name {
+.facility__name {
     border-radius: 35px;
     border: 5px solid #000;
     background: #E5A799;
@@ -27,45 +31,45 @@
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: 900;
 }
 
 @media (min-width:768px) {
-    .facility-name {
+    .facility__name {
         display: flex;
         width: 500px;
         height: 86px;
-        font-size: 2.4rem;
+        font-size: 35px;
     }
 }
 
-.flex-c {
+.flex__c {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.flex-sb {
+.flex__sb {
     display: flex;
     justify-content: space-between;
 }
 
-.flex-sa {
+.flex__sa {
     display: flex;
     justify-content: space-around;
 }
 
-.top-photo {
+.top__photo {
     padding: 0 10px;
 }
 
-.photo-container {
+.photo__container {
     padding: 10px 10px;
     /* 両サイドにスペース */
 }
 
-.s-img {
+.s__img {
     width: 23%;
 }
 
@@ -73,7 +77,7 @@
     margin: 10px 0;
 }
 
-.border-box {
+.border__box {
     border-radius: 8px;
     border: 1px solid #000;
     background: #FFF;
@@ -131,67 +135,8 @@
 
 
 /*********************/
-/* murakami.css部分 */
+/* shinyama.css部分 */
 /*********************/
-
-.display {
-    display: flex;
-}
-
-
-/* 大見出し */
-.headline {
-    margin: 0 auto;
-    width: 200px;
-    height: 60px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    border: 3px dashed #000;
-    background: #E5A799;
-    font-size: 16px;
-}
-
-@media screen and (min-width:769px) {
-
-    /* 大見出し（メディアクエリ） */
-    .headline {
-        width: 330px;
-        height: 90px;
-        margin-bottom: 80px;
-        font-size: 24px;
-    }
-
-    /* 仕切りライン（メディアクエリ） */
-    .line {
-        display: block;
-        width: 100%;
-        border: 1px solid #000;
-    }
-}
-
-.h2__title {
-    /* 立幅60px */
-    height: 60px;
-    /* 行の真ん中 */
-    line-height: 50px;
-    /* コンテナの横幅いっぱい */
-    width: 100%;
-    /* 無いとタイトルのバランスが微妙、下にしずむ */
-    /* padding-bottom: 10px; */
-    /* 上下の邪魔しない為のmargin */
-    margin: 0px auto;
-    /* h2のままだと小さすぎるのでサイズを調整 */
-    font-size: 2.4rem;
-    /* h2の文字をセンターよせにする */
-    text-align: center;
-    /* バックのカラーを確認 */
-    background-color: #E5A799;
-    /* ボーダーの大きさと囲いの調整 */
-    border-top: 5px dashed #333;
-    border-bottom: 5px dashed #333;
-    font-weight: bold;
-}
 
 /**************************************************/
 /* 一覧ページのコンテンツ内にあるサブタイトルのcss */
@@ -206,7 +151,7 @@
     border-radius: 20px;
     border: 5px solid #000;
     background: #E5A799;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: bold;
     color: #000;
     font-family: Zen Maru Gothic;
@@ -215,7 +160,13 @@
     line-height: normal;
 }
 
-.info-wrap {
+@media screen and (min-width:769px) {
+    .info {
+        font-size: 26px;
+    }
+}
+
+.info__wrap {
     margin: 0 10px;
 }
 
@@ -279,18 +230,18 @@
 }
 
 @media (min-width:768px) {
-    .info-wrap {
+    .info__wrap {
         width: 80%;
         /* display: flex; */
         margin: 0 auto;
         /* justify-content: center; */
     }
 
-    .info-wrap li {
+    .info__wrap li {
         display: flex;
     }
 
-    .info-wrap li div {
+    .info__wrap li div {
         margin-left: 30%;
     }
 }
@@ -342,122 +293,6 @@
     margin: 0 1rem;
 }
 
-/* 全体のレイアウトの枠 */
-.card__wrapper {
-    margin: 1rem auto;
-    width: 100%;
-}
-
-/* ホバーした時Y軸方向に下がり、ボタンが動くように見える */
-.card__wrapper:hover {
-    transform: translateY(+5px);
-    box-shadow: 0 7px 34px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
-    transition: all .5s;
-}
-
-/* これが一番初めに影に見えている部分 */
-.card__block {
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px #ccc;
-}
-
-/* カードの画像は丸さをつける */
-.card__img {
-    border-radius: 5px 5px 0 0;
-    max-width: 100%;
-    height: auto;
-}
-
-/* テキスト部を覆う箱 */
-.card__content {
-    padding: 8px 20px 20px;
-}
-
-/* テキスト上段のテキストなど、フレックスでタグごと並べている */
-.card__flex {
-    display: flex;
-    /* 均等に分ける */
-    justify-content: space-between;
-    /* フレックスボックスの並べ方を上から始める */
-    align-items: start;
-    /* 下の傍線 */
-    border-bottom: 2px dashed #333;
-}
-
-/* カード型の一番大きなタイトルネーム */
-.card__title {
-    font-size: 1.6rem;
-    color: #333;
-    font-weight: 700;
-    margin-bottom: 5px;
-}
-
-/* カテゴリーのタグ */
-.card__category {
-    font-size: 0.8rem;
-    color: red;
-    border: solid 1px red;
-    border-radius: 5px;
-    padding: 3px;
-}
-
-/* カードの薄くなった文字 */
-.card__text {
-    color: #777;
-    font-size: 14px;
-    line-height: 1.5;
-    margin-bottom: 0.2em;
-}
-
-/* もっと見るなどページ遷移の誘導 */
-.card__link {
-    text-align: center;
-    border-top: 1px solid #eee;
-    padding: 20px;
-}
-
-/* linkの色付け */
-.card__link a {
-    text-decoration: none;
-    color: #4f96f6;
-    margin: 0 10px;
-    font-size: 1.6rem;
-}
-
-/* リンクのAをホバーした時の色 */
-.card__link a:hover {
-    color: #E5A799;
-}
-
-@media screen and (min-width:768px) {
-
-    .card__box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    /* 全体のレイアウトの枠 */
-    .card__wrapper {
-        width: 30%;
-    }
-
-}
-
-@media screen and (min-width:1023px) {
-    .card__box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    /* 全体のレイアウトの枠 */
-    .card__wrapper {
-        width: 30%;
-    }
-
-}
 
 /*****************************/
 /* もっとみるmoreボタンの設計 */
@@ -558,6 +393,10 @@
 /* フォントサイズ */
 /******************/
 
+.fs35 {
+    font-size: 35px;
+}
+
 .fs24 {
     font-size: 24px;
 }
@@ -586,4 +425,19 @@
 
 .mt100 {
     margin-top: 100px;
+}
+
+
+/*********************/
+/* font-size強制指定 */
+/*********************/
+
+.fs24to30 {
+    font-size: 24px;
+}
+
+@media screen and (min-width: 769px) {
+    .fs24to30 {
+        font-size: 35px;
+    }
 }
