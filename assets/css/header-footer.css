@@ -100,7 +100,7 @@ header {
     left: 100%;
     background-color: #f3e06e;
     z-index: 80;
-    /* transition: 0.3s; */
+    transition: left 0.3s;
     /*アニメーション設定*/
 }
 /* PCnav */
