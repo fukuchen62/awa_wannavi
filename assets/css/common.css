@@ -468,7 +468,7 @@ a img:hover {
 }
 
 /* jqueryでhiddenのクラスを外して隠れている記事を出してあげる */
-.c-more1.is-hidden,
+/* .c-more1.is-hidden,
 .c-more2.is-hidden,
 .c-more3.is-hidden {
     visibility: hidden;
@@ -476,6 +476,10 @@ a img:hover {
     height: 0;
     margin: 0 10px;
     padding: 0;
+} */
+
+.is-hidden {
+    display: none;
 }
 
 /* 記事(navi1)が四件以上あればhideをつけるこれはjquery */

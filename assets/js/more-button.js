@@ -44,7 +44,7 @@ jQuery(document).ready(function () {
             jQuery(first__contents + '.is-hidden').slice(0, num).removeClass('is-hidden');
             // ボタン名はopenからcloseに変更
             jQuery('.one').text('')
-                // .addClass('close');
+            // .addClass('close');
             // 表示フラグを切り替える
             flag_show = false;
         } else {
@@ -63,9 +63,9 @@ jQuery(document).ready(function () {
     jQuery(secound__contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
 
 
-// });
+    // });
 
-// jQuery(document).ready(function () {
+    // jQuery(document).ready(function () {
 
 
     target = document.getElementById('navi2');
@@ -83,34 +83,34 @@ jQuery(document).ready(function () {
         document.getElementById('btn-txt2').classList.add('hide');
     }
 
-// });
+    // });
 
 
 
-// 表示・隠すボタンのクリック処理
-jQuery('.two').on('click', function () {
+    // 表示・隠すボタンのクリック処理
+    jQuery('.two').on('click', function () {
 
-    if (flag_show) {
-        // 隠すカードを表示させる
-        jQuery(secound__contents + '.is-hidden').slice(0, num).removeClass('is-hidden');
-        // ボタン名はopenからcloseに変更
-        jQuery('.two').text('')
+        if (flag_show) {
+            // 隠すカードを表示させる
+            jQuery(secound__contents + '.is-hidden').slice(0, num).removeClass('is-hidden');
+            // ボタン名はopenからcloseに変更
+            jQuery('.two').text('')
             // .addClass('close');
-        // 表示フラグを切り替える
-        flag_show = false;
-    } else {
-        //４件目からを隠せる処理
-        // jQuery(secound__contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
-        // ボタン名はopenからcloseに変更
-        // jQuery('.two').text('more').addClass('open2');
-        // 表示フラグを切り替える
-        flag_show = true;
-    }
+            // 表示フラグを切り替える
+            flag_show = false;
+        } else {
+            //４件目からを隠せる処理
+            // jQuery(secound__contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+            // ボタン名はopenからcloseに変更
+            // jQuery('.two').text('more').addClass('open2');
+            // 表示フラグを切り替える
+            flag_show = true;
+        }
 
-});
+    });
 
 
-// jQuery(document).ready(function () {
+    // jQuery(document).ready(function () {
     target = document.getElementById('camp3');
     count = target.childElementCount;
     // alert(count);
@@ -125,29 +125,29 @@ jQuery('.two').on('click', function () {
         // alert("kjfslkfjlsdk");
         document.getElementById('btn-txt3').classList.add('hide');
     }
-// });
+    // });
 
-jQuery(third__contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+    jQuery(third__contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
 
-// 表示・隠すボタンのクリック処理
-jQuery('.three').on('click', function () {
+    // 表示・隠すボタンのクリック処理
+    jQuery('.three').on('click', function () {
 
-    if (flag_show) {
-        // 隠すカードを表示させる
-        jQuery(third__contents + '.is-hidden').slice(0, num).removeClass('is-hidden');
-        // ボタン名はopenからcloseに変更
-        jQuery('.three').text('close').addClass('close');
-        // 表示フラグを切り替える
-        flag_show = false;
-    } else {
-        //４件目からを隠せる処理
-        jQuery(third__contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
-        // ボタン名はopenからcloseに変更
-        jQuery('.three').text('more').addClass('open3');
-        // 表示フラグを切り替える
-        flag_show = true;
-    }
+        if (flag_show) {
+            // 隠すカードを表示させる
+            jQuery(third__contents + '.is-hidden').slice(0, num).removeClass('is-hidden');
+            // ボタン名はopenからcloseに変更
+            jQuery('.three').text('close').addClass('close');
+            // 表示フラグを切り替える
+            flag_show = false;
+        } else {
+            //４件目からを隠せる処理
+            jQuery(third__contents + ':nth-child(n + ' + (show + 1) + ')').addClass('is-hidden');
+            // ボタン名はopenからcloseに変更
+            jQuery('.three').text('more').addClass('open3');
+            // 表示フラグを切り替える
+            flag_show = true;
+        }
 
-});
+    });
 
 });
