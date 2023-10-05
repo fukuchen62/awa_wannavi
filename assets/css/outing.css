@@ -1,32 +1,38 @@
 @charset "utf-8";
 
-/************************************/
-/* common.CSSから引用*/
-/* テキストのサイズ、配置変更 */
-/************************************/
-.banner__head {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.page__title {
-    font-size: 5.5rem;
-}
-
-
-
-/* common.cssのsub__titleを利用しているが、タブの装飾と配色の変更の為、それぞれに名前を指定した  */
-.manner {
+/* 記事タイトル */
+.article__title {
     margin: 20px auto;
-    border: 3px solid #000;
-    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+    font-size: 2.6rem;
+    width: fit-content;
+    border-bottom: dotted 6px #F3E06E;
+
 }
 
+/************************************/
+/* メイン記事  artical */
+/************************************/
 
-.card__2col {
+/* 記事本文 */
+.main__col {
     width: 100%;
-    padding: 30px 20px;
+    padding-right: 40px;
+}
+
+.article__sub__ttl {
+    margin: 50px 0 30px;
+    padding-left: 10px;
+    border-left: solid 8px #F3E06E;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.article__text {
+    font-size: 1.6rem;
+    line-height: 2.0;
+    margin: 30px 0 80px;
 }
 
 /************************************/
@@ -55,7 +61,7 @@
 /* サイドバー、カテゴリー一覧*/
 .aside__col {
     width: 100%;
-    margin: 20px 0;
+    /* margin: 20px 0; */
 }
 
 /* カテゴリーリストラップ */
@@ -78,29 +84,17 @@ ul .category__list {
     font-size: 2rem;
 }
 
-
 /************************************/
 /* main__colと aside__colを入れるコンテナー */
 /************************************/
 
 .container__col {
     width: 100%;
-    padding: 20px 0;
+    padding: 40px 10px;
 }
-
-/* h３（マナーバー）からmoreアイコンまで */
-.main__col {
-    width: 100%;
-}
-
 
 
 @media screen and (min-width:768px) {
-    .container__col {
-        width: 100%;
-        padding: 60px 0;
-    }
-
     .main__col {
         width: 70%;
         flex-wrap: wrap;
@@ -111,14 +105,12 @@ ul .category__list {
     }
 
     .card__2col {
-        width: 100%;
-        padding-top: 50px;
         display: flex;
         flex-wrap: wrap;
     }
 
     .card__wrapper {
-        width: 45%;
+        width: 30%;
     }
 
     .container__col {
@@ -128,23 +120,8 @@ ul .category__list {
 }
 
 
-/*********************************************************/
-/* /* @media screen and (min-width:1023px) */
-/* .manner内のfont-size以外は(min-width:768px)と同じです。 */
-/*********************************************************/
 
 @media screen and (min-width:1023px) {
-    .container__col {
-        width: 100%;
-        padding: 60px 0;
-    }
-
-    .manner {
-        margin: 20px auto;
-        border: 3px solid #000;
-        font-size: 3.5rem;
-    }
-
     .main__col {
         width: 70%;
         flex-wrap: wrap;
@@ -155,14 +132,12 @@ ul .category__list {
     }
 
     .card__2col {
-        width: 100%;
-        padding-top: 50px;
         display: flex;
         flex-wrap: wrap;
     }
 
     .card__wrapper {
-        width: 45%;
+        width: 30%;
     }
 
     .container__col {
@@ -171,14 +146,8 @@ ul .category__list {
 
 }
 
-
-
-
-
-
-
 /************************************/
-/* commonに追加?? */
+/* commonに追加したい */
 /************************************/
 .yellow {
     background-color: #F3E06E;
