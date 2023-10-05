@@ -86,11 +86,13 @@ a img:hover {
 /*****************************************/
 
 .banner__head {
+    display: flex;
     width: 100%;
     height: 150px;
     margin: 0 auto;
-    text-align: center;
-    background-image: url("../img/dog-banner.jpg");
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/hedder__banner.png");
     color: black;
     -webkit-text-stroke: 2px #fff;
     /* ベンダープレフィックス */
@@ -400,6 +402,7 @@ a img:hover {
 .card__link a:hover {
     color: #6bb6ff;
 }
+
 
 @media screen and (min-width:768px) {
 
