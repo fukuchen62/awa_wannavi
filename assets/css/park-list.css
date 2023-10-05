@@ -1,0 +1,136 @@
+/* comonへ */
+
+h3 {
+    font-size: 2rem;
+}
+
+.h2__title {
+    background-color: #C6DF74;
+}
+
+@media (min-width:768px) {
+    .h2__title {
+        display: flex;
+        height: 140px;
+        padding: 48px 0px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+}
+
+/*****************************/
+/* もどるボタンの設計 */
+/*****************************/
+
+/* もどるのボタンの大きさ */
+.modoru__btn {
+    width: 200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+@media screen and (min-width:768px) {
+
+    .modoru__btn {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width:1023px) {
+
+    .modoru__btn {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* comonへ終わり */
+
+
+/* h3エリア表示 */
+.tbl__center {
+    display: flex;
+    margin-top: 20px;
+    padding-left: 4rem;
+}
+
+/* h3のアンダーライン */
+.tbl__border {
+    border-bottom: solid 2px;
+    padding: 0.5rem 0;
+}
+
+/*-------------table ここから-----------*/
+
+/* tableのレイアウト3カラム */
+.tbl__sp {
+    width: 5%;
+}
+
+.tbl__main {
+    width: 90%;
+}
+
+/*thのアンダーライン、tdのアンダーライン*/
+.line__solid {
+    border-bottom: 1px solid #000000;
+    padding: 10px;
+}
+
+.line__dashed {
+    border-bottom: 1px dashed #000000;
+}
+
+/* .line__dashed td {
+    padding: 5px;
+} */
+
+.tbl__li {
+    width: 90%;
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.tbl__li th {
+    padding: 8px;
+    font-size: 1.4rem;
+}
+
+.tbl__li td:last-child {
+    padding: 8px;
+    border-bottom: 1px dashed #fff;
+}
+
+/* sp設定 */
+@media (max-width: 768px) {
+
+    .tbl__li {
+        width: 100%;
+    }
+
+    .tbl__li td {
+        width: auto;
+        display: block;
+        padding: 5px 0;
+    }
+
+    .tbl__li th {
+        display: none;
+    }
+
+    .line__solid {
+        display: none;
+    }
+
+    .tbl__li td:last-child {
+        padding-bottom: 10px;
+    }
+
+}
