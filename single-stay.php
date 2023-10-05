@@ -1,7 +1,7 @@
 <!-- header.phpを読み込む -->
 <?php get_header(); ?>
 
-<h2 class="pageTitle">泊まる<span>stay</span></h2>
+<h2 class="pageTitle"><?php the_field("stay_type"); ?></h2>
 
 <!-- パンくずリスト出力 -->
 <?php get_template_part("template-parts/breadcrumb"); ?>
@@ -17,7 +17,7 @@
                     <table>
                         <tr>
                             <th>施設名</th>
-                            <td><?php the_field("facility"); ?></td>
+                            <td><?php the_title(); ?></td>
                         </tr>
                         <tr>
                             <th>地域</th>

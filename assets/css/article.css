@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/* 記事タイトル */
+.article__title {
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 2.6rem;
+    width: fit-content;
+    border-bottom: dotted 6px #F3E06E;
+
+}
+
+/************************************/
+/* メイン記事  artical */
+/************************************/
+
+/* 記事本文 */
+.main__col {
+    width: 100%;
+    padding-right: 40px;
+}
+
+.article__sub__ttl {
+    margin: 50px 0 30px;
+    padding-left: 10px;
+    border-left: solid 8px #F3E06E;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.article__text {
+    font-size: 1.6rem;
+    line-height: 2.0;
+    margin: 30px 0 80px;
+}
+
+/************************************/
+/* aside カテゴリー一覧リスト */
+/************************************/
+
+/* カテゴリー一覧タグ*/
+.category__tag {
+    width: 80%;
+    height: 50px;
+    /* 行の真ん中 */
+    line-height: 40px;
+    margin: 0 auto;
+    /* 無いとタイトルのバランスが微妙、下にしずむ */
+    /* padding-bottom: 10px; */
+    /* 上下の邪魔しない為のmargin */
+    /* h2のままだと小さすぎるのでサイズを調整 */
+    font-size: 2rem;
+    /* h2の文字をセンターよせにする */
+    text-align: center;
+    /* ボーダーの大きさと囲いの調整 */
+    border: 3px dashed #000;
+    border-radius: 15px;
+}
+
+/* サイドバー、カテゴリー一覧*/
+.aside__col {
+    width: 100%;
+    /* margin: 20px 0; */
+}
+
+/* カテゴリーリストラップ */
+.category__innner {
+    width: 100%;
+    /* カテゴリ一覧タグと位置を合わせたいので,
+    両サイドのpaddingを％で指定 */
+    padding: 20px 12%;
+}
+
+ul {
+    list-style: none;
+}
+
+ul .category__list {
+    padding-left: 30px;
+    line-height: 3em;
+    background: url(../img/common/footprint.svg) left 0px top 22px no-repeat;
+    background-size: 20px auto;
+    font-size: 2rem;
+}
+
+/************************************/
+/* main__colと aside__colを入れるコンテナー */
+/************************************/
+
+.container__col {
+    width: 100%;
+    padding: 40px 10px;
+}
+
+
+@media screen and (min-width:768px) {
+    .main__col {
+        width: 70%;
+        flex-wrap: wrap;
+    }
+
+    .aside__col {
+        width: 30%;
+    }
+
+    .card__2col {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card__wrapper {
+        width: 30%;
+    }
+
+    .container__col {
+        display: flex;
+    }
+
+}
+
+
+
+@media screen and (min-width:1023px) {
+    .main__col {
+        width: 70%;
+        flex-wrap: wrap;
+    }
+
+    .aside__col {
+        width: 30%;
+    }
+
+    .card__2col {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card__wrapper {
+        width: 30%;
+    }
+
+    .container__col {
+        display: flex;
+    }
+
+}
+
+/************************************/
+/* commonに追加したい */
+/************************************/
+.yellow {
+    background-color: #F3E06E;
+}

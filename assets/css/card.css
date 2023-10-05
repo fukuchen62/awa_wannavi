@@ -1,24 +1,32 @@
 @charset "utf8";
 
+/**********************/
+/* カード型レイアウト */
+/*********************/
+
+/* カードサイズ（スマホ） */
 .card {
     position: relative;
     width: 100%;
+    margin: 60px 0;
 }
 
+/* カード前面の影 */
 .card__front {
     position: relative;
     width: 96%;
     padding: 20px 15px;
-    /* box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.4); */
     border-right: 3px solid #000;
     border-bottom: 3px solid #000;
 }
 
+/* 画像比率固定 */
 .card img {
     width: 100%;
     aspect-ratio: 27 / 23;
 }
 
+/* タグ（遊ぶ、泊まる、食べる） */
 .card__tag {
     display: flex;
     justify-content: center;
@@ -29,21 +37,25 @@
     background: #8CCBE7;
 }
 
+/* 施設名 */
 .card__outline {
     padding: 18px 0;
     border-bottom: 3px dashed #000;
     font-size: 20px;
 }
 
+/* 詳細情報欄 */
 .card__textarea {
     margin-top: 18px;
     font-size: 16px;
 }
 
+/* urlはPC画面のみ表示 */
 .card__url {
     display: none;
 }
 
+/* カード背面の影 */
 .card__back {
     position: absolute;
     right: 0;
@@ -55,30 +67,42 @@
 }
 
 @media screen and (min-width: 769px) {
+
+    /* カードサイズ（PC）+ カーソル判定 */
     .card {
         width: 30%;
-        max-width: 330px;
+        margin: 60px 2.3% 0 1%;
+        cursor: pointer;
     }
 
+    /* カードホバーアニメーション（下に下がって半透明化） */
     .card:hover {
         transform: translateY(10px);
         transition: 0.5s;
     }
 
+    .card:hover a {
+        color: #000;
+        opacity: 0.7;
+    }
 
+    /* カード背面の位置指定 */
     .card__back {
         right: -3px;
     }
 
+    /* 詳細情報欄のレイアウト変更（横並び） */
     .card__textarea dd {
         display: inline-block;
     }
 
-    .card__tag {
-        display: none;
-    }
-
     .card__url {
         display: inline-block;
+    }
+
+    /* カードの横並び試験用 */
+    .pc-flex {
+        display: flex;
+        flex-wrap: wrap;
     }
 }

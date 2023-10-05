@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/************************************/
+/* common.CSSから引用*/
+/* テキストのサイズ、配置変更 */
+/************************************/
+.banner__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__title {
+    font-size: 5.5rem;
+}
+
+
+
+/* common.cssのsub__titleを利用しているが、タブの装飾と配色の変更の為、それぞれに名前を指定した  */
+.manner {
+    margin: 20px auto;
+    border: 3px solid #000;
+    font-size: 2rem;
+}
+
+
+.card__2col {
+    width: 100%;
+    padding: 30px 20px;
+}
+
+/************************************/
+/* aside カテゴリー一覧リスト */
+/************************************/
+
+/* カテゴリー一覧タグ*/
+.category__tag {
+    width: 80%;
+    height: 50px;
+    /* 行の真ん中 */
+    line-height: 40px;
+    margin: 0 auto;
+    /* 無いとタイトルのバランスが微妙、下にしずむ */
+    /* padding-bottom: 10px; */
+    /* 上下の邪魔しない為のmargin */
+    /* h2のままだと小さすぎるのでサイズを調整 */
+    font-size: 2rem;
+    /* h2の文字をセンターよせにする */
+    text-align: center;
+    /* ボーダーの大きさと囲いの調整 */
+    border: 3px dashed #000;
+    border-radius: 15px;
+}
+
+/* サイドバー、カテゴリー一覧*/
+.aside__col {
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* カテゴリーリストラップ */
+.category__innner {
+    width: 100%;
+    /* カテゴリ一覧タグと位置を合わせたいので,
+    両サイドのpaddingを％で指定 */
+    padding: 20px 12%;
+}
+
+ul {
+    list-style: none;
+}
+
+ul .category__list {
+    padding-left: 30px;
+    line-height: 3em;
+    background: url(../img/common/footprint.svg) left 0px top 22px no-repeat;
+    background-size: 20px auto;
+    font-size: 2rem;
+}
+
+
+/************************************/
+/* main__colと aside__colを入れるコンテナー */
+/************************************/
+
+.container__col {
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* h３（マナーバー）からmoreアイコンまで */
+.main__col {
+    width: 100%;
+}
+
+
+
+@media screen and (min-width:768px) {
+    .container__col {
+        width: 100%;
+        padding: 60px 0;
+    }
+
+    .main__col {
+        width: 70%;
+        flex-wrap: wrap;
+    }
+
+    .aside__col {
+        width: 30%;
+    }
+
+    .card__2col {
+        width: 100%;
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card__wrapper {
+        width: 45%;
+    }
+
+    .container__col {
+        display: flex;
+    }
+
+}
+
+
+/*********************************************************/
+/* /* @media screen and (min-width:1023px) */
+/* .manner内のfont-size以外は(min-width:768px)と同じです。 */
+/*********************************************************/
+
+@media screen and (min-width:1023px) {
+    .container__col {
+        width: 100%;
+        padding: 60px 0;
+    }
+
+    .manner {
+        margin: 20px auto;
+        border: 3px solid #000;
+        font-size: 3.5rem;
+    }
+
+    .main__col {
+        width: 70%;
+        flex-wrap: wrap;
+    }
+
+    .aside__col {
+        width: 30%;
+    }
+
+    .card__2col {
+        width: 100%;
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card__wrapper {
+        width: 45%;
+    }
+
+    .container__col {
+        display: flex;
+    }
+
+}
+
+
+
+
+
+
+
+/************************************/
+/* commonに追加?? */
+/************************************/
+.yellow {
+    background-color: #F3E06E;
+}
