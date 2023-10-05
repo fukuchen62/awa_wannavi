@@ -58,6 +58,7 @@
     border-radius: 15px;
 }
 
+
 /* サイドバー、カテゴリー一覧*/
 .aside__col {
     width: 100%;
@@ -144,6 +145,27 @@ ul .category__list {
         display: flex;
     }
 
+}
+
+
+
+/************************************/
+/* カテゴリーのアイコン */
+/************************************/
+
+.ctg__box {
+    width: 100%;
+    display: flex;
+}
+
+.ctg__txt {
+    padding: 0 10px;
+    margin: 10px 0 20px;
+    line-height: 25px;
+    border: solid 1.5px #000;
+    /*線*/
+    border-radius: 10px;
+    /*角の丸み*/
 }
 
 /************************************/
