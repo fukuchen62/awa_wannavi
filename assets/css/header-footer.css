@@ -18,13 +18,18 @@ header {
     margin: 0 auto;
     padding: 0px;
 }
+.header__logo{
+    position: absolute;
+    top: -60px;
+    left: -90px;
+}
 /* ヘッダー画像大きさ */
 .header__logo img{
-    max-width: 50px;
     width: 100%;
     height: auto;
-    margin: 23px 20px;
 }
+
+
 
 
 
@@ -85,9 +90,9 @@ header {
     z-index: 100;
 }
 
-.hamburger__menu__content {
-    padding: 20px 20px;
-    width: 100%;
+.gnav__menu__content {
+    padding: 100px 20px;
+    width: 100vw;
     height: 100%;
     position: fixed;
     top: 0;
@@ -95,48 +100,36 @@ header {
     left: 100%;
     background-color: #f3e06e;
     z-index: 80;
-
-    transition: all 0.5s;
+    /* transition: 0.3s; */
     /*アニメーション設定*/
 }
 /* PCnav */
 @media screen and (min-width:1023px){
-    .hamburger__menu__content {
+    .gnav__menu__content {
         max-width: 100%;
         width: 100%;
         height: 100px;
         transition: 0s;
         display: flex;
-        position: relative;
+        position: absolute;
         background-color: rgba(235, 235, 235, 0);
         left: 0;
         padding: 0;
+        padding-left: 100px;
         text-align: center;
+        transition: 0;
     }
-    .hamburger__menu__content__inner {
+    .gnav__menu__content__inner {
         position: absolute;
         height: 60px;
         margin-top: 33px;
-        left: 75%;
+        left: 77%;
 
     }
 }
 
-/* 1023以上なら消す */
-@media screen and (min-width:1023px) {
-.hamburger__menu__btn,
-.gnav__search__sp__title,
-.gnav__search__sp,
-.gnav__search__sp span:nth-child(1),
-.gnav__search__sp span:nth-child(2),
-.hamburger__menu__content__inner p:first-of-type,
-.gnav__icon,
-.menu__item__search__wrap__sp{
-    display: none !important;
-}
-}
 
-.hamburger__menu__content.is-active {
+.gnav__menu__content.is-active {
     left: 0;
     overflow: scroll;
     /*メニューを画面内へ*/
@@ -144,16 +137,21 @@ header {
 
 /* 検索入力フォーム*/
 .form__box{
+    position: absolute;
     text-align: left;
     width: 210px;
     background-color: #fff;
     height: 30px;
     border-radius: 30px;
+    top: 30px;
+    left: 20px;
 }
 /* PC用 */
 @media screen and (min-width:1023px) {
     .form__box{
+
         position: absolute;
+        top: 0;
         left: 40%;
         background-color: #f3e06e;
     }
@@ -166,6 +164,7 @@ header {
     background-color: #fff;
     border-radius: 20px;
     margin: 5px 0 5px 5px ;
+    width: 170px;
 }
 
 
@@ -187,13 +186,11 @@ header {
 
 /* ワード検索の虫眼鏡アイコン */
 
-.fa-solid {
+.lupe {
     color: #fff;
     background-color: #000;
-    width: 20px;
-    height: 20px;
+    width: 23px;
     border-radius: 50%;
-    padding: 2px;
 
 }
 
@@ -202,7 +199,7 @@ header {
     left: 0;
 }
 /* 輪っか部分 */
-.fa__search__sp span:nth-child(1) {
+.lupe__sp span:nth-child(1) {
     position: absolute;
     border: 4px solid #d9d9d9;
     border-radius: 12px;
@@ -213,7 +210,7 @@ header {
 
 }
 /* 柄部分 */
-.fa__search__sp span:nth-child(2) {
+.lupe__sp span:nth-child(2) {
     position: absolute;
     border: solid 2px #d9d9d9;
     background-color: #d9d9d9;
@@ -225,8 +222,6 @@ header {
     top: -7px;
     left: -30px;
 }
-
-
 /* 通常gnavのアイコン */
 .gnav__icon {
     color: #d9d9d9;
@@ -254,21 +249,8 @@ header {
     left: 50%;
     transform: translate(-50%);
 }
-
 /* sp用検索見出し */
 .gnav__search__sp__title {
-    max-width: 600px;
-    width: 100%;
-    margin: -40px 10px;
-    position: absolute;
-    color: #000;
-    text-decoration: none;
-    border-bottom: dashed 1px #000;
-    left: 50%;
-    transform: translate(-50%);
-}
-/*pc用検索見出し */
-.gnav__search__title {
     max-width: 600px;
     width: 100%;
     margin: -40px 10px;
@@ -365,13 +347,7 @@ header {
 }
 
 /* pc用の検索 */
-/* 1023px以下なら消す */
-.gnav__search__title,
-.menu__item__search__wrap,
-.menu__item__search {
-    display: none;
 
-}
 /* 中身 */
 .menu__item__wrap {
     display: flex;
@@ -385,7 +361,6 @@ header {
     padding: 10px;
 }
 
-
 .menu__item {
     margin: 5px;
     text-decoration: none;
@@ -394,7 +369,7 @@ header {
     font-size: 1rem;
     height: 30px;
 }
-.menu__item  div{
+.menu__item  dl{
     position: relative;
     top:-23px;
     border: #000 solid 1px;
@@ -420,7 +395,6 @@ header {
         text-align: centers;
         flex-wrap: nowrap;
         max-width: initial;
-        max-width: 2560px;
         width: 100%;
         background-color: #f3e06e;
         padding: 20px;
@@ -429,10 +403,13 @@ header {
         top: 100px;
         /* justify-content: space-between; */
         left: 0px;
-        position: absolute;
+        position: fixed;
         visibility: hidden;
-
     }
+}
+
+@media screen and (min-width:1023px) {
+
 
     .menu__wrap {
         max-width: 1200px;
@@ -447,7 +424,7 @@ header {
         max-width: 250px;
         width: 100%;
         text-align: center;
-        line-height: 50px;
+        line-height: 30px;
         height: 85px;
         opacity: 1;
         border: #000 solid 1px;
@@ -468,8 +445,14 @@ header {
     margin: 0px;
     padding: 0px;
     }
-    .menu__item div {
+    .menu__item dl {
         position: static;
+        border: 0;
+    }
+    .menu__item dd {
+        font-size: 14px;
+        line-height: 1.5;
+        display: block !important;
         border: 0;
     }
 }
@@ -485,6 +468,7 @@ header {
         text-align: center;
     }
     .gnav__title {
+        display: block !important;
         position: static;
         max-width: 100%;
         width: 100%;
@@ -493,71 +477,7 @@ header {
         margin: 0;
         transform: translate(0);
     }
-    .gnav__search__title {
-        position: static;
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        display: block;
-        border: 0;
-        margin: 0;
-        transform: translate(0);
-    }
-    .menu__wrap__search {
-        display: flex;
-        height: auto;
-        max-width: 1200px;
-        width: 12%;
-        margin: 0;
-    }
-    .menu__item__search__wrap{
-        /* display: none; */
-        display: block;
-        width: 300%;
-        position: absolute;
-        top: 100px;
-        margin-left: -55%;
-        visibility: hidden;
-
-    }
-    .menu__item__search {
-        display: block;
-        width: 100%;
-        height: 200px;
-        padding: 20px;
-        background-color:#f3e06e ;
-    }
-    .menu__item__search img {
-        max-width: 100px;
-        width: 100%;
-        height: 100px;
-    }
-    .search__title {
-        text-align: left;
-        position: absolute;
-        margin-left: 45%;
-    }
-    .box__wrap {
-        margin-top: 20px;
-        display: flex;
-        /* width: 100px; */
-        height: 20px;
-        margin-left: 50%;
-    }
-
-.box {
-    display: inline-block;
-    /* width: 100px; */
-    /* height: 100px; */
-    margin: 0 10px;
 }
-.box__wrap  ul{
-    list-style: inside;
-}
-}
-
-
-
 /* ホバーアクション */
 /* ホバーしたときに表示する */
 .gnav:hover .menu__item__wrap {
@@ -567,6 +487,30 @@ header {
 .gnav:hover .menu__item__search__wrap {
     visibility: visible;
 }
+.gnav__search__title:hover ,
 .gnav:hover {
     background-color: #f3e06e;
+}
+
+
+/* 1023px以下なら消す */
+.gnav__title:last-child,
+.menu__item dd{
+
+    display: none;
+
+}
+
+/* 1023以上なら消す */
+@media screen and (min-width:1023px) {
+.hamburger__menu__btn,
+.gnav__search__sp__title,
+.gnav__search__sp,
+.gnav__search__sp span:nth-child(1),
+.gnav__search__sp span:nth-child(2),
+.gnav__menu__content__inner p:first-of-type,
+.gnav__icon,
+.menu__item__search__wrap__sp{
+    display: none !important;
+}
 }
