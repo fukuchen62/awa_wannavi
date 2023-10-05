@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /***********************/
-/* 阿波キャンのCSS参考 */
+/* テンプレートパーツ群 */
 /***********************/
 
 html {
@@ -68,6 +68,17 @@ a img:hover {
     min-width: 300px;
     margin: 0 auto;
     background-color: #fff;
+}
+
+/* background-colorのテンプレート  */
+.bgBL {
+    /* バックのカラーを確認 */
+    background-color: #8CCBE7;
+}
+
+.bgGL {
+    /* バックのカラーを確認 */
+    background-color: #C6DF74;
 }
 
 /*****************************************/
@@ -151,6 +162,7 @@ a img:hover {
     border: 4px dashed #333;
 }
 
+
 .tab__title {
     width: 100%;
     height: 100%;
@@ -160,18 +172,6 @@ a img:hover {
     padding-top: 10px;
     padding-bottom: 10px;
     transition: ease;
-}
-
-@media screen and (min-width:768px) {
-    .banner__head {
-        font-size: 3rem;
-    }
-}
-
-@media screen and (min-width:1023px) {
-    .banner__head {
-        font-size: 3rem;
-    }
 }
 
 /* タブタイトルを変更したときは文字を白くします */
@@ -199,9 +199,8 @@ a img:hover {
     .tab__title {
         width: 100%;
         height: 100%;
-
+        font-size: 3rem;
     }
-
 }
 
 @media screen and (min-width:1023px) {
@@ -214,41 +213,26 @@ a img:hover {
         margin-bottom: 30px;
     }
 
-    /* タブの子要素です */
-    .tab__block {
-        /* SP想定で2つ並ぶようにします */
-        width: 30%;
-    }
-
     .tab__title {
-        width: 100%;
-        height: 100%;
+        font-size: 3rem;
     }
 }
-
 
 /****************************************/
 /* エリアを区切るボーダー帯型のタイトル */
 /* 各エリアによってbgcを変更していく */
 /****************************************/
-
 .h2__title {
-    /* 立幅60px */
-    height: 60px;
-    /* 行の真ん中 */
-    line-height: 50px;
+    /* flexboxでjustyfyとtext-align使った方がきれいに見えるので採用 */
+    display: flex;
     /* コンテナの横幅いっぱい */
     width: 100%;
-    /* 無いとタイトルのバランスが微妙、下にしずむ */
-    /* padding-bottom: 10px; */
-    /* 上下の邪魔しない為のmargin */
-    margin: 0px auto;
     /* h2のままだと小さすぎるのでサイズを調整 */
     font-size: 3rem;
-    /* h2の文字をセンターよせにする */
-    text-align: center;
-    /* バックのカラーを確認 */
-    background-color: #8CCBE7;
+    /* 横をそろえる */
+    justify-content: center;
+    /* 縦をそろえる */
+    align-items: center;
     /* ボーダーの大きさと囲いの調整 */
     border-top: 5px dashed #333;
     border-bottom: 5px dashed #333;
@@ -256,13 +240,17 @@ a img:hover {
 }
 
 @media screen and (min-width:768px) {
-    .banner__head {
+    .h2__title {
+        /* 立幅140px */
+        height: 140px;
         font-size: 3.5rem;
     }
 }
 
 @media screen and (min-width:1023px) {
-    .banner__head {
+    .h2__title {
+        /* 立幅140px */
+        height: 140px;
         font-size: 3.5rem;
     }
 }
@@ -282,30 +270,25 @@ a img:hover {
 /**************************************************/
 
 .sub__title {
-    width: 80%;
-    height: 50px;
-    /* 行の真ん中 */
-    line-height: 40px;
+    /* 形を整える為にflex */
+    display: flex;
+    width: 200px;
+    height: 60px;
     margin: 0 auto;
-    /* 無いとタイトルのバランスが微妙、下にしずむ */
-    /* padding-bottom: 10px; */
-    /* 上下の邪魔しない為のmargin */
+    justify-content: center;
+    align-items: center;
     /* h2のままだと小さすぎるのでサイズを調整 */
     font-size: 2.4rem;
     /* h2の文字をセンターよせにする */
-    text-align: center;
-    /* バックのカラーを確認 */
-    background-color: #8CCBE7;
     /* ボーダーの大きさと囲いの調整 */
     border: 3px dashed #333;
-    border-radius: 25px;
-    font-weight: bold;
+    border-radius: 20px;
 }
 
 
 @media screen and (min-width:768px) {
     .sub__title {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
 }
