@@ -18,17 +18,18 @@ header {
     margin: 0 auto;
     padding: 0px;
 }
-/* ヘッダー画像大きさ */
-.header__logo img{
-    max-width: 50px;
-    width: 100%;
-    height: auto;
-    margin: 23px 20px;
-}
-
 .header__logo{
     position: absolute;
+    top: -60px;
+    left: -90px;
 }
+/* ヘッダー画像大きさ */
+.header__logo img{
+    width: 100%;
+    height: auto;
+}
+
+
 
 
 
@@ -89,8 +90,8 @@ header {
     z-index: 100;
 }
 
-.hamburger__menu__content {
-    padding: 20px 20px;
+.gnav__menu__content {
+    padding: 100px 20px;
     width: 100vw;
     height: 100%;
     position: fixed;
@@ -99,12 +100,12 @@ header {
     left: 100%;
     background-color: #f3e06e;
     z-index: 80;
-    transition: all 0.5s;
+    /* transition: 0.3s; */
     /*アニメーション設定*/
 }
 /* PCnav */
 @media screen and (min-width:1023px){
-    .hamburger__menu__content {
+    .gnav__menu__content {
         max-width: 100%;
         width: 100%;
         height: 100px;
@@ -116,8 +117,9 @@ header {
         padding: 0;
         padding-left: 100px;
         text-align: center;
+        transition: 0;
     }
-    .hamburger__menu__content__inner {
+    .gnav__menu__content__inner {
         position: absolute;
         height: 60px;
         margin-top: 33px;
@@ -127,7 +129,7 @@ header {
 }
 
 
-.hamburger__menu__content.is-active {
+.gnav__menu__content.is-active {
     left: 0;
     overflow: scroll;
     /*メニューを画面内へ*/
@@ -135,16 +137,21 @@ header {
 
 /* 検索入力フォーム*/
 .form__box{
+    position: absolute;
     text-align: left;
     width: 210px;
     background-color: #fff;
     height: 30px;
     border-radius: 30px;
+    top: 30px;
+    left: 20px;
 }
 /* PC用 */
 @media screen and (min-width:1023px) {
     .form__box{
+
         position: absolute;
+        top: 0;
         left: 40%;
         background-color: #f3e06e;
     }
@@ -461,6 +468,7 @@ header {
         text-align: center;
     }
     .gnav__title {
+        display: block !important;
         position: static;
         max-width: 100%;
         width: 100%;
@@ -486,7 +494,9 @@ header {
 
 
 /* 1023px以下なら消す */
+.gnav__title:last-child,
 .menu__item dd{
+
     display: none;
 
 }
@@ -498,7 +508,7 @@ header {
 .gnav__search__sp,
 .gnav__search__sp span:nth-child(1),
 .gnav__search__sp span:nth-child(2),
-.hamburger__menu__content__inner p:first-of-type,
+.gnav__menu__content__inner p:first-of-type,
 .gnav__icon,
 .menu__item__search__wrap__sp{
     display: none !important;
