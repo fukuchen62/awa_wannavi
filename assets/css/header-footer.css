@@ -13,6 +13,7 @@ header {
 }
 .wrapper {
     max-width: 1200px;
+    position: relative;
     display: flex;
     margin: 0 auto;
     padding: 0px;
@@ -90,9 +91,9 @@ header {
     height: 100%;
     position: fixed;
     top: 0;
+    /*leftの値を変更してメニューを画面外へ*/
     left: 100%;
     background-color: #f3e06e;
-    /*leftの値を変更してメニューを画面外へ*/
     z-index: 80;
 
     transition: all 0.5s;
@@ -101,27 +102,22 @@ header {
 /* PCnav */
 @media screen and (min-width:1023px){
     .hamburger__menu__content {
-        max-width: 1200px;
-        width: 50%;
+        max-width: 100%;
+        width: 100%;
         height: 100px;
         transition: 0s;
         display: flex;
-        position: static;
+        position: relative;
         background-color: rgba(235, 235, 235, 0);
-        margin: 0 auto;
+        left: 0;
         padding: 0;
-        margin-left: 18%;
         text-align: center;
     }
     .hamburger__menu__content__inner {
         position: absolute;
-        max-width: 1200px;
         height: 60px;
-        width: 100%;
         margin-top: 33px;
-        margin-left: 100px;
-        /* background-color: #f3e06e;
-        border-radius: 30px; */
+        left: 75%;
 
     }
 }
@@ -129,12 +125,13 @@ header {
 /* 1023以上なら消す */
 @media screen and (min-width:1023px) {
 .hamburger__menu__btn,
-.gnav__search,
-.gnav__search span:nth-child(1),
-.gnav__search span:nth-child(2),
+.gnav__search__sp__title,
+.gnav__search__sp,
+.gnav__search__sp span:nth-child(1),
+.gnav__search__sp span:nth-child(2),
 .hamburger__menu__content__inner p:first-of-type,
 .gnav__icon,
-.menu__item__search__wrap{
+.menu__item__search__wrap__sp{
     display: none !important;
 }
 }
@@ -157,7 +154,7 @@ header {
 @media screen and (min-width:1023px) {
     .form__box{
         position: absolute;
-        left: 42%;
+        left: 40%;
         background-color: #f3e06e;
     }
 }
@@ -174,21 +171,16 @@ header {
 
 /* gnavの見出しレイアウト */
 .gnav{
+    width: 100%;
+    text-decoration: none;
     margin: 10px auto;
-    border-bottom: 3px dashed #000;
+    display: flex;
+    justify-content: center;
+
 }
-/* PCnavの見出し */
-@media screen and (min-width:1023px) {
-    .gnav {
-        border: 0px;
-        max-width: 100px;
-        height: auto;
-        margin: 0 auto;
-        margin-top: 35px;
-        text-align: center;
-    }
-}
+
 .menu__wrap {
+    margin-top: 35px;
     display: flex;
     justify-content: center;
 }
@@ -210,7 +202,7 @@ header {
     left: 0;
 }
 /* 輪っか部分 */
-.fa__search span:nth-child(1) {
+.fa__search__sp span:nth-child(1) {
     position: absolute;
     border: 4px solid #d9d9d9;
     border-radius: 12px;
@@ -221,7 +213,7 @@ header {
 
 }
 /* 柄部分 */
-.fa__search span:nth-child(2) {
+.fa__search__sp span:nth-child(2) {
     position: absolute;
     border: solid 2px #d9d9d9;
     background-color: #d9d9d9;
@@ -234,90 +226,6 @@ header {
     left: -30px;
 }
 
-/* 虫眼鏡のgavi */
-.gnav__search {
-    padding: 10px;
-    margin: 10px 0 10px 20px;
-    max-width: 60px;
-    height: 60px;
-    width: 100%;
-    border-radius: 5px;
-    background-color: #4f4f4f;
-}
-/* 輪っか部分 */
-.gnav__search span:nth-child(1) {
-    display: block;
-    position: absolute;
-    border: 4px solid #d9d9d9;
-    border-radius: 12px;
-    padding: 5px;
-    width: 23px;
-    height: 23px;
-}
-/* 柄部分 */
-.gnav__search span:nth-child(2) {
-    display: block;
-    position: relative;
-    border: solid 2px #d9d9d9;
-    background-color: #d9d9d9;
-    border-radius: 5px;
-    max-width: 20px;
-    width: 100%;
-    height: 3px;
-    top: 24px;
-    left: 16px;
-    transform: rotate(45deg);
-}
-
-.menu__item__search__wrap {
-    background-color: #fff;
-    border-radius: 5px;
-    max-width: 500px;
-    width: 100%;
-    height: 60px;
-    margin: 10px 0 10px 0;
-}
-
-.menu__item__search {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding: 15px;
-}
-
-.menu__item__search li {
-    list-style: none;
-    position: relative;
-    color: #fe9800;
-    text-align: center;
-    border-radius: 10px;
-    margin: 0 50px;
-}
-
-.menu__item__search span,
-.menu__item__search span::before {
-    width: 100%;
-    content: "";
-    display: block;
-    position: relative;
-    border-radius: 5px;
-    background-color: #fe9800;
-    height: 1px;
-    width: 15px;
-    bottom: 35px;
-}
-
-.menu__item__search span {
-    transform: rotate(45deg);
-    top: 7px;
-}
-
-.menu__item__search span::before {
-    top: 7px;
-    left: 7px;
-    transform: rotate(90deg);
-}
 
 /* 通常gnavのアイコン */
 .gnav__icon {
@@ -335,6 +243,135 @@ header {
     padding: 10px;
     background-color: #4f4f4f;
 }
+.gnav__title {
+    max-width: 600px;
+    width: 100%;
+    margin: -40px 10px;
+    position: absolute;
+    color: #000;
+    text-decoration: none;
+    border-bottom: dashed 1px #000;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+/* sp用検索見出し */
+.gnav__search__sp__title {
+    max-width: 600px;
+    width: 100%;
+    margin: -40px 10px;
+    position: absolute;
+    color: #000;
+    text-decoration: none;
+    border-bottom: dashed 1px #000;
+    left: 50%;
+    transform: translate(-50%);
+}
+/*pc用検索見出し */
+.gnav__search__title {
+    max-width: 600px;
+    width: 100%;
+    margin: -40px 10px;
+    position: absolute;
+    color: #000;
+    text-decoration: none;
+    border-bottom: dashed 1px #000;
+    left: 50%;
+    transform: translate(-50%);
+}
+/* 虫眼鏡のgavi */
+.gnav__search__sp {
+    padding: 10px;
+    margin: 10px 0 10px 20px;
+    max-width: 60px;
+    height: 60px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #4f4f4f;
+}
+/* 輪っか部分 */
+.gnav__search__sp span:nth-child(1) {
+    display: block;
+    position: absolute;
+    border: 4px solid #d9d9d9;
+    border-radius: 12px;
+    padding: 5px;
+    width: 23px;
+    height: 23px;
+}
+/* 柄部分 */
+.gnav__search__sp span:nth-child(2) {
+    display: block;
+    position: relative;
+    border: solid 2px #d9d9d9;
+    background-color: #d9d9d9;
+    border-radius: 5px;
+    max-width: 20px;
+    width: 100%;
+    height: 3px;
+    top: 24px;
+    left: 16px;
+    transform: rotate(45deg);
+}
+/* sp用検索 */
+.menu__item__search__wrap__sp {
+    background-color: #fff;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    height: 60px;
+    margin: 10px 0 10px 0;
+}
+
+.menu__item__search__sp {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.menu__item__search__sp li {
+    list-style: none;
+    position: relative;
+    color: #fe9800;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 50px;
+}
+
+.menu__item__search__sp span,
+.menu__item__search__sp span::before {
+    width: 100%;
+    content: "";
+    display: block;
+    position: relative;
+    border-radius: 5px;
+    background-color: #fe9800;
+    height: 1px;
+    width: 15px;
+    bottom: 35px;
+}
+
+.menu__item__search__sp span {
+    transform: rotate(45deg);
+    top: 7px;
+}
+
+.menu__item__search__sp span::before {
+    top: 7px;
+    left: 7px;
+    transform: rotate(90deg);
+}
+
+/* pc用の検索 */
+/* 1023px以下なら消す */
+.gnav__search__title,
+.menu__item__search__wrap,
+.menu__item__search {
+    display: none;
+
+}
 /* 中身 */
 .menu__item__wrap {
     display: flex;
@@ -347,6 +384,7 @@ header {
     margin: 10px 0 10px 0;
     padding: 10px;
 }
+
 
 .menu__item {
     margin: 5px;
@@ -376,15 +414,18 @@ header {
     height: 20px;
 
 }
-/* メニュー */
+/* pcメニュー */
 @media screen and (min-width:1023px) {
     .menu__item__wrap {
+        text-align: centers;
         flex-wrap: nowrap;
-        max-width: 100%;
+        max-width: initial;
+        max-width: 2560px;
         width: 100%;
         background-color: #f3e06e;
         padding: 20px;
         margin: 0px;
+        margin-left:0;
         top: 100px;
         /* justify-content: space-between; */
         left: 0px;
@@ -392,38 +433,24 @@ header {
         visibility: hidden;
 
     }
-    /* メニューを隠す */
-    .hamburger__menu__content ul:nth-of-type(1){
-        position: absolute;
-        visibility: hidden;
-    }
 
     .menu__wrap {
-    display: flex;
-    height: auto;
-    position: absolute;
-    }
-    .menu__wrap li {
-        list-style: none;
-        height: 85px;
-        margin: 10px auto;
-        justify-content: space-between;
-        max-width: 200px;
-        width: 100%;
-    }
-    .menu__wrap li a{
-        border: 0;
+        max-width: 1200px;
+        width: 12%;
+        margin: 0;
+        display: flex;
+        height: auto;
     }
     .menu__item{
         display: flex;
-        margin: 0;
+        margin: 0 auto;
+        max-width: 250px;
         width: 100%;
         text-align: center;
         line-height: 50px;
-        height: auto;
+        height: 85px;
         opacity: 1;
         border: #000 solid 1px;
-        width: 100%;
         background: #fff;
     }
     .menu__item img {
@@ -445,84 +472,101 @@ header {
         position: static;
         border: 0;
     }
-    /*ここからメニューの詳細設定 */
-    .play__wrap {
-        opacity: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .stay__wrap {
-        /* display: none; */
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .eat__wrap {
-        display: none;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .model__course__wrap {
-        display: none;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .special__wrap {
-        display: none;
-        left: 50%;
-        transform: translateX(-50%);
-    }
 }
-/* サブメニュー */
+/* 1023px以上なら表示 */
 @media screen and (min-width:1023px) {
-    /* ホバーやクリック前の状態 */
-    .sub__menu__wrap{
-    /* position: absolute;
-    top: -1px;
-    left: 100%;
-    width: 100%;
-    background-color: #f5f4ef;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    visibility: hidden; */
-    opacity: 0;
+    /* PCnavの見出し */
+    .gnav {
+        border: 0px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding-top: 35px;
+        text-align: center;
     }
-    /* ホバーやクリック後の状態 */
-        .menu__item:hover> .sub__menu__wrap{
-        /* position: absolute; */
-        /* top: 40px; */
-        /* width: 100%; */
-        background-color: #f5f4ef;
-        /* -webkit-transition: all 0.2s ease; */
-        transition: all 0.2s ease;
-        opacity: 1;
-        z-index: 1;
+    .gnav__title {
+        position: static;
+        max-width: 100%;
+        width: 100%;
+        border: 0;
+        height: auto;
+        margin: 0;
+        transform: translate(0);
     }
-    .sub__menu__item {
-        background-color: #f3e06e;
-        border:1px solid #000;
+    .gnav__search__title {
+        position: static;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        display: block;
+        border: 0;
+        margin: 0;
+        transform: translate(0);
     }
+    .menu__wrap__search {
+        display: flex;
+        height: auto;
+        max-width: 1200px;
+        width: 12%;
+        margin: 0;
+    }
+    .menu__item__search__wrap{
+        /* display: none; */
+        display: block;
+        width: 300%;
+        position: absolute;
+        top: 100px;
+        margin-left: -55%;
+        visibility: hidden;
+
+    }
+    .menu__item__search {
+        display: block;
+        width: 100%;
+        height: 200px;
+        padding: 20px;
+        background-color:#f3e06e ;
+    }
+    .menu__item__search img {
+        max-width: 100px;
+        width: 100%;
+        height: 100px;
+    }
+    .search__title {
+        text-align: left;
+        position: absolute;
+        margin-left: 45%;
+    }
+    .box__wrap {
+        margin-top: 20px;
+        display: flex;
+        /* width: 100px; */
+        height: 20px;
+        margin-left: 50%;
+    }
+
+.box {
+    display: inline-block;
+    /* width: 100px; */
+    /* height: 100px; */
+    margin: 0 10px;
 }
+.box__wrap  ul{
+    list-style: inside;
+}
+}
+
+
+
 /* ホバーアクション */
-.pray__hover:hover {
-    opacity: 0;
-}
-.pray__hover:hover {
-    opacity: 0.7;
+/* ホバーしたときに表示する */
+.gnav:hover .menu__item__wrap {
+    visibility: visible;
 }
 
-.stay__hover:hover{
-    opacity: 0.7;
+.gnav:hover .menu__item__search__wrap {
+    visibility: visible;
 }
-.eat__hover:hover {
-    opacity: 0.7;
-}
-.model__course__hover:hover {
-    opacity: 0.7;
-}
-.special__hover:hover {
-    opacity: 0.7;
-}
-
-.search__hover:hover {
-    opacity: 0.7;
+.gnav:hover {
+    background-color: #f3e06e;
 }
