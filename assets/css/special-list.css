@@ -1,9 +1,10 @@
 @charset "utf-8";
 
-/************************************/
+/***************************/
 /* common.CSSから引用*/
 /* テキストのサイズ、配置変更 */
-/************************************/
+/* 大帯、h2 */
+/***************************/
 .banner__head {
     display: flex;
     justify-content: center;
@@ -15,23 +16,34 @@
 }
 
 
-
-/* common.cssのsub__titleを利用しているが、タブの装飾と配色の変更の為、それぞれに名前を指定した  */
-.manner {
+/****************/
+/* サブタイトル */
+/****************/
+.sub__ttl {
+    display: flex;
+    width: 60%;
+    height: 50px;
     margin: 20px auto;
     border: 3px solid #000;
     font-size: 2rem;
+    border-radius: 35px;
+    justify-content: center;
+    align-items: center;
 }
-
 
 .card__2col {
     width: 100%;
-    padding: 30px 20px;
+    padding-top: 20px;
 }
 
-/************************************/
+.yellow {
+    background-color: #F3E06E;
+}
+
+
+/******************************/
 /* aside カテゴリー一覧リスト */
-/************************************/
+/******************************/
 
 /* カテゴリー一覧タグ*/
 .category__tag {
@@ -39,24 +51,14 @@
     height: 50px;
     /* 行の真ん中 */
     line-height: 40px;
-    margin: 0 auto;
-    /* 無いとタイトルのバランスが微妙、下にしずむ */
-    /* padding-bottom: 10px; */
-    /* 上下の邪魔しない為のmargin */
-    /* h2のままだと小さすぎるのでサイズを調整 */
+    margin: 20px auto;
     font-size: 2rem;
-    /* h2の文字をセンターよせにする */
     text-align: center;
     /* ボーダーの大きさと囲いの調整 */
     border: 3px dashed #000;
     border-radius: 15px;
 }
 
-/* サイドバー、カテゴリー一覧*/
-.aside__col {
-    width: 100%;
-    margin: 20px 0;
-}
 
 /* カテゴリーリストラップ */
 .category__innner {
@@ -79,27 +81,25 @@ ul .category__list {
 }
 
 
-/************************************/
+/********************************************/
 /* main__colと aside__colを入れるコンテナー */
-/************************************/
+/********************************************/
 
 .container__col {
     width: 100%;
-    padding: 20px 0;
-}
-
-/* h３（マナーバー）からmoreアイコンまで */
-.main__col {
-    width: 100%;
+    padding: 20px;
 }
 
 
+.col3__wrapper {
+    padding: 30px 10px;
+}
+
+/*******************/
+/* メディアクエリ */
+/*******************/
 
 @media screen and (min-width:768px) {
-    .container__col {
-        width: 100%;
-        padding: 60px 0;
-    }
 
     .main__col {
         width: 70%;
@@ -112,7 +112,7 @@ ul .category__list {
 
     .card__2col {
         width: 100%;
-        padding-top: 50px;
+        padding-top: 30px;
         display: flex;
         flex-wrap: wrap;
     }
@@ -127,23 +127,19 @@ ul .category__list {
 
 }
 
-
-/*********************************************************/
-/* /* @media screen and (min-width:1023px) */
-/* .manner内のfont-size以外は(min-width:768px)と同じです。 */
-/*********************************************************/
 
 @media screen and (min-width:1023px) {
-    .container__col {
-        width: 100%;
-        padding: 60px 0;
+
+    .sub__ttl {
+        font-size: 3rem;
     }
 
-    .manner {
-        margin: 20px auto;
-        border: 3px solid #000;
-        font-size: 3.5rem;
-    }
+
+    /* .container__col {
+        width: 100%;
+        padding: 60px 0;
+    } */
+
 
     .main__col {
         width: 70%;
@@ -156,7 +152,7 @@ ul .category__list {
 
     .card__2col {
         width: 100%;
-        padding-top: 50px;
+        padding-top: 30px;
         display: flex;
         flex-wrap: wrap;
     }
@@ -169,17 +165,4 @@ ul .category__list {
         display: flex;
     }
 
-}
-
-
-
-
-
-
-
-/************************************/
-/* commonに追加?? */
-/************************************/
-.yellow {
-    background-color: #F3E06E;
 }
