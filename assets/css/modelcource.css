@@ -1,0 +1,29 @@
+@charset "utf8";
+
+.txt__box {
+    width: 90%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.txt__box>p {
+    font-size: 2.4rem;
+}
+
+.img__tag {
+    width: 200px;
+    margin: 100px auto;
+}
+
+.new::after {
+
+    position: absolute;
+    content: "news";
+    top: -10px;
+    left: -10px;
+    background: #00DE94;
+    border-radius: 50%;
+    color: #fff;
+    padding: 10px 5px;
+
+}
