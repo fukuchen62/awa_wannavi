@@ -406,7 +406,6 @@ header {
         left: 0px;
         position: fixed;
         visibility: hidden;
-        transition: 0.3;
     }
 }
 
@@ -429,7 +428,7 @@ header {
         line-height: 30px;
         height: 85px;
         opacity: 1;
-        border: #000 solid 1px;
+        border: #000 solid 3px;
         background: #fff;
     }
     .menu__item img {
@@ -437,7 +436,7 @@ header {
         text-align: center;
         max-width: 80px;
         width: 100%;
-        height: 83px;
+        height: 79px;
 
     }
     .menu__item a{
