@@ -26,19 +26,18 @@
     border: 5px solid #000;
     background: #E5A799;
     display: flex;
-    width: 210px;
     height: 48px;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
     font-size: 20px;
     font-weight: 900;
+    padding: 0 10px;
 }
 
 @media (min-width:768px) {
     .facility__name {
         display: flex;
-        width: 500px;
         height: 86px;
         font-size: 35px;
     }
