@@ -86,6 +86,11 @@ a img:hover {
     background-color: #E5A799;
 }
 
+.bgYL {
+    /* バックのカラーを確認 */
+    background-color: #F3E06E;
+}
+
 .mw12 {
     max-width: 1200px;
 }
@@ -103,9 +108,7 @@ a img:hover {
     align-items: center;
     background-image: url("../img/hedder__banner.png");
     color: black;
-    -webkit-text-stroke: 2px #fff;
-    /* ベンダープレフィックス */
-    text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px #fff;
     font-size: 3.8rem;
 }
 
@@ -158,8 +161,7 @@ a img:hover {
     width: 40%;
     padding: 5px;
     margin-bottom: 10px;
-    background-color: #8CCBE7;
-    border-radius: 8px;
+    border-radius: 30px;
     /* ホバーした時の色変化を制御します */
     transition: ease;
     /* 傍線に変形します */
@@ -169,7 +171,7 @@ a img:hover {
 
 /* タブをホバーした時はタブの色を変更します */
 .tab__block:hover {
-    background-color: #5a749a;
+    background-color: #c3c3c3;
     border: 4px dashed #333;
 }
 
