@@ -81,6 +81,11 @@ a img:hover {
     background-color: #C6DF74;
 }
 
+.bgPK {
+    /* バックのカラーを確認 */
+    background-color: #E5A799;
+}
+
 .mw12 {
     max-width: 1200px;
 }
@@ -472,7 +477,6 @@ a img:hover {
     margin-top: 18px;
     border-radius: 20px;
     border: 1px solid #000;
-    background: #8CCBE7;
 }
 
 /* 施設名 */
