@@ -2,7 +2,7 @@
 
 /* 記事タイトル */
 .article__title {
-    margin: 20px auto;
+    margin: 0px auto;
     padding: 10px;
     text-align: center;
     font-size: 2.6rem;
@@ -14,12 +14,6 @@
 /************************************/
 /* メイン記事  artical */
 /************************************/
-
-/* 記事本文 */
-.main__col {
-    width: 100%;
-    padding-right: 40px;
-}
 
 .article__sub__ttl {
     margin: 50px 0 30px;
@@ -35,120 +29,52 @@
     margin: 30px 0 80px;
 }
 
+
 /************************************/
-/* aside カテゴリー一覧リスト */
+/* カテゴリーのアイコン */
 /************************************/
 
-/* カテゴリー一覧タグ*/
-.category__tag {
-    width: 80%;
-    height: 50px;
-    /* 行の真ん中 */
-    line-height: 40px;
-    margin: 0 auto;
-    /* 無いとタイトルのバランスが微妙、下にしずむ */
-    /* padding-bottom: 10px; */
-    /* 上下の邪魔しない為のmargin */
-    /* h2のままだと小さすぎるのでサイズを調整 */
-    font-size: 2rem;
-    /* h2の文字をセンターよせにする */
-    text-align: center;
-    /* ボーダーの大きさと囲いの調整 */
-    border: 3px dashed #000;
-    border-radius: 15px;
-}
-
-/* サイドバー、カテゴリー一覧*/
-.aside__col {
+.ctg__box {
     width: 100%;
-    /* margin: 20px 0; */
+    display: flex;
 }
 
-/* カテゴリーリストラップ */
-.category__innner {
-    width: 100%;
-    /* カテゴリ一覧タグと位置を合わせたいので,
-    両サイドのpaddingを％で指定 */
-    padding: 20px 12%;
+.ctg__txt {
+    padding: 0 10px;
+    margin: 10px 0 20px;
+    line-height: 25px;
+    border: solid 1.5px #000;
+    /*線*/
+    border-radius: 10px;
+    /*角の丸み*/
 }
 
-ul {
-    list-style: none;
+
+/****************************************************************/
+/* カード2colから3colに変更する為 card__wrapperを col3__wrapper に変更 */
+/****************************************************************/
+.col3__wrapper {
+    padding: 30px 10px;
 }
-
-ul .category__list {
-    padding-left: 30px;
-    line-height: 3em;
-    background: url(../img/common/footprint.svg) left 0px top 22px no-repeat;
-    background-size: 20px auto;
-    font-size: 2rem;
-}
-
-/************************************/
-/* main__colと aside__colを入れるコンテナー */
-/************************************/
-
-.container__col {
-    width: 100%;
-    padding: 40px 10px;
-}
-
 
 @media screen and (min-width:768px) {
     .main__col {
-        width: 70%;
-        flex-wrap: wrap;
+        padding-top: 20px;
+        padding-right: 40px;
     }
 
-    .aside__col {
+    .col3__wrapper {
         width: 30%;
     }
-
-    .card__2col {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .card__wrapper {
-        width: 30%;
-    }
-
-    .container__col {
-        display: flex;
-    }
-
 }
-
-
 
 @media screen and (min-width:1023px) {
     .main__col {
-        width: 70%;
-        flex-wrap: wrap;
+        padding-right: 40px;
     }
 
-    .aside__col {
+
+    .col3__wrapper {
         width: 30%;
     }
-
-    .card__2col {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .card__wrapper {
-        width: 30%;
-    }
-
-    .container__col {
-        display: flex;
-    }
-
-}
-
-/************************************/
-/* commonに追加したい */
-/************************************/
-.yellow {
-    background-color: #F3E06E;
 }
