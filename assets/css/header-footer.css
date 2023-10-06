@@ -117,7 +117,7 @@ header {
         padding: 0;
         padding-left: 100px;
         text-align: center;
-        transition: 0;
+        transition: 0s;
     }
     .gnav__menu__content__inner {
         position: absolute;
