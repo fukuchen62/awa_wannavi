@@ -1,0 +1,79 @@
+@charset "utf8";
+
+.sub__title {
+    padding: 50px 0px;
+    gap: 10px;
+    background: #C6DF74;
+}
+
+.sub__title2 {
+    display: flex;
+    width: 300px;
+    height: 60px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    border: 3px dashed #333;
+    border-radius: 20px;
+    padding: 50px 0px;
+    gap: 10px;
+    background: #E5A799;
+}
+
+.tr2 {
+    text-align: left;
+    font-weight: bold;
+}
+
+/* マイページ */
+.mypage_title {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    width: 344px;
+    height: 70px;
+    padding: 20px 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
+    border-bottom: 10px dotted #E6917E;
+}
+
+.mypage_font {
+    text-align: center;
+    color: #000;
+    font-family: Zen Maru Gothic;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+/* 説明文 */
+
+.explanation {
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    height: 173px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow-wrap: break-word;
+}
+
+.explanation2 {
+    text-align: center;
+}
+
+.container {
+    background-image: url(../img/background-image.png);
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+}
