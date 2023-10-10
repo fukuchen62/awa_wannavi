@@ -78,9 +78,17 @@ function add_common_stylesheet_script()
     // wp_deregister_script('jquery');
 
     // JavaScriptファイルを読み込む
+    // wp_enqueue_script(
+    //     'jquery-min.js',
+    //     'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'
+    // );
+
     wp_enqueue_script(
         'jquery-min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'
+        get_template_directory_uri() . '/assets/js/jquery-3.6.0.min.js',
+        '',
+        '',
+        false
     );
 
     // footer.phpで定義したもの
