@@ -93,6 +93,9 @@
     display: none;
 }
 
+.ninngenn {
+    display: none;
+}
 
 /* デスクトップ向けメディアクエリ */
 @media (min-width: 769px) {
@@ -170,6 +173,10 @@
 
     .fukidashi {
         margin: 5%;
+    }
+
+    .ninngenn {
+        display: block;
     }
 
 }
