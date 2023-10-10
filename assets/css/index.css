@@ -82,6 +82,7 @@
 .slider__flame {
     width: 100%;
     height: auto;
+    max-height: 530px;
     margin: 0 auto;
     overflow: hidden;
     object-fit: cover;
