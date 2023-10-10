@@ -2,7 +2,6 @@
 
 /***************************/
 /* common.CSSから引用*/
-/* テキストのサイズ、配置変更 */
 /* 大帯、h2 */
 /***************************/
 .banner__head {
@@ -11,10 +10,39 @@
     align-items: center;
 }
 
+/***************************/
+/* テキストのサイズ、配置変更 */
+/* 大帯内text、h2 */
+/* -webkit-text-strokeは指定したフォントの内側に縁取りされる為、text-shadowで擬似的に縁取りする */
+/***************************/
 .page__title {
-    font-size: 5.5rem;
+    font-size: 3.8rem;
+    text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+        -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+        0px 1px 0 #FFF, 0 -1px 0 #FFF,
+        -1px 0 0 #FFF, 1px 0 0 #FFF;
 }
 
+@media screen and (min-width:768px) {
+    .page__title {
+        font-size: 5.5rem;
+        text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+            -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+            0px 1px 0 #FFF, 0 -1px 0 #FFF,
+            -1px 0 0 #FFF, 1px 0 0 #FFF;
+    }
+}
+
+@media screen and (min-width:1023px) {
+    .page__title {
+        font-size: 5.5rem;
+        text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+            -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+            0px 1px 0 #FFF, 0 -1px 0 #FFF,
+            -1px 0 0 #FFF, 1px 0 0 #FFF;
+    }
+
+}
 
 /****************/
 /* サブタイトル */
@@ -87,7 +115,7 @@ ul .category__list {
 
 .container__col {
     width: 100%;
-    padding: 20px;
+    padding: 20px 10px;
 }
 
 
@@ -133,12 +161,6 @@ ul .category__list {
     .sub__ttl {
         font-size: 3rem;
     }
-
-
-    /* .container__col {
-        width: 100%;
-        padding: 60px 0;
-    } */
 
 
     .main__col {
