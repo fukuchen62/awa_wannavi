@@ -2,80 +2,197 @@
 
 /**
  * テーマの初期化処理
- */
-if (!function_exists('bitro_calme_setup')) {
-
-    function bitro_calme_setup()
-    {
-        /**
-         * <title>タグを出力する
-         */
-        add_theme_support('title-tag');
-
-        /**
-         * アイキャッチ画像を使用可能にする
-         */
-        add_theme_support('post-thumbnails');
-
-        /**
-         * カスタムメニューを使用可能にする
-         */
-        add_theme_support('menus');
-    }
-}
-add_action('after_setup_theme', 'bitro_calme_setup');
-
-/**
- * スクリプトファイルを読み込む
  *
  * @return void
  */
-function bitro_calme_scripts()
+function awa_wannavi_theme_support()
 {
-    // header.phpで定義したもの
+    /**
+     * <title>タグを出力する
+     */
+    add_theme_support('title-tag');
+
+    /**
+     * アイキャッチ画像を使用可能にする
+     */
+    add_theme_support('post-thumbnails');
+
+    /**
+     * カスタムメニュー機能を使用可能にする
+     */
+    add_theme_support('menus');
+}
+add_action('after_setup_theme', 'awa_wannavi_theme_support');
+
+
+/**
+ * ファイルを読み込む
+ *
+ *  01.リセットCSSと共通のCSS，JSを読み込む
+ *  02.ページごとのCSSとJSを読み込む
+ */
+
+// -------------------------------
+// 01.共通のCSSやJS，外部ファイルを読み込む
+// -------------------------------
+add_action('wp_enqueue_scripts', 'add_common_stylesheet_script');
+function add_common_stylesheet_script()
+{
     // fontawesomeのスタイルシートを読み込む
     wp_enqueue_style(
-        'font-awesome',
-        'https://use.fontawesome.com/releases/v5.6.1/css/all.css',
+        'awa_wannavi-fontawesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css',
     );
 
-    // 独自のCSSファイルを読み込む
+    // 共通のCSSを読み込む
+    // 01.『リセットCSS（reset.css）』
     wp_enqueue_style(
-        'styles-min',
-        get_template_directory_uri() . '/assets/css/styles.min.css',
+        'awa_wannavi-reset',
+        get_template_directory_uri() . '/assets/css/reset.css',
+        array(),
+        false
     );
 
-    // jQueryを読み込む
-    wp_enqueue_script('jquery');
+    // 02.『common.css』
+    wp_enqueue_style(
+        'awa_wannavi-common-style',
+        get_template_directory_uri() . '/assets/css/common.css',
+        array(),
+        false
+    );
+
+    // 03.『ヘッダーのCSS（template-header.css）』
+    wp_enqueue_style(
+        'awa_wannavi-header',
+        get_template_directory_uri() . '/assets/css/header-footer.css',
+        array(),
+        false
+    );
+
+    // 共通のJavaScriptを読み込む
+    // jQueryライブラリを読み込む
+    // wp_enqueue_script('jquery');
+
+    // 00.『jQuery』
+    // WordPress本体のjquery.jsを読み込まない
+    // wp_deregister_script('jquery');
 
     // JavaScriptファイルを読み込む
     wp_enqueue_script(
-        'bistro-calme-main',
-        get_template_directory_uri() . '/assets/js/main.js',
-        '',
-        '1.0',
-        false
+        'jquery-min.js',
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js'
     );
 
     // footer.phpで定義したもの
     // トップページ専用のスライドショー用のもの
+    // if (is_home()) {
+    //     wp_enqueue_style(
+    //         'slick-carousel',
+    //         'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+    //     );
+    //     wp_enqueue_script(
+    //         'slick-carousel',
+    //         'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+    //     );
+    //     wp_enqueue_script(
+    //         'bistro-calme-home',
+    //         get_template_directory_uri() . '/assets/js/home.js',
+    //     );
+    // }
+
+    // 01.『common.js』
+    wp_enqueue_script(
+        'awa_wannavi-header-footer-script',
+        get_template_directory_uri() . '/assets/js/header-footer.js',
+        '',
+        '',
+        true
+    );
+
+    // 02.『button.js』
+    wp_enqueue_script(
+        'awa_wannavi-button-script',
+        get_template_directory_uri() . '/assets/js/button.js',
+        '',
+        '',
+        true
+    );
+}
+
+
+/**
+ * 02.ページごとに読み込むCSS・JSを変える
+ *
+ */
+
+
+add_action('wp_enqueue_scripts', 'add_individual_stylesheet_script');
+function add_individual_stylesheet_script()
+{
+
+    //----------------------
+    //  02-A:トップページ
+    //----------------------
     if (is_home()) {
+
+        //トップページのCSS（top.css）を読み込む
+        wp_enqueue_style('awa_nolife-top', get_template_directory_uri() . '/assets/css/top.css', array(), false);
+
+        //トップページのヘッダーのCSS（template_top_header.css）を読み込む
+        wp_enqueue_style('awa_nolife-template_top_header', get_template_directory_uri() . '/assets/css/template_top_header.css', array(), false);
+
+        // //slickCSSを読み込む
+        // wp_enqueue_style('slick', get_template_directory_uri() . '/assets/slick/slick.css', false);
+
+        // //slick-themeCSSを読み込む
+        // wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css', false);
+
+        // トップページ用のJS（top.js）を読み込む
+        wp_enqueue_script('awa_nolife-top-script', get_template_directory_uri() . '/assets/js/top.js', '', '', true);
+
+        // トップページ用のJS（template_top_footer.js）を読み込む
+        // wp_enqueue_script('awa_nolife-template_top_footer', get_template_directory_uri() . '/assets/js/template_top_footer.js', '', '', true);
+    }
+    //----------------------
+    //  遊ぶ詳細ページ
+    //----------------------
+    elseif (is_singular('enjoy')) {
+
+        //（single-enjoy.css）を読み込む
         wp_enqueue_style(
-            'slick-carousel',
-            'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+            'awa_wannavi-enjoy',
+            get_template_directory_uri() . '/assets/css/single-enjoy.css',
+            array(),
+            false
         );
-        wp_enqueue_script(
-            'slick-carousel',
-            'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+    }
+    //----------------------
+    //  泊まる詳細ページ
+    //----------------------
+    elseif (is_singular('stay')) {
+
+        //（single-stay.css）を読み込む
+        wp_enqueue_style(
+            'awa_wannavi-stay',
+            get_template_directory_uri() . '/assets/css/single-stay.css',
+            array(),
+            false
         );
-        wp_enqueue_script(
-            'bistro-calme-home',
-            get_template_directory_uri() . '/assets/js/home.js',
+    }
+    //----------------------
+    //  食べる詳細ページ
+    //----------------------
+    elseif (is_singular('eat')) {
+
+        //（single-enjoy.css）を読み込む
+        wp_enqueue_style(
+            'awa_wannavi-eat',
+            get_template_directory_uri() . '/assets/css/single-eat.css',
+            array(),
+            false
         );
     }
 }
-add_action('wp_enqueue_scripts', 'bitro_calme_scripts');
-
 
 /**
  * bitro_calme_document_title_separator function

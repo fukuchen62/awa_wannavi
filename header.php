@@ -3,8 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+
+    <title>ヘッダー</title>
+
     <?php
     // wp_head()を呼び出す
     wp_head();
@@ -16,56 +23,246 @@
     <!-- wp_body_open()を呼び出す -->
     <?php wp_body_open(); ?>
 
-    <header class="header">
-        <div class="header_inner">
-            <div class="header_logo">
-                <h1><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/logo@2x.png" alt="BISTRO CALME"></a></h1>
+    <!-- header開始 -->
+    <header>
+        <div class="wrapper">
+            <div class="header__logo">
+                <h1 class="js__title__logo">
+                    <a href="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/AwAwanlogo.svg" alt="AwAワンNaviわんこと一緒徳島の自然の中でのびのびたのしもう">
+                    </a>
+                </h1>
             </div>
-
-            <div class="header_desc">
-                <p><?php bloginfo('description') ?></p>
-            </div>
-
-            <!-- 検索フォームを読み込む -->
-            <?php get_search_form(); ?>
-        </div>
-
-        <div class="header_links">
-            <!-- 自身のマークアップを活用する -->
-            <nav class="gnav">
-                <ul class="">
-                    <li><a href="<?php echo home_url('/enjoy/'); ?>">遊ぶ</a></li>
-                    <li><a href="<?php echo home_url('/stay/'); ?>">泊まる</a></li>
-                    <li><a href="<?php echo home_url('/eat/'); ?>">食べる</a></li>
-                    <li><a href="<?php echo home_url('/course/'); ?>">モデルコース</a></li>
-                    <li><a href="<?php echo home_url('/special/'); ?>">特集記事</a></li>
-                    <li><a href="<?php echo home_url('/search/'); ?>">検索</a></li>
+            <!-- headerナビゲーション -->
+            <btn class="hamburger__menu__btn"><span></span></btn>
+            <nav class="gnav__menu__content">
+                <div class="gnav__menu__content__inner">
+                    <!-- 検索フォーム -->
+                    <div class="form__box">
+                        <form action="" method="get" class="header__search">
+                            <!---- name="s"サーチのs 決まっている文字 -->
+                            <input class="form__input" type="text" name="s" value="" maxlength="20" placeholder="Search">
+                            <button class="form__button lupe" value="">
+                                <!-- <span></span>
+                                <span></span> -->
+                                <i class=" lupe fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <ul class="menu__wrap">
+                        <li class="gnav"><a class="gnav__search__sp__title" href="">条件検索</a>
+                            <div class="gnav__search__sp">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <ul class="menu__item__search__wrap__sp">
+                                <a class="menu__item__search__sp" href="">
+                                    <li>検索</li>
+                                    <span></span>
+                                </a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="menu__wrap">
+                    <li class="gnav">
+                        <a class="gnav__title" href="">遊ぶ</a>
+                        <div class="gnav__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_asobu01.jpg" alt="犬">
+                        </div>
+                        <ul class="menu__item__wrap">
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_asobu01.jpg" alt="犬">
+                                    <dl>
+                                        <dt>公園</dt>
+                                        <dd>わんちゃんと一緒に遊べる公園を紹介！</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_asobu02.jpg" alt="犬">
+                                    <dl>
+                                        <dt>ドッグラン</dt>
+                                        <dd>徳島県内のドッグランをご紹介します</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_asobu03.jpg" alt="犬">
+                                    <dl>
+                                        <dt>自然・観光</dt>
+                                        <dd>わんちゃんと遊べる大自然や観光スポットのご紹介</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_asobu04.jpg" alt="犬">
+                                    <dl>
+                                        <dt>屋内施設</dt>
+                                        <dd>屋内ドッグランやペットショップ等の商業施設をご紹介</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="menu__wrap">
+                    <li class="gnav">
+                        <a class="gnav__title" href="">泊まる</a>
+                        <div class="gnav__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_tomaru01.jpg" alt="犬">
+                        </div>
+                        <ul class="menu__item__wrap stay__wrap">
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_tomaru01.jpg" alt="犬">
+                                    <dl>
+                                        <dt>ホテル</dt>
+                                        <dd>かわいいわんちゃんを安心して預けられるホテルをご紹介</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_tomaru02.jpg" alt="犬">
+                                    <dl>
+                                        <dt>ペットと宿泊</dt>
+                                        <dd>わんちゃんと一緒に泊まれる宿泊施設をご紹介</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_tomaru03.jpg" alt="犬">
+                                    <dl>
+                                        <dt>キャンプ</dt>
+                                        <dd>大自然の中でわんちゃんと楽しもう！</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="menu__wrap">
+                    <li class="gnav">
+                        <a class="gnav__title" href="">食べる</a>
+                        <div class="gnav__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_taberu01.jpg" alt="犬">
+                        </div>
+                        <ul class="menu__item__wrap eat__wrap">
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_taberu01.jpg" alt="犬">
+                                    <dl>
+                                        <dt>ドッグカフェ</dt>
+                                        <dd>わんちゃん専用メニューをご用意！</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_taberu02.jpg" alt="犬">
+                                    <dl>
+                                        <dt>ペットと食事</dt>
+                                        <dd>わんちゃんと一緒においしく食べよう！</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="menu__wrap">
+                    <li class="gnav"><a class="gnav__title" href="">モデルコース</a>
+                        <div class="gnav__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_model01.jpg" alt="犬">
+                        </div>
+                        <ul class="menu__item__wrap model__course__wrap">
+                            <li class="menu__item"><a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_model01.jpg" alt="犬">
+                                    <dl>
+                                        <dt>川コース</dt>
+                                        <dd>徳島の川の魅力を一緒に楽しもう</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_model02.jpg" alt="犬">
+                                    <dl>
+                                        <dt>海コース</dt>
+                                        <dd>徳島の海の魅力を一緒に楽しもう</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_model03.jpg" alt="犬">
+                                    <dl>
+                                        <dt>山コース</dt>
+                                        <dd>徳島の山の魅力を一緒に楽しもう</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="menu__wrap">
+                    <li class="gnav">
+                        <a class="gnav__title" href="">おすすめ情報</a>
+                        <div class="gnav__icon">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_osusume01.jpg" alt="犬">
+                        </div>
+                        <ul class="menu__item__wrap">
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_osusume01.jpg" alt="犬">
+                                    <dl>
+                                        <dt>マナー</dt>
+                                        <dd>マナーを守って、楽しくお散歩しよう！</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_osusume02.jpg" alt="犬">
+                                    <dl>
+                                        <dt>犬の豆知識</dt>
+                                        <dd>わんちゃんに関する豆知識をお届けします</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_osusume03.jpg" alt="犬">
+                                    <dl>
+                                        <dt>お出かけ情報</dt>
+                                        <dd>わんちゃんと一緒にお出かけ！</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_osusume04.jpg" alt="犬">
+                                    <dl>
+                                        <dt>特集</dt>
+                                        <dd>インタビューやわんちゃん情報をお届けます</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="menu__wrap">
+                    <li class="gnav"><a class="gnav__title" href="">検索</a>
+                    </li>
                 </ul>
             </nav>
-
-            <!-- <nav class="gnav">
-                <?php
-                $args = [
-                    "menu" => "global-navigation",
-                    "menu_class" => "",
-                    "container" => false
-                ];
-                wp_nav_menu($args);
-                ?>
-            </nav> -->
         </div>
-
-        <svg class="header_menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
-            <defs>
-                <clipPath id="clip-path">
-                    <rect width="30" height="30" fill="none" />
-                </clipPath>
-            </defs>
-            <g clip-path="url(#clip-path)">
-                <rect class="header_border header_border-1" width="30" height="2" transform="translate(0 0)" />
-                <rect class="header_border header_border-2" width="30" height="2" transform="translate(0 10)" />
-                <rect class="header_border header_border-3" width="30" height="2" transform="translate(0 20)" />
-            </g>
-        </svg>
-
     </header>
+    <!-- header修了 -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
+    <!-- <script src="../assets/js/header-footer.js"></script> -->
