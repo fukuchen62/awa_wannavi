@@ -1,0 +1,571 @@
+@charset "utf8";
+
+/*********************/
+/* ページ内共通パーツ */
+/*********************/
+
+/* 見出しレイアウト */
+.top__outline-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border: 3px dashed #000;
+    background-color: #F3E06E;
+}
+
+.top__outline {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+@media screen and (min-width:769px) {
+
+    /* 見出しレイアウト（メディアクエリ） */
+    .top__outline {
+        font-size: 36px;
+    }
+}
+
+
+/****************************/
+/* フェードインアニメーション */
+/****************************/
+.section,
+.top-section {
+    /* 最初は非表示 */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: visibility 1.5s, opacity 1.5s, transform 1.5s;
+}
+
+.section--fadein {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/***************************/
+/* キービジュアルレイアウト */
+/***************************/
+
+.top {
+    padding: 20px;
+    background-color: #F3E06EB2;
+    background-attachment: fixed;
+}
+
+.top__text {
+    padding: 5%;
+}
+
+/* 枠線 */
+.top__border {
+    position: relative;
+    border-radius: 20px;
+    border: 5px solid #000;
+}
+
+.slider__text {
+    display: none;
+}
+
+/* 自動スクロール文字列 */
+.top__scroll-text {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+}
+
+.slider__flame {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.top__scroll-img {
+    width: 100%;
+    height: auto;
+}
+
+.top__key-visual {
+    position: relative;
+}
+
+.top__asobu-button {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 90px;
+    height: auto;
+}
+
+.top__tomaru-button {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    width: 90px;
+    height: auto;
+}
+
+.top__taberu-button {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 90px;
+    height: auto;
+}
+
+.top__awamaru {
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:769px) {
+
+    .top__text {
+        display: none;
+    }
+
+    .slider__text {
+        display: block;
+    }
+
+    /* 自動スクロール文字列 */
+    .top__scroll-text {
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin: 10px 0;
+    }
+
+    .top__key-visual {
+        padding: 2%;
+    }
+
+    .slider img {
+        width: 100%;
+        height: auto;
+    }
+
+    .slider__flame {
+        border-radius: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .slick-slide {
+        margin: 0px;
+    }
+
+    .top__scroll-img {
+        width: 600px;
+        height: 560px;
+    }
+
+    .top__asobu-button {
+        width: 185px;
+        top: auto;
+        right: auto;
+        bottom: 50%;
+        left: 15%;
+        margin: 0;
+    }
+
+    .top__tomaru-button {
+        top: 10%;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 185px;
+    }
+
+    .top__taberu-button {
+        width: 185px;
+        right: 15%;
+        bottom: 50%;
+    }
+
+    .top__awamaru {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 440px;
+        height: auto;
+    }
+
+}
+
+
+/**************/
+/* ごあいさつ */
+/**************/
+
+/* ごあいさつ本文レイアウト */
+.top-greeting__text {
+    padding: 20px;
+}
+
+/* ごあいさつワンちゃん画像 */
+.greeting__img {
+    width: 100%;
+    padding: 0 20px;
+}
+
+@media screen and (min-width:769px) {
+
+    /* 横並びレイアウト */
+    .top-greeting {
+        display: flex;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+
+    /* ごあいさつ本文レイアウト */
+    .top-greeting__text {
+        width: 70%;
+        padding: 0 5% 0 15%;
+    }
+
+    /* ごあいさつワンちゃん画像 */
+    .greeting__img {
+        width: 30%;
+        height: auto;
+        padding: 50px 12% 50px 0;
+    }
+}
+
+
+/*******************************************************/
+/* ワンちゃんとおでかけしてみよう！（ディスクリプション） */
+/*******************************************************/
+
+/* ディスクリプションレイアウト  */
+.top-description {
+    padding: 40px 0;
+    background-color: #F3E06E;
+}
+
+.top-description__foot-img {
+    width: 40px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.top-description__foot-img i {
+    font-size: 40px;
+}
+
+/* ディスクリプションタイトル  */
+.top-description__title {
+    padding: 0 17%;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.top-description__title-foot {
+    display: none;
+}
+
+.top-description__block {
+    width: 80%;
+    margin: 13px auto;
+    border-radius: 25px;
+    border: 5px solid #000;
+    background: #FAF2CD;
+}
+
+.top-description__logo {
+    width: 70px;
+    height: 70px;
+    margin: 11px 0 6px;
+}
+
+.top-description__outline {
+    text-align: left;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+.top-description__img {
+    width: 40%;
+    height: auto;
+}
+
+.top-description__text {
+    display: none;
+}
+
+.top-description__dog {
+    display: none;
+}
+
+@media screen and (min-width:769px) {
+
+    /* ディスクリプションレイアウト  */
+    .top-description {
+        padding: 50px 5% 80px;
+    }
+
+    .top-description__foot-img {
+        display: none;
+    }
+
+    /* ディスクリプションタイトル  */
+    .top-description__title {
+        font-size: 26px;
+    }
+
+    /* ディスクリプションブロック  */
+    .top-description__block {
+        display: flex;
+        align-items: center;
+        width: 75%;
+        margin: 30px auto;
+    }
+
+    .top-description a:hover {
+        opacity: 0.7;
+        color: #000;
+    }
+
+    .top-description__outline {
+        padding: 0;
+    }
+
+    .flex-r {
+        flex-direction: row-reverse;
+    }
+
+    .top-description__text-area {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top-description__logo {
+        width: 20%;
+        height: auto;
+        margin: 3%;
+    }
+
+    .top-description__text {
+        display: block;
+        text-align: left;
+    }
+
+    .top-description__dog {
+        display: block;
+        width: 20%;
+        height: auto;
+        margin: 3%;
+    }
+
+    .top-description__img {
+        display: none;
+    }
+}
+
+
+/************/
+/* 新着情報 */
+/************/
+
+.top-news__archive-link {
+    margin: 20px 0 20px 20px;
+    font-weight: 900;
+}
+
+.card {
+    margin: 0 0 40px 0;
+}
+
+@media screen and (min-width:769px) {
+
+    .top-news__card-area {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 250px;
+    }
+
+    .top-news__archive-link {
+        margin: 50px 0 50px 20px;
+    }
+
+}
+
+/********/
+/* MAP */
+/*******/
+
+.top-map {
+    position: relative;
+}
+
+.top-map__title {
+    margin: 30px 20px 0;
+    font-weight: 500;
+}
+
+/* MAPモーダルウィンドウ */
+.top-map__modal-open {
+    cursor: pointer;
+}
+
+.top-map__modal-open:hover {
+    opacity: 0.7;
+}
+
+.top-map__modal-container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    background-color: #E5D170;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.top-map__modal-container.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+/*モーダル枠の指定*/
+.top-map__modal-body {
+    position: relative;
+    width: 80%;
+    height: 50vh;
+}
+
+/*モーダルを閉じるボタンの指定*/
+.top-map__modal-close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.top-map__map {
+    width: 100%;
+    height: 100%;
+}
+
+.top-map__dog {
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 0 70px;
+}
+
+@media screen and (min-width: 769px) {
+
+    .top-map {
+        padding-bottom: 120px;
+    }
+
+    .top-map__modal-open {
+        margin-top: 60px;
+        padding: 0 5%;
+    }
+
+    .top-map__dog {
+        position: absolute;
+        right: 10%;
+        bottom: 5%;
+        width: 25%;
+    }
+}
+
+
+/***********/
+/* Pickup! */
+/***********/
+
+.top-pickup__card-area {
+    margin: 30px 0 80px;
+}
+
+.top-pickup__card {
+    width: 78%;
+    margin: 30px auto 0;
+    text-align: left;
+}
+
+.top-pickup__card-img {
+    aspect-ratio: 1 / 1;
+    border-radius: 10%;
+}
+
+.top-pickup__card-border {
+    display: inline-block;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.top-pickup__card-text h2 {
+    font-size: 16px;
+}
+
+.top-pickup__dog {
+    display: none;
+}
+
+@media screen and (min-width:769px) {
+    .top-pickup__card-area {
+        display: flex;
+    }
+
+    .top-pickup__card-area a:hover {
+        opacity: 0.7;
+        color: #000;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+
+    .top-pickup__dog {
+        display: block;
+        width: 150px;
+        height: auto;
+        margin: 100px auto;
+    }
+}
+
+
+/*************/
+/* Instagram */
+/*************/
+
+@media screen and (min-width:769px) {
+    .top-insta__insta-area {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 100px;
+    }
+
+}
