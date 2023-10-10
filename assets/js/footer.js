@@ -59,7 +59,7 @@ function updateText() {
     // ウィンドウの幅によって追加のテキストの表示/非表示を切り替える
     if (windowWidth >= 768) {
         initialText.style.display = "none"; // 768px以上の場合は初期のテキストを非表示
-        largeScreenText.style.display = "block"; // 768px以上の場合は追加のテキストを表示
+        largeScreenText.style.display = "flex"; // 768px以上の場合は追加のテキストを表示
     } else {
         initialText.style.display = "block"; // 768px未満の場合は初期のテキストを表示
         largeScreenText.style.display = "none"; // 768px未満の場合は追加のテキストを非表示
