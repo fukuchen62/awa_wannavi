@@ -169,7 +169,7 @@ ul .large-menu {
     font-weight: bold;
     position: fixed;
     margin-left: 100px;
-    bottom: 120px;
+    bottom: 200px;
     z-index: 500;
     text-align: center;
     color: #3E3A39;
@@ -184,7 +184,7 @@ ul .large-menu {
         font-weight: bold;
         position: fixed;
         margin-left: 100px;
-        bottom: 120px;
+        bottom: 130px;
         z-index: 500;
         text-align: center;
         color: #3E3A39;
