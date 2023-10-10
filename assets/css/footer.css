@@ -1,0 +1,382 @@
+@charset "utf-8";
+
+main {
+    width: 100%;
+    height: 1200px;
+    background-color: #fcc7c7;
+}
+
+/* footerはここから下 */
+
+
+.footercolor {
+    background-color: #B2D5B9;
+}
+
+.siba-sp {
+    z-index: 0;
+}
+
+.image-container {
+    display: flex;
+    max-width: 100%;
+    height: 300px;
+}
+
+.image-container img {
+    width: 30%;
+    height: 200px;
+    z-index: -1;
+    margin-top: 210px;
+}
+
+.f-dog-img1 {
+    position: absolute;
+    left: 40px;
+    max-width: 100%;
+
+}
+
+.f-dog-img2 {
+    position: absolute;
+    right: 10%;
+    max-width: 100%;
+
+}
+
+.footer-text {
+    text-align: center;
+    text-size-adjust: 24px;
+    height: 150px;
+    font-weight: bold;
+}
+
+.footer-largetext {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* メニューアイテムのスタイル（リンクに適用する場合） */
+.footer-menu a {
+    text-decoration: none;
+    /* リンクの下線を削除 */
+    color: #333;
+    /* リンクの色を設定 */
+    transition: color 0.3s;
+}
+
+/* ホバー時のスタイル */
+.footer-menu a:hover {
+    color: #ff6600;
+    /* ホバー時の新しい色を指定 */
+}
+
+.copyright {
+    background-color: #B2D5B9;
+    /* フッターの背景色を設定 */
+    color: black;
+    /* テキストの色を設定 */
+    text-align: center;
+    /* テキストを中央に配置 */
+    padding: 10px 0;
+    /* フッターの上下のパディングを設定 */
+    font-size: 16px;
+}
+
+/* 芝のSVGをウィンドウの幅にて変更 */
+
+/* 画像の共通スタイル */
+#responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.large-menu {
+    display: inline-block;
+    list-style: none;
+    /* リストのデフォルトのリストマーカーを非表示にする */
+    padding: 0;
+    /* リストの内側の余白をリセット */
+    margin-left: 2.0%;
+    /* <ul> の隙間を設定 */
+    font-weight: bold;
+}
+
+ul .large-menu {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/*＝＝＝豆知識＝＝＝ */
+
+/* あわまるの見た目・配置 */
+.awamaru {
+    width: 150px;
+    position: fixed;
+    left: -120px;
+    bottom: 0px;
+    z-index: 500;
+    cursor: pointer;
+    rotate: 60deg;
+    background-color: none;
+}
+
+/* PC幅 */
+@media screen and (min-width: 1023px) {
+    .awamaru {
+        width: 150px;
+        position: fixed;
+        left: -120px;
+        bottom: 20px;
+        z-index: 500;
+        cursor: pointer;
+        rotate: 60deg;
+        background-color: none;
+    }
+}
+
+/* 吹き出しの画像 */
+.awamaru_commentbox {
+    position: fixed;
+    /* 位置 */
+    margin-left: 100px;
+    bottom: 90px;
+    width: 200px;
+    z-index: 500;
+    -webkit-animation: 5s fukidashi_animation steps(1, start) infinite;
+    animation: 5s fukidashi_animation steps(1, start) infinite;
+}
+
+/* PC幅 */
+@media screen and (min-width: 1023px) {
+    .awamaru_commentbox {
+        position: fixed;
+        /* 位置 */
+        margin-left: 100px;
+        bottom: 90px;
+        width: 200px;
+        z-index: 500;
+        -webkit-animation: 5s fukidashi_animation steps(1, start) infinite;
+        animation: 5s fukidashi_animation steps(1, start) infinite;
+    }
+}
+
+/* あわまるのセリフ */
+.awamaru_comment {
+    font-size: 14px;
+    font-weight: bold;
+    position: fixed;
+    margin-left: 100px;
+    bottom: 120px;
+    z-index: 500;
+    text-align: center;
+    color: #3E3A39;
+    width: 200px;
+    word-wrap: break-word;
+}
+
+/* PC幅 */
+@media screen and (min-width: 1023px) {
+    .awamaru_comment {
+        font-size: 14px;
+        font-weight: bold;
+        position: fixed;
+        margin-left: 100px;
+        bottom: 120px;
+        z-index: 500;
+        text-align: center;
+        color: #3E3A39;
+        width: 200px;
+        word-wrap: break-word;
+    }
+}
+
+/* 吹き出しとセリフのセット */
+.awamaru_commentset {
+    display: none;
+}
+
+/* 吹き出しカタカタ */
+@-webkit-keyframes fukidashi_animation {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    10% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+
+    20% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+
+    30% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+
+    40% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+}
+
+@keyframes fukidashi_animation {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    10% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+
+    20% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+
+    30% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+
+    40% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    100% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+}
+
+.fukidashiAnimation {
+    -webkit-animation: 5s fukidashi_animation steps(1, start) infinite;
+    animation: 5s fukidashi_animation steps(1, start) infinite;
+}
+
+.fukidashiAnimation--delay {
+    -webkit-animation: 5s fukidashi_animation 2s steps(1, start) infinite;
+    animation: 5s fukidashi_animation 2s steps(1, start) infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* トップへ戻る */
+#scroll {
+    position: fixed;
+    right: 0;
+    bottom: 60px;
+    /* z-indexの高さを変更 */
+    z-index: 999;
+    width: 100px;
+    height: 100px;
+    transform: translate(0, 20px);
+}
+
+#scroll img {
+    width: 80%;
+    height: 80%;
+}
+
+/* トップへ戻る画像 pc */
+@media screen and (min-width: 1023px) {
+    #scroll {
+        position: fixed;
+        right: 50px;
+        bottom: 60px;
+        /* z-indexの高さを変更 */
+        z-index: 999;
+        width: 100px;
+        height: 100px;
+        transform: translate(0, 20px);
+    }
+
+    #scroll img {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+/* わんわんがぽよぽよがたがたする
+キーフレーム */
+.poyon {
+    animation: poyooon 2s infinite;
+    animation-delay: 1s;
+}
+
+.poyooon {
+    animation: poyooon 2s infinite;
+}
+
+@keyframes poyooon {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.katakata {
+    animation: katakata 1s infinite;
+}
+
+@keyframes katakata {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    51% {
+        transform: rotate(5deg);
+    }
+
+    99% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
