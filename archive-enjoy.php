@@ -15,19 +15,19 @@
         <!-- 各ボタンをラップでハサミ、ホバーすると色が変わるギミック -->
 
         <div class="tab__wrapper mb40">
-            <div class="tab__block">
+            <div class="tab__block bgBL">
                 <a href="">
                     <h3 class="tab__title">ペットホテル</h3>
                 </a>
             </div>
 
-            <div class="tab__block">
+            <div class="tab__block bgBL">
                 <a href="">
                     <h3 class="tab__title">ペットと宿泊</h3>
                 </a>
             </div>
 
-            <div class="tab__block">
+            <div class="tab__block bgBL">
                 <a href="">
                     <h3 class="tab__title">キャンプ</h3>
                 </a>
@@ -62,39 +62,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- カード型 -->
-            <div class="card tokushima">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -158,7 +126,39 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
+                            <p>遊ぶ</p>
+                        </div>
+                        <h2 class="card__outline">徳島○○○公園</h2>
+                        <div class="card__line"></div>
+                        <div class="card__textarea">
+                            <dl>
+                                <dd>●住所：</dd>
+                                <dd>徳島市○○○○○-○○</dd>
+                            </dl>
+                            <dl>
+                                <dd>●お問い合わせ：</dd>
+                                <dd>○○-○○-○○○</dd>
+                            </dl>
+                            <dl class="card__url">
+                                <dd>●URL：</dd>
+                                <dd><a href="">aaaaaaaaa.com</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- カード型 -->
+            <div class="card tokushima">
+                <a href="#">
+                    <!-- 背面 -->
+                    <div class="card__back"></div>
+                    <!-- 前面 -->
+                    <div class="card__front">
+                        <!-- カード内情報 -->
+                        <img src="../assets/img/cat.jpg" alt="">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -207,7 +207,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -239,7 +239,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -271,7 +271,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -303,7 +303,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -349,7 +349,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -381,7 +381,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -413,7 +413,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -445,7 +445,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -491,7 +491,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -523,7 +523,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -555,7 +555,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
@@ -587,7 +587,7 @@
                     <div class="card__front">
                         <!-- カード内情報 -->
                         <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag">
+                        <div class="card__tag bgBL">
                             <p>遊ぶ</p>
                         </div>
                         <h2 class="card__outline">徳島○○○公園</h2>
