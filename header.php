@@ -28,7 +28,7 @@
         <div class="wrapper">
             <div class="header__logo">
                 <h1 class="js__title__logo">
-                    <a href="">
+                    <a href="<?php echo home_url(); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/AwAwanlogo.svg" alt="AwAワンNaviわんこと一緒徳島の自然の中でのびのびたのしもう">
                     </a>
                 </h1>
