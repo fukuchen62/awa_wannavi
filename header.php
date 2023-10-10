@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
 
-    <title>ヘッダー</title>
+    <!-- <title>ヘッダー</title> -->
 
     <?php
     // wp_head()を呼び出す
@@ -263,6 +263,3 @@
         </div>
     </header>
     <!-- header修了 -->
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script> -->
-    <!-- <script src="../assets/js/header-footer.js"></script> -->
