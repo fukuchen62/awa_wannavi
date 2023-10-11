@@ -64,7 +64,17 @@
 }
 
 .s__img {
-    width: 23%;
+    /* width: 23%; */
+}
+/******************************
+        スリック
+*******************************/
+.choice-btn li.slick-current img {
+    opacity: 1;
+}
+.choice-btn li img {
+    padding: 0 10px;
+    opacity: 0.4;
 }
 
 .mtb {
