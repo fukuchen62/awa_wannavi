@@ -1,11 +1,14 @@
 @charset "utf-8";
-
+main {
+    background-color: #fff;
+}
 .form-sub-title {
     border-bottom: 0;
     color: #fff;
 }
 
-.mw-770 {
+.filtering__wrap {
+    margin-top: 160px;
     padding: 0 20px;
     overflow: hidden;
 }
@@ -120,16 +123,6 @@ label {
     padding: 20px 0;
 }
 
-.search-content::after {
-    content: "";
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 50px solid transparent;
-    border-top: 50px solid #f8f3e0;
-    /* 好みで色を変えてください */
-}
 
 .search-title {
     margin-top: 0;
