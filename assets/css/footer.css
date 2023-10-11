@@ -111,11 +111,11 @@ ul .large-menu {
 
 /* あわまるの見た目・配置 */
 .awamaru {
-    width: 150px;
+    width: 100px;
     position: fixed;
     left: -120px;
     bottom: 300px;
-    z-index: 500;
+    z-index: 5;
     cursor: pointer;
     rotate: 60deg;
     background-color: none;
@@ -128,7 +128,7 @@ ul .large-menu {
         position: fixed;
         left: -120px;
         bottom: 400px;
-        z-index: 500;
+        z-index: 5;
         cursor: pointer;
         rotate: 60deg;
         background-color: none;
@@ -140,9 +140,9 @@ ul .large-menu {
     position: fixed;
     /* 位置 */
     margin-left: 100px;
-    bottom: 440px;
+    bottom: 350px;
     width: 200px;
-    z-index: 500;
+    z-index: 5;
     -webkit-animation: 5s fukidashi_animation steps(1, start) infinite;
     animation: 5s fukidashi_animation steps(1, start) infinite;
 }
@@ -155,7 +155,7 @@ ul .large-menu {
         margin-left: 100px;
         bottom: 500px;
         width: 200px;
-        z-index: 500;
+        z-index: 70;
         -webkit-animation: 5s fukidashi_animation steps(1, start) infinite;
         animation: 5s fukidashi_animation steps(1, start) infinite;
     }
@@ -167,8 +167,8 @@ ul .large-menu {
     font-weight: bold;
     position: fixed;
     margin-left: 100px;
-    bottom: 470px;
-    z-index: 500;
+    bottom: 380px;
+    z-index: 71;
     text-align: center;
     color: #3E3A39;
     width: 200px;
@@ -183,7 +183,7 @@ ul .large-menu {
         position: fixed;
         margin-left: 100px;
         bottom: 530px;
-        z-index: 500;
+        z-index: 71;
         text-align: center;
         color: #3E3A39;
         width: 200px;
@@ -298,7 +298,7 @@ ul .large-menu {
     right: 0;
     bottom: 350px;
     /* z-indexの高さを変更 */
-    z-index: 999;
+    z-index: 5;
     width: 100px;
     height: 100px;
     transform: translate(0, 20px);
@@ -316,7 +316,7 @@ ul .large-menu {
         right: 50px;
         bottom: 400px;
         /* z-indexの高さを変更 */
-        z-index: 999;
+        z-index: 5;
         width: 100px;
         height: 100px;
         transform: translate(0, 20px);

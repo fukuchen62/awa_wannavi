@@ -30,7 +30,7 @@ function updateImages() {
             img.style.display = "none"; // 768px以上の場合は初めの画像を非表示
         });
         largeScreenImages.forEach(img => {
-            img.style.display = "block"; // 768px以上の場合は後から表示される画像を表示
+            img.style.display = "flex"; // 768px以上の場合は後から表示される画像を表示
         });
     } else {
         initialImages.forEach(img => {
@@ -130,14 +130,14 @@ $('.awamaru').clickToggle(function () {
     $(".awamaru").animate({ "rotate": "45deg", }, 500);
 });
 
-// // トップへ戻る
+// トップへ戻る
 
 $(function () {
     var topBtn = $('#scroll');
     topBtn.hide();
     //スクロールが100に達したらボタン表示
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 90 %) {
+        if ($(this).scrollTop() > 5500) {
             topBtn.fadeIn();
         } else {
             topBtn.fadeOut();
@@ -150,18 +150,42 @@ $('#scroll').click(function () {
     $('body, html').animate({ scrollTop: 0 }, 500);
 });
 
-// フッター手前で停止
-window.addEventListener('scroll', () => {
-    const elem = '任意のボタン positionはfixedで右下に設定';
-    const docHeight = document.body.clientHeight;
-    const scrollCount = document.documentElement.scrollTop || document.body.scrollTop;
-    const scrollPos = document.documentElement.clientHeight + scrollCount;
-    const footerHeight = document.querySelector('footer').clientHeight;
-    if (docHeight - scrollPos <= footerHeight) {
-        elem.style.position = 'absolute';
-        elem.style.bottom = footerHeight + 500 + 'px';
-    } else {
-        elem.style.position = 'fixed';
-        elem.style.bottom = 20 + 'px';
-    }
+// ページトップボタン
+$(function () {
+    const pageTop = $("#page-top");
+    pageTop.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 5500) {
+            pageTop.fadeIn();
+        } else {
+            pageTop.fadeOut();
+        }
+    });
+    pageTop.click(function () {
+        $("body,html").animate(
+            {
+                scrollTop: 0,
+            },
+            100
+        );
+        return false;
+    });
+    // フッター手前でストップ
+    $("#page-top").hide();
+    $(window).on("scroll", function () {
+        scrollHeight = $(document).height();
+        scrollPosition = $(window).height() + $(window).scrollTop();
+        footHeight = $("footer").innerHeight();
+        if (scrollHeight - scrollPosition <= footHeight) {
+            $("#page-top").css({
+                position: "absolute",
+                bottom: footHeight,
+            });
+        } else {
+            $("#page-top").css({
+                position: "fixed",
+                bottom: "0",
+            });
+        }
+    });
 });
