@@ -628,24 +628,29 @@ img {
     /*画面幅サイズ変更に伴うサムネイル固定*/
 }
 
-@media (min-width:768px) {
-
-    .choice-btn {
-        width: 80%;
-    }
-
-}
-
 /* ギャラリー下の写真を均等配置 */
-.flex__sb2 {
+/* .flex-sb2 {
     display: flex;
     justify-content: space-between;
-}
+} */
 
 .photo__container2 {
+    width: 100%;
     padding: 10px 10px;
 }
 
 /* .s__img2 {
     width: 23%;
 } */
+
+@media (min-width:768px) {
+
+    .choice-btn {
+        /* width: 80%; */
+    }
+
+    .photo__container2 {
+        width: 80%;
+    }
+
+}
