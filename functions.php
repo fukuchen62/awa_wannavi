@@ -160,6 +160,16 @@ function add_individual_stylesheet_script()
         // //slick-themeCSSを読み込む
         // wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css', false);
 
+        // トップページ専用のスライドショー用のもの
+        wp_enqueue_style(
+            'slick-carousel',
+            'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css',
+        );
+        wp_enqueue_style(
+            'slick-carousel',
+            'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css',
+        );
+
         // トップページ用のJS（top.js）を読み込む
         wp_enqueue_script(
             'awa_wannavi-top-script',
