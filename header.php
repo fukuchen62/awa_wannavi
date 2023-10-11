@@ -66,7 +66,7 @@
                 </div>
                 <ul class="menu__wrap">
                     <li class="gnav">
-                        <a class="gnav__title" href="">遊ぶ</a>
+                        <a class="gnav__title" href="<?php echo home_url('/enjoy/'); ?>">遊ぶ</a>
                         <div class="gnav__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_asobu01.jpg" alt="犬">
                         </div>
@@ -112,7 +112,7 @@
                 </ul>
                 <ul class="menu__wrap">
                     <li class="gnav">
-                        <a class="gnav__title" href="">泊まる</a>
+                        <a class="gnav__title" href="<?php echo home_url('/stay/'); ?>">泊まる</a>
                         <div class="gnav__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_tomaru01.jpg" alt="犬">
                         </div>
@@ -149,7 +149,7 @@
                 </ul>
                 <ul class="menu__wrap">
                     <li class="gnav">
-                        <a class="gnav__title" href="">食べる</a>
+                        <a class="gnav__title" href="<?php echo home_url('/eat/'); ?>">食べる</a>
                         <div class="gnav__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_taberu01.jpg" alt="犬">
                         </div>
@@ -176,7 +176,7 @@
                     </li>
                 </ul>
                 <ul class="menu__wrap">
-                    <li class="gnav"><a class="gnav__title" href="">モデルコース</a>
+                    <li class="gnav"><a class="gnav__title" href="<?php echo home_url('/course/'); ?>">モデルコース</a>
                         <div class="gnav__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_model01.jpg" alt="犬">
                         </div>
@@ -256,7 +256,7 @@
                     </li>
                 </ul>
                 <ul class="menu__wrap">
-                    <li class="gnav"><a class="gnav__title" href="">検索</a>
+                    <li class="gnav"><a class="gnav__title" href="<?php echo home_url('/search/'); ?>">検索</a>
                     </li>
                 </ul>
             </nav>

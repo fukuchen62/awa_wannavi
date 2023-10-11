@@ -10,6 +10,7 @@ header {
     z-index: 10;
     font-family: 'Zen Maru Gothic', sans-serif;
 }
+
 .wrapper {
     max-width: 1200px;
     position: relative;
@@ -17,13 +18,16 @@ header {
     margin: 0 auto;
     padding: 0px;
 }
-.header__logo{
-    display: block;
-    margin: 20px;
 
+.header__logo {
+    display: block;
+    position: relative;
+    z-index: 20;
+    margin: 20px;
 }
+
 /* ヘッダー画像大きさ */
-.header__logo img{
+.header__logo img {
     width: 100px;
     height: 50px;
 }
@@ -104,8 +108,9 @@ header {
     transition: left 0.3s;
     /*アニメーション設定*/
 }
+
 /* PCnav */
-@media screen and (min-width:1023px){
+@media screen and (min-width:1023px) {
     .gnav__menu__content {
         max-width: 1200px;
         width: 100%;
@@ -120,7 +125,9 @@ header {
         text-align: center;
         transition: 0s;
         visibility: visible;
+        z-index: 10;
     }
+
     .gnav__menu__content__inner {
         position: absolute;
         height: 60px;
@@ -139,7 +146,7 @@ header {
 }
 
 /* 検索入力フォーム*/
-.form__box{
+.form__box {
     position: absolute;
     text-align: left;
     width: 210px;
@@ -149,9 +156,10 @@ header {
     top: 30px;
     left: 20px;
 }
+
 /* PC用 */
 @media screen and (min-width:1023px) {
-    .form__box{
+    .form__box {
 
         position: absolute;
         top: 0;
@@ -161,24 +169,25 @@ header {
 }
 
 .form__input {
-    padding:0 3px;
+    padding: 0 3px;
     height: 20px;
     border: 1px solid #4f4f4f;
     background-color: #fff;
     border-radius: 20px;
-    margin: 5px 0 5px 5px ;
+    margin: 5px 0 5px 5px;
     width: 170px;
 }
 
 
 /* gnavの見出しレイアウト */
-.gnav{
+.gnav {
     width: 100%;
     text-decoration: none;
     margin: 10px auto;
     display: flex;
     justify-content: center;
 }
+
 .gnav a {
     font-weight: bold;
 }
@@ -205,6 +214,7 @@ header {
     position: relative;
     left: 0;
 }
+
 /* 輪っか部分 */
 .lupe__sp span:nth-child(1) {
     position: absolute;
@@ -216,6 +226,7 @@ header {
     left: -52px;
 
 }
+
 /* 柄部分 */
 .lupe__sp span:nth-child(2) {
     position: absolute;
@@ -229,6 +240,7 @@ header {
     top: -7px;
     left: -30px;
 }
+
 /* 通常gnavのアイコン */
 .gnav__icon {
     color: #d9d9d9;
@@ -245,6 +257,7 @@ header {
     padding: 10px;
     background-color: #4f4f4f;
 }
+
 .gnav__title {
     max-width: 600px;
     width: 100%;
@@ -256,6 +269,7 @@ header {
     left: 50%;
     transform: translate(-50%);
 }
+
 /* sp用検索見出し */
 .gnav__search__sp__title {
     max-width: 600px;
@@ -268,6 +282,7 @@ header {
     left: 50%;
     transform: translate(-50%);
 }
+
 /* 虫眼鏡のgavi */
 .gnav__search__sp {
     padding: 10px;
@@ -278,6 +293,7 @@ header {
     border-radius: 5px;
     background-color: #4f4f4f;
 }
+
 /* 輪っか部分 */
 .gnav__search__sp span:nth-child(1) {
     display: block;
@@ -288,6 +304,7 @@ header {
     width: 23px;
     height: 23px;
 }
+
 /* 柄部分 */
 .gnav__search__sp span:nth-child(2) {
     display: block;
@@ -302,6 +319,7 @@ header {
     left: 16px;
     transform: rotate(45deg);
 }
+
 /* sp用検索 */
 .menu__item__search__wrap__sp {
     background-color: #fff;
@@ -352,6 +370,7 @@ header {
     left: 7px;
     transform: rotate(90deg);
 }
+
 /**************************
         pc用の検索
 **************************/
@@ -376,13 +395,15 @@ header {
     font-size: 1rem;
     height: 30px;
 }
-.menu__item  dl{
+
+.menu__item dl {
     position: relative;
-    top:-23px;
+    top: -23px;
     border: #000 solid 1px;
     border-radius: 20px;
     padding: 2px 5px;
 }
+
 .menu__item img {
     display: none;
 }
@@ -396,6 +417,7 @@ header {
     height: 20px;
 
 }
+
 /* pcメニュー */
 @media screen and (min-width:1023px) {
     .menu__item__wrap {
@@ -405,7 +427,7 @@ header {
         background-color: #f3e06e;
         padding: 25px 5%;
         margin: 0px;
-        margin-left:0;
+        margin-left: 0;
         top: 100px;
         /* justify-content: space-between; */
         left: 0px;
@@ -424,7 +446,8 @@ header {
         display: flex;
         height: auto;
     }
-    .menu__item{
+
+    .menu__item {
         display: flex;
         margin: 0 auto;
         max-width: 260px;
@@ -436,6 +459,7 @@ header {
         border: #000 solid 3px;
         background: #fff;
     }
+
     .menu__item img {
         display: block;
         text-align: center;
@@ -444,21 +468,25 @@ header {
         height: 94px;
 
     }
-    .menu__item a{
-    display: flex;
-    /* text-decoration: none; */
-    border-radius: 0;
-    margin: 0px;
-    padding: 0px;
+
+    .menu__item a {
+        display: flex;
+        /* text-decoration: none; */
+        border-radius: 0;
+        margin: 0px;
+        padding: 0px;
     }
+
     .menu__item dl {
         position: static;
         border: 0;
     }
+
     .menu__item dt {
         text-align: left;
         font-size: 20px;
     }
+
     .menu__item dd {
         font-size: 14px;
         line-height: 1.5;
@@ -466,8 +494,10 @@ header {
         border: 0;
     }
 }
+
 /* 1023px以上なら表示 */
 @media screen and (min-width:1023px) {
+
     /* PCnavの見出し */
     .gnav {
         border: 0px;
@@ -477,6 +507,7 @@ header {
         padding-top: 35px;
         text-align: center;
     }
+
     .gnav__title {
         display: block !important;
         position: static;
@@ -488,6 +519,7 @@ header {
         transform: translate(0);
     }
 }
+
 /* ホバーアクション */
 /* ホバーしたときに表示する */
 .gnav:hover .menu__item__wrap {
@@ -495,10 +527,11 @@ header {
 
 }
 
-.gnav__search__title:hover ,
+.gnav__search__title:hover,
 .gnav:hover {
     background-color: #f3e06e;
 }
+
 .menu__item:hover {
     opacity: 0.7;
 }
@@ -506,7 +539,7 @@ header {
 
 /* 1023px以下なら消す */
 .gnav__title:last-child,
-.menu__item dd{
+.menu__item dd {
 
     display: none;
 
@@ -514,14 +547,15 @@ header {
 
 /* 1023以上なら消す */
 @media screen and (min-width:1023px) {
-.hamburger__menu__btn,
-.gnav__search__sp__title,
-.gnav__search__sp,
-.gnav__search__sp span:nth-child(1),
-.gnav__search__sp span:nth-child(2),
-.gnav__menu__content__inner p:first-of-type,
-.gnav__icon,
-.menu__item__search__wrap__sp{
-    display: none !important;
-}
+
+    .hamburger__menu__btn,
+    .gnav__search__sp__title,
+    .gnav__search__sp,
+    .gnav__search__sp span:nth-child(1),
+    .gnav__search__sp span:nth-child(2),
+    .gnav__menu__content__inner p:first-of-type,
+    .gnav__icon,
+    .menu__item__search__wrap__sp {
+        display: none !important;
+    }
 }
