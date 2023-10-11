@@ -94,9 +94,8 @@
                         <dd><?php the_field("business_hours"); ?></dd>
                     </dl>
                     <dl>
-                        <!-- 定休日フィールド未設定 -->
                         <dt>定休日</dt>
-                        <dd><?php the_field("company"); ?></dd>
+                        <dd><?php the_field("close"); ?></dd>
                     </dl>
                     <dl>
                         <dt>ホームページ</dt>
@@ -115,9 +114,8 @@
                         <dd><?php the_field("parking"); ?></dd>
                     </dl>
                     <dl>
-                        <!-- 対応犬種見製作 -->
                         <dt>対応犬種</dt>
-                        <dd>有</dd>
+                        <dd><?php the_field("dog_Size"); ?></dd>
                     </dl>
                     <dl>
                         <dt>入店ルール</dt>
