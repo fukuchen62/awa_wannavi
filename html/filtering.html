@@ -3,122 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>条件検索</title>
     <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/header-footer.css">
     <link rel="stylesheet" href="../assets/css/filtering.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>条件検索</title>
 </head>
 <body>
+    <header>
+        <div class="wrapper">
+            <div class="header__logo">
+                <h1 class="js__title__logo">
+                        <a href=""><img src="../assets/img/common/AwAwanlogo.svg" alt="AwAワンNaviわんこと一緒徳島の自然の中でのびのびたのしもう"></a>
+                    </h1>
+            </div>
+            <!-- headerナビゲーション -->
+            <btn class="hamburger__menu__btn"><span></span></btn>
+            <nav class="gnav__menu__content">
+                <div class="gnav__menu__content__inner">
+                    <!-- 検索フォーム -->
+                    <div class="form__box">
+                        <form action="" method="get" class="header__search">
+                            <!---- name="s"サーチのs 決まっている文字 -->
+                            <input class="form__input" type="text" name="s" value="" maxlength="20" placeholder="Search">
+                            <button class="form__button" value="">
+                                <i class=" lupe fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <ul class="menu__wrap">
+                        <li class="gnav"><a class="gnav__search__sp__title" href="">条件検索</a>
+                            <div class="gnav__search__sp">
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <ul class="menu__item__search__wrap__sp">
+                                <a class="menu__item__search__sp" href="">
+                                    <li>検索</li>
+                                    <span></span>
+                                </a>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="menu__wrap">
+                    <li class="gnav">
+                        <a class="gnav__title" href="">遊ぶ</a>
+                        <div class="gnav__icon"><img src="../assets/img/common/menu/sp_mega_asobu01.jpg" alt="犬"></div>
+                        <ul class="menu__item__wrap">
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_asobu01.jpg" alt="犬">
+                                    <dl>
+                                        <dt>公園</dt>
+                                        <dd>わんちゃんと一緒に遊べる公園を紹介！</dd>
+                                    </dl>
+                                </a></li>
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_asobu02.jpg" alt="犬">
+                                    <dl>
+                                        <dt>ドッグラン</dt>
+                                        <dd>徳島県内のドッグランをご紹介します</dd>
+                                    </dl>
+                                </a></li>
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_asobu03.jpg" alt="犬">
+                                    <dl>
+                                        <dt>自然・観光</dt>
+                                        <dd>わんちゃんと遊べる大自然や観光スポットのご紹介</dd>
+                                    </dl>
+                                </a></li>
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_asobu04.jpg" alt="犬">
+                                    <dl>
+                                        <dt>屋内施設</dt>
+                                        <dd>屋内ドッグランやペットショップ等の商業施設をご紹介</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="menu__wrap">
+                    <li class="gnav"><a class="gnav__title" href="">泊まる</a>
+                        <div class="gnav__icon"><img src="../assets/img/common/menu/sp_mega_tomaru01.jpg" alt="犬"></div>
+                        <ul class="menu__item__wrap stay__wrap">
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_tomaru01.jpg" alt="犬">
+                                    <dl>
+                                        <dt>ホテル</dt>
+                                        <dd>かわいいわんちゃんを安心して預けられるホテルをご紹介</dd>
+                                    </dl>
+                                </a></li>
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_tomaru02.jpg" alt="犬">
+                                    <dl>
+                                        <dt>ペットと宿泊</dt>
+                                        <dd>わんちゃんと一緒に泊まれる宿泊施設をご紹介</dd>
+                                    </dl>
+                                </a></li>
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_tomaru03.jpg" alt="犬">
+                                    <dl>
+                                        <dt>キャンプ</dt>
+                                        <dd>大自然の中でわんちゃんと楽しもう！</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="menu__wrap">
+                    <li class="gnav"><a class="gnav__title" href="">食べる</a>
+                        <div class="gnav__icon"><img src="../assets/img/common/menu/sp_mega_taberu01.jpg" alt="犬"></div>
+                        <ul class="menu__item__wrap eat__wrap">
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_taberu01.jpg" alt="犬">
+                                    <dl>
+                                        <dt>ドッグカフェ</dt>
+                                        <dd>わんちゃん専用メニューをご用意！</dd>
+                                    </dl>
+                                </a></li>
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_taberu02.jpg" alt="犬">
+                                    <dl>
+                                        <dt>ペットと食事</dt>
+                                        <dd>わんちゃんと一緒においしく食べよう！</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="menu__wrap">
+                    <li class="gnav"><a class="gnav__title" href="">モデルコース</a>
+                        <div class="gnav__icon"><img src="../assets/img/common/menu/sp_mega_model01.jpg" alt="犬"></div>
+                        <ul class="menu__item__wrap model__course__wrap">
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_model01.jpg" alt="犬">
+                                    <dl>
+                                        <dt>川コース</dt>
+                                        <dd>徳島の川の魅力を一緒に楽しもう</dd>
+                                    </dl>
+                                </a></li>
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_model02.jpg" alt="犬">
+                                    <dl>
+                                        <dt>海コース</dt>
+                                        <dd>徳島の海の魅力を一緒に楽しもう</dd>
+                                    </dl>
+                                </a></li>
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_model03.jpg" alt="犬">
+                                    <dl>
+                                        <dt>山コース</dt>
+                                        <dd>徳島の山の魅力を一緒に楽しもう</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="menu__wrap">
+                    <li class="gnav"><a class="gnav__title" href="">おすすめ情報</a>
+                        <div class="gnav__icon"><img src="../assets/img/common/menu/sp_mega_osusume01.jpg" alt="犬"></div>
+                        <ul class="menu__item__wrap">
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_osusume01.jpg" alt="犬">
+                                    <dl>
+                                        <dt>マナー</dt>
+                                        <dd>マナーを守って、楽しくお散歩しよう！</dd>
+                                    </dl>
+                                </a></li>
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_osusume02.jpg" alt="犬">
+                                    <dl>
+                                        <dt>犬の豆知識</dt>
+                                        <dd>わんちゃんに関する豆知識をお届けします</dd>
+                                    </dl>
+                                </a></li>
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_osusume03.jpg" alt="犬">
+                                    <dl>
+                                        <dt>お出かけ情報</dt>
+                                        <dd>わんちゃんと一緒にお出かけ！</dd>
+                                    </dl>
+                                </a></li>
+                            <li class="menu__item"><a href=""><img src="../assets/img/common/menu/img_mega_osusume04.jpg" alt="犬">
+                                    <dl>
+                                        <dt>特集</dt>
+                                        <dd>インタビューやわんちゃん情報をお届けます</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="menu__wrap">
+                    <li class="gnav"><a class="gnav__title" href="">検索</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <main class="mw-770">
+            <!-- パンくず -->
+            <div class="Breadcrumb">
+                <a href="#">
+                    トップ > 条件検索
+                </a>
+            </div>
+            <div class="content-wrapper">
+                <!-- フォームを読み込む -->
+                <!-- 農業体験を詳細に絞り込むためのフォーム -->
+                <div class="form-wrap">
+                    <div class="form-title">
+                        <!-- 文字変更 2022.10.14 akamatsu -->
+                        <h2 class="form-sub-title" style="white-space: nowrap">条件けんさく</h2>
+                    </div>
+                    <form class="inner" method="get" action="">
 
+                        <!--隠しフィールドとして記述する（これがないとフォームがうまく動作しません）-->
+                        <input type="hidden" name="s" value="">
+
+
+                        <!-- ここから本文 -->
+                        <div class="search-content">
+                            <section class="choice-wrap area-wrap">
+                                <h3 class="search-title area">エリアから探す<img src="../assets/img/cat.jpg" alt=""></h3>
+                                <ul id="area" class="radio-box">
+                                    <li class="choice-item">
+                                        <input type="checkbox" name="area[]" value="tokushima" id="tokushima" class="checkbox_list" />
+                                        <label for="tokushima" class="s-search-btn">徳島市内</label>
+                                    </li>
+                                    <li class="choice-item">
+                                        <input type="checkbox" name="area[]" value="east" id="east" class="checkbox_list" />
+                                        <label for="east" class="s-search-btn">県内東部</label>
+                                    </li>
+                                    <li class="choice-item">
+                                        <input type="checkbox" name="area[]" value="west" id="west" class="checkbox_list" />
+                                        <label for="west" class="s-search-btn">県内西部</label>
+                                    </li>
+                                    <li class="choice-item">
+                                        <input type="checkbox" name="area[]" value="south" id="south" class="checkbox_list" />
+                                        <label for="south" class="s-search-btn">県内南部</label>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="choice-wrap event-type-wrap">
+                                <h3 class="search-title event">目的から探す<img src="../assets/img/cat.jpg" alt=""></h3>
+                                <ul>
+                                    <p>遊ぶ</p>
+                                    <li class="choice-item"><input type="checkbox" name="event_type[]" value="park" id="park" class="checkbox_list" />
+                                        <label for="park" class="s-search-btn">公園</label>
+                                    </li>
+                                    <li class="choice-item">
+                                        <input type="checkbox" name="event_type[]" value="dogrun" id="dogrun" class="checkbox_list" />
+                                        <label for="dogrun" class="s-search-btn">ドッグラン</label>
+                                    </li>
+                                    <li class="choice-item">
+                                        <input type="checkbox" name="event_type[]" value="farm_stay" id="farm_stay" class="checkbox_list" />
+                                        <label for="farm_stay" class="s-search-btn">自然・観光</label>
+                                    </li>
+                                    <li class="choice-item">
+                                        <input type="checkbox" name="event_type[]" value="farm_stay" id="farm_stay" class="checkbox_list" />
+                                        <label for="farm_stay" class="s-search-btn">屋内施設</label>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <p>泊る</p>
+                                    <li class="choice-item"><input type="checkbox" name="event_type[]" value="pethotel" id="pethotel" class="checkbox_list" />
+                                        <label for="pethotel" class="s-search-btn">ペットホテル</label>
+                                    </li>
+                                    <li class="choice-item">
+                                        <input type="checkbox" name="event_type[]" value="pet&stay" id="pet&stay" class="checkbox_list" />
+                                        <label for="pet&stay" class="s-search-btn">ペットと宿泊</label>
+                                    </li>
+                                    <li class="choice-item">
+                                        <input type="checkbox" name="event_type[]" value="camp" id="camp" class="checkbox_list" />
+                                        <label for="camp" class="s-search-btn">キャンプ</label>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <p>食べる</p>
+                                    <li class="choice-item"><input type="checkbox" name="event_type[]" value="dogcafe" id="dogcafe" class="checkbox_list" />
+                                        <label for="dogcafe" class="s-search-btn">ドッグカフェ</label>
+                                    </li>
+                                    <li class="choice-item">
+                                        <input type="checkbox" name="event_type[]" value="pet&meal" id="pet&meal" class="checkbox_list" />
+                                        <label for="pet&meal" class="s-search-btn">ペットと食事</label>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="choice-wrap type-wrap">
+                                <h3 class="search-title type">条件から探す<img src="../assets/img/cat.jpg" alt=""></h3>
+                                <ul class="checkbox_wrap">
+                                    <p>犬種</p>
+                                    <li class="choice-sub-item">
+                                        <input type="checkbox" name="season[]" value="smalldog" id="smalldog" class="checkbox_list" />
+                                        <label for="smalldog" class="s-search-btn">小型犬</label>
+                                    </li>
+                                    <li class="choice-sub-item">
+                                        <input type="checkbox" name="season[]" value="mediumdog" id="mediumdog" class="checkbox_list" />
+                                        <label for="mediumdog" class="s-search-btn">中型犬</label>
+                                    </li>
+                                    <li class="choice-sub-item">
+                                        <input type="checkbox" name="season[]" value="largedog" id="largedog" class="checkbox_list" />
+                                        <label for="largedog" class="s-search-btn">大型犬<label>
+                                    </li>
+                                </ul>
+                                <ul class="checkbox_wrap">
+                                    <p>駐車場</p>
+                                    <li class="choice-sub-item">
+                                        <input type="checkbox" name="season[]" value="yes" id="yes" class="checkbox_list" />
+                                        <label for="yes" class="s-search-btn">有</label>
+                                    </li>
+                                    <li class="choice-sub-item">
+                                        <input type="checkbox" name="season[]" value="nothing" id="nothing" class="checkbox_list" />
+                                        <label for="nothing" class="s-search-btn">無</label>
+                                    </li>
+                                </ul>
+                            </section>
+                            <!-- ボタン -->
+                            <div class="searchbtn-restbtn-wrap">
+                                <!-- リセットボタン -->
+                                <div class="reset-btn-inner">
+                                    <input type="checkbox" value="リセット" id="reset-btn" /><label for="reset-btn" class="reset-btn">リセット</label>
+                                </div>
+                                <!-- 検索ボタン -->
+                                <div class="search-btn-inner">
+                                    <input type="submit" value=" これでさがす " id="search-btn" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+        </main>
+        <footer></footer>
 </body>
 </html>
-<ul class="menu__wrap__search">
-    <li class="gnav"><a class="gnav__search__title" href="">検索</a>
-        <ul class="menu__item__search__wrap">
-            <li class="menu__item__search">
-                <div class="search__title">
-                    <p>エリアから探す</p>
-                    <img src="../assets/img/cat.jpg" alt="">
-                </div>
-                <ul class="box__wrap">
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">徳島市内</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">県内東部</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">県内西部</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">県内南部</label>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu__item__search">
-                <div class="search__title">
-                    <p>目的を探す</p>
-                    <img src="../assets/img/cat.jpg" alt="">
-                </div>
-                <ul class="box__wrap">遊ぶ
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">公園</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">ドッグラン</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">自然・観光</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">屋内施設</label>
-                    </li>
-                </ul>
-                <ul class="box__wrap">泊まる
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">ペットホテル</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">ペットペットと宿泊</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">キャンプ</label>
-                    </li>
-                </ul>
-                <ul class="box__wrap">食べる
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">ドッグカフェ</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">ペットと食事</label>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu__item__search">
-                <div class="search__title">
-                    <p>条件から探す</p>
-                    <img src="../assets/img/cat.jpg" alt="">
-                </div>
-                <ul class="box__wrap">犬種
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">小型犬</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">中型犬</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">大型犬</label>
-                    </li>
-                </ul>
-                <ul class="box__wrap">駐車場
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">有</label>
-                    </li>
-                    <li class="box">
-                        <input type="checkbox" id="scales" name="scales" checked />
-                        <label for="scales">無</label>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
