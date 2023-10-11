@@ -46,32 +46,32 @@
         </script>
         <div class="awamaru_trivia foot_scroll">
             <div class="awamaru_commentset fukidashi_animation" style="display: block;">
-                <img class="awamaru_commentbox" src="../assets/img/common/hukidasi.png" alt="あわまる吹き出し">
+                <img class="awamaru_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/hukidasi.png" alt="あわまる吹き出し">
 
                 <p id="awamaru_comment" class="awamaru_comment">高知の土佐犬みたいに徳島にも阿波犬っていたって知ってるワン？</p>
 
             </div>
-            <input class="awamaru" type="image" src="../assets/img/common/awamaru.png" value="豆知識" onclick="msgOutput()" alt="あわまる" onsubmit="return false" style="margin-left: 130px; rotate: 0deg;">
+            <input class="awamaru" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/awamaru.png" value="豆知識" onclick="msgOutput()" alt="あわまる" onsubmit="return false" style="margin-left: 130px; rotate: 0deg;">
         </div>
         <!-- トップへ戻る -->
         <div id="scroll">
-            <img class="top-btn01" src="../assets/img/common/topbtn.png" alt="トップボタン">
+            <img class="top-btn01" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/topbtn.png" alt="トップボタン">
         </div>
 
         <div class="image-container">
             <!-- 初めに表示される2枚の画像 -->
-            <img class="f-dog-img1 initial-image katakata" src="../assets/img/common/footer_imgdog02.svg" alt="Image 1">
-            <img class="f-dog-img2 initial-image katakata" src="../assets/img/common/footer_imgdog05.svg" alt="Image 2">
+            <img class="f-dog-img1 initial-image katakata" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgdog02.svg" alt="Image 1">
+            <img class="f-dog-img2 initial-image katakata" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgdog05.svg" alt="Image 2">
 
             <!-- 後から表示させる5枚の画像 -->
-            <img class="large-screen katakata" src="../assets/img/common/footer_imgdog01.svg" alt="Image 3">
-            <img class="large-screen poyooon" src="../assets/img/common/footer_imgdog02.svg" alt="Image 4">
-            <img class="large-screen katakata" src="../assets/img/common/footer_imgdog03.svg" alt="Image 5">
-            <img class="large-screen poyon" src="../assets/img/common/footer_imgdog04.svg" alt="Image 6">
-            <img class="large-screen katakata" src="../assets/img/common/footer_imgdog05.svg" alt="Image 7">
+            <img class="large-screen katakata" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgdog01.svg" alt="Image 3">
+            <img class="large-screen poyooon" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgdog02.svg" alt="Image 4">
+            <img class="large-screen katakata" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgdog03.svg" alt="Image 5">
+            <img class="large-screen poyon" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgdog04.svg" alt="Image 6">
+            <img class="large-screen katakata" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgdog05.svg" alt="Image 7">
         </div>
 
-        <img class="siba-sp" id="responsive-image" src="../assets/img/common/footer_imgshiba_sp.svg" alt="Responsive Image">
+        <img class="siba-sp" id="responsive-image" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgshiba_sp.svg" alt="Responsive Image">
 
         <div class="footercolor footer-menu">
             <div class="footer-text">

@@ -69,6 +69,15 @@ function awa_wannavi_add_common_scripts()
         false
     );
 
+    // 04.『フッターのCSS（footer.css）』
+    wp_enqueue_style(
+        'awa_wannavi-footer',
+        get_template_directory_uri() . '/assets/css/footer.css',
+        array(),
+        false
+    );
+
+
     // 共通のJavaScriptを読み込む
     // jQueryライブラリを読み込む
     // wp_enqueue_script('jquery');
@@ -108,6 +117,30 @@ function awa_wannavi_add_common_scripts()
     //     );
     // }
 
+    // トップページ専用のスライドショー用のもの
+    if (is_home()) {
+        wp_enqueue_style(
+            'slick-carousel',
+            'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css',
+        );
+        wp_enqueue_style(
+            'slick-carousel-min',
+            'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css',
+        );
+        wp_enqueue_script(
+            'awa_wannavi-slick-script',
+            'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js',
+        );
+        // トップページ用のJS（top.js）を読み込む
+        wp_enqueue_script(
+            'awa_wannavi-top-script',
+            get_template_directory_uri() . '/assets/js/index.js',
+            '',
+            '',
+            true
+        );
+    }
+
     // 01.『header.js』
     wp_enqueue_script(
         'awa_wannavi-header-script',
@@ -117,7 +150,17 @@ function awa_wannavi_add_common_scripts()
         true
     );
 
-    // 02.『button.js』
+    // 02.『footer.js』
+    wp_enqueue_script(
+        'awa_wannavi-footer-script',
+        get_template_directory_uri() . '/assets/js/footer.js',
+        '',
+        '',
+        true
+    );
+
+
+    // 03.『button.js』
     wp_enqueue_script(
         'awa_wannavi-button-script',
         get_template_directory_uri() . '/assets/js/button.js',
@@ -160,27 +203,7 @@ function awa_wannavi_add_individual_scripts()
         // //slick-themeCSSを読み込む
         // wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css', false);
 
-        // トップページ専用のスライドショー用のもの
-        wp_enqueue_style(
-            'slick-carousel',
-            'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css',
-        );
-        wp_enqueue_style(
-            'slick-carousel-min',
-            'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css',
-        );
-        wp_enqueue_script(
-            'awa_wannavi-slick-script',
-            'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js',
-        );
-        // トップページ用のJS（top.js）を読み込む
-        wp_enqueue_script(
-            'awa_wannavi-top-script',
-            get_template_directory_uri() . '/assets/js/index.js',
-            '',
-            '',
-            true
-        );
+
 
 
         // トップページ用のJS（template_top_footer.js）を読み込む
