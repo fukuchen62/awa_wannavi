@@ -95,7 +95,7 @@ label {
 /*	1. 	フォームのオレンジ色と肌色の部分
 /* --------------------------------------------- */
 .form-title {
-    background-color: #ffc24a;
+    background-color: #f3e06e;
     height: 60px;
     border-radius: 10px 10px 0 0;
     position: relative;
@@ -103,6 +103,9 @@ label {
 
 .form-title h2 {
     font-size: 20px;
+    color: #000;
+    border-bottom:1px dashed;
+    line-height: 2;
 }
 
 .form-wrap h2 {
@@ -271,7 +274,8 @@ label {
     .choice-wrap ul li {
         width: 125px;
         padding: 10px;
-        margin: 0 auto;
+        margin: 0;
+        margin-right: auto;
         margin-bottom: 0;
     }
     .choice-wrap p {
