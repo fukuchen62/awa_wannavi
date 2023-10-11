@@ -166,10 +166,13 @@ function awa_wannavi_add_individual_scripts()
             'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css',
         );
         wp_enqueue_style(
-            'slick-carousel',
+            'slick-carousel-min',
             'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css',
         );
-
+        wp_enqueue_script(
+            'awa_wannavi-slick-script',
+            'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js',
+        );
         // トップページ用のJS（top.js）を読み込む
         wp_enqueue_script(
             'awa_wannavi-top-script',
@@ -178,6 +181,7 @@ function awa_wannavi_add_individual_scripts()
             '',
             true
         );
+
 
         // トップページ用のJS（template_top_footer.js）を読み込む
         // wp_enqueue_script('awa_nolife-template_top_footer', get_template_directory_uri() . '/assets/js/template_top_footer.js', '', '', true);
