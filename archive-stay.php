@@ -17,8 +17,8 @@
             <h2 class="h2__title mb20 fs35 bc_tomaru">キャンプ一覧</h2>
 
             <!-- パンくずリスト -->
-
-            <div class="Breadcrumb"><a href="">遊ぶ > キャンプ一覧</a>
+            <div class="Breadcrumb mb20">
+                <?php get_template_part("template-parts/breadcrumb"); ?>
             </div>
 
 
