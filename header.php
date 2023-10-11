@@ -155,7 +155,7 @@
                         </div>
                         <ul class="menu__item__wrap eat__wrap">
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/eat_type/cafe/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_taberu01.jpg" alt="犬">
                                     <dl>
                                         <dt>ドッグカフェ</dt>
@@ -164,7 +164,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/eat_type/restaurant/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_taberu02.jpg" alt="犬">
                                     <dl>
                                         <dt>ペットと食事</dt>
@@ -176,12 +176,13 @@
                     </li>
                 </ul>
                 <ul class="menu__wrap">
-                    <li class="gnav"><a class="gnav__title" href="<?php echo home_url('/course/'); ?>">モデルコース</a>
+                    <li class="gnav"><span class="gnav__title">モデルコース</span>
                         <div class="gnav__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_model01.jpg" alt="犬">
                         </div>
                         <ul class="menu__item__wrap model__course__wrap">
-                            <li class="menu__item"><a href="">
+                            <li class="menu__item">
+                                <a href="<?php echo home_url('/course/co01/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_model01.jpg" alt="犬">
                                     <dl>
                                         <dt>川コース</dt>
@@ -190,7 +191,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/course/co02/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_model02.jpg" alt="犬">
                                     <dl>
                                         <dt>海コース</dt>
@@ -199,7 +200,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/course/co03/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_model03.jpg" alt="犬">
                                     <dl>
                                         <dt>山コース</dt>
@@ -212,13 +213,13 @@
                 </ul>
                 <ul class="menu__wrap">
                     <li class="gnav">
-                        <a class="gnav__title" href="">おすすめ情報</a>
+                        <span class="gnav__title" href="">おすすめ情報</span>
                         <div class="gnav__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_osusume01.jpg" alt="犬">
                         </div>
                         <ul class="menu__item__wrap">
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/special_type/manner/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_osusume01.jpg" alt="犬">
                                     <dl>
                                         <dt>マナー</dt>
@@ -227,7 +228,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/special_type/dog-trivia/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_osusume02.jpg" alt="犬">
                                     <dl>
                                         <dt>犬の豆知識</dt>
@@ -236,7 +237,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/special_type/info/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_osusume03.jpg" alt="犬">
                                     <dl>
                                         <dt>お出かけ情報</dt>
