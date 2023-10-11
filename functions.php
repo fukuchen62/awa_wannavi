@@ -5,7 +5,7 @@
  *
  * @return void
  */
-function awa_wannavi_theme_support()
+function awa_wannavi_support()
 {
     /**
      * <title>タグを出力する
@@ -22,7 +22,7 @@ function awa_wannavi_theme_support()
      */
     add_theme_support('menus');
 }
-add_action('after_setup_theme', 'awa_wannavi_theme_support');
+add_action('after_setup_theme', 'awa_wannavi_support');
 
 
 /**
@@ -35,8 +35,8 @@ add_action('after_setup_theme', 'awa_wannavi_theme_support');
 // -------------------------------
 // 01.共通のCSSやJS，外部ファイルを読み込む
 // -------------------------------
-add_action('wp_enqueue_scripts', 'add_common_stylesheet_script');
-function add_common_stylesheet_script()
+add_action('wp_enqueue_scripts', 'awa_wannavi_add_common_scripts');
+function awa_wannavi_add_common_scripts()
 {
     // fontawesomeのスタイルシートを読み込む
     wp_enqueue_style(
@@ -75,7 +75,7 @@ function add_common_stylesheet_script()
 
     // 00.『jQuery』
     // WordPress本体のjquery.jsを読み込まない
-    // wp_deregister_script('jquery');
+    wp_deregister_script('jquery');
 
     // JavaScriptファイルを読み込む
     // wp_enqueue_script(
@@ -134,8 +134,8 @@ function add_common_stylesheet_script()
  */
 
 
-add_action('wp_enqueue_scripts', 'add_individual_stylesheet_script');
-function add_individual_stylesheet_script()
+add_action('wp_enqueue_scripts', 'awa_wannavi_add_individual_scripts');
+function awa_wannavi_add_individual_scripts()
 {
 
     //----------------------
@@ -224,20 +224,21 @@ function add_individual_stylesheet_script()
 }
 
 /**
- * bitro_calme_document_title_separator function
+ * awa_wannavi_document_title_separator function
  * タイトルのセパレータを変更する
  *
  * @param string $separator
  * @return void
  */
-function bitro_calme_document_title_separator($separator)
+function awa_wannavi_document_title_separator($separator)
 {
-    $separator = '★';
+    $separator = '|';
     return $separator;
 }
+
 add_filter(
     'document_title_separator',
-    'bitro_calme_document_title_separator'
+    'awa_wannavi_document_title_separator'
 );
 
 /**
@@ -247,28 +248,28 @@ add_filter(
  * @param [type] $title
  * @return void
  */
-function bitro_calme_document_title_parts($title)
+function awa_wannavi_document_title_parts($title)
 {
     if (is_home()) {
         // タイトルを削除
-        unset($title['tagline']);
-        $title['title'] = "Bistro calmeは、カジュアルワインバーよりビストロです。";
+        // unset($title['tagline']);
+        // $title['title'] = "Bistro calmeは、カジュアルワインバーよりビストロです。";
     }
     return $title;
 }
 add_filter(
     'document_title_parts',
-    'bitro_calme_document_title_parts'
+    'awa_wannavi_document_title_parts'
 );
 
 
 /**
- * bitro_calme_comment_form_default_fields function
+ * awa_wannavi_comment_form_default_fields function
  * コメントの名前、Email、サイトの入力を非表示
  * @param [type] $args
  * @return void
  */
-function bitro_calme_comment_form_default_fields($args)
+function awa_wannavi_comment_form_default_fields($args)
 {
     $args['url'] = '';          //サイトを削除
     $args['author'] = '';       //名前を削除
@@ -278,16 +279,16 @@ function bitro_calme_comment_form_default_fields($args)
 }
 add_filter(
     'comment_form_default_fields',
-    'bitro_calme_comment_form_default_fields'
+    'awa_wannavi_comment_form_default_fields'
 );
 
 /**
- * bitro_calme_pre_get_posts function
+ * awa_wannavi_pre_get_posts function
  *
  * @param [type] $query
  * @return void
  */
-function bitro_calme_pre_get_posts($query)
+function awa_wannavi_pre_get_posts($query)
 {
     // 管理画面、またはメインクエリ以外には　設定しない
     if (is_admin() || !$query->is_main_query()) {
@@ -303,5 +304,5 @@ function bitro_calme_pre_get_posts($query)
 }
 add_action(
     'pre_get_posts',
-    'bitro_calme_pre_get_posts'
+    'awa_wannavi_pre_get_posts'
 );
