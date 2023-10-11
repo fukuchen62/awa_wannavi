@@ -55,11 +55,19 @@
 }
 
 .top__photo {
+    max-width: 320px;
+    width: 100%;
     padding: 0 10px;
+}
+@media(min-width:768px) {
+    .top__photo {
+        max-width: 1200px;
+    }
 }
 
 .photo__container {
-    padding: 10px 10px;
+    width: 100%;
+    padding: 10px 0;
     /* 両サイドにスペース */
 }
 
