@@ -118,7 +118,7 @@ ul .large-menu {
     width: 150px;
     position: fixed;
     left: -120px;
-    bottom: 0px;
+    bottom: 350px;
     z-index: 500;
     cursor: pointer;
     rotate: 60deg;
@@ -131,7 +131,7 @@ ul .large-menu {
         width: 150px;
         position: fixed;
         left: -120px;
-        bottom: 20px;
+        bottom: 500px;
         z-index: 500;
         cursor: pointer;
         rotate: 60deg;
@@ -144,7 +144,7 @@ ul .large-menu {
     position: fixed;
     /* 位置 */
     margin-left: 100px;
-    bottom: 90px;
+    bottom: 440px;
     width: 200px;
     z-index: 500;
     -webkit-animation: 5s fukidashi_animation steps(1, start) infinite;
@@ -157,7 +157,7 @@ ul .large-menu {
         position: fixed;
         /* 位置 */
         margin-left: 100px;
-        bottom: 90px;
+        bottom: 590px;
         width: 200px;
         z-index: 500;
         -webkit-animation: 5s fukidashi_animation steps(1, start) infinite;
@@ -171,7 +171,7 @@ ul .large-menu {
     font-weight: bold;
     position: fixed;
     margin-left: 100px;
-    bottom: 130px;
+    bottom: 480px;
     z-index: 500;
     text-align: center;
     color: #3E3A39;
@@ -186,7 +186,7 @@ ul .large-menu {
         font-weight: bold;
         position: fixed;
         margin-left: 100px;
-        bottom: 130px;
+        bottom: 630px;
         z-index: 500;
         text-align: center;
         color: #3E3A39;
