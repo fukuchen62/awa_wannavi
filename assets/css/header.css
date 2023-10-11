@@ -131,7 +131,7 @@ header {
     .gnav__menu__content__inner {
         position: absolute;
         height: 60px;
-        margin-top: 33px;
+        margin-top: 26px;
         left: 75%;
 
     }
@@ -151,7 +151,7 @@ header {
     text-align: left;
     width: 210px;
     background-color: #fff;
-    height: 30px;
+    height: 40px;
     border-radius: 30px;
     top: 30px;
     left: 20px;
@@ -169,13 +169,14 @@ header {
 }
 
 .form__input {
-    padding: 0 3px;
-    height: 20px;
+    padding: 0 6px;
+    height: 30px;
     border: 1px solid #4f4f4f;
     background-color: #fff;
     border-radius: 20px;
     margin: 5px 0 5px 5px;
     width: 170px;
+    font-size: 16px;
 }
 
 
@@ -203,7 +204,7 @@ header {
 .lupe {
     position: relative;
     padding: 4px;
-    font-size: 12px;
+    font-size: 18px;
     color: #fff;
     background-color: #000;
     border-radius: 50%;
