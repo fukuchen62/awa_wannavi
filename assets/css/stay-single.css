@@ -55,8 +55,7 @@
 }
 
 .top__photo {
-    max-width: 300px;
-    width: 100%;
+    width: 100vw;
     margin:0 auto;
     padding: 0 10px;
 }
@@ -66,19 +65,20 @@
 }
 @media(min-width:768px) {
     .top__photo {
+        width: 100%;
         max-width: 1200px;
     }
 }
 
 .photo__container {
-    max-width: 300px;
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
     padding: 10px 0;
     /* 両サイドにスペース */
 }
 @media(min-width:768px) {
     .photo__container{
+        width: 100%;
         max-width: 1200px;
     }
 }
