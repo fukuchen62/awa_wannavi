@@ -134,6 +134,7 @@ time {
 /* 新着情報一覧画像サイズ */
 
 .news__list {
+    padding: 10px 0;
     border-bottom: dashed 1px #759cb0;
 }
 
