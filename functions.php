@@ -143,11 +143,16 @@ function add_individual_stylesheet_script()
     //----------------------
     if (is_home()) {
 
-        //トップページのCSS（top.css）を読み込む
-        wp_enqueue_style('awa_nolife-top', get_template_directory_uri() . '/assets/css/top.css', array(), false);
+        //トップページのCSS（index.css）を読み込む
+        wp_enqueue_style(
+            'awa_wannavi-top',
+            get_template_directory_uri() . '/assets/css/index.css',
+            array(),
+            false
+        );
 
         //トップページのヘッダーのCSS（template_top_header.css）を読み込む
-        wp_enqueue_style('awa_nolife-template_top_header', get_template_directory_uri() . '/assets/css/template_top_header.css', array(), false);
+        // wp_enqueue_style('awa_nolife-template_top_header', get_template_directory_uri() . '/assets/css/template_top_header.css', array(), false);
 
         // //slickCSSを読み込む
         // wp_enqueue_style('slick', get_template_directory_uri() . '/assets/slick/slick.css', false);
@@ -156,7 +161,13 @@ function add_individual_stylesheet_script()
         // wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css', false);
 
         // トップページ用のJS（top.js）を読み込む
-        wp_enqueue_script('awa_nolife-top-script', get_template_directory_uri() . '/assets/js/top.js', '', '', true);
+        wp_enqueue_script(
+            'awa_wannavi-top-script',
+            get_template_directory_uri() . '/assets/js/index.js',
+            '',
+            '',
+            true
+        );
 
         // トップページ用のJS（template_top_footer.js）を読み込む
         // wp_enqueue_script('awa_nolife-template_top_footer', get_template_directory_uri() . '/assets/js/template_top_footer.js', '', '', true);
