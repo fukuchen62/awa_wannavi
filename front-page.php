@@ -11,28 +11,28 @@
             <!-- 枠線 -->
             <div class="top__border">
                 <!-- トップテキスト（スマホ） -->
-                <img class="top__text" src="../assets/img/common/top_font_sp.svg" alt="">
+                <img class="top__text" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_font_sp.svg" alt="">
                 <!-- 自動スクロール文字列（PC） -->
                 <div class="slider slider__text">
-                    <img class="top__scroll-text" src="../assets/img/common/top_font.svg" alt="">
-                    <img class="top__scroll-text" src="../assets/img/common/top_font.svg" alt="">
+                    <img class="top__scroll-text" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_font.svg" alt="">
+                    <img class="top__scroll-text" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_font.svg" alt="">
                 </div>
                 <!-- 自動スクロール画像グループ -->
                 <div class="top__key-visual">
                     <div class="slider__flame slider slider__img">
-                        <div><img class="top__scroll-img" src="../assets/img/common/top_img01..jpg" alt=""></div>
-                        <div><img class="top__scroll-img" src="../assets/img/common/top_img02.jpg" alt=""></div>
-                        <div><img class="top__scroll-img" src="../assets/img/common/top_img03.jpg" alt=""></div>
-                        <div><img class="top__scroll-img" src="../assets/img/common/top_img04.jpg" alt=""></div>
-                        <div><img class="top__scroll-img" src="../assets/img/common/top_img05.jpg" alt=""></div>
-                        <div><img class="top__scroll-img" src="../assets/img/common/top_img06.jpg" alt=""></div>
-                        <div><img class="top__scroll-img" src="../assets/img/common/top_img07.jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01..jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img02.jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img03.jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img04.jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img05.jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img06.jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img07.jpg" alt=""></div>
                     </div>
-                    <div class="top__asobu-button"><a href=""><img src="../assets/img/common/top_asobu.svg" alt=""></a></div>
-                    <div class="top__tomaru-button"><a href=""><img src="../assets/img/common/top_tomaru.svg" alt=""></a></div>
-                    <div class="top__taberu-button"><a href=""><img src="../assets/img/common/top_taberu.svg" alt=""></a></div>
+                    <div class="top__asobu-button"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_asobu.svg" alt=""></a></div>
+                    <div class="top__tomaru-button"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_tomaru.svg" alt=""></a></div>
+                    <div class="top__taberu-button"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_taberu.svg" alt=""></a></div>
                 </div>
-                <div class="top__awamaru"><img src="../assets/img/common/top_awawan.svg" alt=""></div>
+                <div class="top__awamaru"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_awawan.svg" alt=""></div>
             </div>
         </section>
 
@@ -48,7 +48,7 @@
                 <p class="top-greeting__text">
                     ごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいりますごあいさつ文がはいります
                 </p>
-                <img class="greeting__img" src="../assets/img/common/top_ill_dog01.svg" alt="">
+                <img class="greeting__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_ill_dog01.svg" alt="">
             </div>
         </section>
 
@@ -66,7 +66,7 @@
             </div>
             <a href="">
                 <div class="top-description__block tc">
-                    <img class="top-description__logo" src="../assets/img/common/top_asobu.svg" alt="">
+                    <img class="top-description__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_asobu.svg" alt="">
                     <div class="top-description__text-area">
                         <h2 class="top-description__outline">ワンちゃんと思いっきりのびのび遊んでみたい！</h2>
                         <p class="top-description__text">
@@ -75,12 +75,12 @@
                             広い公園で気持ちよくお散歩したりしてみませんか？
                         </p>
                     </div>
-                    <img class="top-description__dog" src="../assets/img/common/top_ill_dog02.svg" alt="">
+                    <img class="top-description__dog" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_ill_dog02.svg" alt="">
                 </div>
             </a>
             <a href="">
                 <div class="top-description__block flex-r tc">
-                    <img class="top-description__logo" src="../assets/img/common/top_tomaru.svg" alt="">
+                    <img class="top-description__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_tomaru.svg" alt="">
                     <div class="top-description__text-area">
                         <h2 class="top-description__outline">ワンちゃんと一緒に泊ってみたい!</h2>
                         <p class="top-description__text">
@@ -88,12 +88,12 @@
                             ワンちゃんと一緒に宿泊できる施設をご紹介します！
                         </p>
                     </div>
-                    <img class="top-description__dog" src="../assets/img/common/top_ill_dog03.svg" alt="">
+                    <img class="top-description__dog" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_ill_dog03.svg" alt="">
                 </div>
             </a>
             <a href="">
                 <div class="top-description__block tc">
-                    <img class="top-description__logo" src="../assets/img/common/top_taberu.svg" alt="">
+                    <img class="top-description__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_taberu.svg" alt="">
                     <div class="top-description__text-area">
                         <h2 class="top-description__outline">ワンちゃんと一緒に楽しくお食事したい！</h2>
                         <p class="top-description__text">
@@ -102,10 +102,10 @@
                             ご紹介。記念日にいかがですか？
                         </p>
                     </div>
-                    <img class="top-description__dog" src="../assets/img/common/top_ill_dog04.svg" alt="">
+                    <img class="top-description__dog" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_ill_dog04.svg" alt="">
                 </div>
             </a>
-            <img class="top-description__img" src="../assets/img/common/top_ill_dog03.svg" alt="">
+            <img class="top-description__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_ill_dog03.svg" alt="">
         </section>
 
         <!-- 新着情報 -->
@@ -128,7 +128,7 @@
                         <!-- 前面 -->
                         <div class="card__front">
                             <!-- カード内情報 -->
-                            <img src="../assets/img/cat.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat.jpg" alt="">
                             <div class="card__tag">
                                 <p>遊ぶ</p>
                             </div>
@@ -160,7 +160,7 @@
                         <!-- 前面 -->
                         <div class="card__front">
                             <!-- 情報 -->
-                            <img src="../assets/img/cat.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat.jpg" alt="">
                             <div class="card__tag">
                                 <p>遊ぶ</p>
                             </div>
@@ -192,7 +192,7 @@
                         <!-- 前面 -->
                         <div class="card__front">
                             <!-- 情報 -->
-                            <img src="../assets/img/cat.jpg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat.jpg" alt="">
                             <div class="card__tag">
                                 <p>遊ぶ</p>
                             </div>
@@ -229,7 +229,7 @@
             <div>
                 <p class="top-map__title">ドッグランや公園など、わんちゃんと遊べる施設をエリアで検索します。</p>
             </div>
-            <img class="top-map__modal-open" src="../assets/img/common/top_map.svg" alt="">
+            <img class="top-map__modal-open" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_map.svg" alt="">
             <!-- モーダル本体 -->
             <div class="top-map__modal-container">
                 <div class="top-map__modal-body">
@@ -242,7 +242,7 @@
                 </div>
             </div>
             <div class="top-map__dog">
-                <img src="../assets/img/common/top_ill_dog05.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_ill_dog05.svg" alt="">
             </div>
         </section>
 
@@ -255,7 +255,7 @@
             <div class="top-pickup__card-area">
                 <a href="">
                     <div class="top-pickup__card">
-                        <img class="top-pickup__card-img" src="../assets/img/common/top_img01..jpg" alt="">
+                        <img class="top-pickup__card-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01..jpg" alt="">
                         <div>
                             <p class="top-pickup__card-border">マナー</p>
                         </div>
@@ -268,7 +268,7 @@
 
                 <a href="">
                     <div class="top-pickup__card">
-                        <img class="top-pickup__card-img" src="../assets/img/common/top_img01..jpg" alt="">
+                        <img class="top-pickup__card-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01..jpg" alt="">
                         <div>
                             <p class="top-pickup__card-border">マナー</p>
                         </div>
@@ -281,7 +281,7 @@
 
                 <a href="">
                     <div class="top-pickup__card">
-                        <img class="top-pickup__card-img" src="../assets/img/common/top_img01..jpg" alt="">
+                        <img class="top-pickup__card-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01..jpg" alt="">
                         <div>
                             <p class="top-pickup__card-border">マナー</p>
                         </div>
@@ -294,7 +294,7 @@
 
             </div>
 
-            <img class="top-pickup__dog" src="../assets/img/common/top_ill_dog06.svg" alt="">
+            <img class="top-pickup__dog" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_ill_dog06.svg" alt="">
 
         </section>
 
