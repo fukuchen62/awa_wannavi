@@ -64,7 +64,7 @@
                     <i class="fa-solid fa-paw top-description__title-foot"></i>
                 </p>
             </div>
-            <a href="">
+            <a href="<?php echo home_url('/enjoy_type/park/'); ?>">
                 <div class="top-description__block tc">
                     <img class="top-description__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_asobu.svg" alt="">
                     <div class="top-description__text-area">
@@ -78,7 +78,7 @@
                     <img class="top-description__dog" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_ill_dog02.svg" alt="">
                 </div>
             </a>
-            <a href="">
+            <a href="<?php echo home_url('/stay_type/hotel/'); ?>">
                 <div class="top-description__block flex-r tc">
                     <img class="top-description__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_tomaru.svg" alt="">
                     <div class="top-description__text-area">
@@ -91,7 +91,7 @@
                     <img class="top-description__dog" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_ill_dog03.svg" alt="">
                 </div>
             </a>
-            <a href="">
+            <a href="<?php echo home_url('/eat_type/cafe/'); ?>">
                 <div class="top-description__block tc">
                     <img class="top-description__logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_taberu.svg" alt="">
                     <div class="top-description__text-area">
