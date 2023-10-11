@@ -335,7 +335,7 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 15px 0;
+    padding: 19px 0;
 }
 
 .menu__item__search__sp li {
@@ -345,6 +345,7 @@ header {
     text-align: center;
     border-radius: 10px;
     margin: 0 50px;
+    font-size: 16px;
 }
 
 .menu__item__search__sp span,
@@ -370,6 +371,11 @@ header {
     left: 7px;
     transform: rotate(90deg);
 }
+    .menu__item dt {
+        text-align: left;
+        font-size: 16px;
+    }
+
 
 /**************************
         pc用の検索
@@ -398,7 +404,7 @@ header {
 
 .menu__item dl {
     position: relative;
-    top: -23px;
+    top: -15px;
     border: #000 solid 1px;
     border-radius: 20px;
     padding: 2px 5px;
