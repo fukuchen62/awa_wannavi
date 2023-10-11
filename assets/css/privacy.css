@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+
+/* 記事タイトル */
+.article__title {
+    margin: 0px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 2.6rem;
+    width: fit-content;
+    border-bottom: dotted 6px #F3E06E;
+}
+
+/* 記事タイトル下のリード文 */
+/*本文*/
+.body__lead {
+    padding: 40px 10px;
+    /* display: flex; */
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0 15px;
+    width: 95%;
+
+}
+
+@media screen and (min-width:1023px) {
+    .body__lead {
+        margin: 0 150px;
+        width: 75%;
+    }
+
+}
+
+/*h3記事見出しまわり*/
+h3 {
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    border-radius: 20px;
+    border: 5px solid #000;
+    background: #F3E06E;
+
+    /* display: inline-flex; */
+    padding: 15px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 15px;
+}
+
+@media screen and (min-width:1023px) {
+    h3 {
+        font-size: 26px;
+        margin: 0 150px;
+    }
+}
