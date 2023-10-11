@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="../assets/css/header-footer.css">
     <link rel="stylesheet" href="../assets/css/stay-single.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
@@ -46,23 +47,20 @@
 
                 <div class="w40per">
 
-                    <div class="top__photo">
-                        <img src="../assets/img/dog-banner.jpg" alt="">
-                    </div>
+                    <ul class="gallery top__photo">
+                        <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                        <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                        <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                        <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                    </ul>
 
                     <div class="flex__sb photo__container">
-                        <div class="s__img">
-                            <img src="../assets/img/dog-banner.jpg" alt="">
-                        </div>
-                        <div class="s__img">
-                            <img src="../assets/img/dog-banner.jpg" alt="">
-                        </div>
-                        <div class="s__img">
-                            <img src="../assets/img/dog-banner.jpg" alt="">
-                        </div>
-                        <div class="s__img">
-                            <img src="../assets/img/dog-banner.jpg" alt="">
-                        </div>
+                        <ul class="choice-btn s__img">
+                            <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                            <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                            <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                            <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                        </ul>
                     </div>
 
                     <div class="column__flex__left">
@@ -262,5 +260,9 @@
             </div>
         </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--自作のJS-->
+    <script src="../assets/js/all-list.js"></script>
 </body>
 </html>
