@@ -82,7 +82,7 @@ $(function () {
     topBtn.hide();
     //スクロールが100に達したらボタン表示
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 5500) {
             topBtn.fadeIn();
         } else {
             topBtn.fadeOut();
@@ -130,14 +130,14 @@ $('.awamaru').clickToggle(function () {
     $(".awamaru").animate({ "rotate": "45deg", }, 500);
 });
 
-// トップへ戻る
+// // トップへ戻る
 
 $(function () {
     var topBtn = $('#scroll');
     topBtn.hide();
     //スクロールが100に達したらボタン表示
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
+        if ($(this).scrollTop() > 90 %) {
             topBtn.fadeIn();
         } else {
             topBtn.fadeOut();

@@ -24,8 +24,10 @@
     border: 1px solid #000;
 }
 
-.container {
-    background-image: url(../img/background-image.png);
+.bg__img {
+    background-image: url(../img/common/bg-img/background-image-yl.svg);
+    background-size: contain;
+    background-repeat: repeat-y;
 }
 
 @media screen and (min-width:768px) {
