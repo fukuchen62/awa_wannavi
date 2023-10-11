@@ -14,10 +14,11 @@ main {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 label {
+    font-size: 16px;
     margin-bottom: 0;
     line-height: 1.1;
 }
@@ -68,7 +69,6 @@ label {
     padding: 15px 20px;
     margin-right: 50px;
     box-shadow: 4px 4px 0px 0px rgb(118 208 186 / 60%);
-    /* 2022.10.15(土) 松下 */
     display: block;
 }
 
@@ -129,7 +129,6 @@ label {
 
 .search-title {
     margin-top: 0;
-    /*←リセットCSSによっては消す */
     margin-bottom: 20px;
     padding-top: 30px;
     padding-bottom: 10px;
@@ -141,7 +140,8 @@ label {
     margin-top: 20px;
     position: relative;
     display: flex;
-    width: 150px;
+    width: 100px;
+    height: 100px;
     left: 50%;
     transform: translate(-50%);
 }
@@ -158,7 +158,7 @@ label {
     transform: translate(-50%);
     padding-top: 10px;
     margin: 20px 0;
-    width:60px;
+    width:70px;
     background-color: rgb(0, 0, 0, 0);
 }
 /* --------------------------------------------- */
@@ -176,7 +176,6 @@ label {
     margin: 0 auto;
     margin-bottom: 24px;
     padding: 10px;
-    background-color: #fff;
     border-radius: 10px;
     text-align: center;
 }
@@ -217,10 +216,6 @@ label {
     margin-bottom: 50px;
 }
 
-/* 検索結果のヒット件数 */
-/* .event-num{
-
-} */
 
 .point-line-01:after {
     content: '';
@@ -264,15 +259,12 @@ label {
     }
 
     .choice-wrap ul {
-        width: 70%;
         list-style: none;
         display: flex;
         margin-left: 23%;
-        /* border-bottom: 1px solid; */
     }
 
     .choice-wrap ul li {
-        width: 125px;
         padding: 10px;
         margin: 0;
         margin-right: auto;
@@ -280,7 +272,8 @@ label {
     }
     .choice-wrap p {
         position: static;
-        margin: 0 10px;
+        margin: 0;
+        margin-left: 20px;
     }
     .choice-wrap p:before{
     content:'●';
@@ -292,18 +285,16 @@ label {
     }
 
     .search-title {
-        line-height: 3;
         position: absolute;
         margin-left: 20px;
         width: 120px;
-        padding-top: 10px;
         margin-bottom: 0;
     }
 .area:first-of-type{
 transform: translatey(-80px);
     }
 .event:first-of-type{
-transform: translatey(-40px);
+transform: translatey(-10px);
     }
 .type:first-of-type{
 transform: translatey(-60px);
