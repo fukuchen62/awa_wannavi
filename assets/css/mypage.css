@@ -1,5 +1,24 @@
 @charset "utf8";
 
+/* 記事タイトル */
+.article__title {
+    margin: 0px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 2.6rem;
+    width: fit-content;
+    border-bottom: dotted 6px #F3E06E;
+    /* font-family: Zen Maru Gothic;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 900; */
+}
+
+.hits {
+    padding-left: 20px;
+    font-size: 1.4rem;
+}
+
 .sub__title {
     padding: 50px 0px;
     gap: 10px;
