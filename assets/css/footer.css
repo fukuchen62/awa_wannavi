@@ -155,7 +155,7 @@ ul .large-menu {
         margin-left: 100px;
         bottom: 500px;
         width: 200px;
-        z-index: 70;
+        z-index: 5;
         -webkit-animation: 5s fukidashi_animation steps(1, start) infinite;
         animation: 5s fukidashi_animation steps(1, start) infinite;
     }
@@ -168,7 +168,7 @@ ul .large-menu {
     position: fixed;
     margin-left: 100px;
     bottom: 380px;
-    z-index: 71;
+    z-index: 6;
     text-align: center;
     color: #3E3A39;
     width: 200px;
@@ -183,7 +183,7 @@ ul .large-menu {
         position: fixed;
         margin-left: 100px;
         bottom: 530px;
-        z-index: 71;
+        z-index: 6;
         text-align: center;
         color: #3E3A39;
         width: 200px;
