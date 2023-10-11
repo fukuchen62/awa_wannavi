@@ -1,69 +1,387 @@
 @charset "utf-8";
 
-.gnav {
-        border: 0px;
-        max-width: 100%;
-        height: auto;
-        margin: 0 auto;
-        padding-top: 35px;
-        text-align: center;
-    }
-    .gnav__title {
-        max-width: 100%;
-        width: 100%;
-    }
-    .gnav__search__title {
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        display: flex;
+.form-sub-title {
+    border-bottom: 0;
+    color: #fff;
+}
 
-    }
-    .menu__wrap__search {
-        display: flex;
-        height: auto;
-        max-width: 1200px;
-        margin: 0;
-    }
-    .menu__item__search__wrap{
-        /* display: none; */
-        display: block;
-        width: 100%;
-        top: 100px;
+.mw-770 {
+    padding: 0 20px;
+    overflow: hidden;
+}
 
-    }
-    .menu__item__search {
-        display: flex;
-        width: 100%;
-        height: 200px;
-        padding: 20px 0;
-        background-color:#f3e06e ;
-    }
-    .menu__item__search img {
-        max-width: 100px;
-        width: 100%;
-        height: 100px;
-    }
-    .search__title {
-        margin-left: 43%;
-    }
-    .search__title  p{
-    width: 640px;
-    border-top: 1px solid #000;
-    padding-top: 20px;
-    }
-    .box__wrap {
-        margin-top: 25px;
-        display: flex;
+p {
+    font-size: 14px;
+}
 
-    }
+label {
+    margin-bottom: 0;
+    line-height: 1.1;
+}
 
-.box {
+#experience-area .experience-area-ttl {
+    font-size: 24px;
+}
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS: 体験の詳細検索をするフォーム
+----------------------------------------------------------------
+
+	0. 	フォームのラップ（フォームの外枠）
+	1. 	フォームのオレンジ色と肌色の部分
+    2.  フォームの目次
+    3.  選択肢（ulとli）の装飾
+	4.  検索ボタンとリセットボタン
+
+--------------------------------------------------------------- */
+
+#search-btn {
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: none;
+    color: #000;
+    padding: 15px 10px;
+    margin-left: 50px;
+    box-shadow: 4px 4px 0px 0px rgb(118 208 186 / 60%);
+}
+
+#search-btn:hover {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+/* 条件検索のチェックした項目をリセットするための */
+#reset-btn {
+    display: none;
+}
+
+
+
+.reset-btn{
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: none;
+    color: #000;
+    padding: 15px 20px;
+    margin-right: 50px;
+    box-shadow: 4px 4px 0px 0px rgb(118 208 186 / 60%);
+    /* 2022.10.15(土) 松下 */
+    display: block;
+}
+
+.reset-btn:hover {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+/* --------------------------------------------- */
+/*	0. 	フォームのラップ（フォームの外枠）
+/* --------------------------------------------- */
+
+.form-wrap {
+    /* width: 72vw; */
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.form-wrap li {
+    margin-top: 15px;
+}
+
+/* --------------------------------------------- */
+/*	1. 	フォームのオレンジ色と肌色の部分
+/* --------------------------------------------- */
+.form-title {
+    background-color: #ffc24a;
+    height: 60px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.form-title h2 {
+    font-size: 20px;
+}
+
+.form-wrap h2 {
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.search-content {
+    font-size: 16px;
+    background-color: #f3e06e;
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+    padding: 20px 0;
+}
+
+.search-content::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 50px solid transparent;
+    border-top: 50px solid #f8f3e0;
+    /* 好みで色を変えてください */
+}
+
+.search-title {
+    margin-top: 0;
+    /*←リセットCSSによっては消す */
+    margin-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+
+}
+
+.search-title img{
+    margin-top: 20px;
+    position: relative;
     display: flex;
-    /* width: 100px; */
-    /* height: 100px; */
-    margin: 0 10px;
+    width: 150px;
+    left: 50%;
+    transform: translate(-50%);
 }
-.box__wrap  ul{
-    list-style: inside;
+
+
+/* --------------------------------------------- */
+/*	2. 	フォームの目次
+/* --------------------------------------------- */
+
+.choice-wrap p{
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    padding-top: 10px;
+    margin: 20px 0;
+    width:60px;
+    background-color: rgb(0, 0, 0, 0);
 }
+/* --------------------------------------------- */
+/*	3. 	選択肢（ulとli）の装飾
+/* --------------------------------------------- */
+
+.choice-wrap ul {
+    list-style: none;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.choice-wrap ul li {
+    max-width: 150px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* --------------------------------------------- */
+/*	4. 	検索ボタンとリセットボタン
+/* --------------------------------------------- */
+
+.searchbtn-restbtn-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search-btn-inner {
+    padding: 10px 10px;
+}
+
+.reset-btn-inner {
+    padding: 10px 10px;
+}
+
+.form-wrap {
+    margin-bottom: 100px;
+}
+/*--------------------------------------------------------------
+>>> 体験の詳細検索をするフォーム ここまで
+----------------------------------------------------------------
+
+
+/* h3タイトル */
+.point-line-01 {
+    position: relative;
+    padding: 0.3em;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* 検索結果のヒット件数 */
+/* .event-num{
+
+} */
+
+.point-line-01:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 5px;
+    background: repeating-linear-gradient(-45deg, rgb(251, 174, 118), rgb(251, 174, 118) 2px, white 2px, white 4px);
+}
+
+.btn-area-ttl {
+    font-size: 24px;
+}
+
+
+/* レスポンシブ対応(TB版) */
+@media screen and (min-width:770px) {
+
+    h3 {
+        font-size: 16px;
+    }
+
+    #experience-area .experience-area-ttl {
+        font-size: 32px;
+    }
+
+    .form-title h2 {
+        font-size: 24px;
+    }
+
+    .choice-wrap {
+        /* display: flex; */
+        width: 100%;
+        margin: 100px auto;
+        padding-top: 100px;
+        justify-content: center;
+        border-top: 1px solid;
+
+    }
+
+    .choice-wrap ul {
+        width: 70%;
+        list-style: none;
+        display: flex;
+        margin-left: 23%;
+        /* border-bottom: 1px solid; */
+    }
+
+    .choice-wrap ul li {
+        width: 125px;
+        padding: 10px;
+        margin: 0 auto;
+        margin-bottom: 0;
+    }
+    .choice-wrap p {
+        position: static;
+        margin: 0 10px;
+    }
+    .choice-wrap p:before{
+    content:'●';
+}
+
+    .article-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .search-title {
+        line-height: 3;
+        position: absolute;
+        margin-left: 20px;
+        width: 120px;
+        padding-top: 10px;
+        margin-bottom: 0;
+    }
+.area:first-of-type{
+transform: translatey(-80px);
+    }
+.event:first-of-type{
+transform: translatey(-40px);
+    }
+.type:first-of-type{
+transform: translatey(-60px);
+    }
+    .radio-box {
+        margin: 0 auto;
+    }
+}
+
+/* レスポンシブ対応(PC版) */
+@media screen and (min-width:1023px) {
+
+    /* h3タイトル下線の幅 */
+    .point-line-01 {
+        padding: 0.5em;
+    }
+
+    .point-line-01:after {
+        height: 9px;
+    }
+    .choice-wrap {
+        max-width: 1200px;
+    }
+
+    .search-content {
+        font-size: 16px;
+    }
+
+}
+
+
+
+
+/*プラグイン『wp-pagenavi』 css Start ↓*/
+.wp-pagenavi {
+	clear: both;
+	text-align: center;
+
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+	color: #795A3C;
+	/* background-color: #FFF1DA; */
+	background-color: #FFF;
+	border: 1px solid #DBC9AA;
+	/* padding: 8px 15px; */
+	padding: 8px 12px;
+	margin: 0 2px;
+	/* margin: 2px 2px; */
+	white-space: nowrap;
+	/* -moz-border-radius: 3px; */
+	-moz-border-radius: 50%;
+	/* -webkit-border-radius: 3px; */
+	-webkit-border-radius: 50%;
+	/* border-radius: 3px; */
+	border-radius: 50%;
+	-webkit-transition: 0.2s ease-in-out;
+	-moz-transition: 0.2s ease-in-out;
+	-o-transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	text-align: center;
+	text-decoration: none;
+}
+
+.wp-pagenavi a:hover {
+	color: #FFF;
+	background-color: #A09D71;
+	border-color: #999;
+}
+
+.wp-pagenavi span.current {
+	color: #FFF;
+	background-color: #FFC24B;
+	border-color: #FFC24B;
+	font-weight: bold;
+}
+/*wp-pagenavi css Endt ↑*/
