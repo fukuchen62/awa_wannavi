@@ -66,13 +66,13 @@
                 </div>
                 <ul class="menu__wrap">
                     <li class="gnav">
-                        <a class="gnav__title" href="<?php echo home_url('/enjoy/'); ?>">遊ぶ</a>
+                        <span class="gnav__title">遊ぶ</span>
                         <div class="gnav__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_asobu01.jpg" alt="犬">
                         </div>
                         <ul class="menu__item__wrap">
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/enjoy_type/park/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_asobu01.jpg" alt="犬">
                                     <dl>
                                         <dt>公園</dt>
@@ -81,7 +81,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/enjoy_type/dogrun/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_asobu02.jpg" alt="犬">
                                     <dl>
                                         <dt>ドッグラン</dt>
@@ -90,7 +90,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/enjoy_type/outdoor/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_asobu03.jpg" alt="犬">
                                     <dl>
                                         <dt>自然・観光</dt>
@@ -99,7 +99,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/enjoy_type/indoor/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_asobu04.jpg" alt="犬">
                                     <dl>
                                         <dt>屋内施設</dt>
@@ -112,13 +112,13 @@
                 </ul>
                 <ul class="menu__wrap">
                     <li class="gnav">
-                        <a class="gnav__title" href="<?php echo home_url('/stay/'); ?>">泊まる</a>
+                        <span class="gnav__title">泊まる</span>
                         <div class="gnav__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_tomaru01.jpg" alt="犬">
                         </div>
                         <ul class="menu__item__wrap stay__wrap">
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/stay_type/pethotel/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_tomaru01.jpg" alt="犬">
                                     <dl>
                                         <dt>ホテル</dt>
@@ -127,7 +127,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/stay_type/hotel/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_tomaru02.jpg" alt="犬">
                                     <dl>
                                         <dt>ペットと宿泊</dt>
@@ -136,7 +136,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="">
+                                <a href="<?php echo home_url('/stay_type/camp/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_tomaru03.jpg" alt="犬">
                                     <dl>
                                         <dt>キャンプ</dt>
@@ -149,7 +149,7 @@
                 </ul>
                 <ul class="menu__wrap">
                     <li class="gnav">
-                        <a class="gnav__title" href="<?php echo home_url('/eat/'); ?>">食べる</a>
+                        <span class="gnav__title">食べる</span>
                         <div class="gnav__icon">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/sp_mega_taberu01.jpg" alt="犬">
                         </div>
