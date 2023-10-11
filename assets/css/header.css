@@ -149,7 +149,7 @@ header {
 .form__box {
     position: absolute;
     text-align: left;
-    width: 210px;
+    width: 220px;
     background-color: #fff;
     height: 40px;
     border-radius: 30px;
@@ -175,7 +175,7 @@ header {
     background-color: #fff;
     border-radius: 20px;
     margin: 5px 0 5px 5px;
-    width: 170px;
+    width: 180px;
     font-size: 16px;
 }
 
