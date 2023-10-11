@@ -55,9 +55,14 @@
 }
 
 .top__photo {
-    max-width: 320px;
+    max-width: 300px;
     width: 100%;
+    margin:0 auto;
     padding: 0 10px;
+}
+.top__photo img{
+    width: 100%;
+
 }
 @media(min-width:768px) {
     .top__photo {
@@ -66,13 +71,20 @@
 }
 
 .photo__container {
+    max-width: 300px;
     width: 100%;
+    margin: 0 auto;
     padding: 10px 0;
     /* 両サイドにスペース */
 }
+@media(min-width:768px) {
+    .photo__container{
+        max-width: 1200px;
+    }
+}
 
-.s__img {
-    /* width: 23%; */
+.choice-btn {
+    width: 100%;
 }
 /******************************
         スリック
@@ -81,6 +93,7 @@
     opacity: 1;
 }
 .choice-btn li img {
+    width: 100%;
     padding: 0 10px;
     opacity: 0.4;
 }
