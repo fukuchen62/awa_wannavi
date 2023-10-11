@@ -61,10 +61,10 @@ function awa_wannavi_add_common_scripts()
         false
     );
 
-    // 03.『ヘッダーのCSS（template-header.css）』
+    // 03.『ヘッダーのCSS（header.css）』
     wp_enqueue_style(
         'awa_wannavi-header',
-        get_template_directory_uri() . '/assets/css/header-footer.css',
+        get_template_directory_uri() . '/assets/css/header.css',
         array(),
         false
     );
@@ -108,10 +108,10 @@ function awa_wannavi_add_common_scripts()
     //     );
     // }
 
-    // 01.『common.js』
+    // 01.『header.js』
     wp_enqueue_script(
-        'awa_wannavi-header-footer-script',
-        get_template_directory_uri() . '/assets/js/header-footer.js',
+        'awa_wannavi-header-script',
+        get_template_directory_uri() . '/assets/js/header.js',
         '',
         '',
         true
