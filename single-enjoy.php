@@ -86,60 +86,46 @@
                         <dd><?php the_field("address"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>利用時間</dt>
-                        <dd><?php the_field("business_hours"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>敷地面積</dt>
-                        <dd><?php the_field("breadth"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>管理会社</dt>
-                        <dd><?php the_field("company"); ?></dd>
-                    </dl>
-                    <dl>
                         <dt>電話番号</dt>
                         <dd><?php the_field("tel"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>メール</dt>
-                        <dd><?php the_field("email"); ?></dd>
+                        <dt>営業時間</dt>
+                        <dd><?php the_field("business_hours"); ?></dd>
+                    </dl>
+                    <dl>
+                        <!-- 定休日フィールド未設定 -->
+                        <dt>定休日</dt>
+                        <dd><?php the_field("company"); ?></dd>
                     </dl>
                     <dl>
                         <dt>ホームページ</dt>
                         <dd><?php the_field("url"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>トイレ</dt>
-                        <dd><?php the_field("toilet"); ?></dd>
+                        <dt>SNS</dt>
+                        <dd><?php the_field("sns"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>喫煙所</dt>
-                        <dd><?php the_field("Smoking"); ?></dd>
+                        <dt>予約</dt>
+                        <dd><?php the_field("reservation"); ?></dd>
                     </dl>
                     <dl>
                         <dt>駐車場（車）</dt>
                         <dd><?php the_field("parking"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>駐輪場（自転車）</dt>
-                        <dd><?php the_field("Bicycle"); ?></dd>
+                        <!-- 対応犬種見製作 -->
+                        <dt>対応犬種</dt>
+                        <dd>有</dd>
                     </dl>
                     <dl>
-                        <dt>芝生エリア</dt>
-                        <dd><?php the_field("grass"); ?></dd>
+                        <dt>入店ルール</dt>
+                        <dd><?php the_field("rule"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>自動販売機</dt>
-                        <dd><?php the_field("vending_machine"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>屋根付き休憩室</dt>
-                        <dd><?php the_field("roof"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>禁止事項</dt>
-                        <dd><?php the_field("ban"); ?></dd>
+                        <dt>決済方法</dt>
+                        <dd><?php the_field("payment"); ?></dd>
                     </dl>
                     <dl class="note">
                         <dt>【特記事項】</dt>

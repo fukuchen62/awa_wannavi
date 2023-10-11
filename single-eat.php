@@ -86,69 +86,67 @@
                 <div class="information">
                     <dl>
                         <dt>住所</dt>
-                        <dd>徳島市徳島町●●</dd>
-                    </dl>
-                    <dl>
-                        <dt>利用時間</dt>
-                        <dd>10:00-20:00</dd>
-                    </dl>
-                    <dl>
-                        <dt>敷地面積</dt>
-                        <dd>1500㎡</dd>
-                    </dl>
-                    <dl>
-                        <dt>管理会社</dt>
-                        <dd>内容</dd>
+                        <dd><?php the_field("address"); ?></dd>
                     </dl>
                     <dl>
                         <dt>電話番号</dt>
-                        <dd>088-000-0000</dd>
+                        <dd><?php the_field("tel"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>メール</dt>
-                        <dd>0000000@000000</dd>
+                        <dt>営業時間</dt>
+                        <dd><?php the_field("business_hours"); ?></dd>
+                    </dl>
+                    <dl>
+                        <!-- 定休日見製作 -->
+                        <dt>定休日</dt>
+                        <dd><?php the_field("breadth"); ?></dd>
                     </dl>
                     <dl>
                         <dt>ホームページ</dt>
-                        <dd>00000000@00000</dd>
+                        <dd><?php the_field("url"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>トイレ</dt>
-                        <dd>有</dd>
+                        <dt>SNS</dt>
+                        <dd><?php the_field("sns"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>喫煙所</dt>
-                        <dd>有</dd>
+                        <!-- テイクアウト見製作 -->
+                        <dt>テイクアウト</dt>
+                        <dd><?php the_field("url"); ?></dd>
+                    </dl>
+                    <dl>
+                        <dt>予約</dt>
+                        <dd><?php the_field("reservation"); ?></dd>
+                    </dl>
+                    <dl>
+                        <dt>喫煙</dt>
+                        <dd><?php the_field("Smoking"); ?></dd>
                     </dl>
                     <dl>
                         <dt>駐車場（車）</dt>
-                        <dd>有料</dd>
+                        <dd><?php the_field("parking"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>駐輪場（自転車）</dt>
+                        <!-- 業態見製作 -->
+                        <dt>業態</dt>
+                        <dd>未入力</dd>
+                    </dl>
+                    <dl>
+                        <!-- 対応犬種見製作 -->
+                        <dt>対応犬種</dt>
                         <dd>有</dd>
                     </dl>
                     <dl>
-                        <dt>芝生エリア</dt>
-                        <dd>有</dd>
+                        <dt>入店ルール</dt>
+                        <dd><?php the_field("rule"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>自動販売機</dt>
-                        <dd>有</dd>
-                    </dl>
-                    <dl>
-                        <dt>屋根付き休憩室</dt>
-                        <dd>有</dd>
-                    </dl>
-                    <dl>
-                        <dt>禁止事項</dt>
-                        <dd>火遊び禁止</dd>
+                        <dt>決済方法</dt>
+                        <dd><?php the_field("payment"); ?></dd>
                     </dl>
                     <dl class="note">
                         <dt>【特記事項】</dt>
-                        <dd>
-                            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-                        </dd>
+                        <dd><?php the_field("note"); ?></dd>
                     </dl>
                 </div>
             </div>
