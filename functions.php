@@ -94,7 +94,7 @@ function awa_wannavi_add_common_scripts()
 
     wp_enqueue_script(
         'jquery-min.js',
-        get_template_directory_uri() . '/assets/js/jquery-3.6.0.min.js',
+        get_template_directory_uri() . '/assets/js/jquery-3.7.0.min.js',
         '',
         '',
         false
