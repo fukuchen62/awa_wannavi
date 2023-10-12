@@ -159,7 +159,6 @@ function awa_wannavi_add_common_scripts()
         true
     );
 
-
     // 03.『button.js』
     wp_enqueue_script(
         'awa_wannavi-button-script',
@@ -233,6 +232,7 @@ function awa_wannavi_add_individual_scripts()
             false
         );
     }
+
     //----------------------
     //  泊まる詳細ページ
     //----------------------
@@ -246,6 +246,7 @@ function awa_wannavi_add_individual_scripts()
             false
         );
     }
+
     //----------------------
     //  食べる詳細ページ
     //----------------------
@@ -255,6 +256,34 @@ function awa_wannavi_add_individual_scripts()
         wp_enqueue_style(
             'awa_wannavi-eat',
             get_template_directory_uri() . '/assets/css/single-eat.css',
+            array(),
+            false
+        );
+    }
+
+    //----------------------
+    //  モデルコースのページ
+    //----------------------
+    elseif (is_singular('course')) {
+
+        //（modelcource.css）を読み込む
+        wp_enqueue_style(
+            'awa_wannavi-course',
+            get_template_directory_uri() . '/assets/css/modelcource.css',
+            array(),
+            false
+        );
+    }
+
+    //----------------------
+    //  プライバシーポリシー
+    //----------------------
+    elseif (is_page('privacy-policy')) {
+
+        //（about.css）を読み込む
+        wp_enqueue_style(
+            'awa_wannavi-about',
+            get_template_directory_uri() . '/assets/css/about.css',
             array(),
             false
         );

@@ -9,7 +9,8 @@
         <!-- いったんコンテナーに格納 -->
 
         <!-- パンくずリスト -->
-        <div class="Breadcrumb"><a href="">トップ > 遊ぶ一覧</a>
+        <div class="Breadcrumb mb20">
+            <?php get_template_part("template-parts/breadcrumb"); ?>
         </div>
         <!-- 県別検索ボタン -->
         <!-- 各ボタンをラップでハサミ、ホバーすると色が変わるギミック -->
