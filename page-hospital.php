@@ -17,8 +17,8 @@
             <h2 class="h2__title mb20 fs35 bc_list">動物病院一覧</h2>
 
             <!-- パンくずリスト -->
-
-            <div class="Breadcrumb"><a href="">>>動物病院一覧</a>
+            <div class="Breadcrumb mb20">
+                <?php get_template_part("template-parts/breadcrumb"); ?>
             </div>
 
 
