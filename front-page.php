@@ -114,7 +114,7 @@
             <div class="top__outline-area">
                 <h2 class="top__outline">新着情報</h2>
             </div>
-            <a href="">
+            <a href="<?php echo home_url('/category/news/'); ?>">
                 <p class="top-news__archive-link">>>>一覧を見る</p>
             </a>
             <!-- カード3連 -->
