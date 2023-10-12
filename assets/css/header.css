@@ -535,7 +535,6 @@ header {
 .gnav:hover .menu__item__wrap {
     visibility: visible;
     opacity: 1;
-    transition: 0s;
 }
 @media screen and (min-width:1023px) {
 .gnav:hover .menu__item__wrap {
