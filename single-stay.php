@@ -110,11 +110,23 @@
                     </dl>
                     <dl>
                         <dt>テイクアウト</dt>
-                        <dd><?php the_field("takeout"); ?></dd>
+                        <dd>
+                            <?php if (get_field("takeout")) : ?>
+                                <span>可能</span>
+                            <?php else : ?>
+                                <span>不可</span>
+                            <?php endif; ?>
+                        </dd>
                     </dl>
                     <dl>
                         <dt>予約</dt>
-                        <dd><?php the_field("reservation"); ?></dd>
+                        <dd>
+                            <?php if (get_field("reservation")) : ?>
+                                <span>可能</span>
+                            <?php else : ?>
+                                <span>不可</span>
+                            <?php endif; ?>
+                        </dd>
                     </dl>
                     <dl>
                         <dt>喫煙</dt>
@@ -122,7 +134,12 @@
                     </dl>
                     <dl>
                         <dt>駐車場（車）</dt>
-                        <dd><?php the_field("parking"); ?></dd>
+                        <<dd><?php if (get_field("parking")) : ?>
+                                <span>有り</span>
+                            <?php else : ?>
+                                <span>無し</span>
+                            <?php endif; ?>
+                            </dd>
                     </dl>
                     <dl>
                         <dt>業態</dt>
@@ -146,6 +163,11 @@
                     </dl>
                 </div>
             </div>
+        </div>
+
+        <!-- 地図 -->
+        <div class="iframe">
+            <?php the_field("iframe"); ?>
         </div>
 
 
