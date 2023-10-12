@@ -43,35 +43,35 @@
     <!-- メインのタイトル -->
     <h2 class="h2__title bgYL">山コース</h2>
 
-    <img src="../assets/img/model-cource.png" alt="">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/model-cource.png" alt="">
 
     <div class="start-born">
-        <img src="../assets/img/course/course_ill_01.svg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_01.svg" alt="">
         <h3 class="model-1">1日目</h3>
-        <img src="../assets/img/course/course_ill_02.svg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_02.svg" alt="">
     </div>
     <div class="kakoi">
         <!-- スマホ版のモデルコースのイメージ -->
         <div class="none">
             <div class="asobu-img">
-                <img src="../assets/img/course/course_ill_14_asobu.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_14_asobu.svg" alt="">
             </div>
             <div class="course-img">
-                <img src="../assets/img/home/news_img-3@2x.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
             </div>
         </div>
         <!-- デスクトップ版のモデルコースイメージ -->
         <div class="side-img1">
             <div class="leftside-img3">
-                <img src="../assets/img/course/course_ill_01.svg" alt="">
-                <img src="../assets/img/course/course_ill_02.svg" alt="">
-                <img src="../assets/img/course/course_ill_22.svg" alt="">
-                <img src="../assets/img/course/course_ill_03.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_01.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_02.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_03.svg" alt="">
             </div>
             <div class="center">
-                <img class="asobu-img" src="../assets/img/course/course_ill_14_asobu.svg" alt="">
+                <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_14_asobu.svg" alt="">
 
-                <img class="course-img" src="../assets/img/home/news_img-3@2x.jpg" alt="">
+                <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
 
                 <!-- 施設名、施設情報 PC版 -->
                 <div class="model-main-pc">
@@ -86,7 +86,7 @@
                 </div>
             </div>
 
-            <img class="rightside-img1" src="../assets/img/course/course_ill_11.svg" alt="">
+            <img class="rightside-img1" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_11.svg" alt="">
         </div>
         <!-- 施設名、施設情報 SP版 -->
         <div class="model-main-sp">
@@ -101,8 +101,8 @@
         </div>
         <!-- スマホ版のアンダーイメージ -->
         <div class="course-under-img">
-            <img src="../assets/img/course/course_ill_05.svg" alt="">
-            <img src="../assets/img/course/course_ill_03.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_03.svg" alt="">
         </div>
     </div>
 
@@ -110,24 +110,24 @@
     <!-- スマホ版のモデルコースのイメージ -->
     <div class="none">
         <div class="asobu-img">
-            <img src="../assets/img/course/course_ill_15_taberu.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
         </div>
         <div class="course-img">
-            <img src="../assets/img/home/news_img-3@2x.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
         </div>
     </div>
     <!-- デスクトップ版のモデルコースイメージ -->
     <div class="side-img1">
         <div class="leftside-img1">
-            <img class="fukidashi" src="../assets/img/course/course_ill_05.svg" alt="">
-            <img src="../assets/img/course/course_ill_22.svg" alt="">
-            <img src="../assets/img/course/course_ill_07.svg" alt="">
+            <img class="fukidashi" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_07.svg" alt="">
         </div>
 
         <div class="center">
-            <img class="asobu-img" src="../assets/img/course/course_ill_15_taberu.svg" alt="">
+            <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
 
-            <img class="course-img" src="../assets/img/home/news_img-3@2x.jpg" alt="">
+            <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
 
             <!-- 施設名、施設情報 PC版 -->
             <div class="model-main-pc">
@@ -139,7 +139,7 @@
                 </div>
             </div>
         </div>
-        <img class="rightside-img1" src="../assets/img/course/course_ill_12.svg" alt="">
+        <img class="rightside-img1" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_12.svg" alt="">
     </div>
     <!-- 施設名、施設情報 SP版 -->
     <div class="model-main-sp">
@@ -152,34 +152,34 @@
     </div>
     <!-- スマホ版のアンダーイメージ -->
     <div class="course-under-img">
-        <img src="../assets/img/course/course_ill_05.svg" alt="">
-        <img src="../assets/img/course/course_ill_07.svg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_07.svg" alt="">
     </div>
 
 
     <!-- スマホ版のモデルコースのイメージ -->
     <div class="none">
         <div class="asobu-img">
-            <img src="../assets/img/course/course_ill_16_tomaru.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_16_tomaru.svg" alt="">
         </div>
         <div class="course-img">
-            <img src="../assets/img/home/news_img-3@2x.jpg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
         </div>
     </div>
     <!-- デスクトップ版のモデルコースイメージ -->
     <div class="side-img1">
         <div class="leftside-img1">
-            <img class="fukidashi" src="../assets/img/course/course_ill_05.svg" alt="">
-            <img class="flower" src="../assets/img/course/course_ill_17.svg" alt="">
-            <img src="../assets/img/course/course_ill_22.svg" alt="">
-            <img src="../assets/img/course/course_ill_09.svg" alt="">
-            <img class="dogfood" src="../assets/img/course/course_ill_10.svg" alt="">
+            <img class="fukidashi" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+            <img class="flower" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_17.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_09.svg" alt="">
+            <img class="dogfood" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_10.svg" alt="">
         </div>
 
         <div class="center">
-            <img class="asobu-img" src="../assets/img/course/course_ill_16_tomaru.svg" alt="">
+            <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_16_tomaru.svg" alt="">
 
-            <img class="course-img" src="../assets/img/home/news_img-3@2x.jpg" alt="">
+            <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
 
             <!-- 施設名、施設情報 PC版 -->
             <div class="model-main-pc">
@@ -191,7 +191,7 @@
                 </div>
             </div>
         </div>
-        <img class="rightside-img1" src="../assets/img/course/course_ill_13.svg" alt="">
+        <img class="rightside-img1" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_13.svg" alt="">
     </div>
     <!-- 施設名、施設情報 SP版 -->
     <div class="model-main-sp">
@@ -212,26 +212,26 @@
         <!-- スマホ版のモデルコースのイメージ -->
         <div class="none">
             <div class="asobu-img">
-                <img src="../assets/img/course/course_ill_15_taberu.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
             </div>
             <div class="course-img">
-                <img src="../assets/img/home/news_img-3@2x.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
             </div>
         </div>
         <!-- デスクトップ版のモデルコースイメージ -->
         <div class="side-img1">
             <div class="leftside-img2">
-                <img class="fukidashi" src="../assets/img/course/course_ill_05.svg" alt="">
-                <img src="../assets/img/course/course_ill_22.svg" alt="">
-                <img src="../assets/img/course/course_ill_18.svg" alt="">
-                <img class="flower" src="../assets/img/course/course_ill_17.svg" alt="">
-                <img src="../assets/img/course/course_ill_19.svg" alt="">
+                <img class="fukidashi" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_18.svg" alt="">
+                <img class="flower" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_17.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_19.svg" alt="">
             </div>
 
             <div class="center">
-                <img class="asobu-img" src="../assets/img/course/course_ill_15_taberu.svg" alt="">
+                <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
 
-                <img class="course-img" src="../assets/img/home/news_img-3@2x.jpg" alt="">
+                <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
 
                 <!-- 施設名、施設情報 PC版 -->
                 <div class="model-main-pc">
@@ -243,7 +243,7 @@
                     </div>
                 </div>
             </div>
-            <img class="rightside-img1" src="../assets/img/course/course_ill_20.svg" alt="">
+            <img class="rightside-img1" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_20.svg" alt="">
         </div>
         <!-- 施設名、施設情報 SP版 -->
         <div class="model-main-sp">
@@ -254,14 +254,12 @@
                 <p>徳島県海部郡美波町山河内なか2-1</p>
             </div>
         </div>
-        <!-- <div class="ninngenn">
-                        <img src="../assets/img/course/course_ill_19.svg" alt="">
-                    </div> -->
+
         <!-- スマホ版のアンダーイメージ -->
         <div class="course-under-img">
-            <img src="../assets/img/course/course_ill_18.svg" alt="">
-            <img src="../assets/img/course/course_ill_10.svg" alt="">
-            <img src="../assets/img/course/course_ill_09.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_18.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_10.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_09.svg" alt="">
         </div>
     </div>
 
