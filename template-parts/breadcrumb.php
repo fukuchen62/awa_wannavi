@@ -1,4 +1,4 @@
-<div class="breadcrumb">
+<div class="Breadcrumb">
     <div class="breadcrumb_inner">
         <?php
         if (function_exists("bcn_display")) {
