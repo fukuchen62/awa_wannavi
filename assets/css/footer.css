@@ -296,7 +296,7 @@ ul .large-menu {
 #scroll {
     position: fixed;
     right: 0;
-    bottom: 350px;
+    bottom: 300px;
     /* z-indexの高さを変更 */
     z-index: 5;
     width: 100px;
@@ -305,8 +305,8 @@ ul .large-menu {
 }
 
 #scroll img {
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
 }
 
 /* トップへ戻る画像 pc */
