@@ -441,6 +441,8 @@ header {
         left: 0px;
         position: fixed;
         visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
     }
 }
 
@@ -532,8 +534,18 @@ header {
 /* ホバーしたときに表示する */
 .gnav:hover .menu__item__wrap {
     visibility: visible;
-
+    opacity: 1;
+    transition: 0s;
 }
+@media screen and (min-width:1023px) {
+.gnav:hover .menu__item__wrap {
+    visibility: visible;
+    opacity: 1;
+    transform: 0.2s;
+}
+}
+
+
 
 .gnav__search__title:hover,
 .gnav:hover {
