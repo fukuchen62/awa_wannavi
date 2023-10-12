@@ -1,6 +1,6 @@
 "use strict";
 
-let show = 3;                           //最初に表示する件数
+let show = 6;                           //最初に表示する件数
 let tokushima__contents = '.tokushima';      // 対象の記事 １つ目のカテゴリー
 let east__contents = '.east';           // 対象の記事 １つ目のカテゴリー
 let west__contents = '.west';           //対象の記事 2つ目のカテゴリー
@@ -159,27 +159,36 @@ $(document).ready(function () {
     });
 
     // それぞれの個数が3以下の場合はmoreボタンを非表示
-    // let target = document.getElementById('east-area');
-    // num_east = target.childElementCount;
-    // // ボタンを隠す
-    // if (num_east <= show) {
-    //     $('#btn__east').addClass('is-hidden');
-    // }
-    // document.getElementById('east-title').textContent = '(' + num_east + '社)';
+    let target = document.getElementById('tokushima-area');
+    num_tokushima = target.childElementCount;
+    // ボタンを隠す
+    if (num_tokushima <= show) {
+        $('#btn__tokushima').addClass('is-hidden');
+    }
+    document.getElementById('tokushima-title').textContent = ' ( ' + num_tokushima + ' )';
 
-    // target = document.getElementById('west-area');
-    // num_west = target.childElementCount;
-    // // ボタンを隠す
-    // if (num_west <= show) {
-    //     $('#btn__west').addClass('is-hidden');
-    // }
-    // document.getElementById('west-title').textContent = '(' + num_west + '社)';
+    target = document.getElementById('east-area');
+    num_east = target.childElementCount;
+    // ボタンを隠す
+    if (num_east <= show) {
+        $('#btn__east').addClass('is-hidden');
+    }
+    document.getElementById('east-title').textContent = ' ( ' + num_east + ' )';
 
-    // target = document.getElementById('south-area');
-    // num_south = target.childElementCount;
-    // // ボタンを隠す
-    // if (num_south <= show) {
-    //     $('#btn__south').addClass('is-hidden');
-    // }
-    // document.getElementById('south-title').textContent = '(' + num_south + '社)';
+    target = document.getElementById('west-area');
+    num_west = target.childElementCount;
+    // ボタンを隠す
+    if (num_west <= show) {
+        $('#btn__west').addClass('is-hidden');
+    }
+    document.getElementById('west-title').textContent = ' ( ' + num_west + ' )';
+
+    target = document.getElementById('south-area');
+    num_south = target.childElementCount;
+
+    // ボタンを隠す
+    if (num_south <= show) {
+        $('#btn__south').addClass('is-hidden');
+    }
+    document.getElementById('south-title').textContent = ' ( ' + num_south + ' )';
 });

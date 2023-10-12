@@ -208,7 +208,7 @@ function awa_wannavi_add_individual_scripts()
         // トップページ用のJS（template_top_footer.js）を読み込む
         // wp_enqueue_script('awa_nolife-template_top_footer', get_template_directory_uri() . '/assets/js/template_top_footer.js', '', '', true);
 
-    } elseif (is_archive()) {
+    } elseif (is_archive() || is_page('hospital') || is_page('rental_car')) {
 
         // 一覧ページのcss
         wp_enqueue_style(
@@ -276,9 +276,9 @@ function awa_wannavi_add_individual_scripts()
     }
 
     //----------------------
-    //  プライバシーポリシー
+    //  このサイトについて・プライバシーポリシー
     //----------------------
-    elseif (is_page('privacy-policy')) {
+    elseif (is_page('about') || is_page('privacy-policy')) {
 
         //（about.css）を読み込む
         wp_enqueue_style(
