@@ -120,101 +120,13 @@
             <!-- カード3連 -->
             <div class="top-news__card-area">
 
-                <a href="#">
-                    <!-- カード型 -->
-                    <div class="card">
-                        <!-- 背面 -->
-                        <div class="card__back"></div>
-                        <!-- 前面 -->
-                        <div class="card__front">
-                            <!-- カード内情報 -->
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat.jpg" alt="">
-                            <div class="card__tag">
-                                <p>遊ぶ</p>
-                            </div>
-                            <h2 class="card__outline">徳島○○○公園</h2>
-                            <div class="card__line"></div>
-                            <div class="card__textarea">
-                                <dl>
-                                    <dd>●住所：</dd>
-                                    <dd>徳島市○○○○○-○○</dd>
-                                </dl>
-                                <dl>
-                                    <dd>●お問い合わせ：</dd>
-                                    <dd>○○-○○-○○○</dd>
-                                </dl>
-                                <dl class="card__url">
-                                    <dd>●URL：</dd>
-                                    <dd><a href="">aaaaaaaaa.com</a></dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#">
-                    <!-- カード型 -->
-                    <div class="card">
-                        <!-- 背面 -->
-                        <div class="card__back"></div>
-                        <!-- 前面 -->
-                        <div class="card__front">
-                            <!-- 情報 -->
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat.jpg" alt="">
-                            <div class="card__tag">
-                                <p>遊ぶ</p>
-                            </div>
-                            <h2 class="card__outline">徳島○○○公園</h2>
-                            <div class="card__line"></div>
-                            <div class="card__textarea">
-                                <dl>
-                                    <dd>●住所：</dd>
-                                    <dd>徳島市○○○○○-○○</dd>
-                                </dl>
-                                <dl>
-                                    <dd>●お問い合わせ：</dd>
-                                    <dd>○○-○○-○○○</dd>
-                                </dl>
-                                <dl class="card__url">
-                                    <dd>●URL：</dd>
-                                    <dd><a href="">aaaaaaaaa.com</a></dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="#">
-                    <!-- カード型 -->
-                    <div class="card">
-                        <!-- 背面 -->
-                        <div class="card__back"></div>
-                        <!-- 前面 -->
-                        <div class="card__front">
-                            <!-- 情報 -->
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cat.jpg" alt="">
-                            <div class="card__tag">
-                                <p>遊ぶ</p>
-                            </div>
-                            <h2 class="card__outline">徳島○○○公園</h2>
-                            <div class="card__line"></div>
-                            <div class="card__textarea">
-                                <dl>
-                                    <dd>●住所：</dd>
-                                    <dd>徳島市○○○○○-○○</dd>
-                                </dl>
-                                <dl>
-                                    <dd>●お問い合わせ：</dd>
-                                    <dd>○○-○○-○○○</dd>
-                                </dl>
-                                <dl class="card__url">
-                                    <dd>●URL：</dd>
-                                    <dd><a href="">aaaaaaaaa.com</a></dd>
-                                </dl>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                <?php query_posts('posts_per_page=3'); ?>
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : ?>
+                        <?php the_post(); ?>
+                        <?php get_template_part('template-parts/loop', 'card'); ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
 
             </div>
 
