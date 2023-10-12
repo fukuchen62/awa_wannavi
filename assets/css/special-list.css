@@ -2,7 +2,6 @@
 
 /* 背景イメージ */
 .bg__img {
-    max-width: 1200px;
     background-image: url(../img/common/bg-img/background-image-yl.svg);
     background-size: contain;
     background-repeat: repeat-y;
