@@ -123,6 +123,7 @@ header {
         text-align: center;
         visibility: visible;
         z-index: 10;
+        transition: 0s;
     }
 
     .gnav__menu__content__inner {
