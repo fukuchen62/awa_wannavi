@@ -579,7 +579,9 @@ a img:hover {
 }
 
 .is-hidden {
-    display: none;
+    /* display: none; */
+    height: 0px;
+    visibility: hidden;
 }
 
 /* 記事(navi1)が四件以上あればhideをつけるこれはjquery */
@@ -606,7 +608,7 @@ a img:hover {
     outline: 3px solid rgb(255, 255, 255);
     outline-offset: -8px;
     margin-top: 100px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 .close {
@@ -624,7 +626,7 @@ a img:hover {
     outline: 3px solid rgb(255, 255, 255);
     outline-offset: -8px;
     margin-top: 100px;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
 }
 
 
@@ -749,4 +751,11 @@ a img:hover {
 
 .flex {
     display: flex;
+}
+
+.taxonomis {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: nowrap;
 }
