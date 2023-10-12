@@ -2,625 +2,135 @@
 <?php get_header(); ?>
 
 <main>
+    <!-- いったんコンテナーに格納 -->
+    <div class="container ">
 
-    <div class="container">
+        <?php
+        //URLからタクソノミーのslugを取得
+        $stay_type_slug = get_query_var('stay_type');
+        // タクソノミーの情報を取得
+        $stay_type = get_term_by('slug', $stay_type_slug, 'stay_type');
+        // print_r($enjoy_type);
+        ?>
+
         <div class="banner__head">泊まる</div>
-
-        <!-- いったんコンテナーに格納 -->
-
         <!-- パンくずリスト -->
-        <div class="Breadcrumb mb20">
-            <?php get_template_part("template-parts/breadcrumb"); ?>
-        </div>
-        <!-- 県別検索ボタン -->
-        <!-- 各ボタンをラップでハサミ、ホバーすると色が変わるギミック -->
+        <?php get_template_part('template-parts/breadcrumb'); ?>
 
+        <!-- タクソノミー毎のリンクボタンを作成 -->
         <div class="tab__wrapper mb40">
-            <div class="tab__block bgBL">
-                <a href="">
-                    <h3 class="tab__title">ペットホテル</h3>
-                </a>
-            </div>
+            <?php
+            $args = [
+                'taxonomy' => 'stay_type',
+                'orderby' => 'count',
+                'order' => 'desc',
+            ];
+            $stay_types = get_terms($args);
 
-            <div class="tab__block bgBL">
-                <a href="">
-                    <h3 class="tab__title">ペットと宿泊</h3>
-                </a>
-            </div>
+            if (!empty($stay_types)) :
+            ?>
+                <?php foreach ($stay_types as $item) : ?>
 
-            <div class="tab__block bgBL">
-                <a href="">
-                    <h3 class="tab__title">キャンプ</h3>
-                </a>
-            </div>
+                    <?php if ($stay_type->name == $item->name) : ?>
+                        <div class="tab__block bgBL">
+                            <a href="<?php echo get_term_link($item); ?>">
+                                <h3 class="tab__title"><?php echo $item->name; ?></h3>
+                            </a>
+                        </div>
+                    <?php else : ?>
+                        <div class="tab__block">
+                            <a href="<?php echo get_term_link($item); ?>">
+                                <h3 class="tab__title"><?php echo $item->name; ?></h3>
+                            </a>
+                        </div>
+                    <?php endif; ?>
 
+                <?php endforeach; ?>
+            <?php endif; ?>
         </div>
-        <!-- 県別検索終了 -->
 
         <!-- メインのタイトル -->
-        <h2 class="h2__title bgBL mb20">ペットホテル</h2>
+        <h2 class="h2__title bgBL mb20"><?php echo $stay_type->name; ?></h2>
 
         <!-- 一覧まで飛んでいくリンク -->
         <div class="next__info tr mb20"><a href="">>>一覧を見る</a></div>
 
+        <!-- 地域ごとの一覧 -->
+        <?php
+        $args = [
+            'taxonomy' => 'area',
+            'orderby' => 'slug',
+        ];
+        $areas = get_terms($args);
+        if (!empty($areas)) :
+        ?>
 
-        <!-- カード型コンテンツのテンプレート -->
-        <!-- デザインはカンプどおりに作成するとして、機能などは逐一考える -->
+            <?php foreach ($areas as $area) : ?>
 
-        <!-- 一つ目のカテゴリのカード群 -->
-        <!-- コンテンツのサブタイトル -->
-        <h2 class="sub__title bgBL mb20"><i class="fa-solid fa-paw"></i> 徳島市エリア</h2>
+                <?php $area_slug = $area->slug; ?>
 
-        <!-- カード型コンテンツまとめ -->
-        <div class="card__contents mw12">
+                <section class="card-box">
 
-            <!-- カード型 -->
-            <div class="card tokushima">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
+                    <!-- 地域名 -->
+                    <h2 class="sub__title bgBL mb20"><i class="fa-solid fa-paw"></i><?php echo $area->name; ?>エリア&nbsp;&nbsp;<span id="<?php echo $area->slug; ?>-title" class="show_num"></span></h2>
+
+
+                    <!-- カード型コンテンツまとめ -->
+
+                    <div id="<?php echo $area->slug; ?>-area" class="card__contents mw12">
+                        <?php
+                        // カスタム投稿タイプ
+                        $args = array(
+                            'post_type' => 'stay',
+                            'posts_per_page' => -1,             //全件表示
+                            'orderby' => 'rand',                //ランダムで表示する
+                        );
+                        // タクソノミーの種類を指定
+                        $taxquerysp = array('relation' => 'AND');
+                        $taxquerysp[] = array(
+                            'taxonomy' => 'stay_type',
+                            'terms' => $stay_type->slug,
+                            'field' => 'slug',
+                        );
+                        // 地域を指定
+                        $taxquerysp[] = array(
+                            'taxonomy' => 'area',           //タクソノミー：『エリア』
+                            'terms' => $area->slug,          //スラッグ名
+                            'field' => 'slug',              //スラッグ指定
+                        );
+                        $args['tax_query'] = $taxquerysp;
+
+                        // print_r($args);
+                        // サブクエリ実行
+                        $the_query =  new WP_Query($args);
+                        ?>
+
+                        <!-- 結果を表示させる -->
+                        <?php if ($the_query->have_posts()) : ?>
+                            <?php while ($the_query->have_posts()) : ?>
+                                <?php $the_query->the_post(); ?>
+
+                                <!-- カード型を読み込む -->
+                                <?php get_template_part('template-parts/loop', 'card'); ?>
+
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+
                     </div>
-                </a>
-            </div>
 
-            <!-- カード型 -->
-            <div class="card tokushima">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                    <!-- Moreボタン -->
+                    <button id="btn__<?php echo $area->slug; ?>" class="more-button">
+                        MORE
+                    </button>
 
-            <!-- カード型 -->
-            <div class="card tokushima">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                </section>
 
-            <!-- カード型 -->
-            <div class="card tokushima">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
 
-            <!-- 記事が4以上ならmoreボタンを出す。 -->
-
-        </div>
-
-        <button id="btn__tokushima" class="more-button">
-            MORE
-        </button>
-
-
-        <!-- コンテンツのサブタイトル -->
-        <h2 class="sub__title bgBL mb20"><i class="fa-solid fa-paw"></i> 県東エリア</h2>
-
-        <!-- 2つめのカテゴリ -->
-
-
-        <div class="card__contents mw12">
-
-            <!-- カード型 -->
-            <div class="card east">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- カード型 -->
-            <div class="card east">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- カード型 -->
-            <div class="card east">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- カード型 -->
-            <div class="card east">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 記事が4以上ならmoreボタンを出す。 -->
-
-        </div>
-
-        <button id="btn__east" class="more-button">
-            MORE
-        </button>
-
-        <!-- コンテンツのサブタイトル -->
-        <h2 class="sub__title bgBL mb20"><i class="fa-solid fa-paw"></i> 県西エリア</h2>
-
-        <!-- ３つめのカテゴリ -->
-        <div class="card__contents mw12">
-
-            <!-- カード型 -->
-            <div class="card west">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- カード型 -->
-            <div class="card west">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- カード型 -->
-            <div class="card west">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- カード型 -->
-            <div class="card west">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 記事が4以上ならmoreボタンを出す。 -->
-
-        </div>
-
-        <button id="btn__west" class="more-button">
-            MORE
-        </button>
-
-        <!-- コンテンツのサブタイトル -->
-        <h2 class="sub__title bgBL mb20"><i class="fa-solid fa-paw"></i> 県南エリア</h2>
-
-        <!-- ３つめのカテゴリ -->
-        <div class="card__contents mw12">
-
-            <!-- カード型 -->
-            <div class="card south">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- カード型 -->
-            <div class="card south">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- カード型 -->
-            <div class="card south">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- カード型 -->
-            <div class="card south">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <img src="../assets/img/cat.jpg" alt="">
-                        <div class="card__tag bgBL">
-                            <p>遊ぶ</p>
-                        </div>
-                        <h2 class="card__outline">徳島○○○公園</h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd>徳島市○○○○○-○○</dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd>○○-○○-○○○</dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="">aaaaaaaaa.com</a></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <!-- 記事が4以上ならmoreボタンを出す。 -->
-
-        </div>
-
-        <button id="btn__south" class="more-button">
-            MORE
-        </button>
-
+        <!-- サブクエリをリセットする -->
+        <?php wp_reset_postdata(); ?>
     </div>
-
 </main>
 
 <!-- footer.phpを読み込む -->

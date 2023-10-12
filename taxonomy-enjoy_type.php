@@ -20,7 +20,13 @@
         <!-- タクソノミー毎のリンクボタンを作成 -->
         <div class="tab__wrapper mb40">
             <?php
-            $enjoy_types = get_terms(array('taxonomy' => 'enjoy_type'));
+            $args = [
+                'taxonomy' => 'enjoy_type',
+                'orderby' => 'count',
+                'order' => 'desc',
+            ];
+            $enjoy_types = get_terms($args);
+
             if (!empty($enjoy_types)) :
             ?>
                 <?php foreach ($enjoy_types as $item) : ?>
@@ -51,7 +57,11 @@
 
         <!-- 地域ごとの一覧 -->
         <?php
-        $areas = get_terms(array('taxonomy' => 'area'));
+        $args = [
+            'taxonomy' => 'area',
+            'orderby' => 'slug',
+        ];
+        $areas = get_terms($args);
         if (!empty($areas)) :
         ?>
 

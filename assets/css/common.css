@@ -148,7 +148,7 @@ a img:hover {
     justify-content: space-between;
     width: 100%;
     /* flexタブの横幅 */
-    max-width: 800px;
+    max-width: 1000px;
     height: auto;
     margin: 0 auto;
     /* タブを並べる横幅の調整 */
@@ -158,9 +158,11 @@ a img:hover {
 /* タブの子要素です */
 .tab__block {
     /* SP想定で2つ並ぶようにします */
-    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
     padding: 5px;
-    margin-bottom: 10px;
     border-radius: 30px;
     /* ホバーした時の色変化を制御します */
     transition: ease;
@@ -177,13 +179,13 @@ a img:hover {
 
 
 .tab__title {
-    width: 100%;
-    height: 100%;
-    font-size: 2rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     text-align: center;
+    font-size: 1.5rem;
     color: #333;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 5px;
     transition: ease;
 }
 
@@ -206,13 +208,13 @@ a img:hover {
     /* タブの子要素です */
     .tab__block {
         /* SP想定で2つ並ぶようにします */
-        width: 30%;
+        width: 24%;
     }
 
     .tab__title {
         width: 100%;
-        height: 100%;
-        font-size: 3rem;
+        /* height: 100%; */
+        font-size: 2rem;
     }
 }
 
@@ -474,10 +476,13 @@ a img:hover {
 /* タグ（遊ぶ、泊まる、食べる） */
 .card__tag {
     display: flex;
-    justify-content: center;
-    width: 80px;
-    margin-top: 18px;
-    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    /* width: 80px; */
+    margin: 10px 2px 0 2px;
+    padding: 0px 10px;
+    border-radius: 15px;
     border: 1px solid #000;
 }
 
@@ -756,8 +761,8 @@ a img:hover {
 .taxonomis {
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .card__textarea p {
