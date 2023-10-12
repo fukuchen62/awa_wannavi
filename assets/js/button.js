@@ -1,6 +1,6 @@
 "use strict";
 
-let show = 6;                           //最初に表示する件数
+let show = 3;                           //最初に表示する件数
 let tokushima__contents = '.tokushima';      // 対象の記事 １つ目のカテゴリー
 let east__contents = '.east';           // 対象の記事 １つ目のカテゴリー
 let west__contents = '.west';           //対象の記事 2つ目のカテゴリー

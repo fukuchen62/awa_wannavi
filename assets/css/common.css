@@ -759,3 +759,7 @@ a img:hover {
     justify-content: left;
     flex-wrap: nowrap;
 }
+
+.card__textarea p {
+    word-wrap: break-word;
+}
