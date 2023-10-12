@@ -12,7 +12,7 @@
 
 
             <!-- 帯の部分 -->
-            <h2 class="h2__title mb20 fs35">公園一覧</h2>
+            <h2 class="h2__title mb20 fs35 bgGL">公園一覧</h2>
 
             <!-- パンくずリスト -->
             <div class="Breadcrumb mb20">
@@ -215,7 +215,7 @@
         <!-- もどるボタン -->
 
         <div class="modoru__btn mb60">
-            <a href=""><img src="../assets/img/common/btn_modoru..svg" alt="もどる"></a>
+            <a href="<?php echo home_url('/enjoy_type/park/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/btn_modoru..svg" alt="もどる"></a>
         </div>
 
     </div>
