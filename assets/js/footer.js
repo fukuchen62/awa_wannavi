@@ -80,7 +80,7 @@ updateText();
 $(function () {
     var topBtn = $('.foot_scroll');
     topBtn.hide();
-    //スクロールが100に達したらボタン表示
+    //スクロールが1000に達したらボタン表示
     $(window).scroll(function () {
         if ($(this).scrollTop() > 1000) {
             topBtn.fadeIn();
@@ -88,7 +88,6 @@ $(function () {
             topBtn.fadeOut();
         }
     });
-
 });
 
 // あわまるを押すと吹き出しが出て、もう一度押すと２秒かけて消える
@@ -119,15 +118,22 @@ $.fn.clickToggle = function (a, b) {
     });
 };
 
+
 $('.awamaru').clickToggle(function () {
     //   // １回目のクリック
-    $(".awamaru").animate({ "marginLeft": "+=60px", }, 500);
-    $(".awamaru").animate({ "rotate": "0deg", }, 500);
+    // $(".awamaru").animate({ "marginLeft": "+=60px", }, 500);
+    // $(".awamaru").animate({ "rotate": "0deg", }, 500);
+
+    $(".awamaru").animate({ "marginLeft": "-=60px", }, 500);
+    $(".awamaru").animate({ "rotate": "45deg", }, 500);
 
 }, function () {
     //   // ２回目のクリック
-    $(".awamaru").animate({ "marginLeft": "-=60px", }, 500);
-    $(".awamaru").animate({ "rotate": "45deg", }, 500);
+    // $(".awamaru").animate({ "marginLeft": "-=60px", }, 500);
+    // $(".awamaru").animate({ "rotate": "45deg", }, 500);
+
+    $(".awamaru").animate({ "marginLeft": "+=60px", }, 500);
+    $(".awamaru").animate({ "rotate": "0deg", }, 500);
 });
 
 // トップへ戻る
@@ -135,7 +141,7 @@ $('.awamaru').clickToggle(function () {
 $(function () {
     var topBtn = $('#scroll');
     topBtn.hide();
-    //スクロールが100に達したらボタン表示
+    //スクロールが1000に達したらボタン表示
     $(window).scroll(function () {
         if ($(this).scrollTop() > 1000) {
             topBtn.fadeIn();
@@ -143,7 +149,6 @@ $(function () {
             topBtn.fadeOut();
         }
     });
-
 });
 
 $('#scroll').click(function () {
@@ -189,3 +194,20 @@ $(function () {
         }
     });
 });
+
+
+// let box = document.getElementById('hukidasi');
+// //styleのdisplayを変更する関数
+// let changeElement = (el) => {
+
+//     if (el.style.display == '') {
+//         el.style.display = 'none';
+//     } else {
+//         el.style.display = '';
+//     }
+// }
+
+// //上記関数をボタンクリック時に実行
+// switchBtn.addEventListener('click', () => {
+//     changeElement(hukidasi);
+// }, false);

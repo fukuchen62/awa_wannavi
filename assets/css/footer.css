@@ -113,7 +113,7 @@ ul .large-menu {
 .awamaru {
     width: 100px;
     position: fixed;
-    left: -120px;
+    left: 15px;
     bottom: 200px;
     z-index: 5;
     cursor: pointer;
@@ -126,7 +126,7 @@ ul .large-menu {
     .awamaru {
         width: 150px;
         position: fixed;
-        left: -120px;
+        left: -10px;
         bottom: 150px;
         z-index: 5;
         cursor: pointer;
@@ -137,6 +137,7 @@ ul .large-menu {
 
 /* 吹き出しの画像 */
 .awamaru_commentbox {
+    display: none;
     position: fixed;
     /* 位置 */
     margin-left: 80px;
@@ -150,6 +151,7 @@ ul .large-menu {
 /* PC幅 */
 @media screen and (min-width: 1023px) {
     .awamaru_commentbox {
+        display: none;
         position: fixed;
         /* 位置 */
         margin-left: 100px;
@@ -163,6 +165,7 @@ ul .large-menu {
 
 /* あわまるのセリフ */
 .awamaru_comment {
+    display: none;
     font-size: 14px;
     font-weight: bold;
     position: fixed;
@@ -178,6 +181,7 @@ ul .large-menu {
 /* PC幅 */
 @media screen and (min-width: 1023px) {
     .awamaru_comment {
+        display: none;
         font-size: 14px;
         font-weight: bold;
         position: fixed;
