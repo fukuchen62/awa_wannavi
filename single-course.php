@@ -1,172 +1,270 @@
 <!-- header.phpを読み込む -->
 <?php get_header(); ?>
 
-<h2 class="pageTitle">メニュー<span>MENU</span></h2>
+<div class="container">
+    <div class="banner__head">モデルコース</div>
 
-<!-- パンくずリスト出力 -->
-<?php get_template_part("template-parts/breadcrumb"); ?>
+    <!-- いったんコンテナーに格納 -->
 
-<!-- メインループの開始 -->
-<?php if (have_posts()) : ?>
-<?php while (have_posts()) : ?>
-<?php the_post(); ?>
+    <!-- パンくずリスト -->
+    <div class="Breadcrumb mb20">
+        <?php get_template_part("template-parts/breadcrumb"); ?>
+    </div>
+    <!-- 県別検索ボタン -->
+    <!-- 各ボタンをラップでハサミ、ホバーすると色が変わるギミック -->
 
-<main class="main">
-    <section class="sec">
-        <div class="container">
-            <div class="article article-menu">
-                <div class="row">
-                    <div class="col-12 col-md-6">
-                        <h2 class="article_title"><?php the_title(); ?></h2>
-                        <div class="content">
-                            <?php the_content(); ?>
-                        </div>
+    <div class="tab__wrapper mb40">
+        <div class="tab__block bgYL">
+            <a href="">
+                <h3 class="tab__title">ペットホテル</h3>
+            </a>
+        </div>
+
+        <div class="tab__block bgYL">
+            <a href="">
+                <h3 class="tab__title">ペットと宿泊</h3>
+            </a>
+        </div>
+
+        <div class="tab__block bgYL">
+            <a href="">
+                <h3 class="tab__title">キャンプ</h3>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="txt__box">
+        <p>徳島の豊かな自然の中で</p>
+        <p>『川、海、山』をワンちゃんと一緒に楽しむコース</p>
+        <p>をご紹介します。</p>
+    </div>
+    <!-- 県別検索終了 -->
+
+    <!-- メインのタイトル -->
+    <h2 class="h2__title bgYL">山コース</h2>
+
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/model-cource.png" alt="">
+
+    <div class="start-born">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_01.svg" alt="">
+        <h3 class="model-1">1日目</h3>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_02.svg" alt="">
+    </div>
+    <div class="kakoi">
+        <!-- スマホ版のモデルコースのイメージ -->
+        <div class="none">
+            <div class="asobu-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_14_asobu.svg" alt="">
+            </div>
+            <div class="course-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+            </div>
+        </div>
+        <!-- デスクトップ版のモデルコースイメージ -->
+        <div class="side-img1">
+            <div class="leftside-img3">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_01.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_02.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_03.svg" alt="">
+            </div>
+            <div class="center">
+                <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_14_asobu.svg" alt="">
+
+                <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+
+                <!-- 施設名、施設情報 PC版 -->
+                <div class="model-main-pc">
+                    <h2>太龍寺ロープウェイ</h2>
+                    <div class="dotted-line"></div>
+                    <div>
+                        <p>http://www.shikoku-cable.co.jp/tairyuji/</p>
+                        <p>太龍寺参拝</p>
+                        <p>お土産/トイレ</p>
+                        <p>道の駅鷲の里</p>
                     </div>
+                </div>
+            </div>
 
-                    <div class="col-12 col-md-6">
-                        <div class="article_pic">
-                            <?php
-                                    $pic = get_field("pic");
-                                    // 大サイズ画像のurl
-                                    $pic_url = $pic["sizes"]["large"];
-                                    ?>
-                            <img src="<?php echo $pic_url; ?>" alt="">
-                        </div>
-                    </div>
+            <img class="rightside-img1" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_11.svg" alt="">
+        </div>
+        <!-- 施設名、施設情報 SP版 -->
+        <div class="model-main-sp">
+            <h2>太龍寺ロープウェイ</h2>
+            <div class="dotted-line"></div>
+            <div>
+                <p>http://www.shikoku-cable.co.jp/tairyuji/</p>
+                <p>太龍寺参拝</p>
+                <p>お土産/トイレ</p>
+                <p>道の駅鷲の里</p>
+            </div>
+        </div>
+        <!-- スマホ版のアンダーイメージ -->
+        <div class="course-under-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_03.svg" alt="">
+        </div>
+    </div>
+
+
+    <!-- スマホ版のモデルコースのイメージ -->
+    <div class="none">
+        <div class="asobu-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
+        </div>
+        <div class="course-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+        </div>
+    </div>
+    <!-- デスクトップ版のモデルコースイメージ -->
+    <div class="side-img1">
+        <div class="leftside-img1">
+            <img class="fukidashi" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_07.svg" alt="">
+        </div>
+
+        <div class="center">
+            <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
+
+            <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+
+            <!-- 施設名、施設情報 PC版 -->
+            <div class="model-main-pc">
+                <h2>あかりカフェ</h2>
+                <div class="dotted-line"></div>
+                <div>
+                    <p>http://www.acaricafe.com/archives/categorytairyuji/</p>
+                    <p>阿南市新野町是国56</p>
                 </div>
             </div>
         </div>
+        <img class="rightside-img1" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_12.svg" alt="">
+    </div>
+    <!-- 施設名、施設情報 SP版 -->
+    <div class="model-main-sp">
+        <h2>あかりカフェ</h2>
+        <div class="dotted-line"></div>
+        <div>
+            <p>http://www.acaricafe.com/archives/categorytairyuji/</p>
+            <p>阿南市新野町是国56</p>
+        </div>
+    </div>
+    <!-- スマホ版のアンダーイメージ -->
+    <div class="course-under-img">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_07.svg" alt="">
+    </div>
 
-        <div class="info">
-            <div class="container">
-                <ul class="info_list">
-                    <li>
-                        <b>価格</b>
-                        <span><?php the_field("price"); ?></span>
-                    </li>
-                    <li>
-                        <b>カロリー</b>
-                        <span><?php echo number_format(get_field("calorie")); ?> kcal</span>
-                    </li>
-                    <li>
-                        <b>アレルギー</b>
-                        <span>
-                            <?php
-                                    $allergies = get_field("allergies");
-                                    // foreach ($allergies as $key => $allergy) {
-                                    // 	echo $allergy;
-                                    // 	if ($allergy !== end($allergies)) {
-                                    // 		echo "、";
-                                    // 	}
-                                    // }
-                                    echo implode("、", $allergies);
-                                    ?>
-                        </span>
-                    </li>
-                    <li>
-                        <b>予約</b>
-                        <?php if (get_field("reservation")) : ?>
-                        <span>必要あり</span>
-                        <?php else : ?>
-                        <span>必要なし</span>
-                        <?php endif; ?>
-                    </li>
-                </ul>
+
+    <!-- スマホ版のモデルコースのイメージ -->
+    <div class="none">
+        <div class="asobu-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_16_tomaru.svg" alt="">
+        </div>
+        <div class="course-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+        </div>
+    </div>
+    <!-- デスクトップ版のモデルコースイメージ -->
+    <div class="side-img1">
+        <div class="leftside-img1">
+            <img class="fukidashi" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+            <img class="flower" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_17.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_09.svg" alt="">
+            <img class="dogfood" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_10.svg" alt="">
+        </div>
+
+        <div class="center">
+            <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_16_tomaru.svg" alt="">
+
+            <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+
+            <!-- 施設名、施設情報 PC版 -->
+            <div class="model-main-pc">
+                <h2>南阿波サンラインモビレージ</h2>
+                <div class="dotted-line"></div>
+                <div>
+                    <p>http://www.acaricafe.com/archives/categorytairyuji/</p>
+                    <p>徳島県海部郡美波町山河内明丸１−１</p>
+                </div>
             </div>
         </div>
-    </section>
+        <img class="rightside-img1" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_13.svg" alt="">
+    </div>
+    <!-- 施設名、施設情報 SP版 -->
+    <div class="model-main-sp">
+        <h2>南阿波サンラインモビレージ</h2>
+        <div class="dotted-line"></div>
+        <div>
+            <p>http://www.acaricafe.com/archives/categorytairyuji/</p>
+            <p>徳島県海部郡美波町山河内明丸１−１</p>
+        </div>
+    </div>
 
 
-    <section class="sec">
-        <div class="container">
-            <div class="sec_header">
-                <h2 class="title title-jp">その他のフード</h2>
-                <span class="title title-en">FOOD</span>
+
+    <div class="start-born">
+        <h3 class="model-1">2日目</h3>
+    </div>
+    <div class="kakoi">
+        <!-- スマホ版のモデルコースのイメージ -->
+        <div class="none">
+            <div class="asobu-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
             </div>
-            <div class="row justify-content-center">
+            <div class="course-img">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+            </div>
+        </div>
+        <!-- デスクトップ版のモデルコースイメージ -->
+        <div class="side-img1">
+            <div class="leftside-img2">
+                <img class="fukidashi" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_18.svg" alt="">
+                <img class="flower" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_17.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_19.svg" alt="">
+            </div>
 
-                <div class="col-md-3">
-                    <section class="menu">
-                        <a href="#">
-                            <figure class="menu_pic">
-                                <img src="./assets/img/menu/menu-1@2x.jpg" alt="">
-                            </figure>
-                            <h3 class="menu_title">メニュー名が入ります</h3>
-                            <p class="menu_price">800円</p>
-                            <div class="menu_desc">
-                                <p>
-											概要が入ります。概要が入ります。概要が入ります。概要が入ります。
-										</p>
-                            </div>
-                        </a>
-                    </section>
-                </div>
+            <div class="center">
+                <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
 
-                <div class="col-md-3">
-                    <section class="menu">
-                        <a href="#">
-                            <figure class="menu_pic">
-                                <img src="./assets/img/menu/menu-2@2x.jpg" alt="">
-                            </figure>
-                            <h3 class="menu_title">メニュー名が入ります</h3>
-                            <p class="menu_price">800円</p>
-                            <div class="menu_desc">
-                                <p>
-											概要が入ります。概要が入ります。概要が入ります。概要が入ります。
-										</p>
-                            </div>
-                        </a>
-                    </section>
-                </div>
+                <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
 
-                <div class="col-md-3">
-                    <section class="menu">
-                        <a href="#">
-                            <figure class="menu_pic">
-                                <img src="./assets/img/menu/menu-3@2x.jpg" alt="">
-                            </figure>
-                            <h3 class="menu_title">メニュー名が入ります</h3>
-                            <p class="menu_price">800円</p>
-                            <div class="menu_desc">
-                                <p>
-											概要が入ります。概要が入ります。概要が入ります。概要が入ります。
-										</p>
-                            </div>
-                        </a>
-                    </section>
-                </div>
-
-                <div class="col-md-3">
-                    <section class="menu">
-                        <a href="#">
-                            <figure class="menu_pic">
-                                <img src="./assets/img/menu/menu-4@2x.jpg" alt="">
-                            </figure>
-                            <h3 class="menu_title">メニュー名が入ります</h3>
-                            <p class="menu_price">800円</p>
-                            <div class="menu_desc">
-                                <p>
-											概要が入ります。概要が入ります。概要が入ります。概要が入ります。
-										</p>
-                            </div>
-                        </a>
-                    </section>
-                </div>
-
-                <div class="col-12">
-                    <div class="sec_btn">
-                        <a href="<?php echo home_url("/menu/") ?>" class="btn btn-default">メニュー一覧<i class="fas fa-angle-right"></i></a>
+                <!-- 施設名、施設情報 PC版 -->
+                <div class="model-main-pc">
+                    <h2>オドリ キッチン</h2>
+                    <div class="dotted-line"></div>
+                    <div>
+                        <p>https://odori.kitchen/</p>
+                        <p>徳島県海部郡美波町山河内なか2-1</p>
                     </div>
                 </div>
-
+            </div>
+            <img class="rightside-img1" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_20.svg" alt="">
+        </div>
+        <!-- 施設名、施設情報 SP版 -->
+        <div class="model-main-sp">
+            <h2>オドリ キッチン</h2>
+            <div class="dotted-line"></div>
+            <div>
+                <p>https://odori.kitchen/</p>
+                <p>徳島県海部郡美波町山河内なか2-1</p>
             </div>
         </div>
-    </section>
-</main>
 
-<!-- メインループの終了 -->
-<?php endwhile; ?>
-<?php endif; ?>
+        <!-- スマホ版のアンダーイメージ -->
+        <div class="course-under-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_18.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_10.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_09.svg" alt="">
+        </div>
+    </div>
+
+</div>
 
 <!-- footer.phpを読み込む -->
 <?php get_footer(); ?>

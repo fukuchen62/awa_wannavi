@@ -1,29 +1,20 @@
 @charset "utf8";
 
-/* 記事タイトル */
-.article__title {
+.mypage_title {
     margin: 0px auto;
     padding: 10px;
     text-align: center;
     font-size: 2.6rem;
+    font-weight: bold;
     width: fit-content;
     border-bottom: dotted 6px #F3E06E;
-    /* font-family: Zen Maru Gothic;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 900; */
 }
 
-.hits {
-    padding-left: 20px;
-    font-size: 1.4rem;
-}
-
+/*
 .sub__title {
     padding: 50px 0px;
     gap: 10px;
-    background: #C6DF74;
-}
+} */
 
 .sub__title2 {
     display: flex;
@@ -32,21 +23,22 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    font-size: 2.4rem;
+    font-size: 2rem;
     border: 3px dashed #333;
     border-radius: 20px;
-    padding: 50px 0px;
+    padding: 40px 0px;
     gap: 10px;
-    background: #E5A799;
 }
 
 .tr2 {
+    padding-left: 20px;
     text-align: left;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 /* マイページ */
-.mypage_title {
+/* .mypage_title {
     margin: 0 auto;
     text-align: center;
     display: flex;
@@ -59,9 +51,9 @@
     gap: 7px;
     flex-shrink: 0;
     border-bottom: 10px dotted #E6917E;
-}
+} */
 
-.mypage_font {
+/* .mypage_font {
     text-align: center;
     color: #000;
     font-family: Zen Maru Gothic;
@@ -69,7 +61,7 @@
     font-style: normal;
     font-weight: 900;
     line-height: normal;
-}
+} */
 
 /* 説明文 */
 
@@ -88,9 +80,9 @@
     text-align: center;
 }
 
-.container {
+/* .container {
     background-image: url(../img/background-image.png);
-}
+} */
 
 iframe {
     width: 100%;

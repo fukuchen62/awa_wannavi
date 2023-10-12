@@ -17,8 +17,8 @@
             <h2 class="h2__title mb20 fs35 bc_taberu">ドッグカフェ一覧</h2>
 
             <!-- パンくずリスト -->
-
-            <div class="Breadcrumb"><a href="">遊ぶ > ドッグカフェ一覧</a>
+            <div class="Breadcrumb mb20">
+                <?php get_template_part("template-parts/breadcrumb"); ?>
             </div>
 
 
