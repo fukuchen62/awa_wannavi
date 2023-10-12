@@ -13,10 +13,11 @@
 
 
 .sub__title {
-    padding: 35px 0;
+    /* padding: 35px 0; */
     line-height: 30px;
-    gap: 15px;
+    gap: 10px;
     text-align: center;
+    font-size: 2rem;
 }
 
 .line__solid {
@@ -29,5 +30,10 @@
 .bg__img {
     background-image: url(../img/common/bg-img/background-image-yl.svg);
     background-size: contain;
-    background-repeat: repeat-y;
+    /* background-repeat: repeat-y; */
+}
+
+.sl2 {
+    text-align: center;
+    padding: 40px;
 }

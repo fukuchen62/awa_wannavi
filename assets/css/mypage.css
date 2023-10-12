@@ -80,9 +80,10 @@
     text-align: center;
 }
 
-/* .container {
-    background-image: url(../img/background-image.png);
-} */
+.container {
+    background-image: url(../img/common/bg-img/background-image-yl.svg);
+    background-size: contain;
+}
 
 iframe {
     width: 100%;
