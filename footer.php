@@ -77,33 +77,33 @@
             <div class="footer-text">
                 <ul>
                     <li><a href="#">マイページ</a></li>
-                    <li><a href="#">動物病院</a></li>
-                    <li><a href="#">レンタカー（犬OK）</a></li>
+                    <li><a href="<?php echo home_url('/hospital/'); ?>">動物病院</a></li>
+                    <li><a href="<?php echo home_url('/rental_car/'); ?>">レンタカー（犬OK）</a></li>
                     <li><a href="#">掲載施設一覧</a></li>
-                    <li><a href="#">このサイトについて</a></li>
-                    <li><a href="#">プライバシーポリシー・<br>免責事項</a></li>
+                    <li><a href="<?php echo home_url('/about/'); ?>">このサイトについて</a></li>
+                    <li><a href="<?php echo home_url('/privacy-policy/'); ?>">プライバシーポリシー・<br>免責事項</a></li>
                 </ul>
             </div>
             <div class="footer-largetext">
                 <ul class="large-menu">遊ぶ
-                    <li><a href="#">公園</a></li>
-                    <li><a href="#">ドッグラン</a></li>
-                    <li><a href="#">自然・観光</a></li>
-                    <li><a href="#">屋内施設</a></li>
+                    <li><a href="<?php echo home_url('/enjoy_type/park/'); ?>">公園</a></li>
+                    <li><a href="<?php echo home_url('/enjoy_type/dogrun/'); ?>">ドッグラン</a></li>
+                    <li><a href="<?php echo home_url('/enjoy_type/outdoor/'); ?>">自然・観光</a></li>
+                    <li><a href="<?php echo home_url('/enjoy_type/indoor/'); ?>">屋内施設</a></li>
                 </ul>
                 <ul class="large-menu">泊まる
-                    <li><a href="#">ペットホテル</a></li>
-                    <li><a href="#">ペットと宿泊</a></li>
-                    <li><a href="#">キャンプ</a></li>
+                    <li><a href="<?php echo home_url('/stay_type/pethotel/'); ?>">ペットホテル</a></li>
+                    <li><a href="<?php echo home_url('/stay_type/hotel/'); ?>">ペットと宿泊</a></li>
+                    <li><a href="<?php echo home_url('/stay_type/camp/'); ?>">キャンプ</a></li>
                 </ul>
                 <ul class="large-menu">食べる
-                    <li><a href="#">ドッグカフェ</a></li>
-                    <li><a href="#">ペットと食事</a></li>
+                    <li><a href="<?php echo home_url('/eat_type/cafe/'); ?>">ドッグカフェ</a></li>
+                    <li><a href="<?php echo home_url('/eat_type/restaurant/'); ?>">ペットと食事</a></li>
                 </ul>
                 <ul class="large-menu">モデルコース
-                    <li><a href="#">海コース</a></li>
-                    <li><a href="#">川コース</a></li>
-                    <li><a href="#">山コース</a></li>
+                    <li><a href="<?php echo home_url('/course/co01/'); ?>">海コース</a></li>
+                    <li><a href="<?php echo home_url('/course/co02/'); ?>">川コース</a></li>
+                    <li><a href="<?php echo home_url('/course/co03/'); ?>">山コース</a></li>
                 </ul>
                 <ul class="large-menu">特集記事
                     <li><a href="#">マナー</a></li>
@@ -122,11 +122,11 @@
                 </ul>
                 <ul class="large-menu">
                     <li><a href="#">マイページ</a></li>
-                    <li><a href="#">動物病院</a></li>
-                    <li><a href="#">レンタカー（犬OK）</a></li>
+                    <li><a href="<?php echo home_url('/hospital/'); ?>">動物病院</a></li>
+                    <li><a href="<?php echo home_url('/rental_car/'); ?>">レンタカー（犬OK）</a></li>
                     <li><a href="#">掲載施設一覧</a></li>
-                    <li><a href="#">このサイトについて</a></li>
-                    <li><a href="#">プライバシーポリシー・<br>免責事項</a></li>
+                    <li><a href="<?php echo home_url('/about/'); ?>">このサイトについて</a></li>
+                    <li><a href="<?php echo home_url('/privacy-policy/'); ?>">プライバシーポリシー・<br>免責事項</a></li>
                 </ul>
             </div>
         </div>
