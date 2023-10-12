@@ -13,7 +13,11 @@
 .article__text {
     font-size: 1.6rem;
     line-height: 2.0;
-    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+.article__img {
+    padding-bottom: 20px;
 }
 
 time {
@@ -46,7 +50,7 @@ time {
 
 /* 記事内見出し（h3） */
 .article__sub__ttl {
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     padding-left: 10px;
     font-size: 2rem;
     font-weight: bold;
@@ -230,12 +234,12 @@ time {
     }
 
     /* 記事内見出し（h3） */
-    .article__sub__ttl {
+    /* .article__sub__ttl {
         margin: 50px 0 30px;
         padding-left: 10px;
         font-size: 2rem;
         font-weight: bold;
-    }
+    } */
 
     /* 新着情報ニュースリスト */
 
