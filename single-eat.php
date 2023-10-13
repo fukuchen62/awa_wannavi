@@ -64,13 +64,7 @@
                             <p><?php the_field("dog_size"); ?></p>
                         </div>
                         <div class="border__box margin5">
-                            <p>
-                                <?php if (get_field("note_flag")) : ?>
-                                    <span>特記事項有り</span>
-                                <?php else : ?>
-                                    <span>特記事項なし</span>
-                                <?php endif; ?>
-                            </p>
+                            <p><?php the_field("note_flag"); ?></p>
                         </div>
                     </div>
                 </div>
@@ -136,13 +130,7 @@
                     </dl>
                     <dl>
                         <dt>喫煙</dt>
-                        <dd>
-                            <?php if (get_field("smoking")) : ?>
-                                <span>可能</span>
-                            <?php else : ?>
-                                <span>不可</span>
-                            <?php endif; ?>
-                        </dd>
+                        <dd><?php the_field("Smoking"); ?></dd>
                     </dl>
                     <dl>
                         <dt>駐車場（車）</dt>
@@ -155,7 +143,7 @@
                     </dl>
                     <dl>
                         <dt>業態</dt>
-                        <dd><?php the_field("eat_type"); ?></dd>
+                        <dd><?php the_field("company_info"); ?></dd>
                     </dl>
                     <dl>
                         <dt>対応犬種</dt>

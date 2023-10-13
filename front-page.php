@@ -28,9 +28,9 @@
                         <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img06.jpg" alt=""></div>
                         <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img07.jpg" alt=""></div>
                     </div>
-                    <div class="top__asobu-button"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_asobu.svg" alt=""></a></div>
-                    <div class="top__tomaru-button"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_tomaru.svg" alt=""></a></div>
-                    <div class="top__taberu-button"><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_taberu.svg" alt=""></a></div>
+                    <div class="top__asobu-button"><a href="<?php echo home_url('/enjoy_type/park/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_asobu.svg" alt=""></a></div>
+                    <div class="top__tomaru-button"><a href="<?php echo home_url('/stay_type/hotel/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_tomaru.svg" alt=""></a></div>
+                    <div class="top__taberu-button"><a href="<?php echo home_url('/eat_type/cafe/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_taberu.svg" alt=""></a></div>
                 </div>
                 <div class="top__awamaru"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_awawan.svg" alt=""></div>
             </div>
