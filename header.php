@@ -122,8 +122,8 @@
                                 <a href="<?php echo home_url('/stay_type/pethotel/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_tomaru01.jpg" alt="犬">
                                     <dl>
-                                        <dt>ホテル</dt>
-                                        <dd>かわいいわんちゃんを安心して預けられるホテルをご紹介</dd>
+                                        <dt>ペットと宿泊</dt>
+                                        <dd>わんちゃんと一緒に泊まれる宿泊施設をご紹介</dd>
                                     </dl>
                                 </a>
                             </li>
@@ -131,8 +131,8 @@
                                 <a href="<?php echo home_url('/stay_type/hotel/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_tomaru02.jpg" alt="犬">
                                     <dl>
-                                        <dt>ペットと宿泊</dt>
-                                        <dd>わんちゃんと一緒に泊まれる宿泊施設をご紹介</dd>
+                                        <dt>ホテル</dt>
+                                        <dd>かわいいわんちゃんを安心して預けられるホテルをご紹介</dd>
                                     </dl>
                                 </a>
                             </li>
