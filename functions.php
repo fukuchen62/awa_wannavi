@@ -373,3 +373,25 @@ add_action(
     'pre_get_posts',
     'awa_wannavi_pre_get_posts'
 );
+
+/**
+ * SearchFilter function
+ * 文字列検索の対象設定
+ *
+ * @param [type] $query
+ * @return void
+ */
+function SearchFilter($query)
+{
+    if ($query->is_search) {
+        $args = array(
+            'enjoy',
+            'stay',
+            'eat',
+            'special',
+        );
+        $query->set('post_type', $args);
+    }
+    return $query;
+}
+add_filter('pre_get_posts', 'SearchFilter');
