@@ -208,7 +208,7 @@ function awa_wannavi_add_individual_scripts()
         // トップページ用のJS（template_top_footer.js）を読み込む
         // wp_enqueue_script('awa_nolife-template_top_footer', get_template_directory_uri() . '/assets/js/template_top_footer.js', '', '', true);
 
-    } elseif (is_archive() || is_page('hospital') || is_page('rental_car')) {
+    } elseif (is_archive() || is_page('hospital') || is_page('rental_car') || is_page('spots_list')) {
 
         // 一覧ページのcss
         wp_enqueue_style(
@@ -270,6 +270,20 @@ function awa_wannavi_add_individual_scripts()
         wp_enqueue_style(
             'awa_wannavi-course',
             get_template_directory_uri() . '/assets/css/modelcource.css',
+            array(),
+            false
+        );
+    }
+
+    //----------------------
+    //  検索結果のページ
+    //----------------------
+    elseif (is_search()) {
+
+        //（search.css）を読み込む
+        wp_enqueue_style(
+            'awa_wannavi-search',
+            get_template_directory_uri() . '/assets/css/search.css',
             array(),
             false
         );
