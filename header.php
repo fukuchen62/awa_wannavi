@@ -40,9 +40,9 @@
                 <div class="gnav__menu__content__inner">
                     <!-- 検索フォーム -->
                     <div class="form__box">
-                        <form action="" method="get" class="header__search">
+                        <form action="<?php echo home_url('/'); ?>" method="get" class="header__search">
                             <!---- name="s"サーチのs 決まっている文字 -->
-                            <input class="form__input" type="text" name="s" value="" maxlength="20" placeholder="Search">
+                            <input class="form__input" type="text" name="s" value="<?php the_search_query(); ?>" maxlength="20" placeholder="Search">
                             <button class="form__button lupe" value="">
                                 <!-- <span></span>
                                 <span></span> -->

@@ -276,6 +276,20 @@ function awa_wannavi_add_individual_scripts()
     }
 
     //----------------------
+    //  モデルコースのページ
+    //----------------------
+    elseif (is_search()) {
+
+        //（search.css）を読み込む
+        wp_enqueue_style(
+            'awa_wannavi-search',
+            get_template_directory_uri() . '/assets/css/search.css',
+            array(),
+            false
+        );
+    }
+
+    //----------------------
     //  このサイトについて・プライバシーポリシー
     //----------------------
     elseif (is_page('about') || is_page('privacy_policy')) {
