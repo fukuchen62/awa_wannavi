@@ -124,7 +124,7 @@
                 <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : ?>
                         <?php the_post(); ?>
-                        <?php get_template_part('template-parts/loop', 'card'); ?>
+                        <?php get_template_part('template-parts/loop', 'news'); ?>
                     <?php endwhile; ?>
                 <?php endif; ?>
 

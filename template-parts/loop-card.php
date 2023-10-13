@@ -32,7 +32,7 @@
                 if (!empty($taxonomy_names)) :
                     foreach ($taxonomy_names as $tax_name) : ?>
 
-                        <li class="card__tag bgGL"><?php echo $tax_name; ?> </li>
+                        <li class="card__tag"><?php echo $tax_name; ?> </li>
 
                 <?php endforeach;
                 endif;  ?>
