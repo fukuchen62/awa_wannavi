@@ -196,18 +196,16 @@ $(function () {
 });
 
 
-// let box = document.getElementById('hukidasi');
-// //styleのdisplayを変更する関数
-// let changeElement = (el) => {
+// const element = document.getElementById("awamaru_trivia");
 
-//     if (el.style.display == '') {
-//         el.style.display = 'none';
-//     } else {
-//         el.style.display = '';
-//     }
-// }
+// element.addEventListener("click", function () {
+//     element.style.display = "block";
+// });
 
-// //上記関数をボタンクリック時に実行
-// switchBtn.addEventListener('click', () => {
-//     changeElement(hukidasi);
-// }, false);
+
+$('.awamaru').click(function () {
+    // alert("クリックされました");
+    $('awamaru_trivia').css({
+        'display': 'block',
+    });
+});
