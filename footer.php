@@ -126,7 +126,7 @@
                     <li><a href="<?php echo home_url('/rental_car/'); ?>">レンタカー（犬OK）</a></li>
                     <li><a href="#">掲載施設一覧</a></li>
                     <li><a href="<?php echo home_url('/about/'); ?>">このサイトについて</a></li>
-                    <li><a href="<?php echo home_url('/privacy-policy/'); ?>">プライバシーポリシー・<br>免責事項</a></li>
+                    <li><a href="<?php echo home_url('/privacy_policy/'); ?>">プライバシーポリシー・<br>免責事項</a></li>
                 </ul>
             </div>
         </div>
