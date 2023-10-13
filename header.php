@@ -131,7 +131,7 @@
                                 <a href="<?php echo home_url('/stay_type/hotel/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_tomaru02.jpg" alt="犬">
                                     <dl>
-                                        <dt>ホテル</dt>
+                                        <dt>ペットホテル</dt>
                                         <dd>かわいいわんちゃんを安心して預けられるホテルをご紹介</dd>
                                     </dl>
                                 </a>
