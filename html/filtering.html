@@ -196,91 +196,110 @@
             </nav>
         </div>
     </header>
+
     <main>
+
         <div class="filtering__wrap">
-            <div class="content-wrapper">
-                <!-- フォームを読み込む -->
-                <!-- 農業体験を詳細に絞り込むためのフォーム -->
-                <div class="form-wrap">
-                    <div class="form-title">
-                        <!-- 文字変更 2022.10.14 akamatsu -->
-                        <h2 class="form-sub-title" style="white-space: nowrap">条件検索</h2>
-                    </div>
-                    <form class="inner" method="get" action="">
-                        <!--隠しフィールドとして記述する（これがないとフォームがうまく動作しません）-->
-                        <input type="hidden" name="s" value="">
-                        <!-- ここから本文 -->
-                        <div class="search-content">
-                            <section class="choice-wrap area-wrap">
-                                <h3 class="search-title area">エリアから探す<img src="../assets/img/filtering/filtering_ill_01.svg" alt=""></h3>
-                                <ul id="area" class="radio-box">
-                                    <li class="choice-item">
-                                        <input type="checkbox" name="area[]" value="tokushima" id="tokushima" class="checkbox_list" />
-                                        <label for="tokushima" class="s-search-btn">徳島市内</label>
-                                    </li>
-                                    <li class="choice-item">
-                                        <input type="checkbox" name="area[]" value="east" id="east" class="checkbox_list" />
-                                        <label for="east" class="s-search-btn">県内東部</label>
-                                    </li>
-                                    <li class="choice-item">
-                                        <input type="checkbox" name="area[]" value="west" id="west" class="checkbox_list" />
-                                        <label for="west" class="s-search-btn">県内西部</label>
-                                    </li>
-                                    <li class="choice-item">
-                                        <input type="checkbox" name="area[]" value="south" id="south" class="checkbox_list" />
-                                        <label for="south" class="s-search-btn">県内南部</label>
-                                    </li>
-                                </ul>
-                            </section>
-                            <section class="choice-wrap event-type-wrap">
-                                <h3 class="search-title event">目的から探す<img src="../assets/img/filtering/filtering_ill_02.svg" alt=""></h3>
-                                <ul>
-                                    <p>遊ぶ</p>
-                                    <li class="choice-item"><input type="checkbox" name="event_type[]" value="park" id="park" class="checkbox_list" />
+
+            <!-- フォームを読み込む -->
+            <!-- 農業体験を詳細に絞り込むためのフォーム -->
+            <div class="form-wrap">
+                <form class="inner" method="get" action="">
+                    <!--隠しフィールドとして記述する（これがないとフォームがうまく動作しません）-->
+                    <input type="hidden" name="s" value="">
+                    <!-- ここから本文 -->
+                    <div class="search-content">
+                        <section class="choice-wrap area-wrap">
+
+                            <h3 class="search-title area">エリアから探す<img src="../assets/img/filtering/filtering_ill_01.svg" alt=""></h3>
+
+                            <ul id="area" class="radio-box">
+                                <li class="choice-item">
+                                    <input type="checkbox" name="area[]" value="tokushima" id="tokushima" class="checkbox_list" />
+                                    <label for="tokushima" class="s-search-btn">徳島市内</label>
+                                </li>
+                                <li class="choice-item">
+                                    <input type="checkbox" name="area[]" value="east" id="east" class="checkbox_list" />
+                                    <label for="east" class="s-search-btn">県内東部</label>
+                                </li>
+                                <li class="choice-item">
+                                    <input type="checkbox" name="area[]" value="west" id="west" class="checkbox_list" />
+                                    <label for="west" class="s-search-btn">県内西部</label>
+                                </li>
+                                <li class="choice-item">
+                                    <input type="checkbox" name="area[]" value="south" id="south" class="checkbox_list" />
+                                    <label for="south" class="s-search-btn">県内南部</label>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="choice-wrap event-type-wrap">
+                            <h3 class="search-title event">目的から探す<img src="../assets/img/filtering/filtering_ill_02.svg" alt=""></h3>
+
+                            <ul class="area__subtitle">
+                                <li class="flex__shrink">●遊　ぶ</li>
+                                <li class="flex__shrink">●泊まる</li>
+                                <li class="flex__shrink">●食べる</li>
+                            </ul>
+
+                            <div class="doing">
+                                <ul id="area">
+                                    <li class="none flex__shrink">遊ぶ</li>
+                                    <li class="choice-item flex__shrink"><input type="checkbox" name="event_type[]" value="park" id="park" class="checkbox_list" />
                                         <label for="park" class="s-search-btn">公園</label>
                                     </li>
-                                    <li class="choice-item">
+                                    <li class="choice-item flex__shrink">
                                         <input type="checkbox" name="event_type[]" value="dogrun" id="dogrun" class="checkbox_list" />
                                         <label for="dogrun" class="s-search-btn">ドッグラン</label>
                                     </li>
-                                    <li class="choice-item">
+                                    <li class="choice-item flex__shrink">
                                         <input type="checkbox" name="event_type[]" value="farm_stay" id="farm_stay" class="checkbox_list" />
                                         <label for="farm_stay" class="s-search-btn">自然・観光</label>
                                     </li>
-                                    <li class="choice-item">
+                                    <li class="choice-item flex__shrink">
                                         <input type="checkbox" name="event_type[]" value="farm_stay" id="farm_stay" class="checkbox_list" />
                                         <label for="farm_stay" class="s-search-btn">屋内施設</label>
                                     </li>
                                 </ul>
-                                <ul>
-                                    <p>泊る</p>
-                                    <li class="choice-item"><input type="checkbox" name="event_type[]" value="pethotel" id="pethotel" class="checkbox_list" />
+                                <ul id="area">
+                                    <li class="none flex__shrink">泊まる</li>
+                                    <li class="choice-item flex__shrink"><input type="checkbox" name="event_type[]" value="pethotel" id="pethotel" class="checkbox_list" />
                                         <label for="pethotel" class="s-search-btn">ペットホテル</label>
                                     </li>
-                                    <li class="choice-item">
+                                    <li class="choice-item flex__shrink">
                                         <input type="checkbox" name="event_type[]" value="pet&stay" id="pet&stay" class="checkbox_list" />
                                         <label for="pet&stay" class="s-search-btn">ペットと宿泊</label>
                                     </li>
-                                    <li class="choice-item">
+                                    <li class="choice-item flex__shrink">
                                         <input type="checkbox" name="event_type[]" value="camp" id="camp" class="checkbox_list" />
                                         <label for="camp" class="s-search-btn">キャンプ</label>
                                     </li>
+                                    <li></li>
                                 </ul>
-                                <ul>
-                                    <p>食べる</p>
-                                    <li class="choice-item"><input type="checkbox" name="event_type[]" value="dogcafe" id="dogcafe" class="checkbox_list" />
+                                <ul id="area">
+                                    <li class="none flex__shrink">食べる</li>
+                                    <li class="choice-item flex__shrink"><input type="checkbox" name="event_type[]" value="dogcafe" id="dogcafe" class="checkbox_list" />
                                         <label for="dogcafe" class="s-search-btn">ドッグカフェ</label>
                                     </li>
-                                    <li class="choice-item">
+                                    <li class="choice-item flex__shrink">
                                         <input type="checkbox" name="event_type[]" value="pet&meal" id="pet&meal" class="checkbox_list" />
                                         <label for="pet&meal" class="s-search-btn">ペットと食事</label>
                                     </li>
                                 </ul>
-                            </section>
-                            <section class="choice-wrap type-wrap">
-                                <h3 class="search-title type">条件から探す<img src="../assets/img/filtering/filtering_ill_03.svg" alt=""></h3>
-                                <ul class="checkbox_wrap">
-                                    <p>犬種</p>
+                            </div>
+                        </section>
+
+                        <section class="choice-wrap type-wrap">
+                            <h3 class="search-title type">条件から探す<img src="../assets/img/filtering/filtering_ill_03.svg" alt=""></h3>
+
+                            <ul class="area__subtitle">
+                                <li>●犬　種</li>
+                                <li>●駐車場</li>
+                            </ul>
+
+                            <div class="doing">
+                                <ul id="area" class="checkbox_wrap none">
+                                    <li class="none">犬種</li>
                                     <li class="choice-sub-item">
                                         <input type="checkbox" name="season[]" value="smalldog" id="smalldog" class="checkbox_list" />
                                         <label for="smalldog" class="s-search-btn">小型犬</label>
@@ -294,8 +313,8 @@
                                         <label for="largedog" class="s-search-btn">大型犬<label>
                                     </li>
                                 </ul>
-                                <ul class="checkbox_wrap">
-                                    <p>駐車場</p>
+                                <ul id="area" class="checkbox_wrap">
+                                    <li class="none">駐車場</li>
                                     <li class="choice-sub-item">
                                         <input type="checkbox" name="season[]" value="yes" id="yes" class="checkbox_list" />
                                         <label for="yes" class="s-search-btn">有</label>
@@ -305,21 +324,21 @@
                                         <label for="nothing" class="s-search-btn">無</label>
                                     </li>
                                 </ul>
-                            </section>
-                            <!-- ボタン -->
-                            <div class="searchbtn-restbtn-wrap">
-                                <!-- リセットボタン -->
-                                <div class="reset-btn-inner">
-                                    <input type="checkbox" value="リセット" id="reset-btn" /><label for="reset-btn" class="reset-btn">リセット</label>
-                                </div>
-                                <!-- 検索ボタン -->
-                                <div class="search-btn-inner">
-                                    <input type="submit" value=" これでさがす " id="search-btn" />
-                                </div>
+                            </div>
+                        </section>
+                        <!-- ボタン -->
+                        <div class="searchbtn-restbtn-wrap">
+                            <!-- リセットボタン -->
+                            <div class="reset-btn-inner">
+                                <input type="checkbox" value="リセット" id="reset-btn" /><label for="reset-btn" class="reset-btn">リセット</label>
+                            </div>
+                            <!-- 検索ボタン -->
+                            <div class="search-btn-inner">
+                                <input type="submit" value=" これでさがす " id="search-btn" />
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="container">
@@ -794,14 +813,12 @@
                 return false;
             }
         </script>
-        <div class="awamaru_trivia">
-            <div class="awamaru_commentset fukidashi_animation hukidasi" style="display: block;">
+        <div class="awamaru_trivia foot_scroll">
+            <div class="awamaru_commentset fukidashi_animation" style="display: block;">
                 <img class="awamaru_commentbox" src="../assets/img/common/hukidasi.png" alt="あわまる吹き出し">
                 <p id="awamaru_comment" class="awamaru_comment">高知の土佐犬みたいに徳島にも阿波犬っていたって知ってるワン？</p>
             </div>
-            <div class="foot_scroll">
-                <input class="awamaru" type="image" src="../assets/img/common/awamaru.png" value="豆知識" onclick="msgOutput()" alt="あわまる" onsubmit="return false" style="margin-left: -45px; rotate: 45deg;">
-            </div>
+            <input class="awamaru" type="image" src="../assets/img/common/awamaru.png" value="豆知識" onclick="msgOutput()" alt="あわまる" onsubmit="return false" style="margin-left: 130px; rotate: 0deg;">
         </div>
         <!-- トップへ戻る -->
         <div id="scroll">
