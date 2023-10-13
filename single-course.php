@@ -16,19 +16,19 @@
     <div class="tab__wrapper mb40">
         <div class="tab__block bgYL">
             <a href="">
-                <h3 class="tab__title">ペットホテル</h3>
+                <h3 class="tab__title">川コース</h3>
             </a>
         </div>
 
         <div class="tab__block bgYL">
             <a href="">
-                <h3 class="tab__title">ペットと宿泊</h3>
+                <h3 class="tab__title">海コース</h3>
             </a>
         </div>
 
         <div class="tab__block bgYL">
             <a href="">
-                <h3 class="tab__title">キャンプ</h3>
+                <h3 class="tab__title">山コース</h3>
             </a>
         </div>
 
