@@ -1,20 +1,20 @@
 "use strict";
 
 // ウィンドウの幅に応じて画像を切り替える関数
-function updateImage() {
-    const windowWidth = window.innerWidth;
-    const imgElement = document.getElementById("responsive-image");
+// function updateImage() {
+//     const windowWidth = window.innerWidth;
+//     const imgElement = document.getElementById("responsive-image");
 
-    if (windowWidth < 768) {
-        imgElement.src = "../assets/img/common/footer_imgshiba_sp.svg";
-    } else {
-        imgElement.src = "../assets/img/common/footer_imgshiba_pc.svg";
-    }
-}
+//     if (windowWidth < 768) {
+//         imgElement.src = "<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgshiba_sp.svg";
+//     } else {
+//         imgElement.src = "<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgshiba_pc.svg";
+
+//     }}
 
 // 初期表示とウィンドウのリサイズ時に画像を更新
-window.addEventListener("DOMContentLoaded", updateImage);
-window.addEventListener("resize", updateImage);
+// window.addEventListener("DOMContentLoaded", updateImage);
+// window.addEventListener("resize", updateImage);
 
 
 // ウィンドウの幅に応じて画像を表示または非表示にする関数
@@ -195,19 +195,9 @@ $(function () {
     });
 });
 
-
-// let box = document.getElementById('hukidasi');
-// //styleのdisplayを変更する関数
-// let changeElement = (el) => {
-
-//     if (el.style.display == '') {
-//         el.style.display = 'none';
-//     } else {
-//         el.style.display = '';
-//     }
-// }
-
-// //上記関数をボタンクリック時に実行
-// switchBtn.addEventListener('click', () => {
-//     changeElement(hukidasi);
-// }, false);
+$('.awamaru').click(function () {
+    // alert("クリックされました");
+    $('awamaru_trivia').css({
+        'display': 'block',
+    });
+});

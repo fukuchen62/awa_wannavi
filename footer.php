@@ -51,8 +51,9 @@
                 <p id="awamaru_comment" class="awamaru_comment">高知の土佐犬みたいに徳島にも阿波犬っていたって知ってるワン？</p>
 
             </div>
-            <input class="awamaru" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/awamaru.png" value="豆知識" onclick="msgOutput()" alt="あわまる" onsubmit="return false" style="margin-left: -45px; rotate: 45deg;">
         </div>
+        <input class="awamaru" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/awamaru.png" value="豆知識" onclick="msgOutput()" alt="あわまる" onsubmit="return false" style="margin-left: -45px; rotate: 45deg;">
+
         <!-- トップへ戻る -->
         <div id="scroll">
             <img class="top-btn01" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/topbtn.png" alt="トップボタン">
@@ -71,7 +72,7 @@
             <img class="large-screen katakata" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgdog05.svg" alt="Image 7">
         </div>
 
-        <img class="siba-sp" id="responsive-image" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgshiba_sp.svg" alt="Responsive Image">
+        <img class="siba-sp" id="responsive-image" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgshiba_pc.svg" alt="Responsive Image">
 
         <div class="footercolor footer-menu">
             <div class="footer-text">
@@ -101,16 +102,15 @@
                     <li><a href="<?php echo home_url('/eat_type/restaurant/'); ?>">ペットと食事</a></li>
                 </ul>
                 <ul class="large-menu">モデルコース
-                    <li><a href="<?php echo home_url('/course/co01/'); ?>">海コース</a></li>
                     <li><a href="<?php echo home_url('/course/co02/'); ?>">川コース</a></li>
+                    <li><a href="<?php echo home_url('/course/co01/'); ?>">海コース</a></li>
                     <li><a href="<?php echo home_url('/course/co03/'); ?>">山コース</a></li>
                 </ul>
                 <ul class="large-menu">特集記事
                     <li><a href="#">マナー</a></li>
                     <li><a href="#">犬の豆知識</a></li>
                     <li><a href="#">お出かけ情報</a></li>
-                    <li><a href="#">インタビュー</a></li>
-                    <li><a href="#">その他</a></li>
+                    <li><a href="#">特集</a></li>
                 </ul>
                 <ul class="large-menu">検索
                     <li><a href="#">条件検索</a></li>
@@ -123,7 +123,6 @@
                 <ul class="large-menu">
                     <li><a href="#">マイページ</a></li>
                     <li><a href="<?php echo home_url('/hospital/'); ?>">動物病院</a></li>
-                    <li><a href="<?php echo home_url('/rental_car/'); ?>">レンタカー（犬OK）</a></li>
                     <li><a href="#">掲載施設一覧</a></li>
                     <li><a href="<?php echo home_url('/about/'); ?>">このサイトについて</a></li>
                     <li><a href="<?php echo home_url('/privacy_policy/'); ?>">プライバシーポリシー・<br>免責事項</a></li>
