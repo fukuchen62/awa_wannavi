@@ -45,7 +45,7 @@
         }
         </script>
         <div class="awamaru_trivia foot_scroll">
-            <div class="awamaru_commentset fukidashi_animation" style="display: block;">
+            <div class="awamaru_commentset fukidashi_animation">
                 <img class="awamaru_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/hukidasi.png" alt="あわまる吹き出し">
 
                 <p id="awamaru_comment" class="awamaru_comment">高知の土佐犬みたいに徳島にも阿波犬っていたって知ってるワン？</p>
