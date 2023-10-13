@@ -136,6 +136,10 @@
                         <dt>決済方法</dt>
                         <dd><?php the_field("payment"); ?></dd>
                     </dl>
+                    <dl>
+                        <dt>決済方法その他</dt>
+                        <dd><?php the_field("payment_text"); ?></dd>
+                    </dl>
                     <dl class="note">
                         <dt>【特記事項】</dt>
                         <dd>
