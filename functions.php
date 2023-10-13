@@ -278,7 +278,7 @@ function awa_wannavi_add_individual_scripts()
     //----------------------
     //  このサイトについて・プライバシーポリシー
     //----------------------
-    elseif (is_page('about') || is_page('privacy-policy')) {
+    elseif (is_page('about') || is_page('privacy_policy')) {
 
         //（about.css）を読み込む
         wp_enqueue_style(
