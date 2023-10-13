@@ -414,7 +414,75 @@
     margin: 30px 20px 0;
     font-weight: 500;
 }
+.background__map {
+    width: 100%;
+    position: relative;
+    font-size: 3vw;
+}
+/*******************
+        各ボタン
+********************/
+.tokushima__btn {
+    top: 20%;
+    right: 7%;
+    width: 17%;
+    height: 9%;
+    position: absolute;
+    background-color: #fff;
+    border:2px dashed #DDCA70;
+    border-radius: 40px;
+}
+@media screen and (min-width:769px){
+.tokushima__btn {
+    border:5px dashed #DDCA70;
+}
+}
+.east__btn {
+    top: 30%;
+    right: 29%;
+    width: 17%;
+    height: 9%;
+    position: absolute;
+    background-color: #fff;
+    border:2px dashed #DA9E91;
+    border-radius: 40px;
+}
+@media screen and (min-width:769px){
+.east__btn {
+    border:5px dashed #DA9E91;
+}
+}
 
+.west_btn {
+    top: 36%;
+    left: 23%;
+    width: 17%;
+    height: 9%;
+    position: absolute;
+    background-color: #fff;
+    border:2px dashed #B5C87D;
+    border-radius: 40px;
+}
+@media screen and (min-width:769px){
+.west_btn {
+    border:5px dashed #B5C87D;
+}
+}
+.south__btn {
+    bottom: 31%;
+    right: 30%;
+    width: 17%;
+    height: 9%;
+    position: absolute;
+    background-color: #fff;
+    border:2px dashed #84BED8;
+    border-radius: 40px;
+}
+@media screen and (min-width:769px){
+.south__btn {
+    border:5px dashed #84BED8;
+}
+}
 /* MAPモーダルウィンドウ */
 .top-map__modal-open {
     cursor: pointer;
@@ -490,8 +558,8 @@
     }
 
     .top-map__modal-open {
-        margin-top: 60px;
-        padding: 0 5%;
+        /* margin-top: 60px;
+        padding: 0 5%; */
     }
 
     .top-map__dog {

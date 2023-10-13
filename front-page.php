@@ -122,16 +122,13 @@
 
                 <?php query_posts('posts_per_page=3'); ?>
                 <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : ?>
-                        <?php the_post(); ?>
-                        <?php get_template_part('template-parts/loop', 'news'); ?>
-                    <?php endwhile; ?>
+                <?php while (have_posts()) : ?>
+                <?php the_post(); ?>
+                <?php get_template_part('template-parts/loop', 'news'); ?>
+                <?php endwhile; ?>
                 <?php endif; ?>
-
             </div>
-
         </section>
-
         <!-- map -->
         <section class="top-map tc">
             <!-- 見出し -->
@@ -141,7 +138,14 @@
             <div>
                 <p class="top-map__title">ドッグランや公園など、わんちゃんと遊べる施設をエリアで検索します。</p>
             </div>
-            <img class="top-map__modal-open" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_map.svg" alt="">
+            <div>
+                <div class="background__map"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_map.jpg" alt="map">
+                    <a class="tokushima__btn top-map__modal-open" href="">徳島市</a>
+                    <a class="east__btn top-map__modal-open" href="">県東部</a>
+                    <a class="west_btn top-map__modal-open" href="">県西部</a>
+                    <a class="south__btn top-map__modal-open" href="">県南部</a>
+                </div>
+            </div>
             <!-- モーダル本体 -->
             <div class="top-map__modal-container">
                 <div class="top-map__modal-body">
