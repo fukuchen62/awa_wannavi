@@ -141,9 +141,9 @@ $('.awamaru').clickToggle(function () {
 $(function () {
     var topBtn = $('#scroll');
     topBtn.hide();
-    //スクロールが1000に達したらボタン表示
+    //スクロールが5000に達したらボタン表示
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 1000) {
+        if ($(this).scrollTop() > 4500) {
             topBtn.fadeIn();
         } else {
             topBtn.fadeOut();
