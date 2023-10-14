@@ -15,7 +15,7 @@
                 <div class="search-content">
                     <section class="choice-wrap area-wrap">
 
-                        <h3 class="search-title area">エリアから探す<img src="../assets/img/filtering/filtering_ill_01.svg" alt=""></h3>
+                        <h3 class="search-title area">エリアから探す<img src="<?php echo get_template_directory_uri(); ?>/assets/img/filtering/filtering_ill_01.svg" alt=""></h3>
 
                         <ul id="area" class="radio-box">
                             <li class="choice-item">
@@ -38,7 +38,7 @@
                     </section>
 
                     <section class="choice-wrap event-type-wrap">
-                        <h3 class="search-title event">目的から探す<img src="../assets/img/filtering/filtering_ill_02.svg" alt=""></h3>
+                        <h3 class="search-title event">目的から探す<img src="<?php echo get_template_directory_uri(); ?>/assets/img/filtering/filtering_ill_02.svg" alt=""></h3>
 
                         <ul class="area__subtitle">
                             <li class="flex__shrink">●遊　ぶ</li>
@@ -94,7 +94,7 @@
                     </section>
 
                     <section class="choice-wrap type-wrap">
-                        <h3 class="search-title type">条件から探す<img src="../assets/img/filtering/filtering_ill_03.svg" alt=""></h3>
+                        <h3 class="search-title type">条件から探す<img src="<?php echo get_template_directory_uri(); ?>/assets/img/filtering/filtering_ill_03.svg" alt=""></h3>
 
                         <ul class="area__subtitle">
                             <li>●犬　種</li>
