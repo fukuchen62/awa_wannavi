@@ -105,6 +105,18 @@
                         <dd><?php the_field("url"); ?></dd>
                     </dl>
                     <dl>
+                        <dt>Instagram</dt>
+                        <dd><?php the_field("instagram"); ?></dd>
+                    </dl>
+                    <dl>
+                        <dt>Facebook</dt>
+                        <dd><?php the_field("facebook"); ?></dd>
+                    </dl>
+                    <dl>
+                        <dt>x</dt>
+                        <dd><?php the_field("x"); ?></dd>
+                    </dl>
+                    <dl>
                         <dt>SNS</dt>
                         <dd><?php the_field("sns"); ?></dd>
                     </dl>

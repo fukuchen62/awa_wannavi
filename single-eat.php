@@ -105,66 +105,79 @@
                         <dd><?php the_field("url"); ?></dd>
                     </dl>
                     <dl>
+                        <dt>Instagram</dt>
+                        <dd><?php the_field("instagram"); ?></dd>
+                    </dl>
+                    <dl>
+                        <dt>Facebook</dt>
+                        <dd><?php the_field("facebook"); ?></dd>
+                    </dl>
+                    <dl>
+                        <dt>x</dt>
+                        <dd><?php the_field("x"); ?></dd>
+                    </dl>
+                    <dl>
                         <dt>SNS</dt>
                         <dd><?php the_field("sns"); ?></dd>
                     </dl>
                     <dl>
-                        <dt>テイクアウト</dt>
-                        <dd>
-                            <?php if (get_field("takeout")) : ?>
-                                <span>可能</span>
-                            <?php else : ?>
-                                <span>不可</span>
-                            <?php endif; ?>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>予約</dt>
-                        <dd>
-                            <?php if (get_field("reservation")) : ?>
-                                <span>可能</span>
-                            <?php else : ?>
-                                <span>不可</span>
-                            <?php endif; ?>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>喫煙</dt>
-                        <dd><?php the_field("Smoking"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>駐車場（車）</dt>
-                        <dd><?php if (get_field("parking")) : ?>
-                                <span>有り</span>
-                            <?php else : ?>
-                                <span>無し</span>
-                            <?php endif; ?>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>業態</dt>
-                        <dd><?php the_field("company_info"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>対応犬種</dt>
-                        <dd><?php the_field("dog_Size"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>入店ルール</dt>
-                        <dd><?php the_field("rule"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>決済方法</dt>
-                        <dd><?php the_field("payment"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>決済方法その他</dt>
-                        <dd><?php the_field("payment_text"); ?></dd>
-                    </dl>
-                    <dl class="note">
-                        <dt>【特記事項】</dt>
-                        <dd><?php the_field("note"); ?></dd>
-                    </dl>
+                        <dl>
+                            <dt>テイクアウト</dt>
+                            <dd>
+                                <?php if (get_field("takeout")) : ?>
+                                    <span>可能</span>
+                                <?php else : ?>
+                                    <span>不可</span>
+                                <?php endif; ?>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>予約</dt>
+                            <dd>
+                                <?php if (get_field("reservation")) : ?>
+                                    <span>可能</span>
+                                <?php else : ?>
+                                    <span>不可</span>
+                                <?php endif; ?>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>喫煙</dt>
+                            <dd><?php the_field("Smoking"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>駐車場（車）</dt>
+                            <dd><?php if (get_field("parking")) : ?>
+                                    <span>有り</span>
+                                <?php else : ?>
+                                    <span>無し</span>
+                                <?php endif; ?>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>業態</dt>
+                            <dd><?php the_field("company_info"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>対応犬種</dt>
+                            <dd><?php the_field("dog_Size"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>入店ルール</dt>
+                            <dd><?php the_field("rule"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>決済方法</dt>
+                            <dd><?php the_field("payment"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>決済方法その他</dt>
+                            <dd><?php the_field("payment_text"); ?></dd>
+                        </dl>
+                        <dl class="note">
+                            <dt>【特記事項】</dt>
+                            <dd><?php the_field("note"); ?></dd>
+                        </dl>
                 </div>
             </div>
         </div>
