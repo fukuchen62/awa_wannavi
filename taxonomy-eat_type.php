@@ -53,7 +53,7 @@
         <h2 class="h2__title bgPK mb20"><?php echo $eat_type->name; ?></h2>
 
         <!-- 一覧まで飛んでいくリンク -->
-        <div class="next__info tr mb20"><a href="">>>一覧を見る</a></div>
+        <div class="next__info tr mb20"><a href="<?php echo home_url('/eat/'); ?>">>>一覧を見る</a></div>
 
         <!-- 地域ごとの一覧 -->
         <?php

@@ -167,6 +167,19 @@ function awa_wannavi_add_common_scripts()
         '',
         true
     );
+
+    //----------------------
+    //  おすすめ情報一覧のページ（taxonomy-special_type.php）
+    //----------------------
+
+    if (taxonomy_exists('special_type')) {
+        wp_enqueue_style(
+            'awa_wannavi-special',
+            get_template_directory_uri() . '/assets/css/special-list.css',
+            array(),
+            false
+        );
+    }
 }
 
 
@@ -208,30 +221,26 @@ function awa_wannavi_add_individual_scripts()
         // トップページ用のJS（template_top_footer.js）を読み込む
         // wp_enqueue_script('awa_nolife-template_top_footer', get_template_directory_uri() . '/assets/js/template_top_footer.js', '', '', true);
 
-    } elseif (is_archive()) {
+    }
 
-        //----------------------
-        //  おすすめ情報一覧のページ（taxonomy-special_type.php）
-        //----------------------
+    //----------------------
+    //  遊ぶ・泊まる・食べるの一覧ページ
+    //----------------------
+    elseif (is_archive()) {
 
-        //（special-list.css）を読み込む
-        if (taxonomy_exists('special_type')) {
-            wp_enqueue_style(
-                'awa_wannavi-special',
-                get_template_directory_uri() . '/assets/css/special-list.css',
-                array(),
-                false
-            );
-        } else {
-            // 一覧ページのcss
-            wp_enqueue_style(
-                'awa_wannavi-list',
-                get_template_directory_uri() . '/assets/css/list-type.css',
-                array(),
-                false
-            );
-        }
-    } elseif (is_page('hospital') || is_page('rental_car') || is_page('spots_list')) {
+        // 一覧ページのcss
+        wp_enqueue_style(
+            'awa_wannavi-archive-list',
+            get_template_directory_uri() . '/assets/css/list-type.css',
+            array(),
+            false
+        );
+    }
+
+    //----------------------
+    //  リスト型の固定ページ
+    //----------------------
+    elseif (is_page('hospital') || is_page('rental_car') || is_page('spots_list')) {
 
         // 固定ページのcss（）
         wp_enqueue_style(
@@ -241,7 +250,6 @@ function awa_wannavi_add_individual_scripts()
             false
         );
     }
-
 
     //----------------------
     //  遊ぶ詳細ページ
