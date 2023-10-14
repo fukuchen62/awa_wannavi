@@ -1,10 +1,15 @@
 <!-- header.phpを読み込む -->
 <?php get_header(); ?>
 
-<h2 class="pageTitle">泊まる<span>stay</span></h2>
-
 <!-- パンくずリスト出力 -->
 <?php get_template_part("template-parts/breadcrumb"); ?>
+
+
+<!-- 帯になるコンテナーのタイトル -->
+<div class="container pd20">
+    <h2 class="article__title">初心者マナー</h2>
+</div>
+
 
 <!-- メインループの開始 -->
 <?php if (have_posts()) : ?>
