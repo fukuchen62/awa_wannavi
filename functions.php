@@ -208,9 +208,32 @@ function awa_wannavi_add_individual_scripts()
         // トップページ用のJS（template_top_footer.js）を読み込む
         // wp_enqueue_script('awa_nolife-template_top_footer', get_template_directory_uri() . '/assets/js/template_top_footer.js', '', '', true);
 
-    } elseif (is_archive() || is_page('hospital') || is_page('rental_car') || is_page('spots_list')) {
+    } elseif (is_archive()) {
 
-        // 一覧ページのcss
+        //----------------------
+        //  おすすめ情報一覧のページ（taxonomy-special_type.php）
+        //----------------------
+
+        //（special-list.css）を読み込む
+        if (taxonomy_exists('special_type')) {
+            wp_enqueue_style(
+                'awa_wannavi-special',
+                get_template_directory_uri() . '/assets/css/special-list.css',
+                array(),
+                false
+            );
+        } else {
+            // 一覧ページのcss
+            wp_enqueue_style(
+                'awa_wannavi-list',
+                get_template_directory_uri() . '/assets/css/list-type.css',
+                array(),
+                false
+            );
+        }
+    } elseif (is_page('hospital') || is_page('rental_car') || is_page('spots_list')) {
+
+        // 固定ページのcss（）
         wp_enqueue_style(
             'awa_wannavi-list',
             get_template_directory_uri() . '/assets/css/list-type.css',
@@ -218,6 +241,7 @@ function awa_wannavi_add_individual_scripts()
             false
         );
     }
+
 
     //----------------------
     //  遊ぶ詳細ページ
@@ -258,7 +282,6 @@ function awa_wannavi_add_individual_scripts()
             true
         );
     }
-
 
     //----------------------
     //  泊まる詳細ページ
