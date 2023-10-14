@@ -52,6 +52,7 @@
 /***************************/
 
 .top {
+    height: calc(100vh - 100px);
     padding: 20px;
     background-color: #F3E06EB2;
     background-attachment: fixed;
@@ -419,6 +420,20 @@
     position: relative;
     font-size: 3vw;
 }
+@media screen and (min-width:600px){
+.background__map {
+    width: 100%;
+    position: relative;
+    font-size: 3vw;
+}
+}
+@media screen and (min-width:1450px){
+.background__map {
+    width: 100%;
+    position: relative;
+    font-size: 40px;
+}
+}
 /*******************
         各ボタン
 ********************/
@@ -432,7 +447,7 @@
     border:2px dashed #DDCA70;
     border-radius: 40px;
 }
-@media screen and (min-width:769px){
+@media screen and (min-width:600px){
 .tokushima__btn {
     border:5px dashed #DDCA70;
 }
@@ -447,7 +462,7 @@
     border:2px dashed #DA9E91;
     border-radius: 40px;
 }
-@media screen and (min-width:769px){
+@media screen and (min-width:600px){
 .east__btn {
     border:5px dashed #DA9E91;
 }
@@ -463,7 +478,7 @@
     border:2px dashed #B5C87D;
     border-radius: 40px;
 }
-@media screen and (min-width:769px){
+@media screen and (min-width:600px){
 .west_btn {
     border:5px dashed #B5C87D;
 }
@@ -478,7 +493,7 @@
     border:2px dashed #84BED8;
     border-radius: 40px;
 }
-@media screen and (min-width:769px){
+@media screen and (min-width:600px){
 .south__btn {
     border:5px dashed #84BED8;
 }
