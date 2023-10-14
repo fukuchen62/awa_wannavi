@@ -259,6 +259,7 @@ function awa_wannavi_add_individual_scripts()
         );
     }
 
+
     //----------------------
     //  泊まる詳細ページ
     //----------------------
