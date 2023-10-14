@@ -51,7 +51,32 @@
         </div>
         <!-- ここからリスト画像終わり -->
 
-        <div class="w80per__responsive">
+
+        <!-- タクソノミーを取得する -->
+        <?php
+        $post_type = get_post_type(get_the_ID());
+        $taxonomies = get_object_taxonomies($post_type);
+
+        $taxonomy_names = wp_get_object_terms(get_the_ID(), $taxonomies,  array("fields" => "names", "orderby" => "count"));
+
+        ?>
+        <!-- タクソノミーを出力 -->
+        <ul class="taxonomis">
+            <?php
+            if (!empty($taxonomy_names)) :
+                foreach ($taxonomy_names as $tax_name) : ?>
+
+                    <li class="card__tag single-tag"><?php echo $tax_name; ?> </li>
+
+            <?php endforeach;
+            endif;  ?>
+            <?php if (get_field("note_flag")) : ?>
+                <li class="card__tag single-tag">特記事項あり</li>
+            <?php endif; ?>
+        </ul>
+
+        <!-- タグ -->
+        <!-- <div class="w80per__responsive">
             <div class="column__flex__left">
                 <div class="flex">
                     <div class="border__box margin5">
@@ -70,7 +95,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="w80per__responsive mb20">
             <p class="paddinglr20"><?php the_field("company_info"); ?></p>
@@ -83,71 +108,215 @@
             <div>
                 <!-- information -->
                 <div class="information">
-                    <dl>
-                        <dt>住所</dt>
-                        <dd><?php the_field("address"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>電話番号</dt>
-                        <dd><?php the_field("tel"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>営業時間</dt>
-                        <dd><?php the_field("business_hours"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>定休日</dt>
-                        <dd><?php the_field("close"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>ホームページ</dt>
-                        <dd><?php the_field("url"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>SNS</dt>
-                        <dd><?php the_field("sns"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>予約</dt>
-                        <dd>
-                            <?php if (get_field("reservation")) : ?>
-                                <span>可能</span>
-                            <?php else : ?>
-                                <span>不可</span>
-                            <?php endif; ?>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>駐車場（車）</dt>
-                        <dd><?php if (get_field("parking")) : ?>
-                                <span>有り</span>
-                            <?php else : ?>
-                                <span>無し</span>
-                            <?php endif; ?>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>対応犬種</dt>
-                        <dd><?php the_field("dog_Size"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>入店ルール</dt>
-                        <dd><?php the_field("rule"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>決済方法</dt>
-                        <dd><?php the_field("payment"); ?></dd>
-                    </dl>
-                    <dl>
-                        <dt>決済方法その他</dt>
-                        <dd><?php the_field("payment_text"); ?></dd>
-                    </dl>
-                    <dl class="note">
-                        <dt>【特記事項】</dt>
-                        <dd>
-                            <?php the_field("note"); ?>
-                        </dd>
-                    </dl>
+                    <?php if (in_array('公園', $taxonomy_names)) : ?>
+                        <dl>
+                            <dt>住所</dt>
+                            <dd><?php the_field("address"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>利用時間</dt>
+                            <dd><?php the_field("business_hours"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>敷地面積</dt>
+                            <dd><?php the_field("breadth"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>管理会社</dt>
+                            <dd><?php the_field("company"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>電話番号</dt>
+                            <dd><?php the_field("tel"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>メール</dt>
+                            <dd><?php the_field("email"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>ホームページ</dt>
+                            <dd><a href="<?php the_field("url"); ?>" target="_blank"><?php the_field("url"); ?></a></dd>
+                        </dl>
+                        <dl>
+                            <dt>トイレ</dt>
+                            <dd><?php if (get_field("toilet")) {
+                                    echo "有り";
+                                } else {
+                                    echo "なし";
+                                } ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>喫煙所</dt>
+                            <dd><?php if (get_field("smoking")) {
+                                    echo "有り";
+                                } else {
+                                    echo "なし";
+                                } ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>駐車場（車）</dt>
+                            <dd><?php if (get_field("parking")) : ?>
+                                    <span><?php the_field("parking_area"); ?></span>
+                                <?php else : ?>
+                                    <span>なし</span>
+                                <?php endif; ?>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>駐輪場（自転車）</dt>
+                            <dd><?php the_field("bicycle"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>芝生エリア</dt>
+                            <dd><?php if (get_field("grass")) {
+                                    echo "有り";
+                                } else {
+                                    echo "なし";
+                                } ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>自動販売機</dt>
+                            <dd><?php if (get_field("vending_machine")) {
+                                    echo "有り";
+                                } else {
+                                    echo "なし";
+                                } ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>屋根付き休憩室</dt>
+                            <dd><?php if (get_field("roof")) {
+                                    echo "有り";
+                                } else {
+                                    echo "なし";
+                                } ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>禁止事項</dt>
+                            <dd><?php the_field("ban"); ?></dd>
+                        </dl>
+                        <dl class="note">
+                            <dt>【特記事項】</dt>
+                            <dd>
+                                <?php the_field("note"); ?>
+                            </dd>
+                        </dl>
+                    <?php elseif ((in_array('ドッグラン', $taxonomy_names))) : ?>
+                        <dl>
+                            <dt>住所</dt>
+                            <dd><?php the_field("address"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>電話番号</dt>
+                            <dd><?php the_field("tel"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>受付時間</dt>
+                            <dd><?php the_field("reception"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>利用時間</dt>
+                            <dd><?php the_field("business_hours"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>定休日</dt>
+                            <dd><?php the_field("close"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>ホームページ</dt>
+                            <dd><a href="<?php the_field("url"); ?>" target="_blank"><?php the_field("url"); ?></a></dd>
+                        </dl>
+                        <dl>
+                            <dt>定休日</dt>
+                            <dd><?php the_field("close"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>SNS</dt>
+                            <dd><?php the_field("sns"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>登録</dt>
+                            <dd><?php if (get_field("register")) {
+                                    echo "必要";
+                                } else {
+                                    echo "不要";
+                                } ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>駐車場（車）</dt>
+                            <dd><?php if (get_field("parking")) : ?>
+                                    <span><?php the_field("parking_area"); ?></span>
+                                <?php else : ?>
+                                    <span>なし</span>
+                                <?php endif; ?>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>常駐管理者</dt>
+                            <dd><?php if (get_field("on_site")) {
+                                    echo "必要";
+                                } else {
+                                    echo "不要";
+                                } ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>フィールド</dt>
+                            <dd><?php the_field("field"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>フェンスの高さ</dt>
+                            <dd><?php the_field("fence"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>ダストボックス</dt>
+                            <dd><?php if (get_field("dust")) {
+                                    echo "有り";
+                                } else {
+                                    echo "なし";
+                                } ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>足洗い場</dt>
+                            <dd><?php if (get_field("washing")) {
+                                    echo "有り";
+                                } else {
+                                    echo "なし";
+                                } ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>対応犬種</dt>
+                            <dd><?php the_field("dog_Size"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>小型犬と中・大型犬を分けている</dt>
+                            <dd><?php if (get_field("washing")) {
+                                    echo "分けている";
+                                } else {
+                                    echo "分かれていない";
+                                } ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>入場ルール</dt>
+                            <dd><?php the_field("rule"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>決済方法</dt>
+                            <dd><?php the_field("payment"); ?>,<?php the_field("payment_text"); ?></dd>
+                        </dl>
+                    <?php elseif ((in_array('自然・観光', $taxonomy_names))) : ?>
+
+
+
+                        <dl>
+                            <dt>予約</dt>
+                            <dd>
+                                <?php if (get_field("reservation")) : ?>
+                                    <span>可能</span>
+                                <?php else : ?>
+                                    <span>不可</span>
+                                <?php endif; ?>
+                            </dd>
+                        </dl>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
