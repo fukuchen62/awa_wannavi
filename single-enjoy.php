@@ -230,93 +230,106 @@
                             <dd><?php the_field("close"); ?></dd>
                         </dl>
                         <dl>
+                            <dt>Instagram</dt>
+                            <dd><?php the_field("instagram"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>Facebook</dt>
+                            <dd><?php the_field("facebook"); ?></dd>
+                        </dl>
+                        <dl>
+                            <dt>x</dt>
+                            <dd><?php the_field("x"); ?></dd>
+                        </dl>
+                        <dl>
                             <dt>SNS</dt>
                             <dd><?php the_field("sns"); ?></dd>
                         </dl>
                         <dl>
-                            <dt>登録</dt>
-                            <dd><?php if (get_field("register")) {
-                                    echo "必要";
-                                } else {
-                                    echo "不要";
-                                } ?></dd>
-                        </dl>
-                        <dl>
-                            <dt>駐車場（車）</dt>
-                            <dd><?php if (get_field("parking")) : ?>
-                                    <span><?php the_field("parking_area"); ?></span>
-                                <?php else : ?>
-                                    <span>なし</span>
-                                <?php endif; ?>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>常駐管理者</dt>
-                            <dd><?php if (get_field("on_site")) {
-                                    echo "必要";
-                                } else {
-                                    echo "不要";
-                                } ?></dd>
-                        </dl>
-                        <dl>
-                            <dt>フィールド</dt>
-                            <dd><?php the_field("field"); ?></dd>
-                        </dl>
-                        <dl>
-                            <dt>フェンスの高さ</dt>
-                            <dd><?php the_field("fence"); ?></dd>
-                        </dl>
-                        <dl>
-                            <dt>ダストボックス</dt>
-                            <dd><?php if (get_field("dust")) {
-                                    echo "有り";
-                                } else {
-                                    echo "なし";
-                                } ?></dd>
-                        </dl>
-                        <dl>
-                            <dt>足洗い場</dt>
-                            <dd><?php if (get_field("washing")) {
-                                    echo "有り";
-                                } else {
-                                    echo "なし";
-                                } ?></dd>
-                        </dl>
-                        <dl>
-                            <dt>対応犬種</dt>
-                            <dd><?php the_field("dog_Size"); ?></dd>
-                        </dl>
-                        <dl>
-                            <dt>小型犬と中・大型犬を分けている</dt>
-                            <dd><?php if (get_field("washing")) {
-                                    echo "分けている";
-                                } else {
-                                    echo "分かれていない";
-                                } ?></dd>
-                        </dl>
-                        <dl>
-                            <dt>入場ルール</dt>
-                            <dd><?php the_field("rule"); ?></dd>
-                        </dl>
-                        <dl>
-                            <dt>決済方法</dt>
-                            <dd><?php the_field("payment"); ?>,<?php the_field("payment_text"); ?></dd>
-                        </dl>
-                    <?php elseif ((in_array('自然・観光', $taxonomy_names))) : ?>
+                            <dl>
+                                <dt>登録</dt>
+                                <dd><?php if (get_field("register")) {
+                                        echo "必要";
+                                    } else {
+                                        echo "不要";
+                                    } ?></dd>
+                            </dl>
+                            <dl>
+                                <dt>駐車場（車）</dt>
+                                <dd><?php if (get_field("parking")) : ?>
+                                        <span><?php the_field("parking_area"); ?></span>
+                                    <?php else : ?>
+                                        <span>なし</span>
+                                    <?php endif; ?>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>常駐管理者</dt>
+                                <dd><?php if (get_field("on_site")) {
+                                        echo "必要";
+                                    } else {
+                                        echo "不要";
+                                    } ?></dd>
+                            </dl>
+                            <dl>
+                                <dt>フィールド</dt>
+                                <dd><?php the_field("field"); ?></dd>
+                            </dl>
+                            <dl>
+                                <dt>フェンスの高さ</dt>
+                                <dd><?php the_field("fence"); ?></dd>
+                            </dl>
+                            <dl>
+                                <dt>ダストボックス</dt>
+                                <dd><?php if (get_field("dust")) {
+                                        echo "有り";
+                                    } else {
+                                        echo "なし";
+                                    } ?></dd>
+                            </dl>
+                            <dl>
+                                <dt>足洗い場</dt>
+                                <dd><?php if (get_field("washing")) {
+                                        echo "有り";
+                                    } else {
+                                        echo "なし";
+                                    } ?></dd>
+                            </dl>
+                            <dl>
+                                <dt>対応犬種</dt>
+                                <dd><?php the_field("dog_Size"); ?></dd>
+                            </dl>
+                            <dl>
+                                <dt>小型犬と中・大型犬を分けている</dt>
+                                <dd><?php if (get_field("washing")) {
+                                        echo "分けている";
+                                    } else {
+                                        echo "分かれていない";
+                                    } ?></dd>
+                            </dl>
+                            <dl>
+                                <dt>入場ルール</dt>
+                                <dd><?php the_field("rule"); ?></dd>
+                            </dl>
+                            <dl>
+                                <dt>決済方法</dt>
+                                <dd><?php the_field("payment"); ?>,<?php the_field("payment_text"); ?></dd>
+                            </dl>
+                        <?php elseif ((in_array('自然・観光', $taxonomy_names))) : ?>
 
 
 
-                        <dl>
-                            <dt>予約</dt>
-                            <dd>
-                                <?php if (get_field("reservation")) : ?>
-                                    <span>可能</span>
-                                <?php else : ?>
-                                    <span>不可</span>
-                                <?php endif; ?>
-                            </dd>
-                        </dl>
-                    <?php endif; ?>
+                            <dl>
+                                <dt>予約</dt>
+                                <dd>
+                                    <?php if (get_field("reservation")) : ?>
+                                        <span>可能</span>
+                                    <?php else : ?>
+                                        <span>不可</span>
+                                    <?php endif; ?>
+                                </dd>
+                            </dl>
+                        <?php endif; ?>
                 </div>
             </div>
         </div>
