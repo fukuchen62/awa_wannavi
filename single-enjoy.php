@@ -26,28 +26,30 @@
                 </defs>
             </svg>
         </div>
-        <div class="column__flex">
-            <div class="top__photo">
-                <img src="<?php the_field("pic1"); ?>" alt="">
-            </div>
-        </div>
 
+        <!-- ここからリスト画像 -->
         <div class="column__flex">
-            <div class="flex__sb photo__container">
-                <div class="s__img">
-                    <img src="<?php the_field("pic2"); ?>" alt="">
-                </div>
-                <div class="s__img">
-                    <img src="<?php the_field("pic3"); ?>" alt="">
-                </div>
-                <div class="s__img">
-                    <img src="<?php the_field("pic4"); ?>" alt="">
-                </div>
-                <div class="s__img">
-                    <img src="<?php the_field("pic5"); ?>" alt="">
-                </div>
+
+            <ul class="gallery top__photo">
+                <li><img src="<?php the_field("pic1"); ?>" alt=""></li>
+                <li><img src="<?php the_field("pic2"); ?>" alt=""></li>
+                <li><img src="<?php the_field("pic3"); ?>" alt=""></li>
+                <li><img src="<?php the_field("pic4"); ?>" alt=""></li>
+
+            </ul>
+        </div>
+        <div class="column__flex">
+            <div class="flex__sb2 photo__container2">
+                <ul class="choice-btn">
+                    <li><img src="<?php the_field("pic1"); ?>" alt=""></li>
+                    <li><img src="<?php the_field("pic2"); ?>" alt=""></li>
+                    <li><img src="<?php the_field("pic3"); ?>" alt=""></li>
+                    <li><img src="<?php the_field("pic4"); ?>" alt=""></li>
+
+                </ul>
             </div>
         </div>
+        <!-- ここからリスト画像終わり -->
 
         <div class="w80per__responsive">
             <div class="column__flex__left">
