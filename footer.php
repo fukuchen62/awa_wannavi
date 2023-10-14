@@ -79,10 +79,10 @@
         <div class="footercolor footer-menu">
             <div class="footer-text">
                 <ul>
-                    <li><a href="#">マイページ</a></li>
+                    <li><a href="<?php echo home_url('/mypage/'); ?>">マイページ</a></li>
                     <li><a href="<?php echo home_url('/hospital/'); ?>">動物病院</a></li>
                     <!-- <li><a href="<?php echo home_url('/rental_car/'); ?>">レンタカー（犬OK）</a></li> -->
-                    <li><a href="#">掲載施設一覧</a></li>
+                    <li><a href="<?php echo home_url('/spots_list/'); ?>">掲載施設一覧</a></li>
                     <li><a href="<?php echo home_url('/about/'); ?>">このサイトについて</a></li>
                     <li><a href="<?php echo home_url('/privacy-policy/'); ?>">プライバシーポリシー・<br>免責事項</a></li>
                 </ul>
@@ -109,21 +109,21 @@
                     <li><a href="<?php echo home_url('/course/co03/'); ?>">山コース</a></li>
                 </ul>
                 <ul class="large-menu">特集記事
-                    <li><a href="#">マナー</a></li>
-                    <li><a href="#">犬の豆知識</a></li>
-                    <li><a href="#">お出かけ情報</a></li>
+                    <li><a href="<?php echo home_url('/special_type/manner/'); ?>">マナー</a></li>
+                    <li><a href="<?php echo home_url('/special_type/dog-trivia/'); ?>">犬の豆知識</a></li>
+                    <li><a href="<?php echo home_url('/special_type/info/'); ?>">お出かけ情報</a></li>
                     <li><a href="#">特集</a></li>
                 </ul>
                 <ul class="large-menu">検索
-                    <li><a href="#">条件検索</a></li>
+                    <li><a href="<?php echo home_url('/filter/'); ?>">条件検索</a></li>
                 </ul>
                 <ul class="large-menu">新着記事
-                    <li><a href="#">イベント情報</a></li>
-                    <li><a href="#">お知らせ</a></li>
-                    <li><a href="#">更新情報</a></li>
+                    <li><a href="<?php echo home_url('/category/event/'); ?>">イベント情報</a></li>
+                    <li><a href="<?php echo home_url('/category/news/'); ?>">お知らせ</a></li>
+                    <li><a href="<?php echo home_url('/category/update/'); ?>">更新情報</a></li>
                 </ul>
                 <ul class="large-menu">
-                    <li><a href="#">マイページ</a></li>
+                    <li><a href="<?php echo home_url('/mypage/'); ?>">マイページ</a></li>
                     <li><a href="<?php echo home_url('/hospital/'); ?>">動物病院</a></li>
                     <li><a href="<?php echo home_url('/spots_list/'); ?>">掲載施設一覧</a></li>
                     <li><a href="<?php echo home_url('/about/'); ?>">このサイトについて</a></li>

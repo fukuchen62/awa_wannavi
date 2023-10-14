@@ -119,7 +119,7 @@
                         </div>
                         <ul class="menu__item__wrap stay__wrap">
                             <li class="menu__item">
-                                <a href="<?php echo home_url('/stay_type/pethotel/'); ?>">
+                                <a href="<?php echo home_url('/stay_type/hotel/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_tomaru01.jpg" alt="犬">
                                     <dl>
                                         <dt>ペットと宿泊</dt>
@@ -128,7 +128,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href="<?php echo home_url('/stay_type/hotel/'); ?>">
+                                <a href="<?php echo home_url('/stay_type/pethotel/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_tomaru02.jpg" alt="犬">
                                     <dl>
                                         <dt>ペットホテル</dt>
@@ -258,7 +258,7 @@
                     </li>
                 </ul>
                 <ul class="menu__wrap">
-                    <li class="gnav"><a class="gnav__title" href="<?php echo home_url('/search/'); ?>">検索</a>
+                    <li class="gnav"><a class="gnav__title" href="<?php echo home_url('/filter/'); ?>">検索</a>
                     </li>
                 </ul>
             </nav>
