@@ -247,7 +247,7 @@
                                 </a>
                             </li>
                             <li class="menu__item">
-                                <a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_osusume04.jpg" alt="犬">
+                                <a href="<?php echo home_url('/special_type/interview/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_osusume04.jpg" alt="犬">
                                     <dl>
                                         <dt>特集</dt>
                                         <dd>インタビューやわんちゃん情報をお届けます</dd>

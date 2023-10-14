@@ -112,7 +112,7 @@
                     <li><a href="<?php echo home_url('/special_type/manner/'); ?>">マナー</a></li>
                     <li><a href="<?php echo home_url('/special_type/dog-trivia/'); ?>">犬の豆知識</a></li>
                     <li><a href="<?php echo home_url('/special_type/info/'); ?>">お出かけ情報</a></li>
-                    <li><a href="#">特集</a></li>
+                    <li><a href="<?php echo home_url('/special_type/interview/'); ?>">特集</a></li>
                 </ul>
                 <ul class="large-menu">検索
                     <li><a href="<?php echo home_url('/filter/'); ?>">条件検索</a></li>
