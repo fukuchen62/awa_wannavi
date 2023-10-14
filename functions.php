@@ -224,12 +224,38 @@ function awa_wannavi_add_individual_scripts()
     //----------------------
     elseif (is_singular('enjoy')) {
 
+        //（slick.css）を読み込む
+        wp_enqueue_style(
+            'slick.css',
+            'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+            array(),
+            false
+        );
+
         //（single-enjoy.css）を読み込む
         wp_enqueue_style(
             'awa_wannavi-enjoy',
             get_template_directory_uri() . '/assets/css/single-enjoy.css',
             array(),
             false
+        );
+
+        // slick.js読み込み
+        wp_enqueue_script(
+            'awa_wannavi-slick-script',
+            'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+            '',
+            '',
+            true
+        );
+
+        // all-listを読み込む
+        wp_enqueue_script(
+            'awa_wannavi-all-list',
+            get_template_directory_uri() . '/assets/js/all-list.js',
+            '',
+            '',
+            true
         );
     }
 
