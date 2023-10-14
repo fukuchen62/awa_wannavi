@@ -74,7 +74,7 @@ time {
 
 /* リード文 */
 .article__lead {
-    padding: 40px 10px;
+    padding: 0px 10px;
     display: flex;
     text-align: center;
     justify-content: center;
