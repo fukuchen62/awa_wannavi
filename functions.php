@@ -249,6 +249,15 @@ function awa_wannavi_add_individual_scripts()
             array(),
             false
         );
+    } elseif (is_page('mypage')) {
+
+        // 固定ページのcss（）
+        wp_enqueue_style(
+            'awa_wannavi-mypage',
+            get_template_directory_uri() . '/assets/css/mypage.css',
+            array(),
+            false
+        );
     }
 
     //----------------------
@@ -476,15 +485,15 @@ add_action(
  */
 function SearchFilter($query)
 {
-    if ($query->is_search) {
-        $args = array(
-            'enjoy',
-            'stay',
-            'eat',
-            'special',
-        );
-        $query->set('post_type', $args);
-    }
-    return $query;
+    // if ($query->is_search) {
+    //     $args = array(
+    //         'enjoy',
+    //         'stay',
+    //         'eat',
+    //         'special',
+    //     );
+    //     $query->set('post_type', $args);
+    // }
+    // return $query;
 }
 add_filter('pre_get_posts', 'SearchFilter');
