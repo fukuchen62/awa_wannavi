@@ -142,10 +142,10 @@
 
                 <?php query_posts('posts_per_page=3'); ?>
                 <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : ?>
-                <?php the_post(); ?>
-                <?php get_template_part('template-parts/loop', 'news'); ?>
-                <?php endwhile; ?>
+                    <?php while (have_posts()) : ?>
+                        <?php the_post(); ?>
+                        <?php get_template_part('template-parts/loop', 'news'); ?>
+                    <?php endwhile; ?>
                 <?php endif; ?>
             </div>
         </section>
@@ -233,6 +233,7 @@
             <img class="top-pickup__dog" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_ill_dog06.svg" alt="">
 
         </section>
+
 
         <!-- instagram -->
         <section class="section">
