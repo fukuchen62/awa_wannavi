@@ -1,51 +1,75 @@
 <!-- header.phpを読み込む -->
 <?php get_header(); ?>
 
-<h2 class="pageTitle">Special</h2>
-
 <main class="main">
+
     <div class="container">
-        <div class="row">
-            <!-- 左半分：記事一覧 -->
-            <div class="col-12 col-md-9">
+        <!-- h2帯タイトル -->
+        <div class="container">
 
-                <!-- タイトルの切り替え -->
-                <?php if (is_month()) : ?>
+            <div class="banner__head">
+                <h2 class="page__title">おすすめ情報</h2>
+            </div>
+
+        </div>
+
+        <!-- パンくずリスト -->
+        <?php get_template_part('template-parts/breadcrumb'); ?>
+
+        <!-- 2col全体を格納するコンテナー -->
+        <div class="container__col">
+
+            <!-- メインコラムコンテナー -->
+            <div class="main__col">
+
+                <!-- コンテンツのサブタイトル -->
+                <h3 class="sub__ttl yellow"> <?php wp_title("") ?></h3>
+
+                <!-- カード型コンテンツ -->
+
+                <div class="card__2col">
+
+
+                    <!-- タイトルの切り替え -->
+                    <?php if (is_month()) : ?>
                     <h2 class="main_title"><?php the_time("Y年m月"); ?></h2>
-                <?php else : ?>
-                    <h2 class="main_title"><?php wp_title("") ?></h2>
-                <?php endif; ?>
-
-
-                <div class="row">
+                    <?php endif; ?>
 
                     <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : ?>
-                            <?php the_post(); ?>
-                            <div class="col-md-4">
-                                <!-- 共通のニュースカード型を読み込む -->
-                                <?php get_template_part("template-parts/loop", "news"); ?>
-                            </div>
-                        <?php endwhile; ?>
+                    <?php while (have_posts()) : ?>
+                    <?php the_post(); ?>
+
+                    <!-- 共通のニュースカード型を読み込む -->
+                    <?php get_template_part("template-parts/loop", "news"); ?>
+
+                    <?php endwhile; ?>
                     <?php endif; ?>
+
+
+                    <!-- ページネーション -->
+                    <?php if (function_exists("wp_pagenavi")) {
+                        wp_pagenavi();
+                    } ?>
 
                 </div>
 
-                <!-- ページネーション -->
-                <?php if (function_exists("wp_pagenavi")) {
-                    wp_pagenavi();
-                } ?>
-
+                <!-- moreボタン -->
+                <button id="btn__tokushima" class="more-button">
+                    MORE
+                </button>
             </div>
 
-            <!-- 右半分：サイドバー -->
-            <div class="col-12 col-md-3">
-                <!-- カテゴリーで絞りこむ -->
-                <?php get_sidebar("special"); ?>
+            <!-- aside カテゴリー一覧 -->
+            <?php get_sidebar("special"); ?>
 
-            </div>
         </div>
     </div>
+
+
+
+
+
+
 </main>
 
 <!-- footer.phpを読み込む -->

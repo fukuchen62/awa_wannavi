@@ -167,6 +167,19 @@ function awa_wannavi_add_common_scripts()
         '',
         true
     );
+
+    //----------------------
+    //  おすすめ情報一覧のページ（taxonomy-special_type.php）
+    //----------------------
+
+    if (taxonomy_exists('special_type')) {
+        wp_enqueue_style(
+            'awa_wannavi-special',
+            get_template_directory_uri() . '/assets/css/special-list.css',
+            array(),
+            false
+        );
+    }
 }
 
 
@@ -208,9 +221,28 @@ function awa_wannavi_add_individual_scripts()
         // トップページ用のJS（template_top_footer.js）を読み込む
         // wp_enqueue_script('awa_nolife-template_top_footer', get_template_directory_uri() . '/assets/js/template_top_footer.js', '', '', true);
 
-    } elseif (is_archive() || is_page('hospital') || is_page('rental_car') || is_page('spots_list')) {
+    }
+
+    //----------------------
+    //  遊ぶ・泊まる・食べるの一覧ページ
+    //----------------------
+    elseif (is_archive()) {
 
         // 一覧ページのcss
+        wp_enqueue_style(
+            'awa_wannavi-archive-list',
+            get_template_directory_uri() . '/assets/css/list-type.css',
+            array(),
+            false
+        );
+    }
+
+    //----------------------
+    //  リスト型の固定ページ
+    //----------------------
+    elseif (is_page('hospital') || is_page('rental_car') || is_page('spots_list')) {
+
+        // 固定ページのcss（）
         wp_enqueue_style(
             'awa_wannavi-list',
             get_template_directory_uri() . '/assets/css/list-type.css',
@@ -224,12 +256,38 @@ function awa_wannavi_add_individual_scripts()
     //----------------------
     elseif (is_singular('enjoy')) {
 
+        //（slick.css）を読み込む
+        wp_enqueue_style(
+            'slick.css',
+            'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+            array(),
+            false
+        );
+
         //（single-enjoy.css）を読み込む
         wp_enqueue_style(
             'awa_wannavi-enjoy',
             get_template_directory_uri() . '/assets/css/single-enjoy.css',
             array(),
             false
+        );
+
+        // slick.js読み込み
+        wp_enqueue_script(
+            'awa_wannavi-slick-script',
+            'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+            '',
+            '',
+            true
+        );
+
+        // all-listを読み込む
+        wp_enqueue_script(
+            'awa_wannavi-all-list',
+            get_template_directory_uri() . '/assets/js/all-list.js',
+            '',
+            '',
+            true
         );
     }
 
@@ -283,6 +341,27 @@ function awa_wannavi_add_individual_scripts()
         //（search.css）を読み込む
         wp_enqueue_style(
             'awa_wannavi-search',
+            get_template_directory_uri() . '/assets/css/search.css',
+            array(),
+            false
+        );
+    }
+
+    //----------------------
+    //  条件検索のページ
+    //----------------------
+
+    elseif (is_page('filter')) {
+
+        //（filtering.css）を読み込む
+        wp_enqueue_style(
+            'awa_wannavi-filter',
+            get_template_directory_uri() . '/assets/css/filtering.css',
+            array(),
+            false
+        );
+        wp_enqueue_style(
+            'awa_wannavi-filter-search',
             get_template_directory_uri() . '/assets/css/search.css',
             array(),
             false
