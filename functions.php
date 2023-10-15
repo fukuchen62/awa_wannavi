@@ -224,6 +224,27 @@ function awa_wannavi_add_individual_scripts()
     }
 
     //----------------------
+    //  新着一覧ページ（index.php）
+    //----------------------
+    elseif (is_category()) {
+
+        // 新着一覧ページのcss
+        wp_enqueue_style(
+            'awa_wannavi-article',
+            get_template_directory_uri() . '/assets/css/article.css',
+            array(),
+            false
+        );
+
+        wp_enqueue_style(
+            'awa_wannavi-special-list',
+            get_template_directory_uri() . '/assets/css/special-list.css',
+            array(),
+            false
+        );
+    }
+
+    //----------------------
     //  遊ぶ・泊まる・食べるの一覧ページ
     //----------------------
     elseif (is_archive()) {
@@ -386,6 +407,27 @@ function awa_wannavi_add_individual_scripts()
         wp_enqueue_style(
             'awa_wannavi-about',
             get_template_directory_uri() . '/assets/css/about.css',
+            array(),
+            false
+        );
+    }
+
+    //----------------------
+    //  新着詳細ページ（single.php）
+    //----------------------
+    elseif (is_single()) {
+
+        // 新着詳細ページのcss
+        wp_enqueue_style(
+            'awa_wannavi-article',
+            get_template_directory_uri() . '/assets/css/article.css',
+            array(),
+            false
+        );
+
+        wp_enqueue_style(
+            'awa_wannavi-special-list',
+            get_template_directory_uri() . '/assets/css/special-list.css',
             array(),
             false
         );
