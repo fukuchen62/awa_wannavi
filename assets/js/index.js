@@ -81,10 +81,7 @@ $(function () {
     *----------------------------*/
 
     // トップのセクションはロード後すぐにフェードイン
-    $(function () {
-        $(".top-section").addClass("section--fadein");
-    });
-
+    $(".top-section").addClass("section--fadein");
     // コンテンツの100px奥までスクロールされたらフェードイン
     $(window).scroll(function () {
         let windowHeight = $(window).height();
