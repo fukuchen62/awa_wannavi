@@ -5,6 +5,7 @@ $(function () {
     $(".hamburger__menu__btn").on("click", function () {
         // ドロワーメニュー部分のアニメーション
         $(".gnav__menu__content").toggleClass("is-active");
+        $("body").toggleClass("is-active");
         // ボタン部分のアニメーション
         $(".hamburger__menu__btn").toggleClass("is-active");
     });
@@ -23,4 +24,10 @@ $(function () {
             $(".gnav__menu__content").removeClass("is-active");
         }
     });
+});
+$(window).resize(function () {
+    let wW = $(window).width();
+    if (wW > 1023) {
+        $("body").removeClass('is-active');
+    }
 });

@@ -35,6 +35,7 @@
 .top-section {
     /* 最初は非表示 */
     visibility: hidden;
+    overflow: hidden;
     opacity: 0;
     transform: translateY(30px);
     transition: visibility 1.5s, opacity 1.5s, transform 1.5s;
@@ -52,7 +53,7 @@
 /***************************/
 
 .top {
-    height: calc(100vh - 100px);
+    /* height: calc(100dvh - 100px); */
     padding: 20px;
     background-color: #F3E06EB2;
     background-attachment: fixed;
@@ -63,10 +64,32 @@
 }
 
 /* 枠線 */
-.top__border {
+.top__border.pc {
     position: relative;
     border-radius: 20px;
     border: 10px solid #000;
+    display: none;
+}
+
+.top__border--sp {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.top__border--sp .slider__flame{
+    height: 100%;
+}
+.top__border--sp .slick-list{
+    height: 100%;
+}
+.top__border--sp .slick-track{
+    height: 100%;
+}
+.top__border--sp .top__scroll-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .slider__text {
@@ -97,6 +120,32 @@
 .top__key-visual {
     position: relative;
 }
+.top__key-visual.sp {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: calc((100dvh - 140px) * 0.6);
+    max-width: calc(100% - 6.2%);
+    height: 47%;
+}
+
+.top__border__bg {
+    width: auto;
+    max-height: calc(100dvh - 140px);
+}
+.top__border__btn {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: calc((100dvh - 140px) * 0.6);
+    max-width: calc(100% - 6.2%);
+    height: 47%;
+}
+
 
 .top__asobu-button {
     position: absolute;
@@ -134,6 +183,9 @@
     .top__text {
         display: none;
     }
+    .top__border.pc {
+        display: block;
+    }
 
     .slider__text {
         display: block;
@@ -150,10 +202,18 @@
     .top__key-visual {
         padding: 2%;
     }
+    .top__border--sp {
+        display: none;
+    }
 
     .slider img {
         width: 100%;
         object-fit: cover;
+    }
+
+    .slider.slider__text img {
+        width: 100%;
+        object-fit: inherit;
     }
 
     .slider__flame {
@@ -203,6 +263,9 @@
         width: 440px;
         height: auto;
     }
+#slider {
+    width: 1260px;
+}
 
 }
 
@@ -383,6 +446,7 @@
 .top-news__archive-link {
     margin: 20px 0 20px 20px;
     font-weight: 900;
+    font-size: 18px;
 }
 
 .card {

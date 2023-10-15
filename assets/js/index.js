@@ -14,13 +14,14 @@ $(function () {
         pauseOnFocus: false,
         pauseOnHover: false,
         arrows: false,
+        // variableWidth: true,
     });
-});
 
-/***************************/
-/* 自動スクロール画像（PC） */
-/***************************/
-$(function () {
+
+    /***************************/
+    /* 自動スクロール画像（PC） */
+    /***************************/
+
     let screen_w = $(window).width();
     if (screen_w < 769) {
         $(".slider__img").slick({
@@ -47,12 +48,11 @@ $(function () {
             arrows: false,
         });
     }
-});
 
-/*************************/
-/* MAPモーダルウィンドウ */
-/*************************/
-$(function () {
+
+    /*************************/
+    /* MAPモーダルウィンドウ */
+    /*************************/
     let open = $('.top-map__modal-open');
     let close = $('.top-map__modal-close');
     let container = $('.top-map__modal-container');
@@ -74,12 +74,12 @@ $(function () {
             container.removeClass('active');
         }
     });
-});
 
-/*----------------------------
-* フェードインアニメーション
-*----------------------------*/
-$(function () {
+
+    /*----------------------------
+    * フェードインアニメーション
+    *----------------------------*/
+
     // トップのセクションはロード後すぐにフェードイン
     $(function () {
         $(".top-section").addClass("section--fadein");

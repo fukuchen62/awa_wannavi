@@ -9,7 +9,7 @@
         <!-- トップ -->
         <section class="top top-section">
             <!-- 枠線 -->
-            <div class="top__border">
+            <div class="top__border pc">
                 <!-- トップテキスト（スマホ） -->
                 <img class="top__text" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_font_sp.svg" alt="">
                 <!-- 自動スクロール文字列（PC） -->
@@ -33,6 +33,26 @@
                     <div class="top__taberu-button"><a href="<?php echo home_url('/eat_type/cafe/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_taberu.svg" alt=""></a></div>
                 </div>
                 <div class="top__awamaru"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_awawan.svg" alt=""></div>
+            </div>
+            <div class="top__border--sp">
+                <img class="top__border__bg" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/kv_bg.png" alt="">
+                <div class="top__key-visual sp">
+                    <div class="slider__flame slider slider__img">
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01..jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img02.jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img03.jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img04.jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img05.jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img06.jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img07.jpg" alt=""></div>
+                    </div>
+
+                </div>
+                <div class="top__border__btn">
+                    <div class="top__asobu-button"><a href="<?php echo home_url('/enjoy_type/park/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_asobu.svg" alt=""></a></div>
+                    <div class="top__tomaru-button"><a href="<?php echo home_url('/stay_type/hotel/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_tomaru.svg" alt=""></a></div>
+                    <div class="top__taberu-button"><a href="<?php echo home_url('/eat_type/cafe/'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_taberu.svg" alt=""></a></div>
+                </div>
             </div>
         </section>
 
@@ -115,7 +135,7 @@
                 <h2 class="top__outline">新着情報</h2>
             </div>
             <a href="<?php echo home_url('/category/news/'); ?>">
-                <p class="top-news__archive-link">>>>一覧を見る</p>
+                <p class="top-news__archive-link">>>>一覧表を見る</p>
             </a>
             <!-- カード3連 -->
             <div class="top-news__card-area">
@@ -171,7 +191,7 @@
             <div class="top-pickup__card-area">
                 <a href="">
                     <div class="top-pickup__card">
-                        <img class="top-pickup__card-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01..jpg" alt="">
+                        <img class="top-pickup__card-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01.jpg" alt="">
                         <div>
                             <p class="top-pickup__card-border">マナー</p>
                         </div>
