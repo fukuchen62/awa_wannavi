@@ -27,6 +27,7 @@
                 <h3 class="category bc__asobu"><i class="fa-solid fa-paw"></i>公園</h3>
 
                 <table class="tbl__li">
+
                     <tr>
                         <th>名称</th>
                         <th>住所</th>
@@ -36,29 +37,34 @@
                     <tr class="line__solid">
                     </tr>
 
-                    <tr>
+                    <?php
+                    // カスタム投稿タイプ
+                    $args = array(
+                        'post_type' => 'enjoy',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'enjoy_type',
+                                'field' => 'slug',
+                                'terms' => 'park'
+                            ),
+                        ),
+                        'posts_per_page' => -1,
+                    );
+                    // サブクエリ実行
+                    $the_query =  new WP_Query($args);
+                    ?>
 
-                        <td><a href="">徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
-                    <tr>
-                        <td><a href="">●●●●●●徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                    <!-- 結果を表示させる -->
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : ?>
+                            <?php $the_query->the_post(); ?>
 
-                    <tr>
-                        <td><a href="">●●●●●●●●●●●●●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345678910</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                            <!-- ループ型spots適用 -->
+                            <?php get_template_part('template-parts/loop', 'spots'); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
+
                 </table>
             </div>
             <div class="list__sp"></div>
@@ -83,29 +89,33 @@
                     <tr class="line__solid">
                     </tr>
 
-                    <tr>
+                    <?php
+                    // カスタム投稿タイプ
+                    $args = array(
+                        'post_type' => 'enjoy',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'enjoy_type',
+                                'field' => 'slug',
+                                'terms' => 'dogrun'
+                            ),
+                        ),
+                        'posts_per_page' => -1,
+                    );
+                    // サブクエリ実行
+                    $the_query =  new WP_Query($args);
+                    ?>
 
-                        <td><a href="">徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
-                    <tr>
-                        <td><a href="">●●●●●●徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                    <!-- 結果を表示させる -->
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : ?>
+                            <?php $the_query->the_post(); ?>
 
-                    <tr>
-                        <td><a href="">●●公園</a></td>
-                        <td>徳島市犬町わんこ番地1234567891012345698</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                            <!-- ループ型spots適用 -->
+                            <?php get_template_part('template-parts/loop', 'spots'); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </table>
             </div>
             <div class="list__sp"></div>
@@ -130,29 +140,33 @@
                     <tr class="line__solid">
                     </tr>
 
-                    <tr>
+                    <?php
+                    // カスタム投稿タイプ
+                    $args = array(
+                        'post_type' => 'enjoy',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'enjoy_type',
+                                'field' => 'slug',
+                                'terms' => 'outdoor'
+                            ),
+                        ),
+                        'posts_per_page' => -1,
+                    );
+                    // サブクエリ実行
+                    $the_query =  new WP_Query($args);
+                    ?>
 
-                        <td><a href="">徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
-                    <tr>
-                        <td><a href="">●●●●●●徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                    <!-- 結果を表示させる -->
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : ?>
+                            <?php $the_query->the_post(); ?>
 
-                    <tr>
-                        <td><a href="">●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345678910</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                            <!-- ループ型spots適用 -->
+                            <?php get_template_part('template-parts/loop', 'spots'); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </table>
             </div>
             <div class="list__sp"></div>
@@ -177,29 +191,33 @@
                     <tr class="line__solid">
                     </tr>
 
-                    <tr>
+                    <?php
+                    // カスタム投稿タイプ
+                    $args = array(
+                        'post_type' => 'enjoy',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'enjoy_type',
+                                'field' => 'slug',
+                                'terms' => 'indoor'
+                            ),
+                        ),
+                        'posts_per_page' => -1,
+                    );
+                    // サブクエリ実行
+                    $the_query =  new WP_Query($args);
+                    ?>
 
-                        <td><a href="">徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
-                    <tr>
-                        <td><a href="">●●●●●●徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                    <!-- 結果を表示させる -->
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : ?>
+                            <?php $the_query->the_post(); ?>
 
-                    <tr>
-                        <td><a href="">●●●●●●●●●●●●●●●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345678910</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                            <!-- ループ型spots適用 -->
+                            <?php get_template_part('template-parts/loop', 'spots'); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </table>
             </div>
             <div class="list__sp"></div>
@@ -228,29 +246,33 @@
                     <tr class="line__solid">
                     </tr>
 
-                    <tr>
+                    <?php
+                    // カスタム投稿タイプ
+                    $args = array(
+                        'post_type' => 'stay',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'stay_type',
+                                'field' => 'slug',
+                                'terms' => 'pethotel'
+                            ),
+                        ),
+                        'posts_per_page' => -1,
+                    );
+                    // サブクエリ実行
+                    $the_query =  new WP_Query($args);
+                    ?>
 
-                        <td><a href="">徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
-                    <tr>
-                        <td><a href="">●●●●●●徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                    <!-- 結果を表示させる -->
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : ?>
+                            <?php $the_query->the_post(); ?>
 
-                    <tr>
-                        <td><a href="">●●●●●●●●●●●●●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345678910</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                            <!-- ループ型spots適用 -->
+                            <?php get_template_part('template-parts/loop', 'spots'); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </table>
             </div>
             <div class="list__sp"></div>
@@ -275,29 +297,33 @@
                     <tr class="line__solid">
                     </tr>
 
-                    <tr>
+                    <?php
+                    // カスタム投稿タイプ
+                    $args = array(
+                        'post_type' => 'stay',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'stay_type',
+                                'field' => 'slug',
+                                'terms' => 'hotel'
+                            ),
+                        ),
+                        'posts_per_page' => -1,
+                    );
+                    // サブクエリ実行
+                    $the_query =  new WP_Query($args);
+                    ?>
 
-                        <td><a href="">徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
-                    <tr>
-                        <td><a href="">●●●●●●徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                    <!-- 結果を表示させる -->
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : ?>
+                            <?php $the_query->the_post(); ?>
 
-                    <tr>
-                        <td><a href="">●●公園</a></td>
-                        <td>徳島市犬町わんこ番地1234567891012345698</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                            <!-- ループ型spots適用 -->
+                            <?php get_template_part('template-parts/loop', 'spots'); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </table>
             </div>
             <div class="list__sp"></div>
@@ -322,29 +348,33 @@
                     <tr class="line__solid">
                     </tr>
 
-                    <tr>
+                    <?php
+                    // カスタム投稿タイプ
+                    $args = array(
+                        'post_type' => 'stay',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'stay_type',
+                                'field' => 'slug',
+                                'terms' => 'camp'
+                            ),
+                        ),
+                        'posts_per_page' => -1,
+                    );
+                    // サブクエリ実行
+                    $the_query =  new WP_Query($args);
+                    ?>
 
-                        <td><a href="">徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
-                    <tr>
-                        <td><a href="">●●●●●●徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                    <!-- 結果を表示させる -->
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : ?>
+                            <?php $the_query->the_post(); ?>
 
-                    <tr>
-                        <td><a href="">●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345678910</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                            <!-- ループ型spots適用 -->
+                            <?php get_template_part('template-parts/loop', 'spots'); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </table>
             </div>
             <div class="list__sp"></div>
@@ -373,29 +403,33 @@
                     <tr class="line__solid">
                     </tr>
 
-                    <tr>
+                    <?php
+                    // カスタム投稿タイプ
+                    $args = array(
+                        'post_type' => 'eat',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'eat_type',
+                                'field' => 'slug',
+                                'terms' => 'cafe'
+                            ),
+                        ),
+                        'posts_per_page' => -1,
+                    );
+                    // サブクエリ実行
+                    $the_query =  new WP_Query($args);
+                    ?>
 
-                        <td><a href="">徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
-                    <tr>
-                        <td><a href="">●●●●●●徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                    <!-- 結果を表示させる -->
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : ?>
+                            <?php $the_query->the_post(); ?>
 
-                    <tr>
-                        <td><a href="">●●●●●●●●●●●●●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345678910</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                            <!-- ループ型spots適用 -->
+                            <?php get_template_part('template-parts/loop', 'spots'); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </table>
             </div>
             <div class="list__sp"></div>
@@ -420,29 +454,33 @@
                     <tr class="line__solid">
                     </tr>
 
-                    <tr>
+                    <?php
+                    // カスタム投稿タイプ
+                    $args = array(
+                        'post_type' => 'eat',
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'eat_type',
+                                'field' => 'slug',
+                                'terms' => 'restaurant'
+                            ),
+                        ),
+                        'posts_per_page' => -1,
+                    );
+                    // サブクエリ実行
+                    $the_query =  new WP_Query($args);
+                    ?>
 
-                        <td><a href="">徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
-                    <tr>
-                        <td><a href="">●●●●●●徳島●●公園</a></td>
-                        <td>徳島市犬町わんこ番地12345</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                    <!-- 結果を表示させる -->
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) : ?>
+                            <?php $the_query->the_post(); ?>
 
-                    <tr>
-                        <td><a href="">●●公園</a></td>
-                        <td>徳島市犬町わんこ番地1234567891012345698</td>
-                        <td>000-000-0000</td>
-                    </tr>
-                    <tr class="line__dashed">
-                    </tr>
+                            <!-- ループ型spots適用 -->
+                            <?php get_template_part('template-parts/loop', 'spots'); ?>
+
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </table>
             </div>
             <div class="list__sp"></div>

@@ -151,6 +151,14 @@ h3 {
     font-size: 1.4rem;
 }
 
+.tbl__li th:nth-child(1) {
+    width: 40%;
+}
+
+.tbl__li th:nth-child(2) {
+    width: 40%;
+}
+
 .tbl__li td:last-child {
     padding: 8px;
     border-bottom: 1px dashed #fff;
