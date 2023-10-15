@@ -34,6 +34,7 @@
                 </div>
                 <div class="top__awamaru"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_awawan.svg" alt=""></div>
             </div>
+            <!-- sp -->
             <div class="top__border--sp">
                 <img class="top__border__bg" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/kv_bg.png" alt="">
                 <div class="top__key-visual sp">
