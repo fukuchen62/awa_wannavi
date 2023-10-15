@@ -142,10 +142,10 @@
 
                 <?php query_posts('posts_per_page=3'); ?>
                 <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : ?>
-                        <?php the_post(); ?>
-                        <?php get_template_part('template-parts/loop', 'news'); ?>
-                    <?php endwhile; ?>
+                <?php while (have_posts()) : ?>
+                <?php the_post(); ?>
+                <?php get_template_part('template-parts/loop', 'news'); ?>
+                <?php endwhile; ?>
                 <?php endif; ?>
             </div>
         </section>
@@ -189,44 +189,27 @@
                 <h2 class="top__outline">Pickup!</h2>
             </div>
             <div class="top-pickup__card-area">
-                <a href="">
-                    <div class="top-pickup__card">
-                        <img class="top-pickup__card-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01.jpg" alt="">
-                        <div>
-                            <p class="top-pickup__card-border">マナー</p>
-                        </div>
-                        <div class="top-pickup__card-text">
-                            <h2>カフェマナー</h2>
-                            <p>わんちゃんと初めてのお出かけ。お出かけ先でお行儀よくできるかな？</p>
-                        </div>
-                    </div>
-                </a>
 
-                <a href="">
-                    <div class="top-pickup__card">
-                        <img class="top-pickup__card-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01..jpg" alt="">
-                        <div>
-                            <p class="top-pickup__card-border">マナー</p>
-                        </div>
-                        <div class="top-pickup__card-text">
-                            <h2>カフェマナー</h2>
-                            <p>わんちゃんと初めてのお出かけ。お出かけ先でお行儀よくできるかな？</p>
-                        </div>
-                    </div>
-                </a>
+                <?php
+                $nearby_query = new WP_Query(
+                    array(
+                        'post_type' => 'special',
+                        'orderby' => 'rand',
+                        'post_per_page' => '3',
+                    )
+                );
+                ?>
 
-                <a href="">
-                    <div class="top-pickup__card">
-                        <img class="top-pickup__card-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01..jpg" alt="">
-                        <div>
-                            <p class="top-pickup__card-border">マナー</p>
-                        </div>
-                        <div class="top-pickup__card-text">
-                            <h2>カフェマナー</h2>
-                            <p>わんちゃんと初めてのお出かけ。お出かけ先でお行儀よくできるかな？</p>
-                        </div>
-                    </div>
-                </a>
+                <?php if ($nearby_query->have_posts()) : ?>
+                <?php while ($nearby_query->have_posts()) : ?>
+                <?php $nearby_query->the_post(); ?>
+
+                <!-- カード型を読み込む -->
+                <?php get_template_part('template-parts/loop', 'card_special'); ?>
+
+                <?php endwhile; ?>
+                <?php endif; ?>
+                <?php wp_reset_postdata(); ?>
 
             </div>
 
