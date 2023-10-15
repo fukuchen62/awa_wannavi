@@ -39,7 +39,7 @@
                 <img class="top__border__bg" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/kv_bg.png" alt="">
                 <div class="top__key-visual sp">
                     <div class="slider__flame slider slider__img">
-                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01..jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01.jpg" alt=""></div>
                         <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img02.jpg" alt=""></div>
                         <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img03.jpg" alt=""></div>
                         <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img04.jpg" alt=""></div>
