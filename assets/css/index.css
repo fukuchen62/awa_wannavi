@@ -77,16 +77,19 @@
     text-align: center;
 }
 
-.top__border--sp .slider__flame{
+.top__border--sp .slider__flame {
     height: 100%;
 }
-.top__border--sp .slick-list{
+
+.top__border--sp .slick-list {
     height: 100%;
 }
-.top__border--sp .slick-track{
+
+.top__border--sp .slick-track {
     height: 100%;
 }
-.top__border--sp .top__scroll-img{
+
+.top__border--sp .top__scroll-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -120,6 +123,7 @@
 .top__key-visual {
     position: relative;
 }
+
 .top__key-visual.sp {
     position: absolute;
     top: 25%;
@@ -135,6 +139,7 @@
     width: auto;
     max-height: calc(100dvh - 140px);
 }
+
 .top__border__btn {
     position: absolute;
     top: 25%;
@@ -183,6 +188,7 @@
     .top__text {
         display: none;
     }
+
     .top__border.pc {
         display: block;
     }
@@ -202,6 +208,7 @@
     .top__key-visual {
         padding: 2%;
     }
+
     .top__border--sp {
         display: none;
     }
@@ -263,9 +270,10 @@
         width: 440px;
         height: auto;
     }
-#slider {
-    width: 1260px;
-}
+
+    #slider {
+        width: 1260px;
+    }
 
 }
 
@@ -479,25 +487,29 @@
     margin: 30px 20px 0;
     font-weight: 500;
 }
+
 .background__map {
     width: 100%;
     position: relative;
     font-size: 3vw;
 }
-@media screen and (min-width:600px){
-.background__map {
-    width: 100%;
-    position: relative;
-    font-size: 3vw;
+
+@media screen and (min-width:600px) {
+    .background__map {
+        width: 100%;
+        position: relative;
+        font-size: 3vw;
+    }
 }
+
+@media screen and (min-width:1450px) {
+    .background__map {
+        width: 100%;
+        position: relative;
+        font-size: 40px;
+    }
 }
-@media screen and (min-width:1450px){
-.background__map {
-    width: 100%;
-    position: relative;
-    font-size: 40px;
-}
-}
+
 /*******************
         各ボタン
 ********************/
@@ -508,14 +520,16 @@
     height: 9%;
     position: absolute;
     background-color: #fff;
-    border:2px dashed #DDCA70;
+    border: 2px dashed #DDCA70;
     border-radius: 40px;
 }
-@media screen and (min-width:600px){
-.tokushima__btn {
-    border:5px dashed #DDCA70;
+
+@media screen and (min-width:600px) {
+    .tokushima__btn {
+        border: 5px dashed #DDCA70;
+    }
 }
-}
+
 .east__btn {
     top: 30%;
     right: 29%;
@@ -523,13 +537,14 @@
     height: 9%;
     position: absolute;
     background-color: #fff;
-    border:2px dashed #DA9E91;
+    border: 2px dashed #DA9E91;
     border-radius: 40px;
 }
-@media screen and (min-width:600px){
-.east__btn {
-    border:5px dashed #DA9E91;
-}
+
+@media screen and (min-width:600px) {
+    .east__btn {
+        border: 5px dashed #DA9E91;
+    }
 }
 
 .west_btn {
@@ -539,14 +554,16 @@
     height: 9%;
     position: absolute;
     background-color: #fff;
-    border:2px dashed #B5C87D;
+    border: 2px dashed #B5C87D;
     border-radius: 40px;
 }
-@media screen and (min-width:600px){
-.west_btn {
-    border:5px dashed #B5C87D;
+
+@media screen and (min-width:600px) {
+    .west_btn {
+        border: 5px dashed #B5C87D;
+    }
 }
-}
+
 .south__btn {
     bottom: 31%;
     right: 30%;
@@ -554,14 +571,16 @@
     height: 9%;
     position: absolute;
     background-color: #fff;
-    border:2px dashed #84BED8;
+    border: 2px dashed #84BED8;
     border-radius: 40px;
 }
-@media screen and (min-width:600px){
-.south__btn {
-    border:5px dashed #84BED8;
+
+@media screen and (min-width:600px) {
+    .south__btn {
+        border: 5px dashed #84BED8;
+    }
 }
-}
+
 /* MAPモーダルウィンドウ */
 .top-map__modal-open {
     cursor: pointer;
@@ -656,6 +675,8 @@
 
 .top-pickup__card-area {
     margin: 30px 0 80px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .top-pickup__card {
