@@ -200,32 +200,36 @@
     .leftside-img1 {
         /* margin-top: 5%; */
         position: relative;
-        width: 110px;
+        width: 20%;
         padding: 3%;
         margin-top: 100px;
     }
 
     .leftside-img1 p {
         position: absolute;
+        top: 9%;
+        right: 35%;
         font-weight: 900;
     }
 
     .leftside-img2 {
         position: relative;
         /* margin-top: 5%; */
-        width: 110px;
+        width: 20%;
         padding: 3%;
         margin-top: 100px;
     }
 
     .leftside-img2 p {
         position: absolute;
+        top: 7%;
+        right: 35%;
         font-weight: 900;
     }
 
     .leftside-img3 {
         /* margin-top: 5%; */
-        width: 110px;
+        width: 20%;
         /* height: 600px; */
         padding: 3%;
         margin-top: 20px;
