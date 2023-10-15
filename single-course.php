@@ -15,19 +15,19 @@
 
     <div class="tab__wrapper mb40">
         <div class="tab__block bgYL">
-            <a href="">
+            <a href="<?php echo home_url('/course/co01/'); ?>">
                 <h3 class="tab__title">川コース</h3>
             </a>
         </div>
 
         <div class="tab__block bgYL">
-            <a href="">
+            <a href="<?php echo home_url('/course/co02/'); ?>">
                 <h3 class="tab__title">海コース</h3>
             </a>
         </div>
 
         <div class="tab__block bgYL">
-            <a href="">
+            <a href="<?php echo home_url('/course/co03/'); ?>">
                 <h3 class="tab__title">山コース</h3>
             </a>
         </div>
@@ -42,7 +42,7 @@
     <!-- 県別検索終了 -->
 
     <!-- メインのタイトル -->
-    <h2 class="h2__title bgYL">山コース</h2>
+    <h2 class="h2__title bgYL"><?php the_title(); ?></h2>
 
     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/model-cource.png" alt="">
 
@@ -55,10 +55,20 @@
         <!-- スマホ版のモデルコースのイメージ -->
         <div class="none">
             <div class="asobu-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_14_asobu.svg" alt="">
+                <img class="asobu-img" src="<?php if (get_post_type(get_field('spot1')) == "enjoy") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_14_asobu.svg';
+                                            } elseif (get_post_type(get_field('spot1')) == "stay") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_16_tomaru.svg';
+                                            } elseif (get_post_type(get_field('spot1')) == "eat") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_15_taberu.svg';
+                                            } ?>" alt="">
             </div>
             <div class="course-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+                <img src="<?php
+                            $val = get_post_custom_values('pic1', get_field('spot1'));
+                            $img_url = wp_get_attachment_url($val[0]);
+                            echo $img_url;
+                            ?>" alt="">
             </div>
         </div>
         <!-- デスクトップ版のモデルコースイメージ -->
@@ -70,19 +80,51 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_03.svg" alt="">
             </div>
             <div class="center">
-                <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_14_asobu.svg" alt="">
+                <img class="asobu-img" src="<?php if (get_post_type(get_field('spot1')) == "enjoy") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_14_asobu.svg';
+                                            } elseif (get_post_type(get_field('spot1')) == "stay") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_16_tomaru.svg';
+                                            } elseif (get_post_type(get_field('spot1')) == "eat") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_15_taberu.svg';
+                                            } ?>" alt="">
 
-                <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+                <img class=" course-img" src="
+                    <?php
+                    $val = get_post_custom_values('pic1', get_field('spot1'));
+                    $img_url = wp_get_attachment_url($val[0]);
+                    echo $img_url;
+                    ?>
+                " alt="">
 
                 <!-- 施設名、施設情報 PC版 -->
                 <div class="model-main-pc">
-                    <h2>太龍寺ロープウェイ</h2>
+                    <h2>
+                        <?php
+                        $val = get_post_custom_values('facility', get_field('spot1'));
+                        echo $val[0];
+                        ?>
+                    </h2>
                     <div class="dotted-line"></div>
                     <div>
-                        <p>http://www.shikoku-cable.co.jp/tairyuji/</p>
-                        <p>太龍寺参拝</p>
-                        <p>お土産/トイレ</p>
-                        <p>道の駅鷲の里</p>
+                        <p><a href="
+                                <?php
+                                $val = get_post_custom_values('url', get_field('spot1'));
+                                echo $val[0];
+                                ?>
+                                " target="_blank">
+                                <?php
+                                $val = get_post_custom_values('url', get_field('spot1'));
+                                echo $val[0];
+                                ?>
+                            </a>
+                        </p>
+                        <p>
+                            <?php
+                            $val = get_post_custom_values('address', get_field('spot1'));
+                            echo $val[0];
+                            ?>
+                        </p>
+
                     </div>
                 </div>
             </div>
@@ -91,17 +133,35 @@
         </div>
         <!-- 施設名、施設情報 SP版 -->
         <div class="model-main-sp">
-            <h2>太龍寺ロープウェイ</h2>
+            <h2><?php
+                $val = get_post_custom_values('facility', get_field('spot1'));
+                echo $val[0];
+                ?></h2>
             <div class="dotted-line"></div>
             <div>
-                <p>http://www.shikoku-cable.co.jp/tairyuji/</p>
-                <p>太龍寺参拝</p>
-                <p>お土産/トイレ</p>
-                <p>道の駅鷲の里</p>
+                <p>
+                    <a href="
+                                <?php
+                                $val = get_post_custom_values('url', get_field('spot1'));
+                                echo $val[0];
+                                ?>
+                                " target="_blank">
+                        <?php
+                        $val = get_post_custom_values('url', get_field('spot1'));
+                        echo $val[0];
+                        ?>
+                    </a>
+                </p>
+                <p>
+                    <?php
+                    $val = get_post_custom_values('address', get_field('spot1'));
+                    echo $val[0];
+                    ?></p>
             </div>
         </div>
         <!-- スマホ版のアンダーイメージ -->
         <div class="course-under-img">
+            <p><?php the_field('time1'); ?></p>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_03.svg" alt="">
         </div>
@@ -111,32 +171,68 @@
     <!-- スマホ版のモデルコースのイメージ -->
     <div class="none">
         <div class="asobu-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
+            <img class="asobu-img" src="<?php if (get_post_type(get_field('spot2')) == "enjoy") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_14_asobu.svg';
+                                        } elseif (get_post_type(get_field('spot2')) == "stay") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_16_tomaru.svg';
+                                        } elseif (get_post_type(get_field('spot2')) == "eat") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_15_taberu.svg';
+                                        } ?>" alt="">
         </div>
         <div class="course-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+            <img src="<?php
+                        $val = get_post_custom_values('pic1', get_field('spot2'));
+                        $img_url = wp_get_attachment_url($val[0]);
+                        echo $img_url;
+                        ?>" alt="">
         </div>
     </div>
     <!-- デスクトップ版のモデルコースイメージ -->
     <div class="side-img1">
         <div class="leftside-img1">
+            <p><?php the_field('time1'); ?></p>
             <img class="fukidashi" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_07.svg" alt="">
         </div>
 
         <div class="center">
-            <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
-
-            <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+            <img class="asobu-img" src="<?php if (get_post_type(get_field('spot2')) == "enjoy") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_14_asobu.svg';
+                                        } elseif (get_post_type(get_field('spot2')) == "stay") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_16_tomaru.svg';
+                                        } elseif (get_post_type(get_field('spot2')) == "eat") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_15_taberu.svg';
+                                        } ?>" alt="">
+            <img class="course-img" src="<?php
+                                            $val = get_post_custom_values('pic1', get_field('spot2'));
+                                            $img_url = wp_get_attachment_url($val[0]);
+                                            echo $img_url;
+                                            ?>" alt="">
 
             <!-- 施設名、施設情報 PC版 -->
             <div class="model-main-pc">
-                <h2>あかりカフェ</h2>
+                <h2><?php
+                    $val = get_post_custom_values('facility', get_field('spot2'));
+                    echo $val[0];
+                    ?></h2>
                 <div class="dotted-line"></div>
                 <div>
-                    <p>http://www.acaricafe.com/archives/categorytairyuji/</p>
-                    <p>阿南市新野町是国56</p>
+                    <p><a href="
+                                <?php
+                                $val = get_post_custom_values('url', get_field('spot2'));
+                                echo $val[0];
+                                ?>
+                                " target="_blank">
+                            <?php
+                            $val = get_post_custom_values('url', get_field('spot2'));
+                            echo $val[0];
+                            ?>
+                        </a></p>
+                    <p><?php
+                        $val = get_post_custom_values('address', get_field('spot2'));
+                        echo $val[0];
+                        ?></p>
                 </div>
             </div>
         </div>
@@ -144,15 +240,32 @@
     </div>
     <!-- 施設名、施設情報 SP版 -->
     <div class="model-main-sp">
-        <h2>あかりカフェ</h2>
+        <h2><?php
+            $val = get_post_custom_values('facility', get_field('spot2'));
+            echo $val[0];
+            ?></h2>
         <div class="dotted-line"></div>
         <div>
-            <p>http://www.acaricafe.com/archives/categorytairyuji/</p>
-            <p>阿南市新野町是国56</p>
+            <p><a href="
+                                <?php
+                                $val = get_post_custom_values('url', get_field('spot2'));
+                                echo $val[0];
+                                ?>
+                                " target="_blank">
+                    <?php
+                    $val = get_post_custom_values('url', get_field('spot2'));
+                    echo $val[0];
+                    ?>
+                </a></p>
+            <p><?php
+                $val = get_post_custom_values('address', get_field('spot2'));
+                echo $val[0];
+                ?></p>
         </div>
     </div>
     <!-- スマホ版のアンダーイメージ -->
     <div class="course-under-img">
+        <p><?php the_field('time2'); ?></p>
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_07.svg" alt="">
     </div>
@@ -161,15 +274,26 @@
     <!-- スマホ版のモデルコースのイメージ -->
     <div class="none">
         <div class="asobu-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_16_tomaru.svg" alt="">
+            <img class="asobu-img" src="<?php if (get_post_type(get_field('spot3')) == "enjoy") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_14_asobu.svg';
+                                        } elseif (get_post_type(get_field('spot3')) == "stay") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_16_tomaru.svg';
+                                        } elseif (get_post_type(get_field('spot3')) == "eat") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_15_taberu.svg';
+                                        } ?>" alt="">
         </div>
         <div class="course-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+            <img src="<?php
+                        $val = get_post_custom_values('pic1', get_field('spot3'));
+                        $img_url = wp_get_attachment_url($val[0]);
+                        echo $img_url;
+                        ?>" alt="">
         </div>
     </div>
     <!-- デスクトップ版のモデルコースイメージ -->
     <div class="side-img1">
         <div class="leftside-img1">
+            <p><?php the_field('time2'); ?></p>
             <img class="fukidashi" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
             <img class="flower" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_17.svg" alt="">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
@@ -178,17 +302,42 @@
         </div>
 
         <div class="center">
-            <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_16_tomaru.svg" alt="">
-
-            <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+            <img class="asobu-img" src="<?php if (get_post_type(get_field('spot3')) == "enjoy") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_14_asobu.svg';
+                                        } elseif (get_post_type(get_field('spot3')) == "stay") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_16_tomaru.svg';
+                                        } elseif (get_post_type(get_field('spot3')) == "eat") {
+                                            echo get_template_directory_uri() . '/assets/img/course/course_ill_15_taberu.svg';
+                                        } ?>" alt="">
+            <img class="course-img" src="<?php
+                                            $val = get_post_custom_values('pic1', get_field('spot3'));
+                                            $img_url = wp_get_attachment_url($val[0]);
+                                            echo $img_url;
+                                            ?>" alt="">
 
             <!-- 施設名、施設情報 PC版 -->
             <div class="model-main-pc">
-                <h2>南阿波サンラインモビレージ</h2>
+                <h2><?php
+                    $val = get_post_custom_values('facility', get_field('spot3'));
+                    echo $val[0];
+                    ?></h2>
                 <div class="dotted-line"></div>
                 <div>
-                    <p>http://www.acaricafe.com/archives/categorytairyuji/</p>
-                    <p>徳島県海部郡美波町山河内明丸１−１</p>
+                    <p><a href="
+                                <?php
+                                $val = get_post_custom_values('url', get_field('spot3'));
+                                echo $val[0];
+                                ?>
+                                " target="_blank">
+                            <?php
+                            $val = get_post_custom_values('url', get_field('spot3'));
+                            echo $val[0];
+                            ?>
+                        </a></p>
+                    <p><?php
+                        $val = get_post_custom_values('address', get_field('spot3'));
+                        echo $val[0];
+                        ?></p>
                 </div>
             </div>
         </div>
@@ -196,11 +345,27 @@
     </div>
     <!-- 施設名、施設情報 SP版 -->
     <div class="model-main-sp">
-        <h2>南阿波サンラインモビレージ</h2>
+        <h2><?php
+            $val = get_post_custom_values('facility', get_field('spot3'));
+            echo $val[0];
+            ?></h2>
         <div class="dotted-line"></div>
         <div>
-            <p>http://www.acaricafe.com/archives/categorytairyuji/</p>
-            <p>徳島県海部郡美波町山河内明丸１−１</p>
+            <p><a href="
+                                <?php
+                                $val = get_post_custom_values('url', get_field('spot3'));
+                                echo $val[0];
+                                ?>
+                                " target="_blank">
+                    <?php
+                    $val = get_post_custom_values('url', get_field('spot3'));
+                    echo $val[0];
+                    ?>
+                </a></p>
+            <p><?php
+                $val = get_post_custom_values('address', get_field('spot3'));
+                echo $val[0];
+                ?></p>
         </div>
     </div>
 
@@ -213,15 +378,26 @@
         <!-- スマホ版のモデルコースのイメージ -->
         <div class="none">
             <div class="asobu-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
+                <img class="asobu-img" src="<?php if (get_post_type(get_field('spot4')) == "enjoy") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_14_asobu.svg';
+                                            } elseif (get_post_type(get_field('spot4')) == "stay") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_16_tomaru.svg';
+                                            } elseif (get_post_type(get_field('spot4')) == "eat") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_15_taberu.svg';
+                                            } ?>" alt="">
             </div>
             <div class="course-img">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+                <img src="<?php
+                            $val = get_post_custom_values('pic1', get_field('spot4'));
+                            $img_url = wp_get_attachment_url($val[0]);
+                            echo $img_url;
+                            ?>" alt="">
             </div>
         </div>
         <!-- デスクトップ版のモデルコースイメージ -->
         <div class="side-img1">
             <div class="leftside-img2">
+                <p><?php the_field('time3'); ?></p>
                 <img class="fukidashi" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_18.svg" alt="">
@@ -230,17 +406,42 @@
             </div>
 
             <div class="center">
-                <img class="asobu-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_15_taberu.svg" alt="">
-
-                <img class="course-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news_img-3@2x.jpg" alt="">
+                <img class="asobu-img" src="<?php if (get_post_type(get_field('spot4')) == "enjoy") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_14_asobu.svg';
+                                            } elseif (get_post_type(get_field('spot4')) == "stay") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_16_tomaru.svg';
+                                            } elseif (get_post_type(get_field('spot4')) == "eat") {
+                                                echo get_template_directory_uri() . '/assets/img/course/course_ill_15_taberu.svg';
+                                            } ?>" alt="">
+                <img class="course-img" src="<?php
+                                                $val = get_post_custom_values('pic1', get_field('spot4'));
+                                                $img_url = wp_get_attachment_url($val[0]);
+                                                echo $img_url;
+                                                ?>" alt="">
 
                 <!-- 施設名、施設情報 PC版 -->
                 <div class="model-main-pc">
-                    <h2>オドリ キッチン</h2>
+                    <h2><?php
+                        $val = get_post_custom_values('facility', get_field('spot4'));
+                        echo $val[0];
+                        ?></h2>
                     <div class="dotted-line"></div>
                     <div>
-                        <p>https://odori.kitchen/</p>
-                        <p>徳島県海部郡美波町山河内なか2-1</p>
+                        <p><a href="
+                                <?php
+                                $val = get_post_custom_values('url', get_field('spot4'));
+                                echo $val[0];
+                                ?>
+                                " target="_blank">
+                                <?php
+                                $val = get_post_custom_values('url', get_field('spot4'));
+                                echo $val[0];
+                                ?>
+                            </a></p>
+                        <p><?php
+                            $val = get_post_custom_values('address', get_field('spot4'));
+                            echo $val[0];
+                            ?></p>
                     </div>
                 </div>
             </div>
@@ -248,11 +449,27 @@
         </div>
         <!-- 施設名、施設情報 SP版 -->
         <div class="model-main-sp">
-            <h2>オドリ キッチン</h2>
+            <h2><?php
+                $val = get_post_custom_values('facility', get_field('spot4'));
+                echo $val[0];
+                ?></h2>
             <div class="dotted-line"></div>
             <div>
-                <p>https://odori.kitchen/</p>
-                <p>徳島県海部郡美波町山河内なか2-1</p>
+                <p><a href="
+                                <?php
+                                $val = get_post_custom_values('url', get_field('spot4'));
+                                echo $val[0];
+                                ?>
+                                " target="_blank">
+                        <?php
+                        $val = get_post_custom_values('url', get_field('spot4'));
+                        echo $val[0];
+                        ?>
+                    </a></p>
+                <p><?php
+                    $val = get_post_custom_values('address', get_field('spot4'));
+                    echo $val[0];
+                    ?></p>
             </div>
         </div>
 
