@@ -1,50 +1,65 @@
 <!-- header.phpを読み込む -->
 <?php get_header(); ?>
 
-<h2 class="pageTitle">最新情報<span>NEWS</span></h2>
-
-<main class="main">
+<main class="container">
+    <!-- h2帯タイトル -->
     <div class="container">
-        <div class="row">
-            <!-- 左半分：記事一覧 -->
-            <div class="col-12 col-md-9">
+        <h2 class="banner__yellow">
+            <?php echo get_the_category()[0]->name; ?>
+        </h2>
 
-                <!-- タイトルの切り替え -->
-                <?php if (is_month()) : ?>
-                    <h2 class="main_title"><?php the_time("Y年m月"); ?></h2>
-                <?php else : ?>
-                    <h2 class="main_title"><?php wp_title("") ?></h2>
-                <?php endif; ?>
+    </div>
 
 
-                <div class="row">
+    <!-- コンテナーに格納 -->
+    <div class="container">
+        <!-- パンくずリスト -->
+        <div class="Breadcrumb">
+            <?php get_template_part("template-parts/breadcrumb"); ?>
+        </div>
 
-                    <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : ?>
-                            <?php the_post(); ?>
-                            <div class="col-md-4">
-                                <!-- 共通のニュースカード型を読み込む -->
-                                <?php get_template_part("template-parts/loop", "news"); ?>
-                            </div>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
+        <!-- articleコンテナーに格納 -->
+        <div class="container">
+
+            <!-- 2col全体を格納するコンテナー -->
+            <div class="container__col">
+
+                <!-- メインコラムコンテナー -->
+                <div class="main__col mb40">
+                    <ul class="news__cont">
+
+                        <?php if (have_posts()) : ?>
+                            <?php while (have_posts()) : ?>
+                                <?php the_post(); ?>
+                                <?php get_template_part('template-parts/loop', 'new'); ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+
+                    </ul>
+
+                    <!-- ページネーション -->
+                    <?php if (function_exists("wp_pagenavi")) {
+                        wp_pagenavi();
+                    } ?>
 
                 </div>
 
-                <!-- ページネーション -->
-                <?php if (function_exists("wp_pagenavi")) {
-                    wp_pagenavi();
-                } ?>
+                <!-- aside カテゴリー一覧 -->
+
+                <div class="aside__col">
+                    <div class="category__tag yellow">カテゴリー一覧</div>
+
+                    <div class="category__innner">
+                        <ul>
+                            <li class="category__list"><a href="<?php echo home_url('/category/event/'); ?>">イベント情報</a></li>
+                            <li class="category__list"><a href="<?php echo home_url('/category/news/'); ?>">お知らせ</a></li>
+                            <li class="category__list"><a href="<?php echo home_url('/category/update/'); ?>">更新情報</a></li>
+                        </ul>
+                    </div>
+                </div>
 
             </div>
 
-            <!-- 右半分：サイドバー -->
-            <div class="col-12 col-md-3">
-                <!-- カテゴリーで絞りこむ -->
-                <?php get_sidebar("categories"); ?>
-                <!-- 月別で絞りこむ -->
-                <?php get_sidebar("archives"); ?>
-            </div>
         </div>
     </div>
 </main>
