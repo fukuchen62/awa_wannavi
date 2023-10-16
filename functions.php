@@ -484,6 +484,20 @@ function awa_wannavi_add_individual_scripts()
             false
         );
     }
+
+    //----------------------
+    //  404ページ
+    //----------------------
+    elseif (is_404()) {
+
+        //（404.css）を読み込む
+        wp_enqueue_style(
+            'awa_wannavi-404',
+            get_template_directory_uri() . '/assets/css/404.css',
+            array(),
+            false
+        );
+    }
 }
 
 /**
