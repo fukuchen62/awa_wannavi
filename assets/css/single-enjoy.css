@@ -223,6 +223,7 @@
     /* informationテーブル化 */
     .information {
         display: table;
+        width: 100%;
     }
 
     .information dl {
