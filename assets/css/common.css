@@ -22,9 +22,13 @@ body {
     font-family: 'Zen Maru Gothic', sans-serif;
     background-color: #fff;
     /* ヘッダー分上に余白を取る */
-    margin-top: 100px;
+    margin-top: 60px;
 }
-
+@media screen and (min-width:1024px) {
+    body {
+        margin-top: 100px;
+    }
+}
 a {
     /* リンクのアンダーバーを消す記載 */
     text-decoration: none;
