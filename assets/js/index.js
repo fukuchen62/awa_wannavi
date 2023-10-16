@@ -53,7 +53,7 @@ $(function () {
     /*************************/
     /* MAPモーダルウィンドウ */
     /*************************/
-    let open = $('.top-map__modal-open');
+    let open = $('.top-map__modal-open__tokusima');
     let close = $('.top-map__modal-close');
     let container = $('.top-map__modal-container');
 
