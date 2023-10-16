@@ -53,56 +53,27 @@ $(function () {
     /*************************/
     /* MAPモーダルウィンドウ */
     /*************************/
+    let open = $('.top-map__modal-open');
+    let close = $('.top-map__modal-close');
+    let container = $('.top-map__modal-container');
 
-    // let open = $('.top-map__modal-open');
-    // let close = $('.top-map__modal-close');
-    // let container = $('.top-map__modal-container');
-
-    // //開くボタンをクリックしたらモーダルを表示する
-    // open.on('click', function () {
-    //     container.addClass('active');
-    //     return false;
-    // });
-
-    // //閉じるボタンをクリックしたらモーダルを閉じる
-    // close.on('click', function () {
-    //     container.removeClass('active');
-    // });
-
-    // //モーダルの外側をクリックしたらモーダルを閉じる
-    // $(document).on('click', function (e) {
-    //     if (!$(e.target).closest('.top-modal__modal-body').length) {
-    //         container.removeClass('active');
-    //     }
-    // });
-
-    // Get all modal buttons
-    const modalButtons = document.querySelectorAll(".modal__button");
-
-    // Attach click event to each modal button
-    modalButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-            const modalId = this.getAttribute("data-modal");
-            const modal = document.getElementById(modalId);
-
-            if (modal) {
-                modal.style.display = "block";
-            }
-        });
+    //開くボタンをクリックしたらモーダルを表示する
+    open.on('click', function () {
+        container.addClass('active');
+        return false;
     });
 
-    // Close the modal when the close button or background is clicked
-    document.addEventListener("click", function (event) {
-        if (event.target.classList.contains("modal") || event.target.classList.contains("close")) {
-            const modalId = event.target.getAttribute("data-modal");
-            const modal = document.getElementById(modalId);
+    //閉じるボタンをクリックしたらモーダルを閉じる
+    close.on('click', function () {
+        container.removeClass('active');
+    });
 
-            if (modal) {
-                modal.style.display = "none";
-            }
+    //モーダルの外側をクリックしたらモーダルを閉じる
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.top-modal__modal-body').length) {
+            container.removeClass('active');
         }
     });
-
 
 
     /*----------------------------
