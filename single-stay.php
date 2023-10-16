@@ -31,43 +31,66 @@
 
             <div class="w40per">
 
-                <div class="top__photo">
-                    <img src="<?php the_field("pic1"); ?>" alt="">
-                </div>
+                <!-- <ul class="gallery top__photo">
+                    <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                    <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                    <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                    <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                </ul>
 
                 <div class="flex__sb photo__container">
-                    <div class="s__img">
-                        <img src="<?php the_field("pic2"); ?>" alt="">
-                    </div>
-                    <div class="s__img">
-                        <img src="<?php the_field("pic3"); ?>" alt="">
-                    </div>
-                    <div class="s__img">
-                        <img src="<?php the_field("pic4"); ?>" alt="">
-                    </div>
-                    <div class="s__img">
-                        <img src="<?php the_field("pic5"); ?>" alt="">
-                    </div>
-                </div>
+                    <ul class="choice-btn s__img">
+                        <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                        <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                        <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                        <li><img src="../assets/img/dog-banner.jpg" alt=""></li>
+                    </ul>
+                </div> -->
 
-                <div class="column__flex__left">
-                    <div class="flex">
-                        <div class="border__box margin5">
-                            <p><?php the_field("area"); ?></p>
-                        </div>
-                        <div class="border__box margin5">
-                            <p><?php the_field("stay_type"); ?></p>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="border__box margin5">
-                            <p><?php the_field("dog_size"); ?></p>
-                        </div>
-                        <div class="border__box margin5">
-                            <p><?php the_field("note_flag"); ?></p>
-                        </div>
-                    </div>
+
+                <!-- ここからリスト画像 -->
+
+
+                <ul class="gallery top__photo">
+                    <li><img src="<?php the_field("pic1"); ?>" alt=""></li>
+                    <li><img src="<?php the_field("pic2"); ?>" alt=""></li>
+                    <li><img src="<?php the_field("pic3"); ?>" alt=""></li>
+                    <li><img src="<?php the_field("pic4"); ?>" alt=""></li>
+
+                </ul>
+
+                <div class="flex__sb photo__container">
+                    <ul class="choice-btn s__img">
+                        <li><img src="<?php the_field("pic1"); ?>" alt=""></li>
+                        <li><img src="<?php the_field("pic2"); ?>" alt=""></li>
+                        <li><img src="<?php the_field("pic3"); ?>" alt=""></li>
+                        <li><img src="<?php the_field("pic4"); ?>" alt=""></li>
+                    </ul>
                 </div>
+                <!-- ここからリスト画像終わり -->
+
+                <!-- タクソノミーを取得する -->
+                <?php
+                $post_type = get_post_type(get_the_ID());
+                $taxonomies = get_object_taxonomies($post_type);
+
+                $taxonomy_names = wp_get_object_terms(get_the_ID(), $taxonomies,  array("fields" => "names", "orderby" => "count"));
+
+                ?>
+                <!-- タクソノミーを出力 -->
+                <ul class="taxonomis">
+                    <?php
+                    if (!empty($taxonomy_names)) :
+                        foreach ($taxonomy_names as $tax_name) : ?>
+
+                            <li class="card__tag single-tag"><?php echo $tax_name; ?> </li>
+
+                    <?php endforeach;
+                    endif;  ?>
+                    <?php if (get_field("note") !== "") : ?>
+                        <li class="card__tag single-tag">特記事項あり</li>
+                    <?php endif; ?>
+                </ul>
 
             </div>
 
@@ -124,9 +147,9 @@
                         <dt>テイクアウト</dt>
                         <dd>
                             <?php if (get_field("takeout")) : ?>
-                            <span>可能</span>
+                                <span>可能</span>
                             <?php else : ?>
-                            <span>不可</span>
+                                <span>不可</span>
                             <?php endif; ?>
                         </dd>
                     </dl>
@@ -134,9 +157,9 @@
                         <dt>予約</dt>
                         <dd>
                             <?php if (get_field("reservation")) : ?>
-                            <span>可能</span>
+                                <span>可能</span>
                             <?php else : ?>
-                            <span>不可</span>
+                                <span>不可</span>
                             <?php endif; ?>
                         </dd>
                     </dl>
@@ -147,9 +170,9 @@
                     <dl>
                         <dt>駐車場（車）</dt>
                         <<dd><?php if (get_field("parking")) : ?>
-                            <span>有り</span>
+                                <span>有り</span>
                             <?php else : ?>
-                            <span>無し</span>
+                                <span>無し</span>
                             <?php endif; ?>
                             </dd>
                     </dl>
@@ -207,49 +230,49 @@
             ?>
 
             <?php if ($nearby_query->have_posts()) : ?>
-            <?php while ($nearby_query->have_posts()) : ?>
-            <?php $nearby_query->the_post(); ?>
+                <?php while ($nearby_query->have_posts()) : ?>
+                    <?php $nearby_query->the_post(); ?>
 
-            <!-- カード型 -->
-            <div class="card tokushima">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <!-- サムネイルの取得 -->
-                        <a href="<?php the_permalink(); ?>">
-                            <?php if (has_post_thumbnail()) : ?>
-                            <?php the_post_thumbnail("medium"); ?>
-                            <?php else : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
-                            <?php endif; ?>
+                    <!-- カード型 -->
+                    <div class="card tokushima">
+                        <a href="#">
+                            <!-- 背面 -->
+                            <div class="card__back"></div>
+                            <!-- 前面 -->
+                            <div class="card__front">
+                                <!-- カード内情報 -->
+                                <!-- サムネイルの取得 -->
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <?php the_post_thumbnail("medium"); ?>
+                                    <?php else : ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
+                                    <?php endif; ?>
+                                </a>
+                                <div class="card__tag">
+                                    <p>泊まる</p>
+                                </div>
+                                <h2 class="card__outline"><?php the_title(); ?></h2>
+                                <div class="card__line"></div>
+                                <div class="card__textarea">
+                                    <dl>
+                                        <dd>●住所：</dd>
+                                        <dd><?php the_field("address"); ?></dd>
+                                    </dl>
+                                    <dl>
+                                        <dd>●お問い合わせ：</dd>
+                                        <dd><?php the_field("tel"); ?></dd>
+                                    </dl>
+                                    <dl class="card__url">
+                                        <dd>●URL：</dd>
+                                        <dd><a href="<?php the_field("url"); ?>"><?php the_field("url"); ?></a></dd>
+                                    </dl>
+                                </div>
+                            </div>
                         </a>
-                        <div class="card__tag">
-                            <p>泊まる</p>
-                        </div>
-                        <h2 class="card__outline"><?php the_title(); ?></h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd><?php the_field("address"); ?></dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd><?php the_field("tel"); ?></dd>
-                            </dl>
-                            <dl class="card__url">
-                                <dd>●URL：</dd>
-                                <dd><a href="<?php the_field("url"); ?>"><?php the_field("url"); ?></a></dd>
-                            </dl>
-                        </div>
                     </div>
-                </a>
-            </div>
 
-            <?php endwhile; ?>
+                <?php endwhile; ?>
             <?php endif; ?>
             <?php wp_reset_postdata(); ?>
 

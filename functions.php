@@ -326,12 +326,38 @@ function awa_wannavi_add_individual_scripts()
     //----------------------
     elseif (is_singular('stay')) {
 
+        //（slick.css）を読み込む
+        wp_enqueue_style(
+            'slick.css',
+            'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+            array(),
+            false
+        );
+
         //（single-stay.css）を読み込む
         wp_enqueue_style(
             'awa_wannavi-stay',
-            get_template_directory_uri() . '/assets/css/single-stay.css',
+            get_template_directory_uri() . '/assets/css/stay-single.css',
             array(),
             false
+        );
+
+        // slick.js読み込み
+        wp_enqueue_script(
+            'awa_wannavi-slick-script',
+            'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+            '',
+            '',
+            true
+        );
+
+        // all-listを読み込む
+        wp_enqueue_script(
+            'awa_wannavi-all-list',
+            get_template_directory_uri() . '/assets/js/all-list.js',
+            '',
+            '',
+            true
         );
     }
 
@@ -340,12 +366,38 @@ function awa_wannavi_add_individual_scripts()
     //----------------------
     elseif (is_singular('eat')) {
 
+        //（slick.css）を読み込む
+        wp_enqueue_style(
+            'slick.css',
+            'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css',
+            array(),
+            false
+        );
+
         //（single-enjoy.css）を読み込む
         wp_enqueue_style(
             'awa_wannavi-eat',
             get_template_directory_uri() . '/assets/css/single-eat.css',
             array(),
             false
+        );
+
+        // slick.js読み込み
+        wp_enqueue_script(
+            'awa_wannavi-slick-script',
+            'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+            '',
+            '',
+            true
+        );
+
+        // all-listを読み込む
+        wp_enqueue_script(
+            'awa_wannavi-all-list',
+            get_template_directory_uri() . '/assets/js/all-list.js',
+            '',
+            '',
+            true
         );
     }
 
