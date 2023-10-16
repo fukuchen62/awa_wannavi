@@ -6,8 +6,8 @@
         <!-- h2帯タイトル -->
         <div class="container">
 
-            <div class="banner__head">
-                <h2 class="page__title">おすすめ情報</h2>
+            <div class="bnr__head bg__special”>
+            <h2 class=" page__title">おすすめ情報</h2>
             </div>
 
         </div>

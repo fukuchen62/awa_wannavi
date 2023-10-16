@@ -13,7 +13,9 @@
         // print_r($enjoy_type);
         ?>
 
-        <div class="banner__head">遊ぶ</div>
+        <div class="bnr__head bg__enjoy">
+            <h2 class="page__title">遊ぶ</h2>
+        </div>
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumb'); ?>
 

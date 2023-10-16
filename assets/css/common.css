@@ -112,15 +112,84 @@ a img:hover {
     font-size: 3.8rem;
 }
 
+.bnr__head {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg__eat {
+    background-image: url("../img/banner/img_midashi_taberu01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left -432px top 0, center;
+}
+
+.bg__stay {
+    background-image: url("../img/banner/img_midashi_tomaru01.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg__enjoy {
+    background-image: url("../img/banner/img_midashi_asobu01.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg__course {
+    background-image: url("../img/banner/img_midashi_model01.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg__special {
+    background-image: url("../img/banner/img_midashi_osusume01.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.page__title {
+    font-size: 3.8rem;
+    text-shadow: 2px 2px 0 #FFF, -2px -2px 0 #FFF,
+        -2px 2px 0 #FFF, 2px -2px 0 #FFF,
+        0px 2px 0 #FFF, 0 -2px 0 #FFF,
+        -2px 0 0 #FFF, 2px 0 0 #FFF;
+}
+
 @media screen and (min-width:768px) {
     .banner__head {
         font-size: 5.5rem;
+    }
+
+    .page__title {
+        font-size: 5.5rem;
+    }
+
+    .bg__eat {
+        background-image: url("../img/banner/img_midashi_taberu01.jpg");
+        background-size: cover;
+        background-position: center center;
     }
 }
 
 @media screen and (min-width:1023px) {
     .banner__head {
         font-size: 5.5rem;
+    }
+
+    .page__title {
+        font-size: 5.5rem;
+    }
+
+    .bg__eat {
+        background-image: url("../img/banner/img_midashi_taberu01.jpg");
+        background-size: cover;
+        background-position: center center;
     }
 }
 
