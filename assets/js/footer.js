@@ -178,9 +178,9 @@ $(function () {
     // フッター手前でストップ
     $("#page-top").hide();
     $(window).on("scroll", function () {
-        scrollHeight = $(document).height();
-        scrollPosition = $(window).height() + $(window).scrollTop();
-        footHeight = $("footer").innerHeight();
+        let scrollHeight = $(document).height();
+        let scrollPosition = $(window).height() + $(window).scrollTop();
+        let footHeight = $("footer").innerHeight();
         if (scrollHeight - scrollPosition <= footHeight) {
             $("#page-top").css({
                 position: "absolute",
