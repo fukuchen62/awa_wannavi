@@ -101,13 +101,41 @@ h4 {
     border: 1px solid #000;
     width: 95%;
 
-    margin: 20px 0 30px;
+    /* ここから追記 */
+
+    margin: 20px 20px 30px;
 }
 
 @media screen and (min-width:1023px) {
     .text__box {
         width: 75%;
         height: auto;
-        margin: 50px 0 100px;
+        margin: 25px 20px 100px;
     }
+}
+
+.character_box .text__box p {
+    line-height: 2;
+    /* padding-top: 50px; */
+
+}
+
+.character_box {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    /* height: auto; */
+    /* margin: 25px; */
+}
+
+@media screen and (min-width:768px) {
+    .character_box {
+        flex-direction: row;
+        width: 75%;
+    }
+
+}
+
+.character_box .text__box {
+    border: 6px solid #000;
 }
