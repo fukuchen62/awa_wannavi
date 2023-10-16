@@ -40,12 +40,13 @@
 }
 
 .photo__container {
-    padding: 10px 10px;
+    padding: 10px 0;
 }
+
 
 @media (min-width:768px) {
     .top__photo, .photo__container {
-        width: 80%;
+        width: 100vh;
 
     }
 
@@ -581,7 +582,7 @@ img {
 /*メイン画像下に余白をつける*/
 
 .gallery {
-    margin: 0 0 15px 0;
+    width: 100%;
 }
 
 .gallery li {
@@ -591,7 +592,7 @@ img {
 @media (min-width:768px) {
 
     .gallery {
-        width: 80%;
+        width: 100%;
     }
 
 }
@@ -634,9 +635,9 @@ img {
 .choice-btn li {
     cursor: pointer;
     outline: none;
-    background: #333;
     width: 25% !important;
     list-style: none;
+    padding: 0 10px;
 }
 
 .choice-btn li img {
@@ -662,7 +663,7 @@ img {
 
 .photo__container2 {
     width: 100%;
-    padding: 10px 10px;
+    padding: 10px 0;
 }
 
 /* .s__img2 {
@@ -676,7 +677,7 @@ img {
     }
 
     .photo__container2 {
-        width: 80%;
+        width: 100%;
     }
 
 }

@@ -31,8 +31,10 @@ body {
 }
 a {
     /* リンクのアンダーバーを消す記載 */
+    /* 文字がはみ出したら改行 */
     text-decoration: none;
     color: black;
+    overflow-wrap: break-word;
 }
 
 /* aをホバーした時の色変化 */
