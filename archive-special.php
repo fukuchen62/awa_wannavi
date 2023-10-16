@@ -5,13 +5,13 @@
 
     <div class="container">
         <!-- h2帯タイトル -->
-        <div class="container">
 
-            <div class="banner__head">
-                <h2 class="page__title">おすすめ情報</h2>
-            </div>
 
+        <div class="banner__head">
+            <h2 class="page__title">おすすめ情報</h2>
         </div>
+
+
 
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumb'); ?>
@@ -32,17 +32,17 @@
 
                     <!-- タイトルの切り替え -->
                     <?php if (is_month()) : ?>
-                    <h2 class="main_title"><?php the_time("Y年m月"); ?></h2>
+                        <h2 class="main_title"><?php the_time("Y年m月"); ?></h2>
                     <?php endif; ?>
 
                     <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : ?>
-                    <?php the_post(); ?>
+                        <?php while (have_posts()) : ?>
+                            <?php the_post(); ?>
 
-                    <!-- 共通のニュースカード型を読み込む -->
-                    <?php get_template_part("template-parts/loop", "news"); ?>
+                            <!-- 共通のニュースカード型を読み込む -->
+                            <?php get_template_part("template-parts/loop", "card"); ?>
 
-                    <?php endwhile; ?>
+                        <?php endwhile; ?>
                     <?php endif; ?>
 
 

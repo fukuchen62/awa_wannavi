@@ -191,7 +191,7 @@
         <!-- リンク -->
         <div class="link__area flex mt100">
             <div class="headline flex">
-                <h2 class="fs24to30"><i class="fa-solid fa-paw"></i>周辺情報</h2>
+                <h2 class="fs24to30"><i class="fa-solid fa-paw"></i>その他おすすめ</h2>
             </div>
         </div>
 
@@ -203,6 +203,8 @@
                 array(
                     'post_type' => 'eat',
                     'orderby' => 'rand',
+                    'posts_per_page' => '3',
+                    'post__not_in' => array($post->ID),
                 )
             );
             ?>
@@ -227,7 +229,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
                             <?php endif; ?>
                         </a>
-                        <div class="card__tag">
+                        <div class="card__tag bgPK">
                             <p>食べる</p>
                         </div>
                         <h2 class="card__outline"><?php the_title(); ?></h2>
@@ -241,10 +243,10 @@
                                 <dd>●お問い合わせ：</dd>
                                 <dd><?php the_field("tel"); ?></dd>
                             </dl>
-                            <dl class="card__url">
+                            <!-- <dl class="card__url">
                                 <dd>●URL：</dd>
                                 <dd><a href="<?php the_field("url"); ?>"><?php the_field("url"); ?></a></dd>
-                            </dl>
+                                </dl> -->
                         </div>
                     </div>
                 </a>
@@ -258,9 +260,9 @@
 
         </div>
 
-        <button id="btn__tokushima" class="more-button">
+        <!-- <button id="btn__tokushima" class="more-button">
             MORE
-        </button>
+        </button> -->
 
         <!-- 特集記事リンク -->
         <div class="link__area flex mt100">

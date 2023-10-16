@@ -27,16 +27,17 @@
     margin-top: 210px;
 }
 
+/* SP時の犬img */
 .f-dog-img1 {
     position: absolute;
-    left: 40px;
+    left: 100px;
     max-width: 100%;
 
 }
 
 .f-dog-img2 {
     position: absolute;
-    right: 10%;
+    right: 100px;
     max-width: 100%;
 
 }
@@ -114,7 +115,7 @@ ul .large-menu {
 
 /* あわまるの見た目・配置 */
 .awamaru {
-    width: 100px;
+    width: 90px;
     position: fixed;
     left: 15px;
     bottom: 200px;
@@ -303,7 +304,7 @@ ul .large-menu {
 #scroll {
     position: fixed;
     right: 0;
-    bottom: 100px;
+    bottom: 10px;
     /* z-indexの高さを変更 */
     z-index: 5;
     width: 100px;
@@ -321,7 +322,7 @@ ul .large-menu {
     #scroll {
         position: fixed;
         right: 50px;
-        bottom: 50px;
+        bottom: 20px;
         /* z-indexの高さを変更 */
         z-index: 5;
         width: 100px;
