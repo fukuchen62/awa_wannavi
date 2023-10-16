@@ -247,12 +247,12 @@ function awa_wannavi_add_individual_scripts()
     //----------------------
     //  遊ぶ・泊まる・食べるの一覧ページ
     //----------------------
-    elseif (is_archive()) {
+    elseif (is_archive('special')) {
 
         // 一覧ページのcss
         wp_enqueue_style(
-            'awa_wannavi-archive-list',
-            get_template_directory_uri() . '/assets/css/list-type.css',
+            'awa_wannavi-archive-special',
+            get_template_directory_uri() . '/assets/css/special-list.css',
             array(),
             false
         );

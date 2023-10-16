@@ -32,18 +32,51 @@
 
                     <!-- タイトルの切り替え -->
                     <?php if (is_month()) : ?>
-                        <h2 class="main_title"><?php the_time("Y年m月"); ?></h2>
+                    <h2 class="main_title"><?php the_time("Y年m月"); ?></h2>
                     <?php endif; ?>
 
-                    <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : ?>
-                            <?php the_post(); ?>
+                    <!-- カード型コンテンツ -->
+                    <div class="card__2col">
 
-                            <!-- 共通のニュースカード型を読み込む -->
-                            <?php get_template_part("template-parts/loop", "card"); ?>
+                        <?php if (have_posts()) : ?>
+                        <?php while (have_posts()) : the_post(); ?>
+
+                        <div class="card__wrapper mb40">
+                            <div class="card__block">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail("medium"); ?>
+                                    <?php else : ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
+                                    <?php endif; ?>
+                                </a>
+                                <div class="card__content">
+                                    <div class="card__flex">
+                                        <div class="card__title"><?php the_title(); ?></div>
+                                        <div class="card__category">遊ぶ</div>
+                                    </div>
+
+                                    <div class="card__text">
+                                        <div class="card__address">
+                                            ●住所：<?php the_field("address"); ?>
+                                        </div>
+                                        <div class="card__number">
+                                            ●お問い合わせ：０８０－６３７９－７４３７
+                                        </div>
+                                        <div class="card__url"></div>
+                                    </div>
+                                </div>
+                                <div class="card__link">
+                                    <a href="#">もっと見る</a>
+                                    <!-- <a href="#">FAQ</a>
+                                        <a href="#">PRIVACY</a> -->
+                                </div>
+                            </div>
+                        </div>
 
                         <?php endwhile; ?>
-                    <?php endif; ?>
+                        <?php endif; ?>
+                    </div>
 
 
                     <!-- ページネーション -->
@@ -54,9 +87,9 @@
                 </div>
 
                 <!-- moreボタン -->
-                <button id="btn__tokushima" class="more-button">
+                <!-- <button id="btn__tokushima" class="more-button">
                     MORE
-                </button>
+                </button> -->
             </div>
 
             <!-- aside カテゴリー一覧 -->

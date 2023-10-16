@@ -26,23 +26,27 @@
                 <!-- </div> -->
 
                 <!-- カード型コンテンツ -->
-
                 <div class="card__2col">
 
-
+                    <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
                     <div class="card__wrapper mb40">
                         <div class="card__block">
                             <img class="card__img" src="../assets/img/cat.jpg" alt="">
                             <div class="card__content">
                                 <div class="card__flex">
-                                    <div class="card__title">徳島●●●公園</div>
+                                    <div class="card__title"><?php the_title(); ?></div>
                                     <div class="card__category">遊ぶ</div>
                                 </div>
 
                                 <div class="card__text">
-                                    <div class="card__address">●住所：徳島県徳島市鮎喰町２丁目５６－１１</div>
-                                    <div class="card__number">●お問い合わせ：０８０－６３７９－７４３７</div>
+                                    <div class="card__address">
+                                        ●住所：<?php the_field("address"); ?>
+                                    </div>
+                                    <div class="card__number">
+                                        ●お問い合わせ：０８０－６３７９－７４３７
+                                    </div>
                                     <div class="card__url"></div>
                                 </div>
                             </div>
@@ -53,12 +57,15 @@
                             </div>
                         </div>
                     </div>
+
+                    <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
 
                 <!-- moreボタン -->
-                <button id="btn__tokushima" class="more-button">
+                <!-- <button id="btn__tokushima" class="more-button">
                     MORE
-                </button>
+                </button> -->
             </div>
 
             <!-- aside カテゴリー一覧 -->
