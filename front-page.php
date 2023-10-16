@@ -164,14 +164,14 @@
             </div>
             <div>
                 <div class="background__map"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_map.jpg" alt="map">
-                    <a class="tokushima__btn top-map__modal-open__tokushima" href="">徳島市</a>
-                    <a class="east__btn top-map__modal-open__east" href="">県東部</a>
-                    <a class="west_btn top-map__modal-open__west" href="">県西部</a>
-                    <a class="south__btn top-map__modal-open__south" href="">県南部</a>
+                    <a class="tokushima__btn modal__button" data-modal="modal__tokushima" href="">徳島市</a>
+                    <a class="east__btn modal__button" data-modal="modal__east" href="">県東部</a>
+                    <a class="west_btn modal__button" data-modal="modal__west" href="">県西部</a>
+                    <a class="south__btn modal__button" data-modal="modal__south" href="">県南部</a>
                 </div>
             </div>
             <!-- モーダル本体 -->
-            <div class="top-map__modal-container">
+            <div id="modal__tokushima" class="top-map__modal-container">
                 <div class="top-map__modal-body">
                     <!-- 閉じるボタン -->
                     <div class="top-map__modal-close__tokusima">
@@ -181,7 +181,7 @@
                     <iframe class="top-map__map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52876.31538723905!2d134.52770198283693!3d34.075417172099314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1696904245356!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <div class="top-map__modal-container">
+            <div id="modal__east" class="top-map__modal-container">
                 <div class="top-map__modal-body">
                     <!-- 閉じるボタン -->
                     <div class="top-map__modal-close__east">
@@ -191,7 +191,7 @@
                     <iframe class="top-map__map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52876.31538723905!2d134.52770198283693!3d34.075417172099314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1696904245356!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <div class="top-map__modal-container">
+            <div id="modal__west" class="top-map__modal-container">
                 <div class="top-map__modal-body">
                     <!-- 閉じるボタン -->
                     <div class="top-map__modal-close__west">
@@ -201,7 +201,7 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13253.60625967496!2d134.08377772625818!3d33.853540512344495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355237d85f748f35%3A0x5d98f310ebe684fb!2z5Ymj5bGx!5e0!3m2!1sja!2sjp!4v1697423162462!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <div class="top-map__modal-container">
+            <div id="modal__south" class="top-map__modal-container">
                 <div class="top-map__modal-body">
                     <!-- 閉じるボタン -->
                     <div class="top-map__modal-close__south">
