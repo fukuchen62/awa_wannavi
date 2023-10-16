@@ -108,31 +108,38 @@
                                 <a href="<?php the_field("url"); ?>" target="_blank"><?php the_field("url"); ?></a>
                             </dd>
                         </dl>
-                        <?php if (get_field("instagram" !== "")) : ?>
+                        <?php if (get_field("instagram") !== "") : ?>
                             <dl>
                                 <dt>Instagram</dt>
-                                <a href="<?php the_field("instagram"); ?>" target="_blank"><?php the_field("instagram"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("instagram"); ?>" target="_blank"><?php the_field("instagram"); ?></a>
+                                </dd>
                             </dl>
                         <?php endif; ?>
-                        <?php if (get_field("facebook" !== "")) : ?>
+                        <?php if (get_field("facebook") !== "") : ?>
                             <dl>
                                 <dt>Facebook</dt>
-                                <a href="<?php the_field("facebook"); ?>" target="_blank"><?php the_field("facebook"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("facebook"); ?>" target="_blank"><?php the_field("facebook"); ?></a>
+                                </dd>
                             </dl>
                         <?php endif; ?>
-                        <?php if (get_field("x" !== "")) : ?>
+                        <?php if (get_field("x") !== "") : ?>
                             <dl>
                                 <dt>x</dt>
-                                <a href="<?php the_field("x"); ?>" target="_blank"><?php the_field("x"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("x"); ?>" target="_blank"><?php the_field("x"); ?></a>
+                                </dd>
                             </dl>
                         <?php endif; ?>
-                        <?php if (get_field("sns" !== "")) : ?>
+                        <?php if (get_field("sns") !== "") : ?>
                             <dl>
                                 <dt>SNS</dt>
-                                <a href="<?php the_field("sns"); ?>" target="_blank"><?php the_field("sns"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("sns"); ?>" target="_blank"><?php the_field("sns"); ?></a>
+                                </dd>
                             </dl>
-                        <?php endif; ?>
-                        <dl>
+                        <?php endif; ?> <dl>
                             <dt>客室数</dt>
                             <dd><?php the_field("rooms"); ?></dd>
                         </dl>
@@ -235,31 +242,38 @@
                                 <a href="<?php the_field("url"); ?>" target="_blank"><?php the_field("url"); ?></a>
                             </dd>
                         </dl>
-                        <?php if (get_field("instagram" !== "")) : ?>
+                        <?php if (get_field("instagram") !== "") : ?>
                             <dl>
                                 <dt>Instagram</dt>
-                                <a href="<?php the_field("instagram"); ?>" target="_blank"><?php the_field("instagram"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("instagram"); ?>" target="_blank"><?php the_field("instagram"); ?></a>
+                                </dd>
                             </dl>
                         <?php endif; ?>
-                        <?php if (get_field("facebook" !== "")) : ?>
+                        <?php if (get_field("facebook") !== "") : ?>
                             <dl>
                                 <dt>Facebook</dt>
-                                <a href="<?php the_field("facebook"); ?>" target="_blank"><?php the_field("facebook"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("facebook"); ?>" target="_blank"><?php the_field("facebook"); ?></a>
+                                </dd>
                             </dl>
                         <?php endif; ?>
-                        <?php if (get_field("x" !== "")) : ?>
+                        <?php if (get_field("x") !== "") : ?>
                             <dl>
                                 <dt>x</dt>
-                                <a href="<?php the_field("x"); ?>" target="_blank"><?php the_field("x"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("x"); ?>" target="_blank"><?php the_field("x"); ?></a>
+                                </dd>
                             </dl>
                         <?php endif; ?>
-                        <?php if (get_field("sns" !== "")) : ?>
+                        <?php if (get_field("sns") !== "") : ?>
                             <dl>
                                 <dt>SNS</dt>
-                                <a href="<?php the_field("sns"); ?>" target="_blank"><?php the_field("sns"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("sns"); ?>" target="_blank"><?php the_field("sns"); ?></a>
+                                </dd>
                             </dl>
-                        <?php endif; ?>
-                        <dl>
+                        <?php endif; ?> <dl>
                             <dt>予約</dt>
                             <dd>
                                 <?php if (get_field("reservation")) : ?>
@@ -326,31 +340,38 @@
                                 <a href="<?php the_field("url"); ?>" target="_blank"><?php the_field("url"); ?></a>
                             </dd>
                         </dl>
-                        <?php if (get_field("instagram" !== "")) : ?>
+                        <?php if (get_field("instagram") !== "") : ?>
                             <dl>
                                 <dt>Instagram</dt>
-                                <a href="<?php the_field("instagram"); ?>" target="_blank"><?php the_field("instagram"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("instagram"); ?>" target="_blank"><?php the_field("instagram"); ?></a>
+                                </dd>
                             </dl>
                         <?php endif; ?>
-                        <?php if (get_field("facebook" !== "")) : ?>
+                        <?php if (get_field("facebook") !== "") : ?>
                             <dl>
                                 <dt>Facebook</dt>
-                                <a href="<?php the_field("facebook"); ?>" target="_blank"><?php the_field("facebook"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("facebook"); ?>" target="_blank"><?php the_field("facebook"); ?></a>
+                                </dd>
                             </dl>
                         <?php endif; ?>
-                        <?php if (get_field("x" !== "")) : ?>
+                        <?php if (get_field("x") !== "") : ?>
                             <dl>
                                 <dt>x</dt>
-                                <a href="<?php the_field("x"); ?>" target="_blank"><?php the_field("x"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("x"); ?>" target="_blank"><?php the_field("x"); ?></a>
+                                </dd>
                             </dl>
                         <?php endif; ?>
-                        <?php if (get_field("sns" !== "")) : ?>
+                        <?php if (get_field("sns") !== "") : ?>
                             <dl>
                                 <dt>SNS</dt>
-                                <a href="<?php the_field("sns"); ?>" target="_blank"><?php the_field("sns"); ?></a>
+                                <dd>
+                                    <a href="<?php the_field("sns"); ?>" target="_blank"><?php the_field("sns"); ?></a>
+                                </dd>
                             </dl>
-                        <?php endif; ?>
-                        <dl>
+                        <?php endif; ?> <dl>
                             <dt>予約</dt>
                             <dd>
                                 <?php if (get_field("reservation")) : ?>
@@ -413,17 +434,6 @@
                 </div>
             </div>
         </div>
-
-        <dl>
-            <dt>業態</dt>
-            <dd>
-                <?php
-                $taxonomy_slug = "stay_type";
-                $taxonomy = get_the_terms($post->ID, $taxonomy_slug);
-                echo $taxonomy[0]->name; //ターム名
-                ?>
-            </dd>
-        </dl>
 
         <!-- 地図 -->
         <div class="iframe">

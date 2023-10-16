@@ -60,16 +60,53 @@
 }
 
 .top__photo {
+    width: 100vw;
+    margin: 0 auto;
     padding: 0 10px;
 }
 
+.top__photo img {
+    width: 100%;
+
+}
+
+@media(min-width:768px) {
+    .top__photo {
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+
 .photo__container {
-    padding: 10px 10px;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 10px 0;
     /* 両サイドにスペース */
 }
 
-.s__img {
-    width: 23%;
+@media(min-width:768px) {
+    .photo__container {
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+
+.choice-btn {
+    width: 100%;
+}
+
+/******************************
+        スリック
+*******************************/
+.choice-btn li.slick-current img {
+    opacity: 1;
+}
+
+.choice-btn li img {
+    width: 100%;
+    padding: 0 10px;
+    opacity: 0.4;
+    cursor: pointer;
 }
 
 .mtb {
@@ -201,6 +238,7 @@
     /* informationテーブル化 */
     .information {
         display: table;
+        width: 100%;
     }
 
     .information dl {

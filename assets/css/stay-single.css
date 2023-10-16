@@ -101,6 +101,7 @@
     width: 100%;
     padding: 0 10px;
     opacity: 0.4;
+    cursor: pointer;
 }
 
 .mtb {
@@ -232,6 +233,7 @@
     /* informationテーブル化 */
     .information {
         display: table;
+        width: 100%;
     }
 
     .information dl {
