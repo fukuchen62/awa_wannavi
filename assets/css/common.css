@@ -20,7 +20,7 @@ body {
     /* googlefontから直接引用している   */
     font-family: 'Cherry Bomb One', cursive;
     font-family: 'Zen Maru Gothic', sans-serif;
-    background-color: #f5f4ef;
+    background-color: #fff;
     /* ヘッダー分上に余白を取る */
     margin-top: 100px;
 }
