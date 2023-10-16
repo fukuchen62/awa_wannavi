@@ -20,7 +20,7 @@
                 <!-- 自動スクロール画像グループ -->
                 <div class="top__key-visual">
                     <div class="slider__flame slider slider__img">
-                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01..jpg" alt=""></div>
+                        <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img01.jpg" alt=""></div>
                         <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img02.jpg" alt=""></div>
                         <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img03.jpg" alt=""></div>
                         <div><img class="top__scroll-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/top_img04.jpg" alt=""></div>
@@ -143,10 +143,10 @@
 
                 <?php query_posts('posts_per_page=3'); ?>
                 <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : ?>
-                <?php the_post(); ?>
-                <?php get_template_part('template-parts/loop', 'news'); ?>
-                <?php endwhile; ?>
+                    <?php while (have_posts()) : ?>
+                        <?php the_post(); ?>
+                        <?php get_template_part('template-parts/loop', 'news'); ?>
+                    <?php endwhile; ?>
                 <?php endif; ?>
             </div>
         </section>
@@ -202,13 +202,13 @@
                 ?>
 
                 <?php if ($nearby_query->have_posts()) : ?>
-                <?php while ($nearby_query->have_posts()) : ?>
-                <?php $nearby_query->the_post(); ?>
+                    <?php while ($nearby_query->have_posts()) : ?>
+                        <?php $nearby_query->the_post(); ?>
 
-                <!-- カード型を読み込む -->
-                <?php get_template_part('template-parts/loop', 'card_special'); ?>
+                        <!-- カード型を読み込む -->
+                        <?php get_template_part('template-parts/loop', 'card_special'); ?>
 
-                <?php endwhile; ?>
+                    <?php endwhile; ?>
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
 
