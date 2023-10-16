@@ -272,7 +272,7 @@ function awa_wannavi_add_individual_scripts()
         );
     } elseif (is_page('mypage')) {
 
-        // 固定ページのcss（）
+        // マイページのcss（）
         wp_enqueue_style(
             'awa_wannavi-mypage',
             get_template_directory_uri() . '/assets/css/mypage.css',
@@ -398,6 +398,20 @@ function awa_wannavi_add_individual_scripts()
             '',
             '',
             true
+        );
+    }
+
+    //----------------------
+    //  おすすめ情報詳細ページ
+    //----------------------
+    elseif (is_singular('special')) {
+
+        //（article.css）を読み込む
+        wp_enqueue_style(
+            'awa_wannavi-single-special',
+            get_template_directory_uri() . '/assets/css/article.css',
+            array(),
+            false
         );
     }
 
