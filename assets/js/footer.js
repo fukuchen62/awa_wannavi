@@ -1,6 +1,6 @@
 "use strict";
 
-// ウィンドウの幅に応じて画像を切り替える関数
+// // ウィンドウの幅に応じて画像を切り替える関数
 // function updateImage() {
 //     const windowWidth = window.innerWidth;
 //     const imgElement = document.getElementById("responsive-image");
@@ -10,9 +10,10 @@
 //     } else {
 //         imgElement.src = "<?php echo get_template_directory_uri(); ?>/assets/img/common/footer_imgshiba_pc.svg";
 
-//     }}
+//     }
+// }
 
-// 初期表示とウィンドウのリサイズ時に画像を更新
+// // 初期表示とウィンドウのリサイズ時に画像を更新
 // window.addEventListener("DOMContentLoaded", updateImage);
 // window.addEventListener("resize", updateImage);
 
@@ -77,15 +78,34 @@ updateText();
 
 // あわまるを、スクロールしたら表示させる
 
-$(function () {
-    var topBtn = $('.foot_scroll');
-    topBtn.hide();
-    //スクロールが1000に達したらボタン表示
+// $(function () {
+//     var topBtn = $('.foot_scroll');
+//     topBtn.hide();
+//     //スクロールが1000に達したらボタン表示
+//     $(window).scroll(function () {
+//         if ($(this).scrollTop() > 1000) {
+//             topBtn.fadeIn();
+//         } else {
+//             topBtn.fadeOut();
+//         }
+//     });
+// });
+
+// あわまる
+$(document).ready(function () {
+    $(".awamaru").hide(); // 初期状態で非表示にします
+
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 1000) {
-            topBtn.fadeIn();
+        var scrollTop = $(window).scrollTop(),
+            docHeight = $(document).height(),
+            winHeight = $(window).height(),
+            scrollPercent = (scrollTop) / (docHeight - winHeight),
+            scrollPercentRounded = Math.round(scrollPercent * 100);
+
+        if (scrollPercentRounded > 90) {
+            $(".awamaru").show(); // 90%以上で要素を表示
         } else {
-            topBtn.fadeOut();
+            $(".awamaru").hide(); // 90%未満で要素を非表示
         }
     });
 });
@@ -138,59 +158,78 @@ $('.awamaru').clickToggle(function () {
 
 // トップへ戻る
 
-$(function () {
-    var topBtn = $('#scroll');
-    topBtn.hide();
-    //スクロールが5000に達したらボタン表示
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 4500) {
-            topBtn.fadeIn();
-        } else {
-            topBtn.fadeOut();
-        }
-    });
-});
+// $(function () {
+//     var topBtn = $('#scroll');
+//     topBtn.hide();
+//     //スクロールが5000に達したらボタン表示
+//     $(window).scroll(function () {
+//         if ($(this).scrollTop() > 4500) {
+//             topBtn.fadeIn();
+//         } else {
+//             topBtn.fadeOut();
+//         }
+//     });
+// });
 
 $('#scroll').click(function () {
     $('body, html').animate({ scrollTop: 0 }, 500);
 });
 
-// ページトップボタン
-$(function () {
-    const pageTop = $("#page-top");
-    pageTop.hide();
+// // ページトップボタン
+// $(function () {
+//     const pageTop = $("#page-top");
+//     pageTop.hide();
+//     $(window).scroll(function () {
+//         if ($(this).scrollTop() > 5500) {
+//             pageTop.fadeIn();
+//         } else {
+//             pageTop.fadeOut();
+//         }
+//     });
+//     pageTop.click(function () {
+//         $("body,html").animate(
+//             {
+//                 scrollTop: 0,
+//             },
+//             100
+//         );
+//         return false;
+//     });
+//     // フッター手前でストップ
+//     $("#page-top").hide();
+//     $(window).on("scroll", function () {
+//         let scrollHeight = $(document).height();
+//         let scrollPosition = $(window).height() + $(window).scrollTop();
+//         let footHeight = $("footer").innerHeight();
+//         if (scrollHeight - scrollPosition <= footHeight) {
+//             $("#page-top").css({
+//                 position: "absolute",
+//                 bottom: footHeight,
+//             });
+//         } else {
+//             $("#page-top").css({
+//                 position: "fixed",
+//                 bottom: "0",
+//             });
+//         }
+//     });
+// });
+
+// トップへ戻るボタン
+$(document).ready(function () {
+    $("#scroll").hide(); // 初期状態で非表示にします
+
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 5500) {
-            pageTop.fadeIn();
+        var scrollTop = $(window).scrollTop(),
+            docHeight = $(document).height(),
+            winHeight = $(window).height(),
+            scrollPercent = (scrollTop) / (docHeight - winHeight),
+            scrollPercentRounded = Math.round(scrollPercent * 100);
+
+        if (scrollPercentRounded > 90) {
+            $("#scroll").show(); // 90%以上で要素を表示
         } else {
-            pageTop.fadeOut();
-        }
-    });
-    pageTop.click(function () {
-        $("body,html").animate(
-            {
-                scrollTop: 0,
-            },
-            100
-        );
-        return false;
-    });
-    // フッター手前でストップ
-    $("#page-top").hide();
-    $(window).on("scroll", function () {
-        let scrollHeight = $(document).height();
-        let scrollPosition = $(window).height() + $(window).scrollTop();
-        let footHeight = $("footer").innerHeight();
-        if (scrollHeight - scrollPosition <= footHeight) {
-            $("#page-top").css({
-                position: "absolute",
-                bottom: footHeight,
-            });
-        } else {
-            $("#page-top").css({
-                position: "fixed",
-                bottom: "0",
-            });
+            $("#scroll").hide(); // 90%未満で要素を非表示
         }
     });
 });
