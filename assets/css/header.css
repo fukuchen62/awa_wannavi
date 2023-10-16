@@ -112,7 +112,7 @@ header {
 @media screen and (min-width:1023px) {
     .gnav__menu__content {
         max-width: 1200px;
-        width: 100%;
+        width: 92%;
         height: 100px;
         display: flex;
         position: absolute;
@@ -130,7 +130,7 @@ header {
         position: absolute;
         height: 60px;
         margin-top: 26px;
-        left: 75%;
+        left: 86%;
 
     }
 }
@@ -149,7 +149,7 @@ header {
 .form__box {
     position: absolute;
     text-align: left;
-    width: 227px;
+    width: 180px;
     background-color: #fff;
     height: 40px;
     border-radius: 30px;
@@ -175,8 +175,8 @@ header {
     background-color: #fff;
     border-radius: 20px;
     margin: 5px 0 5px 5px;
-    width: 180px;
-    font-size: 1.6rem;
+    width: 140px;
+    font-size: 1.4rem;
 }
 
 
@@ -203,8 +203,8 @@ header {
 
 .lupe {
     position: relative;
-    padding: 4px;
-    font-size: 18px;
+    padding: 3px;
+    font-size: 15px;
     color: #fff;
     background-color: #000;
     border-radius: 50%;
