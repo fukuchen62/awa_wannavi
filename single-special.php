@@ -13,7 +13,7 @@
 
             <!-- 帯になるコンテナーのタイトル -->
             <div class="container pd20">
-                <h2 class="article__title">初心者マナー</h2>
+                <h2 class="article__title"><?php the_title("") ?></h2>
             </div>
 
         </div>
@@ -24,18 +24,17 @@
             <!-- メインコラムコンテナー -->
             <div class="main__col">
 
-                <!-- コンテンツのサブタイトル -->
-                <h3 class="sub__ttl yellow"> <?php wp_title("") ?></h3>
-
-                <!-- カード型コンテンツ -->
-
                 <div class="card__2col">
+                    <!-- wpのメインクエリは個別ページでは一回だけループすると定義されています -->
+                    <!-- なので、個別でもthe contentsなどの前にループで囲いますp84 -->
+                    <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
+                    <?php the_content(); ?>
 
-
-
+                    <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
-
 
             </div>
 
@@ -44,10 +43,6 @@
 
         </div>
     </div>
-
-
-
-
 
 
 </main>
