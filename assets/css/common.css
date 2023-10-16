@@ -24,11 +24,13 @@ body {
     /* ヘッダー分上に余白を取る */
     margin-top: 60px;
 }
+
 @media screen and (min-width:1024px) {
     body {
         margin-top: 100px;
     }
 }
+
 a {
     /* リンクのアンダーバーを消す記載 */
     /* 文字がはみ出したら改行 */
@@ -537,6 +539,7 @@ a img:hover {
 .card__front {
     position: relative;
     width: 96%;
+    height: 100%;
     padding: 20px 15px;
     border-right: 3px solid #000;
     border-bottom: 3px solid #000;
