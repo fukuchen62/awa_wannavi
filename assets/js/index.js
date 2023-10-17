@@ -58,8 +58,24 @@ $(function () {
     let container = $('.top-map__modal-container');
 
     //開くボタンをクリックしたらモーダルを表示する
-    open.on('click', function () {
+    $('#tokushima__btn').on('click', function () {
         container.addClass('active');
+        setTokushima();
+        return false;
+    });
+    $('#east__btn').on('click', function () {
+        container.addClass('active');;
+        setEast();
+        return false;
+    });
+    $('#west_btn').on('click', function () {
+        container.addClass('active');
+        setWest();
+        return false;
+    });
+    $('#south__btn').on('click', function () {
+        container.addClass('active');
+        setSouth();
         return false;
     });
 
@@ -69,11 +85,11 @@ $(function () {
     });
 
     //モーダルの外側をクリックしたらモーダルを閉じる
-    $(document).on('click', function (e) {
-        if (!$(e.target).closest('.top-modal__modal-body').length) {
-            container.removeClass('active');
-        }
-    });
+    // $(document).on('click', function (e) {
+    //     if (!$(e.target).closest('.top-modal__modal-body').length) {
+    //         container.removeClass('active');
+    //     }
+    // });
 
 
     /*----------------------------

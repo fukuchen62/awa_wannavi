@@ -299,7 +299,7 @@
     .top-greeting {
         display: flex;
         align-items: center;
-        margin-bottom: 70px;
+        /* margin-bottom: 70px; */
     }
 
     /* ごあいさつ本文レイアウト */
@@ -593,6 +593,7 @@
 .top-map__modal-container {
     position: fixed;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     top: 0;
@@ -618,8 +619,49 @@
 /*モーダル枠の指定*/
 .top-map__modal-body {
     position: relative;
-    width: 80%;
-    height: 50vh;
+    width: 95%;
+    /* height: 50vh; */
+}
+
+.top-map__modal-sample {
+    width: 350px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto 0;
+    padding-right: 0 20px;
+    font-size: 2rem;
+}
+
+.top-map__header {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.top-map__btns input {
+    width: 90px;
+    padding: 10px 10px;
+    border: 2px burlywood solid;
+    background-color: lightpink;
+    font-size: 2rem;
+}
+
+.top-map__modal-sample img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    /* border: 1px brown solid; */
+}
+
+.top-map__modal-sample div {
+    display: flex;
+    align-items: center;
 }
 
 /*モーダルを閉じるボタンの指定*/
@@ -628,13 +670,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 0;
-    right: 0;
+    top: 40px;
+    right: 20px;
     width: 40px;
     height: 40px;
     color: #fff;
-    background-color: #000;
+    background-color: brown;
     cursor: pointer;
+    border: 1px white solid;
 }
 
 .top-map__map {
@@ -658,6 +701,11 @@
     .top-map__modal-open {
         /* margin-top: 60px;
         padding: 0 5%; */
+    }
+
+    .top-map__modal-close {
+        top: 40px;
+        right: 40px;
     }
 
     .top-map__dog {
