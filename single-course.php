@@ -2,7 +2,9 @@
 <?php get_header(); ?>
 
 <div class="container">
-    <div class="banner__head">モデルコース</div>
+    <div class="bnr__head bg__course">
+        <h2 class=" page__title">モデルコース</h2>
+    </div>
 
     <!-- いったんコンテナーに格納 -->
 
@@ -165,12 +167,12 @@
 
         <?php if (get_field('spot2') !== "") : ?>
 
-            <!-- スマホ版のアンダーイメージ -->
-            <div class="course-under-img">
-                <p><?php the_field('time1'); ?></p>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_03.svg" alt="">
-            </div>
+        <!-- スマホ版のアンダーイメージ -->
+        <div class="course-under-img">
+            <p><?php the_field('time1'); ?></p>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_03.svg" alt="">
+        </div>
     </div>
 
     <!-- スマホ版のモデルコースのイメージ -->
@@ -275,17 +277,17 @@
             </div>
         </div>
     </a>
-<?php endif; ?>
+    <?php endif; ?>
 
-<!-- スマホ版のアンダーイメージ -->
-<div class="course-under-img">
-    <p><?php the_field('time3'); ?></p>
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_07.svg" alt="">
-</div>
+    <!-- スマホ版のアンダーイメージ -->
+    <div class="course-under-img">
+        <p><?php the_field('time3'); ?></p>
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_07.svg" alt="">
+    </div>
 
 
-<?php if (get_field('spot3') !== "") : ?>
+    <?php if (get_field('spot3') !== "") : ?>
 
     <!-- スマホ版のモデルコースのイメージ -->
     <div class="none">
@@ -391,64 +393,64 @@
         </div>
     </a>
 
-<?php endif; ?>
+    <?php endif; ?>
 
-<div class="kakoi">
-    <!-- スマホ版のモデルコースのイメージ -->
-    <div class="none">
-        <div class="asobu-img">
-            <img class="asobu-img" src="<?php if (get_post_type(get_field('spot4')) == "enjoy") {
+    <div class="kakoi">
+        <!-- スマホ版のモデルコースのイメージ -->
+        <div class="none">
+            <div class="asobu-img">
+                <img class="asobu-img" src="<?php if (get_post_type(get_field('spot4')) == "enjoy") {
                                             echo get_template_directory_uri() . '/assets/img/course/course_ill_14_asobu.svg';
                                         } elseif (get_post_type(get_field('spot4')) == "stay") {
                                             echo get_template_directory_uri() . '/assets/img/course/course_ill_16_tomaru.svg';
                                         } elseif (get_post_type(get_field('spot4')) == "eat") {
                                             echo get_template_directory_uri() . '/assets/img/course/course_ill_15_taberu.svg';
                                         } ?>" alt="">
-        </div>
-        <div class="course-img">
-            <img src="<?php
+            </div>
+            <div class="course-img">
+                <img src="<?php
                         $val = get_post_custom_values('pic1', get_field('spot4'));
                         $img_url = wp_get_attachment_url($val[0]);
                         echo $img_url;
                         ?>" alt="">
+            </div>
         </div>
-    </div>
-    <!-- デスクトップ版のモデルコースイメージ -->
-    <div class="side-img1">
-        <div class="leftside-img2">
-            <p><?php the_field('time3'); ?></p>
-            <img class="fukidashi" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_18.svg" alt="">
-            <img class="flower" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_17.svg" alt="">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_19.svg" alt="">
-        </div>
+        <!-- デスクトップ版のモデルコースイメージ -->
+        <div class="side-img1">
+            <div class="leftside-img2">
+                <p><?php the_field('time3'); ?></p>
+                <img class="fukidashi" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_05.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_22.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_18.svg" alt="">
+                <img class="flower" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_17.svg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_19.svg" alt="">
+            </div>
 
-        <div class="center">
-            <img class="asobu-img" src="<?php if (get_post_type(get_field('spot4')) == "enjoy") {
+            <div class="center">
+                <img class="asobu-img" src="<?php if (get_post_type(get_field('spot4')) == "enjoy") {
                                             echo get_template_directory_uri() . '/assets/img/course/course_ill_14_asobu.svg';
                                         } elseif (get_post_type(get_field('spot4')) == "stay") {
                                             echo get_template_directory_uri() . '/assets/img/course/course_ill_16_tomaru.svg';
                                         } elseif (get_post_type(get_field('spot4')) == "eat") {
                                             echo get_template_directory_uri() . '/assets/img/course/course_ill_15_taberu.svg';
                                         } ?>" alt="">
-            <img class="course-img" src="<?php
+                <img class="course-img" src="<?php
                                             $val = get_post_custom_values('pic1', get_field('spot4'));
                                             $img_url = wp_get_attachment_url($val[0]);
                                             echo $img_url;
                                             ?>" alt="">
 
-            <!-- 施設名、施設情報 PC版 -->
-            <a href="<?php echo get_permalink(get_field('spot4')); ?>">
+                <!-- 施設名、施設情報 PC版 -->
+                <a href="<?php echo get_permalink(get_field('spot4')); ?>">
 
-                <div class="model-main-pc">
-                    <h2><?php
+                    <div class="model-main-pc">
+                        <h2><?php
                         $val = get_post_custom_values('facility', get_field('spot4'));
                         echo $val[0];
                         ?></h2>
-                    <div class="dotted-line"></div>
-                    <div>
-                        <p><a href="
+                        <div class="dotted-line"></div>
+                        <div>
+                            <p><a href="
                                 <?php
                                 $val = get_post_custom_values('url', get_field('spot4'));
                                 echo $val[0];
@@ -459,27 +461,27 @@
                                 echo $val[0];
                                 ?>
                             </a></p>
-                        <p><?php
+                            <p><?php
                             $val = get_post_custom_values('address', get_field('spot4'));
                             echo $val[0];
                             ?></p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
+            <img class="rightside-img1" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_20.svg" alt="">
         </div>
-        <img class="rightside-img1" src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_20.svg" alt="">
-    </div>
-    <!-- 施設名、施設情報 SP版 -->
-    <a href="<?php echo get_permalink(get_field('spot4')); ?>">
+        <!-- 施設名、施設情報 SP版 -->
+        <a href="<?php echo get_permalink(get_field('spot4')); ?>">
 
-        <div class="model-main-sp">
-            <h2><?php
+            <div class="model-main-sp">
+                <h2><?php
                 $val = get_post_custom_values('facility', get_field('spot4'));
                 echo $val[0];
                 ?></h2>
-            <div class="dotted-line"></div>
-            <div>
-                <p><a href="
+                <div class="dotted-line"></div>
+                <div>
+                    <p><a href="
                                 <?php
                                 $val = get_post_custom_values('url', get_field('spot4'));
                                 echo $val[0];
@@ -490,21 +492,21 @@
                         echo $val[0];
                         ?>
                     </a></p>
-                <p><?php
+                    <p><?php
                     $val = get_post_custom_values('address', get_field('spot4'));
                     echo $val[0];
                     ?></p>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
 
-    <!-- スマホ版のアンダーイメージ -->
-    <div class="course-under-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_18.svg" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_10.svg" alt="">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_09.svg" alt="">
+        <!-- スマホ版のアンダーイメージ -->
+        <div class="course-under-img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_18.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_10.svg" alt="">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_09.svg" alt="">
+        </div>
     </div>
-</div>
 
 </div>
 
