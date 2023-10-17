@@ -5,6 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!--description設定-->
+    <?php /*トップページ home▼*/
+    if (is_home()) : ?>
+        <meta name="description" content="「AwAワン！Navi」は、ワンちゃんと徳島にいらした方や県内在住でお出かけできるスポットを探している方に向けて、魅力あるスポットの情報を発信しているサイトです。" />
+
+    <?php /*（遊ぶ・泊まる・食べる）個別ページ */
+    elseif (is_singular('enjoy') || is_singular('eat') || is_singular('stay')) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+            <meta name="description" content="「AwAワン!Navi」では、徳島にある公園、自然、ドッグラン、ドッグカフェ、同伴可能な食事処、宿などおすすめの施設を掲載しております。" />
+        <?php endwhile; ?>
+
+    <?php /*（マナー、犬の豆知識、お出かけ情報、特集） */
+    elseif (is_singular('special')) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+            <meta name="description" content="ワンちゃんの豆知識、マナー、ドッグカフェや飼い主さんにインタビューした記事、モデルコースなどおすすめ情報として読んでいただきたい情報集めました。" />
+        <?php endwhile; ?>
+
+    <?php /*上記以外*/ else : ?>
+        <meta name="description" content="「AwAワン！Navi」のWebページです。" />
+
+    <?php endif; ?>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
@@ -258,7 +280,7 @@
                     </li>
                 </ul>
                 <ul class="menu__wrap">
-                    <li class="gnav"><a class="gnav__title" href="<?php echo home_url(''); ?>">マイページ</a>
+                    <li class="gnav"><a class="gnav__title" href="<?php echo home_url('/mypage/'); ?>">マイページ</a>
                     </li>
                 </ul>
                 <ul class="menu__wrap">

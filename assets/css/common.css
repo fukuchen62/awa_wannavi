@@ -493,6 +493,10 @@ a img:hover {
     color: #6bb6ff;
 }
 
+.card-box {
+    margin: 0 10px;
+}
+
 
 @media screen and (min-width:768px) {
 
@@ -540,10 +544,46 @@ a img:hover {
     position: relative;
     width: 96%;
     height: 100%;
-    padding: 20px 15px;
+    padding: 10px 10px;
     border-right: 3px solid #000;
     border-bottom: 3px solid #000;
 }
+
+/* カード背面の影 */
+.card__back {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    width: 97%;
+    height: 100%;
+    border-right: 8px solid #000;
+    border-bottom: 8px solid #000;
+}
+
+.card__back:before {
+    background-color: #000;
+    border-radius: 5px;
+    content: "";
+    display: block;
+    height: 8px;
+    position: relative;
+    top: 100%;
+    right: 3px;
+}
+
+.card__back:after {
+    background-color: #000;
+    position: absolute;
+    border-radius: 5px;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 8px;
+    left: 100%;
+    bottom: 13px;
+}
+
 
 /* 画像比率固定 */
 .card img {
@@ -566,7 +606,7 @@ a img:hover {
 
 /* 施設名 */
 .card__outline {
-    padding: 18px 0;
+    padding: 10px 0;
     border-bottom: 3px dashed #000;
     font-size: 20px;
 }
@@ -582,15 +622,10 @@ a img:hover {
     display: none;
 }
 
-/* カード背面の影 */
-.card__back {
-    position: absolute;
-    right: 0;
-    bottom: -15px;
-    width: 97%;
-    height: 100%;
-    border-right: 8px solid #000;
-    border-bottom: 8px solid #000;
+
+
+.wd45 {
+    width: 100%;
 }
 
 @media screen and (min-width: 769px) {
@@ -631,6 +666,26 @@ a img:hover {
     .card__contents {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .wd45 {
+        width: 45%;
+    }
+
+    .card__outline {
+        padding: 18px 0;
+    }
+
+    .card__front {
+        padding: 20px 15px;
+    }
+
+    .card__outline {
+        padding: 18px 0;
+    }
+
+    .card__front {
+        padding: 20px 15px;
     }
 }
 
@@ -717,6 +772,60 @@ a img:hover {
 .more-button:hover {
     opacity: 0.7;
 }
+
+/**************/
+/* NAVIボタン */
+/**************/
+
+
+/*プラグイン『wp-pagenavi』 css Start ↓*/
+.wp-pagenavi {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+    padding: 80px 0 50px 0;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+    color: #795A3C;
+    /* background-color: #FFF1DA; */
+    background-color: #FFF;
+    border: 1px solid #DBC9AA;
+    /* padding: 8px 15px; */
+    padding: 8px 12px;
+    margin: 0 2px;
+    /* margin: 2px 2px; */
+    white-space: nowrap;
+    /* -moz-border-radius: 3px; */
+    -moz-border-radius: 50%;
+    /* -webkit-border-radius: 3px; */
+    -webkit-border-radius: 50%;
+    /* border-radius: 3px; */
+    border-radius: 50%;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+}
+
+.wp-pagenavi a:hover {
+    color: #FFF;
+    background-color: #A09D71;
+    border-color: #999;
+}
+
+.wp-pagenavi span.current {
+    color: #FFF;
+    background-color: #FFC24B;
+    border-color: #FFC24B;
+    font-weight: bold;
+}
+
+/*wp-pagenavi css Endt ↑*/
 
 /*****************************************/
 /* marginのpx幅テンプレート等 */
