@@ -21,7 +21,7 @@ $(".globalnavi a").click(function () {
         $(".gnav__menu__content").hasClass("is-active")
 
 
-    ){
+    ) {
         // .menu-btnと.menuの要素から.is-activeを外す
         $(".hamburger__menu__btn").removeClass("is-active");
         $(".gnav__menu__content").removeClass("is-active");
@@ -31,5 +31,7 @@ $(window).resize(function () {
     let wW = $(window).width();
     if (wW > 1023) {
         $("body").removeClass('is-active');
+        $(".gnav__menu__content").removeClass('is-active');
+        $(".hamburger__menu__btn").removeClass('is-active');
     }
 });
