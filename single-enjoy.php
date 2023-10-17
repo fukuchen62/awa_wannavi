@@ -15,11 +15,7 @@
             <div class="facility__name mr20"><?php the_title(); ?></div>
 
             <!-- お気に入り登録ボタン -->
-            <?php
-            global $wp_query;
-            $post_id = $wp_query->get_queried_object_id();
-            echo get_favorites_button($post_id);
-            ?>
+            <?php echo do_shortcode('[favorite_button post_id="" site_id=""]'); ?>
 
             <!-- <svg xmlns="http://www.w3.org/2000/svg" width="48" height="54" viewBox="0 0 48 54" fill="none">
                 <g clip-path="url(#clip0_823_6329)">
