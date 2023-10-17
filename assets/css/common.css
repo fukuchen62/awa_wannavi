@@ -573,7 +573,7 @@ a img:hover {
 
 .card__back:after {
     background-color: #000;
-    position: relative;
+    position: absolute;
     border-radius: 5px;
     content: "";
     display: inline-block;
