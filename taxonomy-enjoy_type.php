@@ -31,23 +31,19 @@
 
             if (!empty($enjoy_types)) :
             ?>
-            <?php foreach ($enjoy_types as $item) : ?>
+                <?php foreach ($enjoy_types as $item) : ?>
 
-            <?php if ($enjoy_type->name == $item->name) : ?>
-            <div class="tab__block bgGL">
-                <a href="<?php echo get_term_link($item); ?>">
-                    <h3 class="tab__title"><?php echo $item->name; ?></h3>
-                </a>
-            </div>
-            <?php else : ?>
-            <div class="tab__block">
-                <a href="<?php echo get_term_link($item); ?>">
-                    <h3 class="tab__title"><?php echo $item->name; ?></h3>
-                </a>
-            </div>
-            <?php endif; ?>
+                    <?php if ($enjoy_type->name == $item->name) : ?>
+                        <a class="tab__block bgGL" href=" <?php echo get_term_link($item); ?>">
+                            <h3 class="tab__title"><?php echo $item->name; ?></h3>
+                        </a>
+                    <?php else : ?>
+                        <a class="tab__block" href="<?php echo get_term_link($item); ?>">
+                            <h3 class="tab__title"><?php echo $item->name; ?></h3>
+                        </a>
+                    <?php endif; ?>
 
-            <?php endforeach; ?>
+                <?php endforeach; ?>
             <?php endif; ?>
         </div>
 
@@ -67,20 +63,20 @@
         if (!empty($areas)) :
         ?>
 
-        <?php foreach ($areas as $area) : ?>
+            <?php foreach ($areas as $area) : ?>
 
-        <?php $area_slug = $area->slug; ?>
+                <?php $area_slug = $area->slug; ?>
 
-        <section class="card-box">
+                <section class="card-box">
 
-            <!-- 地域名 -->
-            <h2 class="sub__title bgGL mb20"><i class="fa-solid fa-paw"></i><?php echo $area->name; ?>エリア&nbsp;&nbsp;<span id="<?php echo $area->slug; ?>-title" class="show_num"></span></h2>
+                    <!-- 地域名 -->
+                    <h2 class="sub__title bgGL mb20"><i class="fa-solid fa-paw"></i><?php echo $area->name; ?>エリア&nbsp;&nbsp;<span id="<?php echo $area->slug; ?>-title" class="show_num"></span></h2>
 
 
-            <!-- カード型コンテンツまとめ -->
+                    <!-- カード型コンテンツまとめ -->
 
-            <div id="<?php echo $area->slug; ?>-area" class="card__contents mw12">
-                <?php
+                    <div id="<?php echo $area->slug; ?>-area" class="card__contents mw12">
+                        <?php
                         // カスタム投稿タイプ
                         $args = array(
                             'post_type' => 'enjoy',
@@ -107,27 +103,27 @@
                         $the_query =  new WP_Query($args);
                         ?>
 
-                <!-- 結果を表示させる -->
-                <?php if ($the_query->have_posts()) : ?>
-                <?php while ($the_query->have_posts()) : ?>
-                <?php $the_query->the_post(); ?>
+                        <!-- 結果を表示させる -->
+                        <?php if ($the_query->have_posts()) : ?>
+                            <?php while ($the_query->have_posts()) : ?>
+                                <?php $the_query->the_post(); ?>
 
-                <!-- カード型を読み込む -->
-                <?php get_template_part('template-parts/loop', 'card'); ?>
+                                <!-- カード型を読み込む -->
+                                <?php get_template_part('template-parts/loop', 'card'); ?>
 
-                <?php endwhile; ?>
-                <?php endif; ?>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
 
-            </div>
+                    </div>
 
-            <!-- Moreボタン -->
-            <button id="btn__<?php echo $area->slug; ?>" class="more-button">
-                MORE
-            </button>
+                    <!-- Moreボタン -->
+                    <button id="btn__<?php echo $area->slug; ?>" class="more-button">
+                        MORE
+                    </button>
 
-        </section>
+                </section>
 
-        <?php endforeach; ?>
+            <?php endforeach; ?>
         <?php endif; ?>
 
         <!-- サブクエリをリセットする -->
