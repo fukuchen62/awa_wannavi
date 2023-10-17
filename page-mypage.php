@@ -24,37 +24,40 @@
     <!-- カード型コンテンツまとめ -->
     <div class="card__contents mw12">
 
-        <!-- カード型 -->
-        <div class="card tokushima">
-            <a href="#">
-                <!-- 背面 -->
-                <div class="card__back"></div>
-                <!-- 前面 -->
-                <div class="card__front">
-                    <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
-                    <div class="card__tag">
-                        <p>遊ぶ</p>
-                    </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
-                    <div class="card__line"></div>
-                    <div class="card__textarea">
-                        <dl>
-                            <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
-                        </dl>
-                        <dl>
-                            <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
-                        </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
-                        </dl>
-                    </div>
-                </div>
-            </a>
-        </div>
+        <?php
+        if (function_exists('get_user_favorites')) :
+            // code...
+            $favorites = get_user_favorites();
+            krsort($favorites);
+
+            // print_r($favorites);
+
+            if ($favorites) :
+                $the_query = new WP_Query([
+                    'post_type' => 'enjoy',
+                    'posts_per_page' => -1,
+                    'ignore_sticky_posts' => true,
+                    'post__in' => $favorites,
+                    'orderby' => 'post__in',
+                ]);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) :
+                        $the_query->the_post();
+
+                        // マップ用
+                        // $latitude = SCF::get('latitude'); // 緯度のフィールド名latitude
+                        // $longitude = SCF::get('longitude'); // 経度のフィールド名longitude
+                        // $text = esc_html(SCF::get('event_name')); // 体験の名前のフィールド名event_name
+
+                        // $latitude = get_field('latitude'); // 緯度のフィールド名latitude
+                        // $longitude = get_field('longitude'); // 経度のフィールド名longitude
+                        // $text = esc_html(get_field('event_name')); // 体験の名前のフィールド名event_name
+
+                        // $events['lat'][] = $latitude;
+                        // $events['lng'][] = $longitude;
+                        // $events['text'][] = $text;
+        ?>
+
 
         <!-- カード型 -->
         <div class="card tokushima">
@@ -64,95 +67,58 @@
                 <!-- 前面 -->
                 <div class="card__front">
                     <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
-                    <div class="card__tag">
+                    <!-- サムネイルの取得 -->
+                    <a href="<?php the_permalink(); ?>">
+                        <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail("medium"); ?>
+                        <?php else : ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
+                        <?php endif; ?>
+                    </a>
+                    <div class="card__tag bgGL">
                         <p>遊ぶ</p>
                     </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
+                    <h2 class="card__outline"><?php the_title(); ?></h2>
                     <div class="card__line"></div>
                     <div class="card__textarea">
                         <dl>
                             <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
+                            <dd><?php the_field("address"); ?></dd>
                         </dl>
                         <dl>
                             <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
+                            <dd><?php the_field("tel"); ?></dd>
                         </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
-                        </dl>
+                        <!-- <dl class="card__url">
+                                <dd>●URL：</dd>
+                                <dd><a href="<?php the_field("url"); ?>"><?php the_field("url"); ?></a></dd>
+                            </dl> -->
                     </div>
                 </div>
             </a>
         </div>
 
-        <!-- カード型 -->
-        <div class="card tokushima">
-            <a href="#">
-                <!-- 背面 -->
-                <div class="card__back"></div>
-                <!-- 前面 -->
-                <div class="card__front">
-                    <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
-                    <div class="card__tag bgBL">
-                        <p>遊ぶ</p>
-                    </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
-                    <div class="card__line"></div>
-                    <div class="card__textarea">
-                        <dl>
-                            <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
-                        </dl>
-                        <dl>
-                            <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
-                        </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
-                        </dl>
-                    </div>
-                </div>
-            </a>
-        </div>
+        <?php
+                    // $event_count++;
+                    // end ループ while
+                    endwhile;
+                    wp_reset_postdata();
+                    // else :
+                    ?>
+    </div>
 
-        <!-- カード型 -->
-        <div class="card tokushima">
-            <a href="#">
-                <!-- 背面 -->
-                <div class="card__back"></div>
-                <!-- 前面 -->
-                <div class="card__front">
-                    <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
-                    <div class="card__tag">
-                        <p>遊ぶ</p>
-                    </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
-                    <div class="card__line"></div>
-                    <div class="card__textarea">
-                        <dl>
-                            <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
-                        </dl>
-                        <dl>
-                            <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
-                        </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
-                        </dl>
-                    </div>
-                </div>
-            </a>
-        </div>
+    <?php
+                else :
 
-        <!-- 記事が4以上ならmoreボタンを出す。 -->
+                endif;
+            endif;
+        // end favorites
+        endif;
+        // print_r($events);
+        // print_r($event_count);
+?>
+
+    <!-- 記事が4以上ならmoreボタンを出す。 -->
 
     </div>
 
@@ -171,135 +137,101 @@
     <!-- カード型コンテンツまとめ -->
     <div class="card__contents mw12">
 
-        <!-- カード型 -->
-        <div class="card tokushima">
-            <a href="#">
-                <!-- 背面 -->
-                <div class="card__back"></div>
-                <!-- 前面 -->
-                <div class="card__front">
-                    <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
-                    <div class="card__tag">
-                        <p>遊ぶ</p>
-                    </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
-                    <div class="card__line"></div>
-                    <div class="card__textarea">
-                        <dl>
-                            <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
-                        </dl>
-                        <dl>
-                            <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
-                        </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
-                        </dl>
-                    </div>
-                </div>
-            </a>
-        </div>
+        <?php
+    if (function_exists('get_user_favorites')) :
+        // code...
+        $favorites = get_user_favorites();
+        krsort($favorites);
+
+        // print_r($favorites);
+
+        if ($favorites) :
+            $the_query = new WP_Query([
+                'post_type' => 'stay',
+                'posts_per_page' => -1,
+                'ignore_sticky_posts' => true,
+                'post__in' => $favorites,
+                'orderby' => 'post__in',
+            ]);
+            if ($the_query->have_posts()) :
+                while ($the_query->have_posts()) :
+                    $the_query->the_post();
+
+                    // マップ用
+                    // $latitude = SCF::get('latitude'); // 緯度のフィールド名latitude
+                    // $longitude = SCF::get('longitude'); // 経度のフィールド名longitude
+                    // $text = esc_html(SCF::get('event_name')); // 体験の名前のフィールド名event_name
+
+                    // $latitude = get_field('latitude'); // 緯度のフィールド名latitude
+                    // $longitude = get_field('longitude'); // 経度のフィールド名longitude
+                    // $text = esc_html(get_field('event_name')); // 体験の名前のフィールド名event_name
+
+                    // $events['lat'][] = $latitude;
+                    // $events['lng'][] = $longitude;
+                    // $events['text'][] = $text;
+    ?>
+
 
         <!-- カード型 -->
-        <div class="card tokushima">
+        <div class="card east">
             <a href="#">
                 <!-- 背面 -->
                 <div class="card__back"></div>
                 <!-- 前面 -->
                 <div class="card__front">
                     <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
-                    <div class="card__tag">
-                        <p>遊ぶ</p>
-                    </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
-                    <div class="card__line"></div>
-                    <div class="card__textarea">
-                        <dl>
-                            <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
-                        </dl>
-                        <dl>
-                            <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
-                        </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
-                        </dl>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <!-- カード型 -->
-        <div class="card tokushima">
-            <a href="#">
-                <!-- 背面 -->
-                <div class="card__back"></div>
-                <!-- 前面 -->
-                <div class="card__front">
-                    <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
+                    <!-- サムネイルの取得 -->
+                    <a href="<?php the_permalink(); ?>">
+                        <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail("medium"); ?>
+                        <?php else : ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
+                        <?php endif; ?>
+                    </a>
                     <div class="card__tag bgBL">
-                        <p>遊ぶ</p>
+                        <p>泊まる</p>
                     </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
+                    <h2 class="card__outline"><?php the_title(); ?></h2>
                     <div class="card__line"></div>
                     <div class="card__textarea">
                         <dl>
                             <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
+                            <dd><?php the_field("address"); ?></dd>
                         </dl>
                         <dl>
                             <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
+                            <dd><?php the_field("tel"); ?></dd>
                         </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
+                        <!-- <dl class="card__url">
+                                <dd>●URL：</dd>
+                                <dd><a href="<?php the_field("url"); ?>"><?php the_field("url"); ?></a></dd> -->
                         </dl>
                     </div>
                 </div>
             </a>
         </div>
 
-        <!-- カード型 -->
-        <div class="card tokushima">
-            <a href="#">
-                <!-- 背面 -->
-                <div class="card__back"></div>
-                <!-- 前面 -->
-                <div class="card__front">
-                    <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
-                    <div class="card__tag">
-                        <p>遊ぶ</p>
-                    </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
-                    <div class="card__line"></div>
-                    <div class="card__textarea">
-                        <dl>
-                            <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
-                        </dl>
-                        <dl>
-                            <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
-                        </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
-                        </dl>
-                    </div>
-                </div>
-            </a>
-        </div>
+        <?php
+                // $event_count++;
+                // end ループ while
+                endwhile;
+                wp_reset_postdata();
+                // else :
+                ?>
+    </div>
 
-        <!-- 記事が4以上ならmoreボタンを出す。 -->
+    <?php
+            else :
+
+            endif;
+        endif;
+    // end favorites
+    endif;
+    // print_r($events);
+    // print_r($event_count);
+?>
+
+    <!-- 記事が4以上ならmoreボタンを出す。 -->
 
     </div>
 
@@ -318,37 +250,40 @@
     <!-- ３つめのカテゴリ -->
     <div class="card__contents mw12">
 
-        <!-- カード型 -->
-        <div class="card west">
-            <a href="#">
-                <!-- 背面 -->
-                <div class="card__back"></div>
-                <!-- 前面 -->
-                <div class="card__front">
-                    <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
-                    <div class="card__tag">
-                        <p>遊ぶ</p>
-                    </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
-                    <div class="card__line"></div>
-                    <div class="card__textarea">
-                        <dl>
-                            <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
-                        </dl>
-                        <dl>
-                            <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
-                        </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
-                        </dl>
-                    </div>
-                </div>
-            </a>
-        </div>
+        <?php
+    if (function_exists('get_user_favorites')) :
+        // code...
+        $favorites = get_user_favorites();
+        krsort($favorites);
+
+        // print_r($favorites);
+
+        if ($favorites) :
+            $the_query = new WP_Query([
+                'post_type' => 'eat',
+                'posts_per_page' => -1,
+                'ignore_sticky_posts' => true,
+                'post__in' => $favorites,
+                'orderby' => 'post__in',
+            ]);
+            if ($the_query->have_posts()) :
+                while ($the_query->have_posts()) :
+                    $the_query->the_post();
+
+                    // マップ用
+                    // $latitude = SCF::get('latitude'); // 緯度のフィールド名latitude
+                    // $longitude = SCF::get('longitude'); // 経度のフィールド名longitude
+                    // $text = esc_html(SCF::get('event_name')); // 体験の名前のフィールド名event_name
+
+                    // $latitude = get_field('latitude'); // 緯度のフィールド名latitude
+                    // $longitude = get_field('longitude'); // 経度のフィールド名longitude
+                    // $text = esc_html(get_field('event_name')); // 体験の名前のフィールド名event_name
+
+                    // $events['lat'][] = $latitude;
+                    // $events['lng'][] = $longitude;
+                    // $events['text'][] = $text;
+    ?>
+
 
         <!-- カード型 -->
         <div class="card west">
@@ -358,95 +293,58 @@
                 <!-- 前面 -->
                 <div class="card__front">
                     <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
-                    <div class="card__tag">
-                        <p>遊ぶ</p>
+                    <!-- サムネイルの取得 -->
+                    <a href="<?php the_permalink(); ?>">
+                        <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail("medium"); ?>
+                        <?php else : ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
+                        <?php endif; ?>
+                    </a>
+                    <div class="card__tag bgPK">
+                        <p>食べる</p>
                     </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
+                    <h2 class="card__outline"><?php the_title(); ?></h2>
                     <div class="card__line"></div>
                     <div class="card__textarea">
                         <dl>
                             <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
+                            <dd><?php the_field("address"); ?></dd>
                         </dl>
                         <dl>
                             <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
+                            <dd><?php the_field("tel"); ?></dd>
                         </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
-                        </dl>
+                        <!-- <dl class="card__url">
+                                <dd>●URL：</dd>
+                                <dd><a href="<?php the_field("url"); ?>"><?php the_field("url"); ?></a></dd>
+                                </dl> -->
                     </div>
                 </div>
             </a>
         </div>
 
-        <!-- カード型 -->
-        <div class="card west">
-            <a href="#">
-                <!-- 背面 -->
-                <div class="card__back"></div>
-                <!-- 前面 -->
-                <div class="card__front">
-                    <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
-                    <div class="card__tag">
-                        <p>遊ぶ</p>
-                    </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
-                    <div class="card__line"></div>
-                    <div class="card__textarea">
-                        <dl>
-                            <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
-                        </dl>
-                        <dl>
-                            <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
-                        </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
-                        </dl>
-                    </div>
-                </div>
-            </a>
-        </div>
+        <?php
+                // $event_count++;
+                // end ループ while
+                endwhile;
+                wp_reset_postdata();
+                // else :
+                ?>
+    </div>
 
-        <!-- カード型 -->
-        <div class="card west">
-            <a href="#">
-                <!-- 背面 -->
-                <div class="card__back"></div>
-                <!-- 前面 -->
-                <div class="card__front">
-                    <!-- カード内情報 -->
-                    <img src="../assets/img/cat.jpg" alt="">
-                    <div class="card__tag">
-                        <p>遊ぶ</p>
-                    </div>
-                    <h2 class="card__outline">徳島○○○公園</h2>
-                    <div class="card__line"></div>
-                    <div class="card__textarea">
-                        <dl>
-                            <dd>●住所：</dd>
-                            <dd>徳島市○○○○○-○○</dd>
-                        </dl>
-                        <dl>
-                            <dd>●お問い合わせ：</dd>
-                            <dd>○○-○○-○○○</dd>
-                        </dl>
-                        <dl class="card__url">
-                            <dd>●URL：</dd>
-                            <dd><a href="">aaaaaaaaa.com</a></dd>
-                        </dl>
-                    </div>
-                </div>
-            </a>
-        </div>
+    <?php
+            else :
 
-        <!-- 記事が4以上ならmoreボタンを出す。 -->
+            endif;
+        endif;
+    // end favorites
+    endif;
+    // print_r($events);
+    // print_r($event_count);
+?>
+
+    <!-- 記事が4以上ならmoreボタンを出す。 -->
 
     </div>
 
