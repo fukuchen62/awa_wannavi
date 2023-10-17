@@ -178,20 +178,20 @@
                         </div>
                         <ul class="menu__item__wrap eat__wrap">
                             <li class="menu__item">
-                                <a href="<?php echo home_url('/eat_type/cafe/'); ?>">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_taberu01.jpg" alt="犬">
-                                    <dl>
-                                        <dt>ドッグカフェ</dt>
-                                        <dd>わんちゃん専用メニューをご用意！</dd>
-                                    </dl>
-                                </a>
-                            </li>
-                            <li class="menu__item">
                                 <a href="<?php echo home_url('/eat_type/restaurant/'); ?>">
                                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_taberu02.jpg" alt="犬">
                                     <dl>
                                         <dt>ペットと食事</dt>
                                         <dd>わんちゃんと一緒においしく食べよう！</dd>
+                                    </dl>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="<?php echo home_url('/eat_type/cafe/'); ?>">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/img_mega_taberu01.jpg" alt="犬">
+                                    <dl>
+                                        <dt>ドッグカフェ</dt>
+                                        <dd>わんちゃん専用メニューをご用意！</dd>
                                     </dl>
                                 </a>
                             </li>
