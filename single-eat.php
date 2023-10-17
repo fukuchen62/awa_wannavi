@@ -5,7 +5,11 @@
 
     <div class="container">
 
-        <h2 class="h2__title mb10 fs35"><?php the_field("eat_type"); ?></h2>
+        <h2 class="h2__title mb10 fs35"> <?php
+                                            $taxonomy_slug = "eat_type";
+                                            $taxonomy = get_the_terms($post->ID, $taxonomy_slug);
+                                            echo $taxonomy[0]->name; //ターム名
+                                            ?></h2>
 
         <div class="Breadcrumb mb20">
             <?php get_template_part("template-parts/breadcrumb"); ?>
@@ -66,12 +70,12 @@
                     if (!empty($taxonomy_names)) :
                         foreach ($taxonomy_names as $tax_name) : ?>
 
-                    <li class="card__tag single-tag"><?php echo $tax_name; ?> </li>
+                            <li class="card__tag single-tag"><?php echo $tax_name; ?> </li>
 
                     <?php endforeach;
                     endif;  ?>
                     <?php if (get_field("note") !== "") : ?>
-                    <li class="card__tag single-tag">特記事項あり</li>
+                        <li class="card__tag single-tag">特記事項あり</li>
                     <?php endif; ?>
                 </ul>
 
@@ -113,44 +117,44 @@
                         </dd>
                     </dl>
                     <?php if (get_field("instagram") !== "") : ?>
-                    <dl>
-                        <dt>Instagram</dt>
-                        <dd>
-                            <a href="<?php the_field("instagram"); ?>" target="_blank"><?php the_field("instagram"); ?></a>
-                        </dd>
-                    </dl>
+                        <dl>
+                            <dt>Instagram</dt>
+                            <dd>
+                                <a href="<?php the_field("instagram"); ?>" target="_blank"><?php the_field("instagram"); ?></a>
+                            </dd>
+                        </dl>
                     <?php endif; ?>
                     <?php if (get_field("facebook") !== "") : ?>
-                    <dl>
-                        <dt>Facebook</dt>
-                        <dd>
-                            <a href="<?php the_field("facebook"); ?>" target="_blank"><?php the_field("facebook"); ?></a>
-                        </dd>
-                    </dl>
+                        <dl>
+                            <dt>Facebook</dt>
+                            <dd>
+                                <a href="<?php the_field("facebook"); ?>" target="_blank"><?php the_field("facebook"); ?></a>
+                            </dd>
+                        </dl>
                     <?php endif; ?>
                     <?php if (get_field("x") !== "") : ?>
-                    <dl>
-                        <dt>x</dt>
-                        <dd>
-                            <a href="<?php the_field("x"); ?>" target="_blank"><?php the_field("x"); ?></a>
-                        </dd>
-                    </dl>
+                        <dl>
+                            <dt>x</dt>
+                            <dd>
+                                <a href="<?php the_field("x"); ?>" target="_blank"><?php the_field("x"); ?></a>
+                            </dd>
+                        </dl>
                     <?php endif; ?>
                     <?php if (get_field("sns") !== "") : ?>
-                    <dl>
-                        <dt>SNS</dt>
-                        <dd>
-                            <a href="<?php the_field("sns"); ?>" target="_blank"><?php the_field("sns"); ?></a>
-                        </dd>
-                    </dl>
+                        <dl>
+                            <dt>SNS</dt>
+                            <dd>
+                                <a href="<?php the_field("sns"); ?>" target="_blank"><?php the_field("sns"); ?></a>
+                            </dd>
+                        </dl>
                     <?php endif; ?>
                     <dl>
                         <dt>テイクアウト</dt>
                         <dd>
                             <?php if (get_field("takeout")) : ?>
-                            <span>可能</span>
+                                <span>可能</span>
                             <?php else : ?>
-                            <span>不可</span>
+                                <span>不可</span>
                             <?php endif; ?>
                         </dd>
                     </dl>
@@ -158,9 +162,9 @@
                         <dt>予約</dt>
                         <dd>
                             <?php if (get_field("reservation")) : ?>
-                            <span>可能</span>
+                                <span>可能</span>
                             <?php else : ?>
-                            <span>不可</span>
+                                <span>不可</span>
                             <?php endif; ?>
                         </dd>
                     </dl>
@@ -171,20 +175,16 @@
                     <dl>
                         <dt>駐車場（車）</dt>
                         <dd><?php if (get_field("parking")) : ?>
-                            <span>有り</span>
+                                <span>有り</span>
                             <?php else : ?>
-                            <span>無し</span>
+                                <span>無し</span>
                             <?php endif; ?>
                         </dd>
                     </dl>
                     <dl>
                         <dt>業態</dt>
                         <dd>
-                            <?php
-                            $taxonomy_slug = "eat_type";
-                            $taxonomy = get_the_terms($post->ID, $taxonomy_slug);
-                            echo $taxonomy[0]->name; //ターム名
-                            ?>
+                            <?php the_field("eat_type"); ?>
                         </dd>
                     </dl>
                     <dl>
@@ -243,49 +243,49 @@
             ?>
 
             <?php if ($nearby_query->have_posts()) : ?>
-            <?php while ($nearby_query->have_posts()) : ?>
-            <?php $nearby_query->the_post(); ?>
+                <?php while ($nearby_query->have_posts()) : ?>
+                    <?php $nearby_query->the_post(); ?>
 
-            <!-- カード型 -->
-            <div class="card tokushima">
-                <a href="#">
-                    <!-- 背面 -->
-                    <div class="card__back"></div>
-                    <!-- 前面 -->
-                    <div class="card__front">
-                        <!-- カード内情報 -->
-                        <!-- サムネイルの取得 -->
-                        <a href="<?php the_permalink(); ?>">
-                            <?php if (has_post_thumbnail()) : ?>
-                            <?php the_post_thumbnail("medium"); ?>
-                            <?php else : ?>
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
-                            <?php endif; ?>
-                        </a>
-                        <div class="card__tag bgPK">
-                            <p>食べる</p>
-                        </div>
-                        <h2 class="card__outline"><?php the_title(); ?></h2>
-                        <div class="card__line"></div>
-                        <div class="card__textarea">
-                            <dl>
-                                <dd>●住所：</dd>
-                                <dd><?php the_field("address"); ?></dd>
-                            </dl>
-                            <dl>
-                                <dd>●お問い合わせ：</dd>
-                                <dd><?php the_field("tel"); ?></dd>
-                            </dl>
-                            <!-- <dl class="card__url">
+                    <!-- カード型 -->
+                    <div class="card tokushima">
+                        <a href="#">
+                            <!-- 背面 -->
+                            <div class="card__back"></div>
+                            <!-- 前面 -->
+                            <div class="card__front">
+                                <!-- カード内情報 -->
+                                <!-- サムネイルの取得 -->
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <?php the_post_thumbnail("medium"); ?>
+                                    <?php else : ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
+                                    <?php endif; ?>
+                                </a>
+                                <div class="card__tag bgPK">
+                                    <p>食べる</p>
+                                </div>
+                                <h2 class="card__outline"><?php the_title(); ?></h2>
+                                <div class="card__line"></div>
+                                <div class="card__textarea">
+                                    <dl>
+                                        <dd>●住所：</dd>
+                                        <dd><?php the_field("address"); ?></dd>
+                                    </dl>
+                                    <dl>
+                                        <dd>●お問い合わせ：</dd>
+                                        <dd><?php the_field("tel"); ?></dd>
+                                    </dl>
+                                    <!-- <dl class="card__url">
                                 <dd>●URL：</dd>
                                 <dd><a href="<?php the_field("url"); ?>"><?php the_field("url"); ?></a></dd>
                                 </dl> -->
-                        </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
 
-            <?php endwhile; ?>
+                <?php endwhile; ?>
             <?php endif; ?>
             <?php wp_reset_postdata(); ?>
 
@@ -299,14 +299,14 @@
 
         <!-- 特集記事リンク -->
         <?php if (get_field('url_article') !== "") : ?>
-        <div class="link__area flex mt100">
-            <div class="headline flex">
-                <h2 class="fs24to30"><i class="fa-solid fa-paw"></i>関連記事</h2>
+            <div class="link__area flex mt100">
+                <div class="headline flex">
+                    <h2 class="fs24to30"><i class="fa-solid fa-paw"></i>関連記事</h2>
+                </div>
+                <a class="special__article flex mt40">
+                    <p class="fs24">特集記事</p>
+                </a>
             </div>
-            <a class="special__article flex mt40">
-                <p class="fs24">特集記事</p>
-            </a>
-        </div>
         <?php endif; ?>
     </div>
 </main>
