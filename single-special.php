@@ -39,9 +39,30 @@
         </div>
         <h2 class="article__title">こちらの記事はいかがですか？</h2>
 
-        <!-- カード型を読み込む -->
-        <?php get_template_part('template-parts/loop', 'card_tax-special'); ?>
+        <section class="card-box">
 
+            <!-- カード型を読み込む -->
+            <?php
+            $nearby_query = new WP_Query(
+                array(
+                    'post_type' => 'special',
+                    'orderby' => 'rand',
+                    'post_per_page' => '3',
+                )
+            );
+            ?>
+
+            <?php if ($nearby_query->have_posts()) : ?>
+            <?php while ($nearby_query->have_posts()) : ?>
+            <?php $nearby_query->the_post(); ?>
+
+            <!-- カード型を読み込む -->
+            <?php get_template_part('template-parts/loop', 'card_special'); ?>
+
+            <?php endwhile; ?>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+        </section>
     </div>
 
 
