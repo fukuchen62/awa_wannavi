@@ -258,6 +258,10 @@
                     </li>
                 </ul>
                 <ul class="menu__wrap">
+                    <li class="gnav"><a class="gnav__title" href="<?php echo home_url(''); ?>">マイページ</a>
+                    </li>
+                </ul>
+                <ul class="menu__wrap">
                     <li class="gnav"><a class="gnav__title" href="<?php echo home_url('/filter/'); ?>">検索</a>
                     </li>
                 </ul>
