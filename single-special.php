@@ -9,13 +9,8 @@
         <?php get_template_part('template-parts/breadcrumb'); ?>
 
         <!-- h2帯タイトル -->
-        <div class="container">
-
-            <!-- 帯になるコンテナーのタイトル -->
-            <div class="container pd20">
-                <h2 class="article__title"><?php the_title("") ?></h2>
-            </div>
-
+        <div class="pd20">
+            <h2 class="article__title"><?php the_title("") ?></h2>
         </div>
 
         <!-- 2col全体を格納するコンテナー -->
@@ -42,6 +37,11 @@
             <?php get_sidebar("special"); ?>
 
         </div>
+        <h2 class="article__title">こちらの記事はいかがですか？</h2>
+
+        <!-- カード型を読み込む -->
+        <?php get_template_part('template-parts/loop', 'card_tax-special'); ?>
+
     </div>
 
 

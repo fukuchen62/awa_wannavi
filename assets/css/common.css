@@ -593,6 +593,10 @@ a img:hover {
     border-bottom: 8px solid #000;
 }
 
+.wd45 {
+    width: 100%;
+}
+
 @media screen and (min-width: 769px) {
 
     /* カードサイズ（PC）+ カーソル判定 */
@@ -631,6 +635,10 @@ a img:hover {
     .card__contents {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .wd45 {
+        width: 45%;
     }
 }
 
