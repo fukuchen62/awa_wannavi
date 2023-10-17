@@ -780,6 +780,7 @@ a img:hover {
 
 /*プラグイン『wp-pagenavi』 css Start ↓*/
 .wp-pagenavi {
+    width: 100%;
     margin: 0 auto;
     clear: both;
     text-align: center;
