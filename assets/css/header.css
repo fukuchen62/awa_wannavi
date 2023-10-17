@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 /* ヘッダー */
+body.is-active {
+    overflow: hidden;
+}
 header {
     position: fixed;
     top: 0;
