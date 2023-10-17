@@ -80,11 +80,11 @@ function awa_wannavi_add_common_scripts()
 
     // 共通のJavaScriptを読み込む
     // jQueryライブラリを読み込む
-    // wp_enqueue_script('jquery');
+    wp_enqueue_script('jquery');
 
     // 00.『jQuery』
     // WordPress本体のjquery.jsを読み込まない
-    wp_deregister_script('jquery');
+    // wp_deregister_script('jquery');
 
     // JavaScriptファイルを読み込む
     // wp_enqueue_script(
