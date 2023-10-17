@@ -106,8 +106,8 @@
                     <li><a href="<?php echo home_url('/eat_type/restaurant/'); ?>">ペットと食事</a></li>
                 </ul>
                 <ul class="large-menu">モデルコース
-                    <li><a href="<?php echo home_url('/course/co02/'); ?>">川コース</a></li>
-                    <li><a href="<?php echo home_url('/course/co01/'); ?>">海コース</a></li>
+                    <li><a href="<?php echo home_url('/course/co01/'); ?>">川コース</a></li>
+                    <li><a href="<?php echo home_url('/course/co02/'); ?>">海コース</a></li>
                     <li><a href="<?php echo home_url('/course/co03/'); ?>">山コース</a></li>
                 </ul>
                 <ul class="large-menu">おすすめ情報
