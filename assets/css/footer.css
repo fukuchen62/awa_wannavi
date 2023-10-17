@@ -121,9 +121,16 @@ ul .large-menu {
     bottom: 200px;
     z-index: 5;
     cursor: pointer;
+    margin-left: -45px;
     rotate: 60deg;
     background-color: none;
+    transition: all 1s;
     animation: fadein 2s ease-out forwards;
+}
+.awamaru.is-active{
+    margin-left: 0;
+    rotate: 0deg;
+    left: 0;
 }
 
 /* PC幅 */
@@ -137,18 +144,16 @@ ul .large-menu {
         cursor: pointer;
         rotate: 60deg;
         background-color: none;
-        animation: fadein 2s ease-out forwards;
+        /* animation: fadein 2s ease-out forwards; */
     }
 }
 
 /* 吹き出しの画像 */
 .awamaru_commentbox {
-    /* display: none; */
     position: fixed;
-    /* 位置 */
-    margin-left: 80px;
-    bottom: 300px;
-    width: 200px;
+    margin-left: 70px;
+    bottom: 280px;
+    width: 230px;
     z-index: 5;
     -webkit-animation: 5s fukidashi_animation steps(1, start) infinite;
     animation: 5s fukidashi_animation steps(1, start) infinite;
@@ -157,12 +162,11 @@ ul .large-menu {
 /* PC幅 */
 @media screen and (min-width: 1023px) {
     .awamaru_commentbox {
-        /* display: none; */
         position: fixed;
         /* 位置 */
-        margin-left: 100px;
+        margin-left: 75px;
         bottom: 280px;
-        width: 200px;
+        width: 250px;
         z-index: 5;
         -webkit-animation: 5s fukidashi_animation steps(1, start) infinite;
         animation: 5s fukidashi_animation steps(1, start) infinite;
@@ -171,7 +175,6 @@ ul .large-menu {
 
 /* あわまるのセリフ */
 .awamaru_comment {
-    /* display: none; */
     font-size: 14px;
     font-weight: bold;
     position: fixed;
@@ -187,15 +190,15 @@ ul .large-menu {
 /* PC幅 */
 @media screen and (min-width: 1023px) {
     .awamaru_comment {
-        /* display: none; */
         font-size: 14px;
         font-weight: bold;
         position: fixed;
         margin-left: 100px;
-        bottom: 320px;
+        bottom: 340px;
         z-index: 6;
         text-align: center;
         color: #3E3A39;
+        line-height: 1.3;
         width: 200px;
         word-wrap: break-word;
     }
@@ -204,6 +207,19 @@ ul .large-menu {
 /* 吹き出しとセリフのセット */
 .awamaru_commentset {
     display: none;
+    transition: 0.5s;
+}
+.awamaru_commentset.is-active{
+    display: block;
+    animation: appear 0.5s ease;
+}
+@keyframes appear {
+    0%{
+    opacity: 0;
+    }
+    100%{
+    opacity: 1;
+    }
 }
 
 /* 吹き出しカタカタ */

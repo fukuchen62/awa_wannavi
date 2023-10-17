@@ -1,7 +1,7 @@
     <!-- footer開始 -->
     <footer>
         <!-- js -->
-        <script>
+        <?php /*<script>
             // 豆知識の配列を生成
 
             let mames = [];
@@ -36,14 +36,14 @@
             // ランダムに豆知識を表示させる
 
             function msgOutput() {
-                // 変数mameに配列を代入
-                //変数ｒに、0以上1以下のランダムな数字とmameのlength(35）を掛けた結果（小数点を切り捨てた数字）を代入
-                let r = Math.floor(Math.random() * mames.length);
+            // 変数mameに配列を代入
+            //変数ｒに、0以上1以下のランダムな数字とmameのlength(35）を掛けた結果（小数点を切り捨てた数字）を代入
+            let r = Math.floor(Math.random() * mames.length);
 
-                document.getElementById("awamaru_comment").innerHTML = mames[r]; //上の式で出た結果をHTMLで"awamaru_comment"に表示する
-                return false;
+            document.getElementById("awamaru_comment").innerHTML = mames[r]; //上の式で出た結果をHTMLで"awamaru_comment"に表示する
+            return false;
             }
-        </script>
+            </script> */ ?>
         <div class="awamaru_trivia foot_scroll">
             <div class="awamaru_commentset fukidashi_animation">
                 <img class="awamaru_commentbox" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/hukidasi.png" alt="あわまる吹き出し">
@@ -52,9 +52,10 @@
 
             </div>
         </div>
-        <input class="awamaru" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/awamaru.png" value="豆知識" onclick="msgOutput()" alt="あわまる" onsubmit="return false" style="margin-left: -45px; rotate: 45deg;">
+        <?php /* <input class="awamaru" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/awamaru.png" value="豆知識" onclick="msgOutput()" alt="あわまる" onsubmit="return false" style="margin-left: -45px; rotate: 45deg;">*/ ?>
+        <img id="awamaru" class="awamaru" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/awamaru.png" alt="あわまる">
 
-        <!-- トップへ戻る -->
+        <!-- トップへ戻る -->m
         <a>
             <div id="scroll">
                 <img class="top-btn01 fadein" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/topbtn.png" alt="トップボタン">
