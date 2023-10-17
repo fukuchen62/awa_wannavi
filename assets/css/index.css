@@ -450,7 +450,9 @@
 /************/
 /* 新着情報 */
 /************/
-
+    .top-news__card-area {
+        margin: 0 10px;
+    }
 .top-news__archive-link {
     margin: 20px 0 20px 20px;
     font-weight: 900;
@@ -466,7 +468,7 @@
     .top-news__card-area {
         display: flex;
         justify-content: space-around;
-        margin-bottom: 250px;
+        margin-bottom: 100px;
     }
 
     .top-news__archive-link {
@@ -489,24 +491,21 @@
 }
 
 .background__map {
+    max-width: 800px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: 100%;
     position: relative;
     font-size: 3vw;
 }
 
-@media screen and (min-width:600px) {
-    .background__map {
-        width: 100%;
-        position: relative;
-        font-size: 3vw;
-    }
-}
 
-@media screen and (min-width:1450px) {
+@media screen and (min-width:1024px) {
     .background__map {
         width: 100%;
         position: relative;
-        font-size: 40px;
+        font-size: 30px;
     }
 }
 
@@ -722,8 +721,8 @@
 /***********/
 
 .top-pickup__card-area {
-    margin: 30px 0 80px;
-    display: flex;
+
+    margin: 30px 10px 80px 10px;
     justify-content: space-around;
 }
 
