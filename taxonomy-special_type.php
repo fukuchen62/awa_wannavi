@@ -29,12 +29,12 @@
                 <div class="card__2col">
 
                     <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : the_post(); ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
-                            <!-- カード型を読み込む -->
-                            <?php get_template_part('template-parts/loop', 'card_tax-special'); ?>
+                    <!-- カード型を読み込む -->
+                    <?php get_template_part('template-parts/loop', 'card_tax-special'); ?>
 
-                        <?php endwhile; ?>
+                    <?php endwhile; ?>
                     <?php endif; ?>
                 </div>
 
@@ -47,7 +47,12 @@
             <!-- aside カテゴリー一覧 -->
             <?php get_sidebar("special"); ?>
 
+
         </div>
+        <?php if (function_exists("wp_pagenavi")) {
+            wp_pagenavi();
+        } ?>
+
     </div>
 
 
