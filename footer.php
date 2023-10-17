@@ -57,7 +57,7 @@
         <!-- トップへ戻る -->
         <a>
             <div id="scroll">
-                <img class="top-btn01" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/topbtn.png" alt="トップボタン">
+                <img class="top-btn01 fadein" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/topbtn.png" alt="トップボタン">
             </div>
         </a>
 
