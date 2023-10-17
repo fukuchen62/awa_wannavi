@@ -123,6 +123,7 @@ ul .large-menu {
     cursor: pointer;
     rotate: 60deg;
     background-color: none;
+    animation: fadein 2s ease-out forwards;
 }
 
 /* PC幅 */
@@ -136,6 +137,7 @@ ul .large-menu {
         cursor: pointer;
         rotate: 60deg;
         background-color: none;
+        animation: fadein 2s ease-out forwards;
     }
 }
 
@@ -310,6 +312,7 @@ ul .large-menu {
     width: 100px;
     height: 100px;
     transform: translate(0, 20px);
+    animation: fadein 2s ease-out forwards;
 }
 
 #scroll img {
@@ -322,13 +325,14 @@ ul .large-menu {
     #scroll {
         position: fixed;
         right: 50px;
-        bottom: 20px;
+        bottom: 40px;
         /* z-indexの高さを変更 */
         z-index: 5;
         width: 100px;
         height: 100px;
         transform: translate(0, 20px);
         cursor: pointer;
+        animation: fadein 2s ease-out forwards;
     }
 
     #scroll img {
@@ -336,6 +340,17 @@ ul .large-menu {
         height: 90%;
     }
 }
+
+@keyframes fadein {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
 
 /* わんわんがぽよぽよがたがたする
 キーフレーム */
