@@ -492,7 +492,8 @@ a img:hover {
 .card__link a:hover {
     color: #6bb6ff;
 }
-    .card-box {
+
+.card-box {
     margin: 0 10px;
 }
 
@@ -547,6 +548,7 @@ a img:hover {
     border-right: 3px solid #000;
     border-bottom: 3px solid #000;
 }
+
 /* カード背面の影 */
 .card__back {
     position: absolute;
@@ -557,6 +559,7 @@ a img:hover {
     border-right: 8px solid #000;
     border-bottom: 8px solid #000;
 }
+
 .card__back:before {
     background-color: #000;
     border-radius: 5px;
@@ -567,6 +570,7 @@ a img:hover {
     top: 100%;
     right: 3px;
 }
+
 .card__back:after {
     background-color: #000;
     position: relative;
@@ -667,17 +671,21 @@ a img:hover {
     .wd45 {
         width: 45%;
     }
+
     .card__outline {
-    padding: 18px 0;
+        padding: 18px 0;
     }
+
     .card__front {
-    padding: 20px 15px;
+        padding: 20px 15px;
     }
+
     .card__outline {
-    padding: 18px 0;
+        padding: 18px 0;
     }
+
     .card__front {
-    padding: 20px 15px;
+        padding: 20px 15px;
     }
 }
 
@@ -764,6 +772,59 @@ a img:hover {
 .more-button:hover {
     opacity: 0.7;
 }
+
+/**************/
+/* NAVIボタン */
+/**************/
+
+
+/*プラグイン『wp-pagenavi』 css Start ↓*/
+.wp-pagenavi {
+    margin: 0 auto;
+    clear: both;
+    text-align: center;
+    padding: 80px 0 50px 0;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+    color: #795A3C;
+    /* background-color: #FFF1DA; */
+    background-color: #FFF;
+    border: 1px solid #DBC9AA;
+    /* padding: 8px 15px; */
+    padding: 8px 12px;
+    margin: 0 2px;
+    /* margin: 2px 2px; */
+    white-space: nowrap;
+    /* -moz-border-radius: 3px; */
+    -moz-border-radius: 50%;
+    /* -webkit-border-radius: 3px; */
+    -webkit-border-radius: 50%;
+    /* border-radius: 3px; */
+    border-radius: 50%;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+}
+
+.wp-pagenavi a:hover {
+    color: #FFF;
+    background-color: #A09D71;
+    border-color: #999;
+}
+
+.wp-pagenavi span.current {
+    color: #FFF;
+    background-color: #FFC24B;
+    border-color: #FFC24B;
+    font-weight: bold;
+}
+
+/*wp-pagenavi css Endt ↑*/
 
 /*****************************************/
 /* marginのpx幅テンプレート等 */
