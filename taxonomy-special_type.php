@@ -31,32 +31,8 @@
                     <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
 
-                    <div class="card__wrapper mb40">
-                        <div class="card__block">
-                            <img class="card__img" src="../assets/img/cat.jpg" alt="">
-                            <div class="card__content">
-                                <div class="card__flex">
-                                    <div class="card__title"><?php the_title(); ?></div>
-                                    <div class="card__category">遊ぶ</div>
-                                </div>
-
-                                <div class="card__text">
-                                    <div class="card__address">
-                                        ●住所：<?php the_field("address"); ?>
-                                    </div>
-                                    <div class="card__number">
-                                        ●お問い合わせ：０８０－６３７９－７４３７
-                                    </div>
-                                    <div class="card__url"></div>
-                                </div>
-                            </div>
-                            <div class="card__link">
-                                <a href="#">もっと見る</a>
-                                <!-- <a href="#">FAQ</a>
-                                        <a href="#">PRIVACY</a> -->
-                            </div>
-                        </div>
-                    </div>
+                    <!-- カード型を読み込む -->
+                    <?php get_template_part('template-parts/loop', 'card_tax-special'); ?>
 
                     <?php endwhile; ?>
                     <?php endif; ?>
@@ -71,7 +47,12 @@
             <!-- aside カテゴリー一覧 -->
             <?php get_sidebar("special"); ?>
 
+
         </div>
+        <?php if (function_exists("wp_pagenavi")) {
+            wp_pagenavi();
+        } ?>
+
     </div>
 
 
