@@ -3,9 +3,7 @@
 
 <main>
     <!-- 帯になるコンテナーのタイトル -->
-    <div class="container pd10 mb10">
-        <h2 class="search__ttl">「<?php the_search_query(); ?>」の検索結果</h2>
-    </div>
+    <h2 class="search__ttl">「<?php the_search_query(); ?>」の検索結果</h2>
 
     <div class="container bg__img">
         <!-- パンくずリスト -->

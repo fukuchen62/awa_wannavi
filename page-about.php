@@ -6,7 +6,7 @@
     <!-- コンテナーに格納 -->
     <div class="container">
         <!-- 帯になるコンテナーのタイトル -->
-        <div class="container pd10 mb10">
+        <div class="container">
             <!-- common.cssのsub__titleを利用しているが、タブの装飾と配色の変更の為、それぞれに名前を指定した-->
             <h2 class="article__title">このサイトについて</h2>
 
