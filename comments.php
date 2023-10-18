@@ -2,21 +2,21 @@
     <?php
     // コメント欄を表示
     $args = [
-        "title_reply" => "<h2 class='comment'>【コメント投稿フォーム】</h2>"
+        "title_reply" => "<h2 class='comment'>口コミ投稿する</h2>"
     ];
     comment_form($args);
 
     // コメントの履歴を表示
     if (have_comments()) :
     ?>
-    <p><?php comments_number("コメントはありません。", "コメントが1件あります。", "コメントが%件あります。"); ?></p>
-    <ol class="commentlist">
-        <?php $wp_list_comments_args = array(
+        <p><?php comments_number("コメントはありません。", "コメントが1件あります。", "コメントが%件あります。"); ?></p>
+        <ol class="commentlist">
+            <?php $wp_list_comments_args = array(
                 "avatar_size" => "50"
             );
             wp_list_comments($wp_list_comments_args);
             ?>
-    </ol>
+        </ol>
     <?php
         // ページネーション
         $paginate_comments_links_args = array(
