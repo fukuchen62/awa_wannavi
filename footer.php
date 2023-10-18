@@ -85,7 +85,7 @@
                     <?php
                     /* <li><a href="<?php echo home_url('/rental_car/'); ?>">レンタカー（犬OK）</a></li> */
                     ?>
-                    <li><a href="<?php echo home_url('/spot_list/'); ?>">掲載施設一覧</a></li>
+                    <li><a href="<?php echo home_url('/spots_list/'); ?>">掲載施設一覧</a></li>
                     <li><a href="<?php echo home_url('/about/'); ?>">このサイトについて</a></li>
                     <li><a href="<?php echo home_url('/privacy-policy/'); ?>">利用規約・免責事項</a></li>
                 </ul>
