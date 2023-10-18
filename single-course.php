@@ -47,10 +47,16 @@
     <h2 class="h2__title__thin bgYL"><?php the_title(); ?></h2>
 
     <?php the_field('iframe'); ?>
+
+    <div class="abstract">
+        <?php the_content(); ?>
+    </div>
+
     <div class="start-born">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_01.svg" alt="">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_02.svg" alt="">
     </div>
+
     <div class="kakoi">
         <!-- スマホ版のモデルコースのイメージ -->
         <div class="none">
