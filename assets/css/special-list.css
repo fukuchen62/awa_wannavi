@@ -197,3 +197,22 @@ ul .category__list {
     }
 
 }
+/*******************/
+/* nextボタン */
+/*******************/
+.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 60px;
+    border-radius: 25px;
+    background-color: #F3E06E;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #000;
+    outline: 3px solid rgb(255, 255, 255);
+    outline-offset: -8px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    margin-top: 50px;
+}
