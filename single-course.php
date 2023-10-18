@@ -44,7 +44,7 @@
     <!-- 県別検索終了 -->
 
     <!-- メインのタイトル -->
-    <h2 class="h2__title bgYL"><?php the_title(); ?></h2>
+    <h2 class="h2__title__thin bgYL"><?php the_title(); ?></h2>
 
     <?php the_field('iframe'); ?>
     <div class="start-born">
