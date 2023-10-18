@@ -55,7 +55,7 @@
         <?php /* <input class="awamaru" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/awamaru.png" value="豆知識" onclick="msgOutput()" alt="あわまる" onsubmit="return false" style="margin-left: -45px; rotate: 45deg;">*/ ?>
         <img id="awamaru" class="awamaru" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/awamaru.png" alt="あわまる">
 
-        <!-- トップへ戻る -->m
+        <!-- トップへ戻る -->
         <a>
             <div id="scroll">
                 <img class="top-btn01 fadein" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/topbtn.png" alt="トップボタン">

@@ -92,6 +92,20 @@ updateText();
 // });
 
 // あわまる
+// あわまるをクリックする度に「現れてしゃべる」と「隠れる」を交互に繰り返す
+
+$.fn.clickToggle = function (a, b) {
+    return this.each(function () {
+        var clicked = false;
+        $(this).on('click', function () {
+            clicked = !clicked;
+            if (clicked) {
+                return b.apply(this, arguments);
+            }
+            return a.apply(this, arguments);
+        });
+    });
+};
 $(document).ready(function () {
     $(".awamaru").hide(); // 初期状態で非表示にします
 
@@ -106,13 +120,16 @@ $(document).ready(function () {
             $(".awamaru").show(); // 90%以上で要素を表示
             $(".awamaru_commentbox").show(); // 90%以上で要素を表示
             $(".awamaru_comment").show(); // 90%以上で要素を表示
+            $("#scroll").show(); // 90%以上で要素を表示
         } else {
             $(".awamaru").hide(); // 90%未満で要素を非表示
             $(".awamaru_commentbox").hide(); // 90%未満で要素を非表示
             $(".awamaru_comment").hide(); // 90%未満で要素を非表示
+            $("#scroll").hide(); // 90%未満で要素を非表示
         }
     });
 });
+
 
 // あわまるを押すと吹き出しが出て、もう一度押すと２秒かけて消える
 
@@ -133,20 +150,7 @@ $(function () {
 
     });
 });
-// あわまるをクリックする度に「現れてしゃべる」と「隠れる」を交互に繰り返す
 
-$.fn.clickToggle = function (a, b) {
-    return this.each(function () {
-        var clicked = false;
-        $(this).on('click', function () {
-            clicked = !clicked;
-            if (clicked) {
-                return b.apply(this, arguments);
-            }
-            return a.apply(this, arguments);
-        });
-    });
-};
 
 
 $('.awamaru').clickToggle(function () {
@@ -226,24 +230,6 @@ $('#scroll').click(function () {
 //     });
 // });
 
-// トップへ戻るボタン
-$(document).ready(function () {
-    $("#scroll").hide(); // 初期状態で非表示にします
-
-    $(window).scroll(function () {
-        var scrollTop = $(window).scrollTop(),
-            docHeight = $(document).height(),
-            winHeight = $(window).height(),
-            scrollPercent = (scrollTop) / (docHeight - winHeight),
-            scrollPercentRounded = Math.round(scrollPercent * 100);
-
-        if (scrollPercentRounded > 90) {
-            $("#scroll").show(); // 90%以上で要素を表示
-        } else {
-            $("#scroll").hide(); // 90%未満で要素を非表示
-        }
-    });
-});
 
 let mames = [
     "土佐犬みたいに徳島にも阿波犬っていたって知ってるワン？",
