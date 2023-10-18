@@ -682,3 +682,21 @@ img {
     }
 
 }
+
+
+/*************************/
+/* 口コミ投稿フォーム */
+/*************************/
+
+/* 背景 */
+.comment-respond {
+    width: 100%;
+    text-align: center;
+    border-radius: 35px;
+    background-color: #ddd;
+}
+
+/* タイトル文字サイズ */
+.comment {
+    font-size: 24px;
+}
