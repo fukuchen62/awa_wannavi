@@ -114,7 +114,7 @@
 
 .course-under-img p {
     position: absolute;
-    left: 33%;
+    left: 34%;
     font-weight: 900;
 }
 
@@ -167,7 +167,7 @@
         height: 660px;
         justify-content: center;
         align-items: center;
-        /* position: relative; */
+        position: relative;
     }
 
     .asobu-img {
@@ -200,7 +200,7 @@
     .leftside-img1 {
         /* margin-top: 5%; */
         position: relative;
-        width: 20%;
+        width: 13%;
         padding: 3%;
         margin-top: 100px;
     }
@@ -208,14 +208,14 @@
     .leftside-img1 p {
         position: absolute;
         top: 10%;
-        right: 35%;
+        right: 36%;
         font-weight: 900;
     }
 
     .leftside-img2 {
         position: relative;
         /* margin-top: 5%; */
-        width: 20%;
+        width: 13%;
         padding: 3%;
         margin-top: 100px;
     }
@@ -223,20 +223,20 @@
     .leftside-img2 p {
         position: absolute;
         top: 7%;
-        right: 35%;
+        right: 36%;
         font-weight: 900;
     }
 
     .leftside-img3 {
         /* margin-top: 5%; */
-        width: 20%;
+        width: 13%;
         /* height: 600px; */
         padding: 3%;
         margin-top: 20px;
     }
 
     .rightside-img1 {
-        width: 260px;
+        width: 20%;
         padding: 3%;
     }
 
@@ -259,6 +259,7 @@
     }
 
     .center {
+        width: 77%;
         margin-top: -10%;
         margin-left: 4%;
     }
@@ -278,4 +279,19 @@
 iframe {
     width: 100%;
     height: 50vh;
+}
+
+
+/* モデルコース概要 */
+.abstract p {
+    width: 85%;
+    margin: 20px auto 50px;
+}
+
+@media screen and (min-width:768px) {
+    .abstract p {
+        width: 85%;
+        margin: 50px auto 50px;
+        font-size: 24px;
+    }
 }
