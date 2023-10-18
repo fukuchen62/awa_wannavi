@@ -3,16 +3,12 @@
 
 /* 記事タイトル */
 .article__title {
-    display: flex;
-    width: 100%;
-    font-size: 3rem;
-    justify-content: center;
-    align-items: center;
-    border-top: 5px dashed #333;
-    border-bottom: 5px dashed #333;
-    font-weight: bold;
-    height: 140px;
-    background-color: #F3E06E;
+    margin: 0px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 2.6rem;
+    width: fit-content;
+    border-bottom: dotted 6px #F3E06E;
 }
 
 /* 記事タイトル下のリード文 */

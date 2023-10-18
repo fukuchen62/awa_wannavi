@@ -8,7 +8,7 @@
         <!-- 帯になるコンテナーのタイトル -->
         <div class="container">
             <!-- common.cssのsub__titleを利用しているが、タブの装飾と配色の変更の為、それぞれに名前を指定した-->
-            <h2 class="article__title">このサイトについて</h2>
+            <h2 class="h2__title bgYL">このサイトについて</h2>
 
             <!-- 記事のリード文 -->
             <div class="body__lead">
