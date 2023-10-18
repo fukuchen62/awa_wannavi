@@ -5,24 +5,25 @@
 
     <!-- コンテナーに格納 -->
     <div class="container">
-        <!-- パンくずリスト -->
-        <div class="Breadcrumb mb20">
-            <?php get_template_part("template-parts/breadcrumb"); ?>
-        </div>
+        <!-- 帯になるコンテナーのタイトル -->
+        <div class="container pd10 mb10">
+            <!-- common.cssのsub__titleを利用しているが、タブの装飾と配色の変更の為、それぞれに名前を指定した-->
+            <h2 class="article__title">このサイトについて</h2>
 
-        <!-- articleコンテナーに格納 -->
-        <div class="container">
+            <!-- 記事のリード文 -->
+            <div class="body__lead">
+                <p>このサイトは国の求職者支援制度に基づく、株式会社ＱＬＩＰ クリッププログラミングスクール・ＷＥＢプログラマー養成科第15期生、『縁（えん）』班が、２０２３年に制作したウェブサイトです。</p>
 
-            <!-- 帯になるコンテナーのタイトル -->
-            <div class="container pd10 mb10">
-                <!-- common.cssのsub__titleを利用しているが、タブの装飾と配色の変更の為、それぞれに名前を指定した-->
-                <h2 class="article__title">このサイトについて</h2>
+            </div>
+            <!-- パンくずリスト -->
+            <div class="Breadcrumb mb20">
+                <?php get_template_part("template-parts/breadcrumb"); ?>
+            </div>
 
-                <!-- 記事のリード文 -->
-                <div class="body__lead">
-                    <p>このサイトは国の求職者支援制度に基づく、株式会社ＱＬＩＰ クリッププログラミングスクール・ＷＥＢプログラマー養成科第15期生、『縁（えん）』班が、２０２３年に制作したウェブサイトです。</p>
+            <!-- articleコンテナーに格納 -->
+            <div class="container">
 
-                </div>
+
                 <div class="body__main">
                     <h3>なぜ、このサイトを作ったのか？</h3>
                     <img class="body__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/about/about_img01.jpg" alt="なぜこのサイトを作ったのか考えるわんちゃん">
