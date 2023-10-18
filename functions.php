@@ -39,9 +39,14 @@ add_action('wp_enqueue_scripts', 'awa_wannavi_add_common_scripts');
 function awa_wannavi_add_common_scripts()
 {
     // fontawesomeのスタイルシートを読み込む
+    // wp_enqueue_style(
+    //     'awa_wannavi-fontawesome',
+    //     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css',
+    // );
+
     wp_enqueue_style(
-        'awa_wannavi-fontawesome',
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css',
+        'font-awesome-css',
+        'https://use.fontawesome.com/releases/v5.6.1/css/all.css',
     );
 
     // 共通のCSSを読み込む
