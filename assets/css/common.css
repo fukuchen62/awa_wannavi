@@ -264,6 +264,7 @@ a img:hover {
     color: #333;
     padding: 5px;
     transition: ease;
+    font-weight: bold;
 }
 
 /* タブタイトルを変更したときは文字を白くします */
@@ -285,7 +286,7 @@ a img:hover {
     /* タブの子要素です */
     .tab__block {
         /* SP想定で2つ並ぶようにします */
-        width: 24%;
+        width: 30%;
     }
 
     .tab__title {
@@ -306,7 +307,7 @@ a img:hover {
     }
 
     .tab__title {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 }
 
