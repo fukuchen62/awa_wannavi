@@ -2,7 +2,11 @@
 <?php get_header(); ?>
 
 <main>
-
+    <div class="pd40">
+        <h2 class="search__ttl">条件検索</h2>
+    </div>
+    <!-- パンくずリスト -->
+    <?php get_template_part("template-parts/breadcrumb"); ?>
     <div class="filtering__wrap">
 
         <!-- フォームを読み込む -->
