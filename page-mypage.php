@@ -23,10 +23,12 @@
         <i class="fa-solid fa-paw"></i> お気に入りした<br>
         遊ぶの施設
     </h2>
-    <div class="next__info tr2 ">
+
+    <!-- <div class="next__info tr2 ">
         <a href="">>>〇〇件</a>
-    </div>
+    </div> -->
     <!-- カード型コンテンツまとめ -->
+
     <div class="card__contents mw12">
 
         <?php
@@ -123,9 +125,9 @@
         ?>
     </div>
 
-    <button id="btn__tokushima" class="more-button">
+    <!-- <button id="btn__tokushima" class="more-button">
         MORE
-    </button>
+    </button> -->
 
 
     <!-- コンテンツのサブタイトル -->
@@ -134,7 +136,7 @@
         泊るの施設
     </h2>
 
-    <div class="next__info tr2"><a href="">>>〇〇件</a></div>
+    <!-- <div class="next__info tr2"><a href="">>>〇〇件</a></div> -->
 
     <!-- 2つめのカテゴリ -->
 
@@ -235,14 +237,14 @@
         ?>
     </div>
 
-    <button id="btn__east" class="more-button">
+    <!-- <button id="btn__east" class="more-button">
         MORE
-    </button>
+    </button> -->
 
     <!-- コンテンツのサブタイトル -->
     <h2 class="sub__title2 mb20 bgPK"><i class="fa-solid fa-paw"></i> お気に入りした<br>食べるの施設</h2>
 
-    <div class="next__info tr2"><a href="">>>〇〇件</a></div>
+    <!-- <div class="next__info tr2"><a href="">>>〇〇件</a></div> -->
 
     <!-- ３つめのカテゴリ -->
 
@@ -345,9 +347,9 @@
 
     </div>
 
-    <button id="btn__west" class="more-button">
+    <!-- <button id="btn__west" class="more-button">
         MORE
-    </button>
+    </button> -->
 
     <!-- コンテンツのサブタイトル -->
     <h2 class="sub__title bgBL mb20"><i class="fa-solid fa-paw"></i>MAP表示</h2>
