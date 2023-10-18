@@ -2,14 +2,16 @@
 <?php get_header(); ?>
 
 <main>
+    <!-- 帯になるコンテナーのタイトル -->
+    <div class="container pd10 mb10">
+        <h2 class="search__ttl">「<?php the_search_query(); ?>」の検索結果</h2>
+    </div>
+
     <div class="container bg__img">
         <!-- パンくずリスト -->
         <?php get_template_part("template-parts/breadcrumb"); ?>
 
-        <!-- 帯になるコンテナーのタイトル -->
-        <div class="container pd10 mb10">
-            <h2 class="search__ttl">「<?php the_search_query(); ?>」の検索結果</h2>
-        </div>
+
 
         <!-- 遊ぶタブ -->
         <?php
