@@ -967,3 +967,8 @@ a img:hover {
 .card__textarea p {
     word-wrap: break-word;
 }
+/* Font Awesomeをsafariでも対応させるため */
+.fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}

@@ -11,22 +11,22 @@
     <!--description設定-->
     <?php /*トップページ home▼*/
     if (is_home()) : ?>
-        <meta name="description" content="「AwAワン！Navi」は、ワンちゃんと徳島にいらした方や県内在住でお出かけできるスポットを探している方に向けて、魅力あるスポットの情報を発信しているサイトです。" />
+    <meta name="description" content="「AwAワン！Navi」は、ワンちゃんと徳島にいらした方や県内在住でお出かけできるスポットを探している方に向けて、魅力あるスポットの情報を発信しているサイトです。" />
 
     <?php /*（遊ぶ・泊まる・食べる）個別ページ */
     elseif (is_singular('enjoy') || is_singular('eat') || is_singular('stay')) : ?>
-        <?php while (have_posts()) : the_post(); ?>
-            <meta name="description" content="「AwAワン!Navi」では、徳島にある公園、自然、ドッグラン、ドッグカフェ、同伴可能な食事処、宿などおすすめの施設を掲載しております。" />
-        <?php endwhile; ?>
+    <?php while (have_posts()) : the_post(); ?>
+    <meta name="description" content="「AwAワン!Navi」では、徳島にある公園、自然、ドッグラン、ドッグカフェ、同伴可能な食事処、宿などおすすめの施設を掲載しております。" />
+    <?php endwhile; ?>
 
     <?php /*（マナー、犬の豆知識、お出かけ情報、特集） */
     elseif (is_singular('special')) : ?>
-        <?php while (have_posts()) : the_post(); ?>
-            <meta name="description" content="ワンちゃんの豆知識、マナー、ドッグカフェや飼い主さんにインタビューした記事、モデルコースなどおすすめ情報として読んでいただきたい情報集めました。" />
-        <?php endwhile; ?>
+    <?php while (have_posts()) : the_post(); ?>
+    <meta name="description" content="ワンちゃんの豆知識、マナー、ドッグカフェや飼い主さんにインタビューした記事、モデルコースなどおすすめ情報として読んでいただきたい情報集めました。" />
+    <?php endwhile; ?>
 
     <?php /*上記以外*/ else : ?>
-        <meta name="description" content="「AwAワン！Navi」のWebページです。" />
+    <meta name="description" content="「AwAワン！Navi」のWebページです。" />
 
     <?php endif; ?>
 
@@ -34,6 +34,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/img/common/menu/AwA_favicon.png">
 
     <!-- <title>ヘッダー</title> -->
