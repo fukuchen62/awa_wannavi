@@ -223,7 +223,7 @@
                     array(
                         'post_type' => 'special',
                         'orderby' => 'rand',
-                        'post_per_page' => '3',
+                        'posts_per_page' => '3',
                     )
                 );
                 ?>
