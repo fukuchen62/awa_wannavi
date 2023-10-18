@@ -793,38 +793,26 @@
 
 .top__banner__btn__wrap {
     display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+@media screen and (min-width:768px){
+.top__banner__btn__wrap {
     justify-content: center;
 }
-
+}
 .top__banner__btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: 40%;
     height: 60px;
-    margin: 0 10%;
+    margin: 0 5%;
     border-radius: 25px;
     background-color: #F3E06E;
-    font-size: 20px;
-    font-weight: bold;
-    color: #000;
-    outline: 3px solid rgb(255, 255, 255);
-    outline-offset: -8px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    font-family: 'Zen Maru Gothic', sans-serif;
-}
-
-.top__banner__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 60px;
-    margin: 100px 10%;
-    border-radius: 25px;
-    background-color: #F3E06E;
-    font-size: 20px;
+    font-size: 1.6rem;
     font-weight: bold;
     color: #000;
     outline: 3px solid rgb(255, 255, 255);
@@ -834,6 +822,6 @@
 @media screen and (min-width:768px){
 
 .top__banner__btn {
-margin: 100px 10%;
+margin: 0 10%;
 }
 }
