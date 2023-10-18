@@ -256,6 +256,12 @@
                 <?php echo do_shortcode('[instagram-feed]'); ?>
             </div>
         </section>
+
+        <div class="top__banner__btn__wrap">
+            <a class="top__banner__btn" href="<?php echo home_url('/hospital/'); ?>">動物病院一覧</a>
+            <a class="top__banner__btn" href="<?php echo home_url('/spot_list/'); ?>">掲載施設一覧</a>
+        </div>
+    </div>
     </div>
 </main>
 
@@ -319,7 +325,7 @@ wp_reset_postdata();
 
 ?>
 
-<script type="text/javascript">
+<script type=" text/javascript">
     var map;
     var tokushima;
     var east;
@@ -394,66 +400,12 @@ wp_reset_postdata();
         ?>
 
         // マーカー生成
-        for (var i = 0; i < markers.length; i++) {
-            createMarker(
-                markers[i].text,
-                markers[i].lat,
-                markers[i].lng,
-                markers[i].url,
-                markers[i].icon_url,
-                map,
-            );
-        }
-        // マーカー表示
-        // marker.setMap(map);
-    }
+        for (var i = 0; i
 
-    // マーカーを設定
-    function createMarker(name, lat, lng, url, icon_url, map) {
-
-        var latlng = new google.maps.LatLng(lat, lng);
-        var pixelOffset = new google.maps.Size(0, -40);
-
-        var marker = new google.maps.Marker({
-            position: latlng,
-            icon: {
-                url: '<?php echo get_template_directory_uri(); ?>/assets/img/common/' + icon_url,
-
-                scaledSize: new google.maps.Size(40, 40),
-            },
-            map: map
-        });
-
-        //クリックしたら指定したurlに遷移するイベント
-        marker.addListener('click', (function(url) {
-            return function() {
-                location.href = url;
-            };
-        })(url));
-
-        // マーカーにマウスを乗せたときのイベント
-        marker.addListener('mouseover', function() {
-            // infoの位置
-            hoverinfo = new google.maps.InfoWindow({
-                map: map,
-                content: name,
-                noSuppress: true,
-                pixelOffset: pixelOffset
-            });
-
-            hoverinfo.setPosition(
-                latlng
-            );
-
-            // マーカーからマウスを降ろしたときのイベント
-            marker.addListener('mouseout', function() {
-                if (hoverinfo) {
-                    hoverinfo.close();
-                }
-            });
-        });
-
-    }
+            <
+            markers.length; i++) {
+            createMarker(markers[i].text, markers[i].lat, markers[i].lng, markers[i].url, markers[i].icon_url, map, );
+        } // マーカー表示 // marker.setMap(map); } // マーカーを設定 function createMarker(name, lat, lng, url, icon_url, map) { var latlng=new google.maps.LatLng(lat, lng); var pixelOffset=new google.maps.Size(0, -40); var marker=new google.maps.Marker({ position: latlng, icon: { url: '<?php echo get_template_directory_uri(); ?>/assets/img/common/' + icon_url, scaledSize: new google.maps.Size(40, 40), }, map: map }); //クリックしたら指定したurlに遷移するイベント marker.addListener('click', (function(url) { return function() { location.href=url; }; })(url)); // マーカーにマウスを乗せたときのイベント marker.addListener('mouseover', function() { // infoの位置 hoverinfo=new google.maps.InfoWindow({ map: map, content: name, noSuppress: true, pixelOffset: pixelOffset }); hoverinfo.setPosition( latlng ); // マーカーからマウスを降ろしたときのイベント marker.addListener('mouseout', function() { if (hoverinfo) { hoverinfo.close(); } }); }); }
 </script>
 
 <!-- callback=initMap=APIが読み込み後にinitMap()を実行 -->
