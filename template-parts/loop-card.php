@@ -1,4 +1,4 @@
-<div class="card <?php echo $area_slug; ?>">
+<div class="card <?php echo $args; ?>">
 
     <!-- IDの追加 -->
     <a id="post-<?php the_ID(); ?>" <?php post_class(); ?> href="<?php the_permalink(); ?>">
