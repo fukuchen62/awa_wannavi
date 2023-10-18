@@ -48,7 +48,7 @@
         </div>
 
         <!-- メインのタイトル -->
-        <h2 class="h2__title bgGL mb60"><?php echo $enjoy_type->name; ?></h2>
+        <h2 class="h2__title__thin bgGL mb60"><?php echo $enjoy_type->name; ?></h2>
 
         <!-- 地域ごとの一覧 -->
         <?php
@@ -67,7 +67,7 @@
         <section class="card-box">
 
             <!-- 地域名 -->
-            <h2 class="sub__title bgGL mb20"><i class="fa-solid fa-paw"></i><?php echo $area->name; ?>エリア&nbsp;&nbsp;<span id="<?php echo $area->slug; ?>-title" class="show_num"></span></h2>
+            <h2 class="sub__title bgGL "><i class="fa-solid fa-paw"></i><?php echo $area->name; ?>エリア&nbsp;&nbsp;<span id="<?php echo $area->slug; ?>-title" class="show_num"></span></h2>
 
 
             <!-- カード型コンテンツまとめ -->

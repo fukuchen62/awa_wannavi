@@ -338,13 +338,23 @@ a img:hover {
         font-size: 3.5rem;
     }
 }
-
-@media screen and (min-width:1023px) {
-    .h2__title {
-        /* 立幅140px */
-        height: 140px;
-        font-size: 3.5rem;
-    }
+.h2__title__thin {
+    /* flexboxでjustyfyとtext-align使った方がきれいに見えるので採用 */
+    display: flex;
+    /* コンテナの横幅いっぱい */
+    width: 100%;
+    /* h2のままだと小さすぎるのでサイズを調整 */
+    font-size: 3rem;
+    margin-bottom: 50px;
+    /* 横をそろえる */
+    justify-content: center;
+    /* 縦をそろえる */
+    align-items: center;
+    /* ボーダーの大きさと囲いの調整 */
+    border-top: 5px dashed #333;
+    border-bottom: 5px dashed #333;
+    font-weight: bold;
+    height: 70px;
 }
 
 
@@ -366,6 +376,7 @@ a img:hover {
     display: flex;
     width: 300px;
     height: 60px;
+    margin-top: 40px;
     margin: 0 auto;
     justify-content: center;
     align-items: center;

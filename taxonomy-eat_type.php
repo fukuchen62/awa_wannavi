@@ -54,7 +54,7 @@
         </div>
 
         <!-- メインのタイトル -->
-        <h2 class="h2__title bgPK mb20"><?php echo $eat_type->name; ?></h2>
+        <h2 class="h2__title__thin bgPK "><?php echo $eat_type->name; ?></h2>
 
         <!-- 地域ごとの一覧 -->
         <?php
