@@ -3,7 +3,9 @@
 
 <main>
     <!-- 帯になるコンテナーのタイトル -->
-    <h2 class="search__ttl">「<?php the_search_query(); ?>」の検索結果</h2>
+    <div class="container">
+        <h2 class="search__ttl">「<?php the_search_query(); ?>」の検索結果</h2>
+    </div>
 
     <div class="container bg__img">
         <!-- パンくずリスト -->
@@ -34,13 +36,13 @@
         <!-- 結果を表示させる -->
         <div class="card__contents mw12 mb80">
             <?php if ($enjoy_query->have_posts()) : ?>
-            <?php while ($enjoy_query->have_posts()) : ?>
-            <?php $enjoy_query->the_post(); ?>
+                <?php while ($enjoy_query->have_posts()) : ?>
+                    <?php $enjoy_query->the_post(); ?>
 
-            <!-- カード型を読み込む -->
-            <?php get_template_part('template-parts/loop', 'card'); ?>
+                    <!-- カード型を読み込む -->
+                    <?php get_template_part('template-parts/loop', 'card'); ?>
 
-            <?php endwhile; ?>
+                <?php endwhile; ?>
             <?php endif; ?>
         </div>
 
@@ -70,13 +72,13 @@
         <!-- 結果を表示させる -->
         <div class="card__contents mw12 mb80">
             <?php if ($stay_query->have_posts()) : ?>
-            <?php while ($stay_query->have_posts()) : ?>
-            <?php $stay_query->the_post(); ?>
+                <?php while ($stay_query->have_posts()) : ?>
+                    <?php $stay_query->the_post(); ?>
 
-            <!-- カード型を読み込む -->
-            <?php get_template_part('template-parts/loop', 'card'); ?>
+                    <!-- カード型を読み込む -->
+                    <?php get_template_part('template-parts/loop', 'card'); ?>
 
-            <?php endwhile; ?>
+                <?php endwhile; ?>
             <?php endif; ?>
         </div>
 
@@ -106,13 +108,13 @@
         <!-- 結果を表示させる -->
         <div class="card__contents mw12 mb80">
             <?php if ($eat_query->have_posts()) : ?>
-            <?php while ($eat_query->have_posts()) : ?>
-            <?php $eat_query->the_post(); ?>
+                <?php while ($eat_query->have_posts()) : ?>
+                    <?php $eat_query->the_post(); ?>
 
-            <!-- カード型を読み込む -->
-            <?php get_template_part('template-parts/loop', 'card'); ?>
+                    <!-- カード型を読み込む -->
+                    <?php get_template_part('template-parts/loop', 'card'); ?>
 
-            <?php endwhile; ?>
+                <?php endwhile; ?>
             <?php endif; ?>
         </div>
 
@@ -142,13 +144,13 @@
         <!-- 結果を表示させる -->
         <div class="card__contents mw12 mb80">
             <?php if ($special_query->have_posts()) : ?>
-            <?php while ($special_query->have_posts()) : ?>
-            <?php $special_query->the_post(); ?>
+                <?php while ($special_query->have_posts()) : ?>
+                    <?php $special_query->the_post(); ?>
 
-            <!-- カード型を読み込む -->
-            <?php get_template_part('template-parts/loop', 'card_special'); ?>
+                    <!-- カード型を読み込む -->
+                    <?php get_template_part('template-parts/loop', 'card_special'); ?>
 
-            <?php endwhile; ?>
+                <?php endwhile; ?>
             <?php endif; ?>
         </div>
 

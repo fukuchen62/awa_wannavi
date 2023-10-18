@@ -2,7 +2,6 @@
 <?php get_header(); ?>
 
 <main class="container">
-
     <div class="container pd20">
         <h2 class="mypage_title">マイページ</h2>
     </div>
