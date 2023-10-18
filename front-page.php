@@ -146,10 +146,10 @@
 
                 <?php query_posts('posts_per_page=3'); ?>
                 <?php if (have_posts()) : ?>
-                    <?php while (have_posts()) : ?>
-                        <?php the_post(); ?>
-                        <?php get_template_part('template-parts/loop', 'news'); ?>
-                    <?php endwhile; ?>
+                <?php while (have_posts()) : ?>
+                <?php the_post(); ?>
+                <?php get_template_part('template-parts/loop', 'news'); ?>
+                <?php endwhile; ?>
                 <?php endif; ?>
             </div>
         </section>
@@ -229,13 +229,13 @@
                 ?>
 
                 <?php if ($nearby_query->have_posts()) : ?>
-                    <?php while ($nearby_query->have_posts()) : ?>
-                        <?php $nearby_query->the_post(); ?>
+                <?php while ($nearby_query->have_posts()) : ?>
+                <?php $nearby_query->the_post(); ?>
 
-                        <!-- カード型を読み込む -->
-                        <?php get_template_part('template-parts/loop', 'card_special'); ?>
+                <!-- カード型を読み込む -->
+                <?php get_template_part('template-parts/loop', 'card_special'); ?>
 
-                    <?php endwhile; ?>
+                <?php endwhile; ?>
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
 
@@ -259,7 +259,7 @@
 
         <div class="top__banner__btn__wrap">
             <a class="top__banner__btn" href="<?php echo home_url('/hospital/'); ?>">動物病院一覧</a>
-            <a class="top__banner__btn" href="<?php echo home_url('/spot_list/'); ?>">掲載施設一覧</a>
+            <a class="top__banner__btn" href="<?php echo home_url('/spots_list/'); ?>">掲載施設一覧</a>
         </div>
     </div>
     </div>
@@ -326,59 +326,59 @@ wp_reset_postdata();
 ?>
 
 <script type=" text/javascript">
-    var map;
-    var tokushima;
-    var east;
-    var west;
-    var south;
+var map;
+var tokushima;
+var east;
+var west;
+var south;
 
-    function setTokushima() {
-        map.setCenter(tokushima);
-    }
+function setTokushima() {
+    map.setCenter(tokushima);
+}
 
-    function setEast() {
-        map.setCenter(east);
-    }
+function setEast() {
+    map.setCenter(east);
+}
 
-    function setWest() {
-        map.setCenter(west);
-    }
+function setWest() {
+    map.setCenter(west);
+}
 
-    function setSouth() {
-        map.setCenter(south);
-    }
+function setSouth() {
+    map.setCenter(south);
+}
 
-    // initMap() を使って地図を埋め込む記述
-    function initMap() {
+// initMap() を使って地図を埋め込む記述
+function initMap() {
 
-        const color = "black"; // ラベルの色
-        const font_family = 'Kosugi Maru' //ラベルのフォント
-        const font_size = "14px" //ラベルのサイズ
-        // 徳島全域が入るように
+    const color = "black"; // ラベルの色
+    const font_family = 'Kosugi Maru' //ラベルのフォント
+    const font_size = "14px" //ラベルのサイズ
+    // 徳島全域が入るように
 
-        latlng = new google.maps.LatLng(34.079798787522876, 134.55043661781215);
-        tokushima = new google.maps.LatLng(34.079798787522876, 134.55043661781215);
-        east = new google.maps.LatLng(33.98552415068177, 134.5941004190196);
-        west = new google.maps.LatLng(34.04322081830907, 133.93799051471868);
-        south = new google.maps.LatLng(33.92793998879676, 134.65708931868127);
+    latlng = new google.maps.LatLng(34.079798787522876, 134.55043661781215);
+    tokushima = new google.maps.LatLng(34.079798787522876, 134.55043661781215);
+    east = new google.maps.LatLng(33.98552415068177, 134.5941004190196);
+    west = new google.maps.LatLng(34.04322081830907, 133.93799051471868);
+    south = new google.maps.LatLng(33.92793998879676, 134.65708931868127);
 
-        var opts = {
-            zoom: 12, // 地図のズームを指定
-            center: latlng, // 地図の中心を指定
-            fullscreenControl: false,
-            streetViewControl: false,
-            mapTypeControl: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP // マップタイプの設定 ROADMAPは道路や建物などが表示される地図
-        };
-        // マップ生成
-        map = new google.maps.Map(document.getElementById("map"), opts); // #mapに地図を埋め込む
+    var opts = {
+        zoom: 12, // 地図のズームを指定
+        center: latlng, // 地図の中心を指定
+        fullscreenControl: false,
+        streetViewControl: false,
+        mapTypeControl: false,
+        mapTypeId: google.maps.MapTypeId.ROADMAP // マップタイプの設定 ROADMAPは道路や建物などが表示される地図
+    };
+    // マップ生成
+    map = new google.maps.Map(document.getElementById("map"), opts); // #mapに地図を埋め込む
 
-        //console.log("この文章をコンソールに表示します");
+    //console.log("この文章をコンソールに表示します");
 
-        // マーカー生成
-        // フォント変えられる
-        let markers = [];
-        <?php
+    // マーカー生成
+    // フォント変えられる
+    let markers = [];
+    <?php
         for ($i = 0; $i < $spot_count; $i++) {
             echo "markers[$i]={lat:";
             echo $spots['lat'][$i];
@@ -399,13 +399,13 @@ wp_reset_postdata();
         }
         ?>
 
-        // マーカー生成
-        for (var i = 0; i
+    // マーカー生成
+    for (var i = 0; i
 
-            <
-            markers.length; i++) {
-            createMarker(markers[i].text, markers[i].lat, markers[i].lng, markers[i].url, markers[i].icon_url, map, );
-        } // マーカー表示 // marker.setMap(map); } // マーカーを設定 function createMarker(name, lat, lng, url, icon_url, map) { var latlng=new google.maps.LatLng(lat, lng); var pixelOffset=new google.maps.Size(0, -40); var marker=new google.maps.Marker({ position: latlng, icon: { url: '<?php echo get_template_directory_uri(); ?>/assets/img/common/' + icon_url, scaledSize: new google.maps.Size(40, 40), }, map: map }); //クリックしたら指定したurlに遷移するイベント marker.addListener('click', (function(url) { return function() { location.href=url; }; })(url)); // マーカーにマウスを乗せたときのイベント marker.addListener('mouseover', function() { // infoの位置 hoverinfo=new google.maps.InfoWindow({ map: map, content: name, noSuppress: true, pixelOffset: pixelOffset }); hoverinfo.setPosition( latlng ); // マーカーからマウスを降ろしたときのイベント marker.addListener('mouseout', function() { if (hoverinfo) { hoverinfo.close(); } }); }); }
+        <
+        markers.length; i++) {
+        createMarker(markers[i].text, markers[i].lat, markers[i].lng, markers[i].url, markers[i].icon_url, map, );
+    } // マーカー表示 // marker.setMap(map); } // マーカーを設定 function createMarker(name, lat, lng, url, icon_url, map) { var latlng=new google.maps.LatLng(lat, lng); var pixelOffset=new google.maps.Size(0, -40); var marker=new google.maps.Marker({ position: latlng, icon: { url: '<?php echo get_template_directory_uri(); ?>/assets/img/common/' + icon_url, scaledSize: new google.maps.Size(40, 40), }, map: map }); //クリックしたら指定したurlに遷移するイベント marker.addListener('click', (function(url) { return function() { location.href=url; }; })(url)); // マーカーにマウスを乗せたときのイベント marker.addListener('mouseover', function() { // infoの位置 hoverinfo=new google.maps.InfoWindow({ map: map, content: name, noSuppress: true, pixelOffset: pixelOffset }); hoverinfo.setPosition( latlng ); // マーカーからマウスを降ろしたときのイベント marker.addListener('mouseout', function() { if (hoverinfo) { hoverinfo.close(); } }); }); }
 </script>
 
 <!-- callback=initMap=APIが読み込み後にinitMap()を実行 -->
