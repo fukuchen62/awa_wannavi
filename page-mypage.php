@@ -127,6 +127,8 @@ $spot_count = 0;
         ?>
     </div>
 
+    <hr>
+
     <!-- <button id="btn__tokushima" class="more-button">
         MORE
     </button> -->
@@ -232,6 +234,8 @@ $spot_count = 0;
         ?>
     </div>
 
+    <hr>
+
     <!-- <button id="btn__east" class="more-button">
         MORE
     </button> -->
@@ -334,6 +338,8 @@ $spot_count = 0;
         ?>
 
     </div>
+
+    <hr>
 
     <!-- <button id="btn__west" class="more-button">
         MORE
