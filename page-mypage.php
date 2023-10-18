@@ -2,12 +2,14 @@
 <?php get_header(); ?>
 
 <main class="container">
-    <!-- パンくずリスト -->
-    <?php get_template_part("template-parts/breadcrumb"); ?>
 
     <div class="container pd20">
         <h2 class="mypage_title">マイページ</h2>
     </div>
+    <!-- パンくずリスト -->
+    <?php get_template_part("template-parts/breadcrumb"); ?>
+
+
 
     <div class="explanation explanation2">
         <p>1. 本マイページはこのサイトにてご紹介した『遊ぶ』『泊る』『食べる』の施設等を ブックマークし参照することができます。</p>
