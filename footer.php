@@ -55,7 +55,7 @@
         <?php /* <input class="awamaru" type="image" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/awamaru.png" value="豆知識" onclick="msgOutput()" alt="あわまる" onsubmit="return false" style="margin-left: -45px; rotate: 45deg;">*/ ?>
         <img id="awamaru" class="awamaru" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/awamaru.png" alt="あわまる">
 
-        <!-- トップへ戻る -->m
+        <!-- トップへ戻る -->
         <a>
             <div id="scroll">
                 <img class="top-btn01 fadein" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/topbtn.png" alt="トップボタン">
@@ -85,7 +85,7 @@
                     <?php
                     /* <li><a href="<?php echo home_url('/rental_car/'); ?>">レンタカー（犬OK）</a></li> */
                     ?>
-                    <li><a href="<?php echo home_url('/spot_list/'); ?>">掲載施設一覧</a></li>
+                    <li><a href="<?php echo home_url('/spots_list/'); ?>">掲載施設一覧</a></li>
                     <li><a href="<?php echo home_url('/about/'); ?>">このサイトについて</a></li>
                     <li><a href="<?php echo home_url('/privacy-policy/'); ?>">利用規約・免責事項</a></li>
                 </ul>
@@ -115,7 +115,7 @@
                     <li><a href="<?php echo home_url('/special_type/manner/'); ?>">マナー</a></li>
                     <li><a href="<?php echo home_url('/special_type/dog-trivia/'); ?>">犬の豆知識</a></li>
                     <li><a href="<?php echo home_url('/special_type/info/'); ?>">お出かけ情報</a></li>
-                    <li><a href="<?php echo home_url('/special_type/interview/'); ?>">特集</a></li>
+                    <li><a href="<?php echo home_url('/special_type/interview/'); ?>">特集記事</a></li>
                 </ul>
                 <ul class="large-menu">検索
                     <li><a href="<?php echo home_url('/filter/'); ?>">条件検索</a></li>

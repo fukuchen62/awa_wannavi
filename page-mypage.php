@@ -2,12 +2,13 @@
 <?php get_header(); ?>
 
 <main class="container">
-    <!-- パンくずリスト -->
-    <?php get_template_part("template-parts/breadcrumb"); ?>
-
     <div class="container pd20">
         <h2 class="mypage_title">マイページ</h2>
     </div>
+    <!-- パンくずリスト -->
+    <?php get_template_part("template-parts/breadcrumb"); ?>
+
+
 
     <div class="explanation explanation2">
         <p>1. 本マイページはこのサイトにてご紹介した『遊ぶ』『泊る』『食べる』の施設等を ブックマークし参照することができます。</p>
@@ -18,9 +19,13 @@
 
     <!-- 一つ目のカテゴリのカード群 -->
     <!-- コンテンツのサブタイトル -->
-    <h2 class="sub__title2 mb20 bgGL"><i class="fa-solid fa-paw"></i> お気に入りした<br>
-        遊ぶの施設</h2>
-    <div class="next__info tr2 "><a href="">>>〇〇件</a></div>
+    <h2 class="sub__title2 mb20 bgGL">
+        <i class="fa-solid fa-paw"></i> お気に入りした<br>
+        遊ぶの施設
+    </h2>
+    <div class="next__info tr2 ">
+        <a href="">>>〇〇件</a>
+    </div>
     <!-- カード型コンテンツまとめ -->
     <div class="card__contents mw12">
 
@@ -58,9 +63,8 @@
                         // $events['text'][] = $text;
         ?>
 
-
         <!-- カード型 -->
-        <div class="card tokushima">
+        <div class="card">
             <a href="#">
                 <!-- 背面 -->
                 <div class="card__back"></div>
@@ -105,9 +109,9 @@
                     wp_reset_postdata();
                     // else :
                     ?>
-    </div>
 
-    <?php
+
+        <?php
                 else :
 
                 endif;
@@ -116,10 +120,7 @@
         endif;
         // print_r($events);
         // print_r($event_count);
-?>
-
-    <!-- 記事が4以上ならmoreボタンを出す。 -->
-
+        ?>
     </div>
 
     <button id="btn__tokushima" class="more-button">
@@ -128,7 +129,10 @@
 
 
     <!-- コンテンツのサブタイトル -->
-    <h2 class="sub__title2 mb20 bgBL"><i class="fa-solid fa-paw"></i> お気に入りした<br>泊るの施設</h2>
+    <h2 class="sub__title2 mb20 bgBL">
+        <i class="fa-solid fa-paw"></i> お気に入りした<br>
+        泊るの施設
+    </h2>
 
     <div class="next__info tr2"><a href="">>>〇〇件</a></div>
 
@@ -138,42 +142,42 @@
     <div class="card__contents mw12">
 
         <?php
-    if (function_exists('get_user_favorites')) :
-        // code...
-        $favorites = get_user_favorites();
-        krsort($favorites);
+        if (function_exists('get_user_favorites')) :
+            // code...
+            $favorites = get_user_favorites();
+            krsort($favorites);
 
-        // print_r($favorites);
+            // print_r($favorites);
 
-        if ($favorites) :
-            $the_query = new WP_Query([
-                'post_type' => 'stay',
-                'posts_per_page' => -1,
-                'ignore_sticky_posts' => true,
-                'post__in' => $favorites,
-                'orderby' => 'post__in',
-            ]);
-            if ($the_query->have_posts()) :
-                while ($the_query->have_posts()) :
-                    $the_query->the_post();
+            if ($favorites) :
+                $the_query = new WP_Query([
+                    'post_type' => 'stay',
+                    'posts_per_page' => -1,
+                    'ignore_sticky_posts' => true,
+                    'post__in' => $favorites,
+                    'orderby' => 'post__in',
+                ]);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) :
+                        $the_query->the_post();
 
-                    // マップ用
-                    // $latitude = SCF::get('latitude'); // 緯度のフィールド名latitude
-                    // $longitude = SCF::get('longitude'); // 経度のフィールド名longitude
-                    // $text = esc_html(SCF::get('event_name')); // 体験の名前のフィールド名event_name
+                        // マップ用
+                        // $latitude = SCF::get('latitude'); // 緯度のフィールド名latitude
+                        // $longitude = SCF::get('longitude'); // 経度のフィールド名longitude
+                        // $text = esc_html(SCF::get('event_name')); // 体験の名前のフィールド名event_name
 
-                    // $latitude = get_field('latitude'); // 緯度のフィールド名latitude
-                    // $longitude = get_field('longitude'); // 経度のフィールド名longitude
-                    // $text = esc_html(get_field('event_name')); // 体験の名前のフィールド名event_name
+                        // $latitude = get_field('latitude'); // 緯度のフィールド名latitude
+                        // $longitude = get_field('longitude'); // 経度のフィールド名longitude
+                        // $text = esc_html(get_field('event_name')); // 体験の名前のフィールド名event_name
 
-                    // $events['lat'][] = $latitude;
-                    // $events['lng'][] = $longitude;
-                    // $events['text'][] = $text;
-    ?>
+                        // $events['lat'][] = $latitude;
+                        // $events['lng'][] = $longitude;
+                        // $events['text'][] = $text;
+        ?>
 
 
         <!-- カード型 -->
-        <div class="card east">
+        <div class="card">
             <a href="#">
                 <!-- 背面 -->
                 <div class="card__back"></div>
@@ -212,31 +216,23 @@
         </div>
 
         <?php
-                // $event_count++;
-                // end ループ while
-                endwhile;
-                wp_reset_postdata();
-                // else :
-                ?>
-    </div>
+                    // $event_count++;
+                    // end ループ while
+                    endwhile;
+                    wp_reset_postdata();
+                    // else :
+                    ?>
 
-    <?php
-            else :
+        <?php
+                else :
 
+                endif;
             endif;
+        // end favorites
         endif;
-    // end favorites
-    endif;
-    // print_r($events);
-    // print_r($event_count);
-?>
-
-    <!-- 記事が4以上ならmoreボタンを出す。 -->
-
-    </div>
-
-    <!-- 記事が4以上ならmoreボタンを出す。 -->
-
+        // print_r($events);
+        // print_r($event_count);
+        ?>
     </div>
 
     <button id="btn__east" class="more-button">
@@ -247,46 +243,49 @@
     <h2 class="sub__title2 mb20 bgPK"><i class="fa-solid fa-paw"></i> お気に入りした<br>食べるの施設</h2>
 
     <div class="next__info tr2"><a href="">>>〇〇件</a></div>
+
     <!-- ３つめのカテゴリ -->
+
+    <!-- カード型コンテンツまとめ -->
     <div class="card__contents mw12">
 
         <?php
-    if (function_exists('get_user_favorites')) :
-        // code...
-        $favorites = get_user_favorites();
-        krsort($favorites);
+        if (function_exists('get_user_favorites')) :
+            // code...
+            $favorites = get_user_favorites();
+            krsort($favorites);
 
-        // print_r($favorites);
+            // print_r($favorites);
 
-        if ($favorites) :
-            $the_query = new WP_Query([
-                'post_type' => 'eat',
-                'posts_per_page' => -1,
-                'ignore_sticky_posts' => true,
-                'post__in' => $favorites,
-                'orderby' => 'post__in',
-            ]);
-            if ($the_query->have_posts()) :
-                while ($the_query->have_posts()) :
-                    $the_query->the_post();
+            if ($favorites) :
+                $the_query = new WP_Query([
+                    'post_type' => 'eat',
+                    'posts_per_page' => -1,
+                    'ignore_sticky_posts' => true,
+                    'post__in' => $favorites,
+                    'orderby' => 'post__in',
+                ]);
+                if ($the_query->have_posts()) :
+                    while ($the_query->have_posts()) :
+                        $the_query->the_post();
 
-                    // マップ用
-                    // $latitude = SCF::get('latitude'); // 緯度のフィールド名latitude
-                    // $longitude = SCF::get('longitude'); // 経度のフィールド名longitude
-                    // $text = esc_html(SCF::get('event_name')); // 体験の名前のフィールド名event_name
+                        // マップ用
+                        // $latitude = SCF::get('latitude'); // 緯度のフィールド名latitude
+                        // $longitude = SCF::get('longitude'); // 経度のフィールド名longitude
+                        // $text = esc_html(SCF::get('event_name')); // 体験の名前のフィールド名event_name
 
-                    // $latitude = get_field('latitude'); // 緯度のフィールド名latitude
-                    // $longitude = get_field('longitude'); // 経度のフィールド名longitude
-                    // $text = esc_html(get_field('event_name')); // 体験の名前のフィールド名event_name
+                        // $latitude = get_field('latitude'); // 緯度のフィールド名latitude
+                        // $longitude = get_field('longitude'); // 経度のフィールド名longitude
+                        // $text = esc_html(get_field('event_name')); // 体験の名前のフィールド名event_name
 
-                    // $events['lat'][] = $latitude;
-                    // $events['lng'][] = $longitude;
-                    // $events['text'][] = $text;
-    ?>
+                        // $events['lat'][] = $latitude;
+                        // $events['lng'][] = $longitude;
+                        // $events['text'][] = $text;
+        ?>
 
 
         <!-- カード型 -->
-        <div class="card west">
+        <div class="card">
             <a href="#">
                 <!-- 背面 -->
                 <div class="card__back"></div>
@@ -325,26 +324,24 @@
         </div>
 
         <?php
-                // $event_count++;
-                // end ループ while
-                endwhile;
-                wp_reset_postdata();
-                // else :
-                ?>
-    </div>
+                    // $event_count++;
+                    // end ループ while
+                    endwhile;
+                    wp_reset_postdata();
+                    // else :
+                    ?>
 
-    <?php
-            else :
 
+        <?php
+                else :
+
+                endif;
             endif;
+        // end favorites
         endif;
-    // end favorites
-    endif;
-    // print_r($events);
-    // print_r($event_count);
-?>
-
-    <!-- 記事が4以上ならmoreボタンを出す。 -->
+        // print_r($events);
+        // print_r($event_count);
+        ?>
 
     </div>
 

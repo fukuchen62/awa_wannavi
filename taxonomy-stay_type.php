@@ -52,10 +52,7 @@
         </div>
 
         <!-- メインのタイトル -->
-        <h2 class="h2__title bgBL mb20"><?php echo $stay_type->name; ?></h2>
-
-        <!-- 一覧まで飛んでいくリンク -->
-        <div class="next__info tr mb20"><a href="<?php echo home_url('/stay/'); ?>">>>一覧を見る</a></div>
+        <h2 class="h2__title__thin bgBL "><?php echo $stay_type->name; ?></h2>
 
         <!-- 地域ごとの一覧 -->
         <?php
@@ -113,7 +110,7 @@
                                 <?php $the_query->the_post(); ?>
 
                                 <!-- カード型を読み込む -->
-                                <?php get_template_part('template-parts/loop', 'card'); ?>
+                                <?php get_template_part('template-parts/loop', 'card', $area_slug); ?>
 
                             <?php endwhile; ?>
                         <?php endif; ?>
