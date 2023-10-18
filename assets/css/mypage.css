@@ -13,24 +13,25 @@
     font-size: 2.5rem;
     background-color: #F3E06E;
 }
+
 @media screen and (min-width: 1023px) {
-.mypage_title {
-    height: 140px;
-    font-size: 3.5rem;
+    .mypage_title {
+        height: 140px;
+        font-size: 3.5rem;
 
     }
 }
-/*
+
+
 .sub__title {
-    padding: 50px 0px;
-    gap: 10px;
-} */
+    margin: 100px auto 20px;
+}
 
 .sub__title2 {
     display: flex;
     width: 300px;
     height: 60px;
-    margin: 0 auto;
+    margin: 100px auto 0;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
