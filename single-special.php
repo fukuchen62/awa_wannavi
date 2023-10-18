@@ -4,7 +4,9 @@
 <main class="main">
 
     <div class="container">
-
+        <div class="pd20">
+            <h2 class="h2__title bgYL"><?php the_title("") ?></h2>
+        </div>
         <!-- パンくずリスト -->
         <?php get_template_part('template-parts/breadcrumb'); ?>
 
