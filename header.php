@@ -77,7 +77,8 @@
                         </form>
                     </div>
                     <ul class="menu__wrap">
-                        <li class="gnav"><a class="gnav__search__sp__title" href="<?php echo home_url('/filter/'); ?>">条件検索</a>
+                        <li class="gnav">
+                            <p class="gnav__search__sp__title" href="">条件検索</p>
                             <div class="gnav__search__sp">
                                 <span></span>
                                 <span></span>
