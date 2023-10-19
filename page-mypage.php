@@ -1,5 +1,14 @@
 <!-- header.phpを読み込む -->
-<?php get_header(); ?>
+<?php get_header();
+
+//マップ表示するための情報保存用
+// lat:緯度, lng:経度, text:表示名
+
+$spots = [];
+// ブックマーク数カウント
+$spot_count = 0;
+
+?>
 
 <main class="container">
     <div class="container pd20">
@@ -52,17 +61,14 @@
                         $the_query->the_post();
 
                         // マップ用
-                        // $latitude = SCF::get('latitude'); // 緯度のフィールド名latitude
-                        // $longitude = SCF::get('longitude'); // 経度のフィールド名longitude
-                        // $text = esc_html(SCF::get('event_name')); // 体験の名前のフィールド名event_name
 
-                        // $latitude = get_field('latitude'); // 緯度のフィールド名latitude
-                        // $longitude = get_field('longitude'); // 経度のフィールド名longitude
-                        // $text = esc_html(get_field('event_name')); // 体験の名前のフィールド名event_name
+                        $latitude = get_field('latitude'); // 緯度のフィールド名latitude
+                        $longitude = get_field('longitude'); // 経度のフィールド名longitude
+                        $text = esc_html(get_field('facility')); // 体験の名前のフィールド名facility
 
-                        // $events['lat'][] = $latitude;
-                        // $events['lng'][] = $longitude;
-                        // $events['text'][] = $text;
+                        $spots['lat'][] = $latitude;
+                        $spots['lng'][] = $longitude;
+                        $spots['text'][] = $text;
         ?>
 
         <!-- カード型 -->
@@ -81,9 +87,6 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
                         <?php endif; ?>
                     </a>
-                    <div class="card__tag bgGL">
-                        <p>遊ぶ</p>
-                    </div>
                     <h2 class="card__outline"><?php the_title(); ?></h2>
                     <div class="card__line"></div>
                     <div class="card__textarea">
@@ -105,7 +108,7 @@
         </div>
 
         <?php
-                    // $event_count++;
+                        $spot_count++;
                     // end ループ while
                     endwhile;
                     wp_reset_postdata();
@@ -120,10 +123,11 @@
             endif;
         // end favorites
         endif;
-        // print_r($events);
-        // print_r($event_count);
+
         ?>
     </div>
+
+    <hr>
 
     <!-- <button id="btn__tokushima" class="more-button">
         MORE
@@ -133,7 +137,7 @@
     <!-- コンテンツのサブタイトル -->
     <h2 class="sub__title2 mb20 bgBL">
         <i class="fa-solid fa-paw"></i> お気に入りした<br>
-        泊るの施設
+        泊まるの施設
     </h2>
 
     <!-- <div class="next__info tr2"><a href="">>>〇〇件</a></div> -->
@@ -164,17 +168,14 @@
                         $the_query->the_post();
 
                         // マップ用
-                        // $latitude = SCF::get('latitude'); // 緯度のフィールド名latitude
-                        // $longitude = SCF::get('longitude'); // 経度のフィールド名longitude
-                        // $text = esc_html(SCF::get('event_name')); // 体験の名前のフィールド名event_name
 
-                        // $latitude = get_field('latitude'); // 緯度のフィールド名latitude
-                        // $longitude = get_field('longitude'); // 経度のフィールド名longitude
-                        // $text = esc_html(get_field('event_name')); // 体験の名前のフィールド名event_name
+                        $latitude = get_field('latitude'); // 緯度のフィールド名latitude
+                        $longitude = get_field('longitude'); // 経度のフィールド名longitude
+                        $text = esc_html(get_field('facility')); // 体験の名前のフィールド名facility
 
-                        // $events['lat'][] = $latitude;
-                        // $events['lng'][] = $longitude;
-                        // $events['text'][] = $text;
+                        $spots['lat'][] = $latitude;
+                        $spots['lng'][] = $longitude;
+                        $spots['text'][] = $text;
         ?>
 
 
@@ -194,9 +195,6 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
                         <?php endif; ?>
                     </a>
-                    <div class="card__tag bgBL">
-                        <p>泊まる</p>
-                    </div>
                     <h2 class="card__outline"><?php the_title(); ?></h2>
                     <div class="card__line"></div>
                     <div class="card__textarea">
@@ -218,7 +216,7 @@
         </div>
 
         <?php
-                    // $event_count++;
+                        $spot_count++;
                     // end ループ while
                     endwhile;
                     wp_reset_postdata();
@@ -232,10 +230,11 @@
             endif;
         // end favorites
         endif;
-        // print_r($events);
-        // print_r($event_count);
+
         ?>
     </div>
+
+    <hr>
 
     <!-- <button id="btn__east" class="more-button">
         MORE
@@ -272,17 +271,14 @@
                         $the_query->the_post();
 
                         // マップ用
-                        // $latitude = SCF::get('latitude'); // 緯度のフィールド名latitude
-                        // $longitude = SCF::get('longitude'); // 経度のフィールド名longitude
-                        // $text = esc_html(SCF::get('event_name')); // 体験の名前のフィールド名event_name
 
-                        // $latitude = get_field('latitude'); // 緯度のフィールド名latitude
-                        // $longitude = get_field('longitude'); // 経度のフィールド名longitude
-                        // $text = esc_html(get_field('event_name')); // 体験の名前のフィールド名event_name
+                        $latitude = get_field('latitude'); // 緯度のフィールド名latitude
+                        $longitude = get_field('longitude'); // 経度のフィールド名longitude
+                        $text = esc_html(get_field('facility')); // 体験の名前のフィールド名facility
 
-                        // $events['lat'][] = $latitude;
-                        // $events['lng'][] = $longitude;
-                        // $events['text'][] = $text;
+                        $spots['lat'][] = $latitude;
+                        $spots['lng'][] = $longitude;
+                        $spots['text'][] = $text;
         ?>
 
 
@@ -302,9 +298,6 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/noimage_600x400.png" alt="">
                         <?php endif; ?>
                     </a>
-                    <div class="card__tag bgPK">
-                        <p>食べる</p>
-                    </div>
                     <h2 class="card__outline"><?php the_title(); ?></h2>
                     <div class="card__line"></div>
                     <div class="card__textarea">
@@ -326,7 +319,7 @@
         </div>
 
         <?php
-                    // $event_count++;
+                        $spot_count++;
                     // end ループ while
                     endwhile;
                     wp_reset_postdata();
@@ -341,22 +334,88 @@
             endif;
         // end favorites
         endif;
-        // print_r($events);
-        // print_r($event_count);
+
         ?>
 
     </div>
+
+    <hr>
 
     <!-- <button id="btn__west" class="more-button">
         MORE
     </button> -->
 
     <!-- コンテンツのサブタイトル -->
-    <h2 class="sub__title bgBL mb20"><i class="fa-solid fa-paw"></i>MAP表示</h2>
+    <h2 class="sub__title bgcYL mb20"><i class="fa-solid fa-paw"></i>MAP表示</h2>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d128516.40393760444!2d134.45463388956426!3d34.074890831171494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1696859548408!5m2!1sja!2sjp"></iframe>" frameborder="0"></iframe>
-    </div>
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d128516.40393760444!2d134.45463388956426!3d34.074890831171494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1696859548408!5m2!1sja!2sjp"></iframe>" frameborder="0"></iframe> -->
+
+    <section class="map mw-1200" style="margin-bottom:200px">
+        <div id="map" style="width:100%; height:450px"></div>
+    </section>
+
 </main>
+
+<script type="text/javascript">
+// initMap() を使って地図を埋め込む記述
+function initMap() {
+    //alert("lkjfks");
+    const color = "black"; // ラベルの色
+    const font_family = 'Kosugi Maru' //ラベルのフォント
+    const font_size = "14px" //ラベルのサイズ
+    // 徳島全域が入るように
+    var latlng = new google.maps.LatLng(33.9220334, 134.2203203);
+    var opts = {
+        zoom: 9.4, // 地図のズームを指定
+        center: latlng, // 地図の中心を指定
+        mapTypeId: google.maps.MapTypeId.ROADMAP // マップタイプの設定 ROADMAPは道路や建物などが表示される地図
+    };
+    // マップ生成
+    var map = new google.maps.Map(document.getElementById("map"), opts); // #mapに地図を埋め込む
+
+    //console.log("この文章をコンソールに表示します");
+
+    // マーカー生成
+    // フォント変えられる
+    let spots = [];
+    <?php
+        for ($i = 0; $i < $spot_count; $i++) {
+            echo "spots[${i}]={lat:";
+            echo $spots['lat'][$i];
+            echo ', lng:';
+            echo $spots['lng'][$i];
+            echo ', text:"';
+            echo $spots['text'][$i];
+            echo "\",
+                color: \"#AD7000\",
+                fontFamily: 'Kosugi Maru',
+                fontSize: \"14px\",
+                fontWeight: \"bold\",};";
+
+            echo "\n";
+        }
+        ?>
+
+
+    //コンソールテスト
+    // console.log('Hello World');
+
+    var marker = new google.maps.Marker();
+    for (let i = 0; i < spots.length; i++) {
+        marker = new google.maps.Marker({
+            position: spots[i], // マーカーを立てる位置を指定
+            label: spots[i],
+            map: map, // マーカーを立てる地図を指定
+        });
+    }
+    // マーカー表示
+    marker.setMap(map);
+}
+</script>
+
+<!-- callback=initMap=APIが読み込み後にinitMap()を実行 -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJpkrA0wadpGsq26hNJcnFOoZiKpeOTfM&callback=initMap">
+</script>
 
 <!-- footer.phpを読み込む -->
 <?php get_footer(); ?>
