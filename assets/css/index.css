@@ -524,6 +524,7 @@
 
 @media screen and (min-width:600px) {
     .tokushima__btn {
+        height: 10%;
         border: 5px dashed #DDCA70;
     }
 }
@@ -541,6 +542,7 @@
 
 @media screen and (min-width:600px) {
     .east__btn {
+        height: 10%;
         border: 5px dashed #DA9E91;
     }
 }
@@ -558,6 +560,7 @@
 
 @media screen and (min-width:600px) {
     .west_btn {
+        height: 10%;
         border: 5px dashed #B5C87D;
     }
 }
@@ -575,6 +578,7 @@
 
 @media screen and (min-width:600px) {
     .south__btn {
+        height: 10%;
         border: 5px dashed #84BED8;
     }
 }
