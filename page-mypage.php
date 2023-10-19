@@ -346,7 +346,7 @@ $spot_count = 0;
     </button> -->
 
     <!-- コンテンツのサブタイトル -->
-    <h2 class="sub__title bgBL mb20"><i class="fa-solid fa-paw"></i>MAP表示</h2>
+    <h2 class="sub__title bgcYL mb20"><i class="fa-solid fa-paw"></i>MAP表示</h2>
 
     <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d128516.40393760444!2d134.45463388956426!3d34.074890831171494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1696859548408!5m2!1sja!2sjp"></iframe>" frameborder="0"></iframe> -->
 

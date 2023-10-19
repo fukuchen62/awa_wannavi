@@ -24,7 +24,7 @@
 
 
 .sub__title {
-    margin: 100px auto 20px;
+    margin: 0 auto 80px;
 }
 
 .sub__title2 {
@@ -104,4 +104,8 @@ iframe {
 hr {
     border-top: 3px solid #000;
     margin: 100px 0 80px;
+}
+
+.bgcYL {
+    background-color: #F3E06E;
 }
