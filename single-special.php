@@ -18,22 +18,17 @@
         <!-- 2col全体を格納するコンテナー -->
         <div class="container__col">
 
-            <!-- メインコラムコンテナー -->
-            <div class="main__col">
+            <!-- wpのメインクエリは個別ページでは一回だけループすると定義されています -->
+            <!-- なので、個別でもthe contentsなどの前にループで囲いますp84 -->
+            <!-- the-contentsのhtml記載欄はmaincolomから -->
 
-                <div class="card__2col">
-                    <!-- wpのメインクエリは個別ページでは一回だけループすると定義されています -->
-                    <!-- なので、個別でもthe contentsなどの前にループで囲いますp84 -->
-                    <?php if (have_posts()) : ?>
-                        <?php while (have_posts()) : the_post(); ?>
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
 
-                            <?php the_content(); ?>
+                    <?php the_content(); ?>
 
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                </div>
-
-            </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
 
             <!-- aside カテゴリー一覧 -->
             <?php get_sidebar("special"); ?>
