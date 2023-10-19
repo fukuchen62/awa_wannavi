@@ -277,6 +277,12 @@ header {
     top: -7px;
     left: -30px;
 }
+.house {
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+    padding: 3px;
+}
 
 /* 通常gnavのアイコン */
 .gnav__icon {
@@ -313,6 +319,8 @@ header {
 .gnav__search__sp__title {
     max-width: 600px;
     width: 100%;
+    font-size: 1.6rem;
+    font-weight: bold;
     margin: -40px 10px;
     position: absolute;
     color: #000;
@@ -403,6 +411,9 @@ header {
 .menu__item__search__sp span {
     transform: rotate(45deg);
     top: 7px;
+    position: relative;
+    left: 30%;
+
 }
 
 .menu__item__search__sp span::before {
@@ -414,6 +425,38 @@ header {
 .menu__item dt {
     text-align: left;
     font-size: 1.6rem;
+}
+.menu__item__home {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 19px 0;
+}
+.menu__item__home span,
+.menu__item__home span::before {
+    width: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 5px;
+    background-color: #fe9800;
+    height: 1px;
+    width: 15px;
+    bottom: 35px;
+}
+.menu__item__home span {
+    transform: rotate(45deg);
+    position: absolute;
+    left: 82%;
+    top: 42%;
+
+}
+.menu__item__home span::before {
+    top: 7px;
+    left: 7px;
+    transform: rotate(90deg);
 }
 
 

@@ -82,12 +82,13 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <ul class="menu__item__search__wrap__sp">
+                            <div class="menu__item__search__wrap__sp">
                                 <a class="menu__item__search__sp" href="">
-                                    <li>検索</li>
+                                    <div>検索
+                                    </div>
                                     <span></span>
                                 </a>
-                            </ul>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -285,6 +286,16 @@
                 </ul>
                 <ul class="menu__wrap">
                     <li class="gnav"><a class="gnav__title" href="<?php echo home_url('/mypage/'); ?>">マイページ</a>
+                        <div class="gnav__search__sp">
+                            <i class="house fa-solid fa-house"></i>
+                        </div>
+                        <div class="menu__item__search__wrap__sp">
+                            <a class="menu__item__home" href="">
+                                <div>マイページ
+                                </div>
+                                <span></span>
+                            </a>
+                        </div>
                     </li>
                 </ul>
                 <ul class="menu__wrap">
