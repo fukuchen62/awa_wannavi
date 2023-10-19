@@ -285,14 +285,24 @@
 /* ごあいさつ本文レイアウト */
 .top-greeting__text {
     padding: 20px;
+    line-height: 2;
 }
 
 /* ごあいさつワンちゃん画像 */
+.greeting__img__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .greeting__img {
     width: 100%;
-    padding: 0 20px;
+    margin: 20px;
 }
-
+@media screen and (min-width:430px) {
+    .greeting__img {
+        width: 70%;
+    }
+}
 @media screen and (min-width:769px) {
 
     /* 横並びレイアウト */
@@ -305,14 +315,14 @@
     /* ごあいさつ本文レイアウト */
     .top-greeting__text {
         width: 70%;
-        padding: 0 5% 0 15%;
+        margin: 5% 5%;
     }
 
     /* ごあいさつワンちゃん画像 */
     .greeting__img {
-        width: 30%;
+        width: 70%;
         height: auto;
-        padding: 50px 12% 50px 0;
+        margin: 5% 0;
     }
 }
 
