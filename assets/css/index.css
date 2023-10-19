@@ -486,7 +486,8 @@
 
 .top-map__title {
     margin: 30px 20px 0;
-    font-weight: 500;
+    font-weight: bold;
+    font-size: 2rem;
 }
 
 .background__map {
