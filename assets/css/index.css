@@ -520,6 +520,7 @@
     background-color: #fff;
     border: 2px dashed #DDCA70;
     border-radius: 40px;
+    font-weight: bold;
 }
 
 @media screen and (min-width:600px) {
@@ -538,6 +539,7 @@
     background-color: #fff;
     border: 2px dashed #DA9E91;
     border-radius: 40px;
+    font-weight: bold;
 }
 
 @media screen and (min-width:600px) {
@@ -556,6 +558,7 @@
     background-color: #fff;
     border: 2px dashed #B5C87D;
     border-radius: 40px;
+    font-weight: bold;
 }
 
 @media screen and (min-width:600px) {
@@ -574,6 +577,7 @@
     background-color: #fff;
     border: 2px dashed #84BED8;
     border-radius: 40px;
+    font-weight: bold;
 }
 
 @media screen and (min-width:600px) {
