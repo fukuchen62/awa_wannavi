@@ -77,13 +77,13 @@
                         </form>
                     </div>
                     <ul class="menu__wrap">
-                        <li class="gnav"><a class="gnav__search__sp__title" href="">条件検索</a>
+                        <li class="gnav"><a class="gnav__search__sp__title" href="<?php echo home_url('/filter/'); ?>">条件検索</a>
                             <div class="gnav__search__sp">
                                 <span></span>
                                 <span></span>
                             </div>
                             <div class="menu__item__search__wrap__sp">
-                                <a class="menu__item__search__sp" href="">
+                                <a class="menu__item__search__sp" href="<?php echo home_url('/filter/'); ?>">
                                     <div>検索
                                     </div>
                                     <span></span>
@@ -290,7 +290,7 @@
                             <i class="house fa-solid fa-house"></i>
                         </div>
                         <div class="menu__item__search__wrap__sp">
-                            <a class="menu__item__home" href="">
+                            <a class="menu__item__home" href="<?php echo home_url('/mypage/'); ?>">
                                 <div>マイページ
                                 </div>
                                 <span></span>
