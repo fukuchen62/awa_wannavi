@@ -11,9 +11,7 @@ $spot_count = 0;
 ?>
 
 <main class="container">
-    <div class="container pd20">
-        <h2 class="mypage_title">マイページ</h2>
-    </div>
+    <h2 class="mypage_title">マイページ</h2>
     <!-- パンくずリスト -->
     <?php get_template_part("template-parts/breadcrumb"); ?>
 
