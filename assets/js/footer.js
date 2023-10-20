@@ -106,8 +106,10 @@ $.fn.clickToggle = function (a, b) {
         });
     });
 };
+
 $(document).ready(function () {
     $(".awamaru").hide(); // 初期状態で非表示にします
+    $("#scroll").hide();// 初期状態で非表示にします
 
     $(window).scroll(function () {
         var scrollTop = $(window).scrollTop(),
@@ -147,7 +149,6 @@ $(function () {
         $('awamaru_trivia').css({
             'display': 'block',
         });
-
     });
 });
 
