@@ -27,7 +27,7 @@ $(function () {
         $(".slider__img").slick({
             autoplay: true,
             autoplaySpeed: 0,
-            speed: 5000,
+            speed: 7500,
             cssEase: 'linear',
             slidesToShow: 1,
             swipe: false,
@@ -39,7 +39,7 @@ $(function () {
         $(".slider__img").slick({
             autoplay: true,
             autoplaySpeed: 0,
-            speed: 5000,
+            speed: 7500,
             cssEase: 'linear',
             slidesToShow: 1.5,
             swipe: false,
