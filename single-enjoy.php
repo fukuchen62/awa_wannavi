@@ -575,15 +575,15 @@
         <?php endif; ?>
 
         <!-- 口コミフォーム -->
-        <div class="comments flex mt100">
+        <!-- <div class="comments flex mt100">
             <div class="headline flex">
                 <h2 class="fs24to30"><i class="fa-solid fa-paw"></i>口コミ</h2>
             </div>
 
-            <?php comments_template(); ?>
+            <?php comments_template(); ?> -->
 
-            <!-- 口コミ一覧 -->
-            <div class="comments__area tc mt40">
+        <!-- 口コミ一覧 -->
+        <!-- <div class="comments__area tc mt40">
                 <div class="pd40">
                     <h2 class="fs24"><?php the_title(); ?>の口コミ一覧</h2>
                     <ul class="mt40">
@@ -595,9 +595,9 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            <!-- 口コミ投稿する -->
-            <div class="comments__area tc mt60">
+            </div> -->
+        <!-- 口コミ投稿する -->
+        <!-- <div class="comments__area tc mt60">
                 <div class="pd40">
                     <h2 class="fs24">口コミ投稿する</h2>
                     <p class="comments__attention tl mt20 fw500">
@@ -616,7 +616,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </main>
