@@ -801,7 +801,7 @@
     .top-insta__insta-area {
         display: flex;
         justify-content: space-around;
-        margin-top: 100px;
+        margin-top: 20px;
     }
 
 }
