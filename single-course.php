@@ -1,7 +1,7 @@
 <!-- header.phpを読み込む -->
 <?php get_header(); ?>
 
-<div class="container">
+< class="container">
     <div class="bnr__head bg__course">
         <h2 class=" page__title">モデルコース</h2>
     </div>
@@ -511,8 +511,6 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_10.svg" alt="">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/course/course_ill_09.svg" alt="">
     </div>
-</div>
-
 </div>
 
 <!-- footer.phpを読み込む -->
