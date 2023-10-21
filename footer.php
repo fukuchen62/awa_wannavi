@@ -117,10 +117,12 @@
                     <li><a href="<?php echo home_url('/special_type/info/'); ?>">お出かけ情報</a></li>
                     <li><a href="<?php echo home_url('/special_type/interview/'); ?>">特集記事</a></li>
                 </ul>
-                <!-- <ul class="large-menu">検索
+                <?php /*
+                <ul class="large-menu">検索
                     <li><a href="<?php //echo home_url('/filter/');
                                     ?>">条件検索</a></li>
-                </ul> -->
+                </ul>
+                */ ?>
                 <ul class="large-menu">新着情報
                     <li><a href="<?php echo home_url('/category/news/'); ?>">お知らせ</a></li>
                     <li><a href="<?php echo home_url('/category/event/'); ?>">イベント情報</a></li>
