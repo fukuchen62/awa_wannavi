@@ -146,7 +146,7 @@
                         </dl>
                         <dl>
                             <dt>駐輪場（自転車）</dt>
-                            <dd><?php if (get_field("bicycle")) {
+                            <dd><?php if (get_field("Bicycle")) {
                                     echo "有り";
                                 } else {
                                     echo "なし";
@@ -376,7 +376,7 @@
                         </dl>
                         <dl>
                             <dt>駐輪場（自転車）</dt>
-                            <dd><?php if (get_field("bicycle")) {
+                            <dd><?php if (get_field("Bicycle")) {
                                     echo "有り";
                                 } else {
                                     echo "なし";
@@ -443,7 +443,7 @@
                         </dl>
                         <dl>
                             <dt>駐輪場（自転車）</dt>
-                            <dd><?php if (get_field("bicycle")) {
+                            <dd><?php if (get_field("Bicycle")) {
                                     echo "有り";
                                 } else {
                                     echo "なし";
