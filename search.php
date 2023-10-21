@@ -13,8 +13,8 @@
 
         <?php if (get_search_query() != '') : ?>
 
-            <!-- 遊ぶタブ -->
-            <?php
+        <!-- 遊ぶタブ -->
+        <?php
             // カスタム投稿タイプ
             $args = array(
                 'post_type' => 'enjoy',
@@ -29,28 +29,28 @@
             $enjoy_query =  new WP_Query($args);
             ?>
 
-            <div class="mt40">
-                <div class="sub__title bgGL"><i class="fa-solid fa-paw"></i>遊ぶ (<?php echo $enjoy_query->post_count; ?>件)</div>
-            </div>
+        <div class="mt40">
+            <div class="sub__title bgGL"><i class="fa-solid fa-paw"></i>遊ぶ (<?php echo $enjoy_query->post_count; ?>件)</div>
+        </div>
 
-            <!-- 結果を表示させる -->
-            <div class="card__contents mw12 mb80">
-                <?php if ($enjoy_query->have_posts()) : ?>
-                    <?php while ($enjoy_query->have_posts()) : ?>
-                        <?php $enjoy_query->the_post(); ?>
+        <!-- 結果を表示させる -->
+        <div class="card__contents mw12 mb80">
+            <?php if ($enjoy_query->have_posts()) : ?>
+            <?php while ($enjoy_query->have_posts()) : ?>
+            <?php $enjoy_query->the_post(); ?>
 
-                        <!-- カード型を読み込む -->
-                        <?php get_template_part('template-parts/loop', 'card'); ?>
+            <!-- カード型を読み込む -->
+            <?php get_template_part('template-parts/loop', 'card'); ?>
 
-                    <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
 
-            <!-- ライン -->
-            <div class="line__solid"></div>
+        <!-- ライン -->
+        <div class="line__solid"></div>
 
-            <!-- 泊まるの検索 -->
-            <?php
+        <!-- 泊まるの検索 -->
+        <?php
             // カスタム投稿タイプ
             $args = array(
                 'post_type' => 'stay',
@@ -65,28 +65,28 @@
             $stay_query =  new WP_Query($args);
             ?>
 
-            <div class="mt40">
-                <div class="sub__title bgGL"><i class="fa-solid fa-paw"></i>泊まる (<?php echo $stay_query->post_count; ?>件)</div>
-            </div>
+        <div class="mt40">
+            <div class="sub__title bgBL"><i class="fa-solid fa-paw"></i>泊まる (<?php echo $stay_query->post_count; ?>件)</div>
+        </div>
 
-            <!-- 結果を表示させる -->
-            <div class="card__contents mw12 mb80">
-                <?php if ($stay_query->have_posts()) : ?>
-                    <?php while ($stay_query->have_posts()) : ?>
-                        <?php $stay_query->the_post(); ?>
+        <!-- 結果を表示させる -->
+        <div class="card__contents mw12 mb80">
+            <?php if ($stay_query->have_posts()) : ?>
+            <?php while ($stay_query->have_posts()) : ?>
+            <?php $stay_query->the_post(); ?>
 
-                        <!-- カード型を読み込む -->
-                        <?php get_template_part('template-parts/loop', 'card'); ?>
+            <!-- カード型を読み込む -->
+            <?php get_template_part('template-parts/loop', 'card'); ?>
 
-                    <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
 
-            <!-- ライン -->
-            <div class="line__solid"></div>
+        <!-- ライン -->
+        <div class="line__solid"></div>
 
-            <!-- 食べるの検索 -->
-            <?php
+        <!-- 食べるの検索 -->
+        <?php
             // カスタム投稿タイプ
             $args = array(
                 'post_type' => 'eat',
@@ -101,28 +101,28 @@
             $eat_query =  new WP_Query($args);
             ?>
 
-            <div class="mt40">
-                <div class="sub__title bgGL"><i class="fa-solid fa-paw"></i>食べる (<?php echo $eat_query->post_count; ?>件)</div>
-            </div>
+        <div class="mt40">
+            <div class="sub__title bgPK"><i class="fa-solid fa-paw"></i>食べる (<?php echo $eat_query->post_count; ?>件)</div>
+        </div>
 
-            <!-- 結果を表示させる -->
-            <div class="card__contents mw12 mb80">
-                <?php if ($eat_query->have_posts()) : ?>
-                    <?php while ($eat_query->have_posts()) : ?>
-                        <?php $eat_query->the_post(); ?>
+        <!-- 結果を表示させる -->
+        <div class="card__contents mw12 mb80">
+            <?php if ($eat_query->have_posts()) : ?>
+            <?php while ($eat_query->have_posts()) : ?>
+            <?php $eat_query->the_post(); ?>
 
-                        <!-- カード型を読み込む -->
-                        <?php get_template_part('template-parts/loop', 'card'); ?>
+            <!-- カード型を読み込む -->
+            <?php get_template_part('template-parts/loop', 'card'); ?>
 
-                    <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
 
-            <!-- ライン -->
-            <div class="line__solid"></div>
+        <!-- ライン -->
+        <div class="line__solid"></div>
 
-            <!-- おすすめ情報の検索 -->
-            <?php
+        <!-- おすすめ情報の検索 -->
+        <?php
             // カスタム投稿タイプ
             $args = array(
                 'post_type' => 'special',
@@ -137,28 +137,28 @@
             $special_query =  new WP_Query($args);
             ?>
 
-            <div class="mt40">
-                <div class="sub__title bgGL"><i class="fa-solid fa-paw"></i>おすすめ情報 (<?php echo $special_query->post_count; ?>件)</div>
-            </div>
+        <div class="mt40">
+            <div class="sub__title bgcYL"><i class="fa-solid fa-paw"></i>おすすめ情報 (<?php echo $special_query->post_count; ?>件)</div>
+        </div>
 
-            <!-- 結果を表示させる -->
-            <div class="card__contents mw12 mb80">
-                <?php if ($special_query->have_posts()) : ?>
-                    <?php while ($special_query->have_posts()) : ?>
-                        <?php $special_query->the_post(); ?>
+        <!-- 結果を表示させる -->
+        <div class="card__contents mw12 mb80">
+            <?php if ($special_query->have_posts()) : ?>
+            <?php while ($special_query->have_posts()) : ?>
+            <?php $special_query->the_post(); ?>
 
-                        <!-- カード型を読み込む -->
-                        <?php get_template_part('template-parts/loop', 'card_special'); ?>
+            <!-- カード型を読み込む -->
+            <?php get_template_part('template-parts/loop', 'card_special'); ?>
 
-                    <?php endwhile; ?>
-                <?php endif; ?>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
 
-            <!-- ライン -->
-            <div class="line__solid"></div>
+        <!-- ライン -->
+        <div class="line__solid"></div>
 
         <?php else : ?>
-            <p>検索ワードを入力してください。</p>
+        <p>検索ワードを入力してください。</p>
         <?php endif; ?>
     </div>
 
