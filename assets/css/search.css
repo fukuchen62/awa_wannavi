@@ -10,7 +10,7 @@
     border-bottom: 5px dashed #333;
     font-weight: bold;
     height: 140px;
-    background-color:#F3E06E;
+    background-color: #F3E06E;
 }
 
 .sub__title {
@@ -37,4 +37,8 @@
 .sl2 {
     text-align: center;
     padding: 40px;
+}
+
+.bgcYL {
+    background-color: #F3E06E;
 }
