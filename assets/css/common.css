@@ -551,7 +551,7 @@ a img:hover {
 .card {
     position: relative;
     width: 100%;
-    margin: 60px 0;
+    margin: 50px 0;
 }
 
 /* カード前面の影 */
@@ -648,7 +648,7 @@ a img:hover {
     /* カードサイズ（PC）+ カーソル判定 */
     .card {
         width: 30%;
-        margin: 60px 2.3% 0 1%;
+        margin: 50px  auto;
         cursor: pointer;
     }
 
