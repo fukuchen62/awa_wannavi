@@ -306,20 +306,20 @@ header {
     font-size: 1.6rem;
     font-weight: bold;
     max-width: 600px;
-    width: 100%;
+    width: 95%;
     margin: -40px 10px;
     position: absolute;
     color: #000;
     text-decoration: none;
     border-bottom: dashed 1px #000;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%);
 }
 
 /* sp用検索見出し */
 .gnav__search__sp__title {
     max-width: 600px;
-    width: 100%;
+    width: 95%;
     font-size: 1.6rem;
     font-weight: bold;
     margin: -40px 10px;
@@ -327,7 +327,7 @@ header {
     color: #000;
     text-decoration: none;
     border-bottom: dashed 1px #000;
-    left: 50%;
+    left: 48%;
     transform: translate(-50%);
 }
 
