@@ -163,7 +163,9 @@
                         <dl>
                             <dt>分煙</dt>
                             <dd>
-                                <?php if (get_field("separate smoking")) : ?>
+                                <?php if (get_the_ID() == 644) : ?>
+                                    <span></span>
+                                <?php elseif (get_field("separate smoking")) : ?>
                                     <span>有り</span>
                                 <?php else : ?>
                                     <span>なし</span>
