@@ -294,15 +294,18 @@
     display: flex;
     justify-content: center;
 }
+
 .greeting__img {
     width: 100%;
     margin: 20px;
 }
+
 @media screen and (min-width:430px) {
     .greeting__img {
         width: 70%;
     }
 }
+
 @media screen and (min-width:769px) {
 
     /* 横並びレイアウト */
@@ -374,7 +377,7 @@
 
 .top-description__outline {
     text-align: left;
-    padding: 0 15px;
+    padding: 15px;
     font-size: 16px;
 }
 
@@ -460,9 +463,10 @@
 /************/
 /* 新着情報 */
 /************/
-    .top-news__card-area {
-        margin: 0 10px;
-    }
+.top-news__card-area {
+    margin: 0 10px;
+}
+
 .top-news__archive-link {
     margin: 20px 0 20px 20px;
     font-weight: 900;
@@ -817,11 +821,13 @@
     margin-top: 40px;
     margin-bottom: 40px;
 }
-@media screen and (min-width:768px){
-.top__banner__btn__wrap {
-    justify-content: center;
+
+@media screen and (min-width:768px) {
+    .top__banner__btn__wrap {
+        justify-content: center;
+    }
 }
-}
+
 .top__banner__btn {
     display: flex;
     justify-content: center;
@@ -838,10 +844,11 @@
     outline-offset: -8px;
     font-family: 'Zen Maru Gothic', sans-serif;
 }
-@media screen and (min-width:768px){
 
-.top__banner__btn {
-    font-size: 2.5rem;
-margin: 0 10%;
-}
+@media screen and (min-width:768px) {
+
+    .top__banner__btn {
+        font-size: 2.5rem;
+        margin: 0 10%;
+    }
 }
