@@ -37,6 +37,9 @@ time {
     border: 1px solid #000;
 }
 
+.marker__yellow {
+    background: linear-gradient(transparent 80%, #F3E06E 80%);
+}
 
 /************************************/
 /* メイン記事  artical */
@@ -281,4 +284,8 @@ time {
     /* .news__date {
         padding: 15px 10px;
     } */
+}
+
+h4 {
+    font-size: 1.6rem;
 }
