@@ -24,6 +24,7 @@ body {
     /* ヘッダー分上に余白を取る */
     margin-top: 60px;
 }
+
 h2 {
     font-family: 'Zen Maru Gothic', serif;
 }
@@ -342,6 +343,7 @@ a img:hover {
         font-size: 3.5rem;
     }
 }
+
 .h2__title__thin {
     /* flexboxでjustyfyとtext-align使った方がきれいに見えるので採用 */
     display: flex;
@@ -603,7 +605,7 @@ a img:hover {
 /* 画像比率固定 */
 .card img {
     width: 100%;
-    aspect-ratio: 27 / 23;
+    aspect-ratio: 3 / 2;
 }
 
 /* タグ（遊ぶ、泊まる、食べる） */
@@ -648,7 +650,7 @@ a img:hover {
     /* カードサイズ（PC）+ カーソル判定 */
     .card {
         width: 30%;
-        margin: 50px  auto;
+        margin: 50px auto;
         cursor: pointer;
     }
 
@@ -970,6 +972,7 @@ a img:hover {
 .card__textarea p {
     word-wrap: break-word;
 }
+
 /* Font Awesomeをsafariでも対応させるため */
 .fas {
     font-family: "Font Awesome 6 Free";
