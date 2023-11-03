@@ -23,17 +23,26 @@
             <!-- the-contentsのhtml記載欄はmaincolomから -->
 
             <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : the_post(); ?>
+                <?php while (have_posts()) : the_post(); ?>
 
-            <?php the_content(); ?>
+                    <?php the_content(); ?>
 
-            <?php endwhile; ?>
+                <?php endwhile; ?>
             <?php endif; ?>
 
             <!-- aside カテゴリー一覧 -->
             <?php get_sidebar("special"); ?>
 
         </div>
+
+        <?php if (get_field("url1_article") !== "") : ?>
+            <div class="link-area">
+                <a class="link" href="<?php echo get_permalink(get_field("url1_article")); ?>">
+                    こちらのスポットの詳細はこちら
+                </a>
+            </div>
+        <?php endif; ?>
+
         <h2 class="article__title">こちらの記事はいかがですか？</h2>
 
         <div class="card__contents mw12">
@@ -50,13 +59,13 @@
             ?>
 
             <?php if ($nearby_query->have_posts()) : ?>
-            <?php while ($nearby_query->have_posts()) : ?>
-            <?php $nearby_query->the_post(); ?>
+                <?php while ($nearby_query->have_posts()) : ?>
+                    <?php $nearby_query->the_post(); ?>
 
-            <!-- カード型を読み込む -->
-            <?php get_template_part('template-parts/loop', 'card_special'); ?>
+                    <!-- カード型を読み込む -->
+                    <?php get_template_part('template-parts/loop', 'card_special'); ?>
 
-            <?php endwhile; ?>
+                <?php endwhile; ?>
             <?php endif; ?>
             <?php wp_reset_postdata(); ?>
         </div>
