@@ -528,8 +528,8 @@
                 <div class="headline flex">
                     <h2 class="fs24to30"><i class="fa-solid fa-paw"></i>関連記事</h2>
                 </div>
-                <a class="special__article flex mt40">
-                    <p class="fs24">特集記事</p>
+                <a href="<?php echo get_permalink(get_field("url_article")); ?>" class="special__article flex mt40">
+                    <p class="fs24"><?php echo get_the_title(get_field("url_article")); ?></p>
                 </a>
             </div>
         <?php endif; ?>
