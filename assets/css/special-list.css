@@ -197,6 +197,7 @@ ul .category__list {
     }
 
 }
+
 /*******************/
 /* nextボタン */
 /*******************/
@@ -215,4 +216,39 @@ ul .category__list {
     outline-offset: -8px;
     font-family: 'Zen Maru Gothic', sans-serif;
     margin-top: 50px;
+}
+
+/*******************/
+/* 詳細ページリンクボタン */
+/*******************/
+/* .link-area {
+    display: flex;
+    justify-content: center;
+} */
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    min-height: 60px;
+    border-radius: 25px;
+    background-color: #F3E06E;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #000;
+    outline: 3px solid rgb(255, 255, 255);
+    outline-offset: -8px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    margin-bottom: 100px;
+    padding: 10px;
+}
+
+@media screen and (max-width:768px) {
+    .link-area {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        text-align: justify;
+    }
 }

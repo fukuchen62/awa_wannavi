@@ -594,7 +594,7 @@ img {
 @media (min-width:768px) {
 
     .gallery {
-        width: 100%;
+        width: 80%;
     }
 
 }
@@ -675,7 +675,8 @@ img {
 @media (min-width:768px) {
 
     .choice-btn {
-        /* width: 80%; */
+        width: 80%;
+        margin: 0 auto;
     }
 
     .photo__container2 {
