@@ -18,8 +18,9 @@
                 </a>
             </div>
 
+
             <!-- カテゴリ -->
-            <!-- <?php the_category(); ?> -->
+            <?php the_category(); ?>
 
             <!-- 記事タイトル表示 76p -->
             <h2 class="card__outline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

@@ -621,6 +621,16 @@ a img:hover {
     border: 1px solid #000;
 }
 
+.post-categories li {
+    display: inline-block;
+    height: 40px;
+    /* width: 80px; */
+    margin: 10px 2px 0 2px;
+    padding: 8px 10px;
+    border-radius: 15px;
+    border: 1px solid #000;
+}
+
 /* 施設名 */
 .card__outline {
     padding: 10px 0;
