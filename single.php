@@ -5,6 +5,9 @@
 
     <!-- コンテナーに格納 -->
     <div class="container">
+        <div class="pd20">
+            <h2 class="h2__title bgYL"><?php the_title("") ?></h2>
+        </div>
         <!-- パンくずリスト -->
         <div class="Breadcrumb">
             <?php get_template_part("template-parts/breadcrumb"); ?>
@@ -23,12 +26,13 @@
             <div class="container__col">
 
                 <!-- メインコラムコンテナー -->
-                <div class="main__col mb40">
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
-                    <?php the_content(); ?>
+                        <?php the_content(); ?>
 
-                </div>
-
+                    <?php endwhile; ?>
+                <?php endif; ?>
 
                 <!-- aside カテゴリー一覧 -->
 
