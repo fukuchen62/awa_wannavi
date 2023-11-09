@@ -57,6 +57,7 @@
 .sub__ttl {
     display: flex;
     width: 60%;
+    min-width: 260px;
     height: 50px;
     margin: 20px auto;
     border: 3px solid #000;
